@@ -4,6 +4,11 @@ margin-left: 20px;
 margin-bottom: 20px;
 }
 
+.brend-section{
+padding: 5px 28px;
+max-width: 1160px;
+}
+
 .image-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,6 +24,7 @@ margin-bottom: 20px;
 
 .image-grid li {
     display: flex;
+    padding: 10px 10px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -32,6 +38,7 @@ margin-bottom: 20px;
     /* Заполняет контейнер без искажений */
     transition: transform 0.3s ease;
     /* Анимация при наведении */
+    
 }
 
 .image-grid img:hover {
