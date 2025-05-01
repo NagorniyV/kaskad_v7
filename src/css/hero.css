@@ -2,7 +2,7 @@
     display: flex;
     max-width: 1260px;
     max-height: 600px;
-    
+    padding-right: 8px;
 }
 
 .hero-content{
@@ -26,11 +26,9 @@
 
 
 .hero-img{
-    /* background-image: url(../img/bg-hero-car.png); */
     background-size: cover;
     background-position: center;
     display: flex;
-    background-color: blueviolet;
 }
 
 .pulse-color-button {
