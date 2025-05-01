@@ -1,80 +1,178 @@
-header{
-   margin-bottom: 8px;
-background: linear-gradient(to right, #cceeff, #66a3ff);
-padding: 4px 8px;
-border: 1px solid #4c4e61;
-    border-radius: 8px;
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 2px 14px;
+}
+
+.midd-header{
+    padding: 2px 28px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.entry-midd-header{
+    max-width: 1160px;
+        margin-left: auto;
+            margin-right: auto;
 }
 
 .chek-item {
-    padding: 4px 14px;
-    border: 1px solid #4c4e61;
-    border-radius: 4px;
-}
+        padding: 2px 14px;
+        border: 1px solid #4c4e61;
+        border-radius: 4px;
+        background-color: white;
+    }
 
-.header-container {
+    .header-container {
+        display: flex;
+    }
+
+    .chek-list {
+        display: flex;
+        gap: 5px;
+    }
+
+    .chek-container {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .chek-item:hover {
+            transform: scale(1.05);
+    
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    
+            z-index: 1;
+    
+        }
+    
+        .logo:hover {
+            transform: scale(1.05);
+    
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    
+            z-index: 1;
+    
+        }
+
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .lang-btn{
+            background-color: white;
+        }
+
+.bott-header{
     display: flex;
-}
-
-.chek-list {
-    display: flex;
-    gap: 5px;
-}
-
-.chek-container{
-    /* width: 1260px; */
+    gap: 80px;
+    max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
+    padding: 2px 14px;
+    align-items: center;
+    background-color: white;
 }
 
-.logo{
+.logo {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
-    margin-right: 20px;
+    /* margin-right: 160px; */
     color: darkred;
 }
 
-.header-container{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
+.phone-icon{
+    color: black;
 }
 
-.telegram{
+.social-link .team-icon {
+    fill: #f4f4fd;
+    position: absolute;
+}
+
+.contacts-div{
+    display: flex;
+    gap: 80px;
+    /* max-width: 550px; */
+        align-items: center;
+}
+
+.social{
+    display: block;
+
+
+}
+
+  .viber-button {
+      display: inline-block;
+      background: #7360F2;
+      /* Фиолетовый цвет Viber */
+      color: white;
+      padding: 4px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+.viber-button:hover {
+    background: #5a4acf;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tg-button {
+    display: inline-block;
+    background: #0088cc;
+    color: white;
+    padding: 4px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4px;
+}
+    
+.tg-button:hover {
+    background: #0077b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.callback-form h3 {
+    margin-top: 0;
+}
+
+#phoneInput {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.callback-form button {
+    background: #0088cc;
+    color: white;
     border: none;
-    border-radius: 4px;
-    background-color: #f4f5f6;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.contacts{
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-}
-
-.contact-container{
-    display: flex;
-    width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
-}
-
-.chek-item:hover {
-    transform: scale(1.05);
-    /* Увеличение на 5% */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    /* Усиленная тень */
-    z-index: 1;
-    /* Поднимаем над соседями */
-}
-
-.logo:hover {
-    transform: scale(1.05);
-    /* Увеличение на 5% */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    /* Усиленная тень */
-    z-index: 1;
-    /* Поднимаем над соседями */
+.callback-form button:hover {
+    background: #0077b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
