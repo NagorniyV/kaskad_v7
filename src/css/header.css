@@ -11,29 +11,32 @@
 .midd-header{
     padding: 2px 28px;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .entry-midd-header{
     max-width: 1160px;
-        margin-left: auto;
-            margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .chek-item {
-        padding: 2px 14px;
-        border: 1px solid #4c4e61;
-        border-radius: 4px;
-        background-color: white;
-    }
+    padding: 2px 14px;
+    border: 1px solid #4c4e61;
+    border-radius: 4px;
+    background-color: white;
+}
 
-    .header-container {
-        display: flex;
-    }
+.header-container {
+    display: flex;
+}
 
-    .chek-list {
-        display: flex;
-        gap: 5px;
-    }
+.chek-list {
+    display: flex;
+    gap: 5px;
+}
 
     .chek-container {
 
@@ -70,7 +73,7 @@
 
 .bott-header{
     display: flex;
-    gap: 80px;
+    gap: 60px;
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;

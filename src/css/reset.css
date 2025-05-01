@@ -48,9 +48,10 @@ background: #f8fafc;
 }
 
 body{
-    /* max-width: 1160px; */
+    max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
+    padding: 2px 14px;
 }
 
 header{
