@@ -1,81 +1,23 @@
-.hero{
-    display: flex;
-    max-width: 1260px;
-    max-height: 600px;
-    padding-right: 8px;
+.hero {
+    width: 100%;
+    /* Ширина секции на всю доступную область */
+    height: 450px;
+    /* Высота секции на весь экран (можно изменить на фиксированную, например, 500px) */
+    overflow: hidden;
+    /* Обрезаем всё, что выходит за границы */
+    position: relative;
+    /* Для позиционирования внутри секции */
 }
 
-.hero-content{
+.hero img {
+    width: 100%;
+    /* Ширина картинки 100% от родителя */
+    height: 100%;
+    /* Высота картинки 100% от родителя */
+    object-fit: cover;
+    /* Заполняет всю область, обрезая лишнее (сохраняет пропорции) */
+    object-position: center;
+    /* Центрирует картинку */
     display: block;
-    text-align: center;
-    max-width: 630px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-
-.hero h1 {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-
-.hero-img{
-    background-size: cover;
-    background-position: center;
-    display: flex;
-}
-
-.pulse-color-button {
-    padding: 8px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #1b2029;
-    background: #42a5f5;
-    /* Стартовый цвет */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(66, 165, 245, 0.4);
-
-    /* Анимация изменения цвета */
-    animation: color-pulse 4s ease infinite;
-}
-
-@keyframes color-pulse {
-
-    0%,
-    100% {
-        background-color: #64b5f6;
-    }
-
-    /* Светло-синий */
-    50% {
-        background-color: #2196f3;
-    }
-
-    /* Более насыщенный синий */
-}
-
-/* Затемнение + остановка анимации при hover/focus */
-.pulse-color-button:hover,
-.pulse-color-button:focus {
-    animation: none;
-    /* Останавливаем анимацию */
-    background-color: #1976d2;
-    /* Тёмно-синий */
-    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.6);
-}
-
-/* Эффект нажатия */
-.pulse-color-button:active {
-    transform: translateY(3px);
-    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.6);
-    background-color: #1565c0;
-    /* Ещё темнее */
+    /* Убирает лишние отступы снизу */
 }

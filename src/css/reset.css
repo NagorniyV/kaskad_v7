@@ -44,7 +44,8 @@ html {
 /* цвет фона */
 
 header, body, footer{
-background: #f8fafc;
+background: #F5F9FF;
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 body{

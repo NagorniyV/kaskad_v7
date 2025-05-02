@@ -1,3 +1,10 @@
+header{
+    border: 1px solid #4c4e61;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
 .top-header{
     display: flex;
     justify-content: space-between;
@@ -10,7 +17,7 @@
 
 .midd-header{
     padding: 2px 28px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: #455A64;
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
