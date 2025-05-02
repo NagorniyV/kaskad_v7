@@ -88,6 +88,9 @@
     margin-left: 10px;
     /* margin-right: 160px; */
     color: darkred;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .phone-icon{

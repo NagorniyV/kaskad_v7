@@ -3,6 +3,7 @@
     display: flex;
     justify-content: flex-end;
     color: aliceblue;
+    padding-top: 20px;
 }
 
 .main-footer{
@@ -58,7 +59,7 @@
     font-size: 16px;
 }
 
-.main-namber{
+.main-namber-footer{
     color: whitesmoke;
 }
 
@@ -93,4 +94,18 @@
     background: #0077b3;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-title{
+color: whitesmoke;
+}
+
+.footer-slogon{
+color: whitesmoke
+}
+
+.middle-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
