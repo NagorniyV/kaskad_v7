@@ -61,24 +61,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // section parts 
 
-document.querySelectorAll('.card-item').forEach(item => {
-  item.addEventListener('click', function() {
-    // Закрываем все открытые элементы
-    document.querySelectorAll('.card-details').forEach(detail => {
-      if (detail !== this.querySelector('.card-details')) {
-        detail.classList.remove('active');
-        detail.parentElement.style.marginBottom = '0';
+document.addEventListener('DOMContentLoaded', function() {
+  const cardItems = document.querySelectorAll('.card-item');
+  
+  cardItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const details = this.querySelector('.card-details');
+      const isActive = details.classList.contains('active');
+      
+      // Закрываем все другие элементы
+      document.querySelectorAll('.card-details').forEach(el => {
+        if (el !== details) {
+          el.classList.remove('active');
+          el.parentElement.classList.remove('active');
+        }
+      });
+      
+      // Переключаем текущий элемент
+      details.classList.toggle('active');
+      this.classList.toggle('active', !isActive);
+      
+      // Альтернатива с динамической высотой
+      if (!isActive) {
+        details.style.maxHeight = details.scrollHeight + 'px';
+      } else {
+        details.style.maxHeight = '0';
       }
     });
-    
-    const details = this.querySelector('.card-details');
-    details.classList.toggle('active');
-    
-    // Добавляем отступ снизу при открытии
-    if (details.classList.contains('active')) {
-      this.style.marginBottom = '20px';
-    } else {
-      this.style.marginBottom = '0';
-    }
   });
 });
