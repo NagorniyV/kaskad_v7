@@ -1,5 +1,6 @@
 .parts-section{
-    padding: 20px 20px;
+    padding: 20px 30px;
+    background: white;
 }
 
 .parts-title{
@@ -26,9 +27,9 @@
 }
 
 .card-image {
-    width: 60px;
+    width: 30px;
     /* Фиксированная ширина изображения */
-    height: 60px;
+    height: 30px;
     /* Фиксированная высота изображения */
     object-fit: cover;
     /* Сохраняет пропорции, обрезая лишнее */
