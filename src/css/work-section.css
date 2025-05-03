@@ -62,3 +62,16 @@
 .work-section svg {
     margin-right: 4px;
 }
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 480px) {
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    }
+}
