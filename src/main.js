@@ -36,3 +36,25 @@ document.getElementById('callbackForm').addEventListener('submit', function(e) {
   // Сообщение пользователю
   alert('Сейчас откроется Telegram с готовым сообщением. Просто нажмите "Отправить"!');
 });
+
+//BREND SECTION
+
+// JavaScript для бесконечного эффекта
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.carousel-track');
+  const logos = track.querySelectorAll('img');
+  const logosCount = logos.length;
+  
+  // Клонируем логотипы для бесшовности
+  logos.forEach(logo => {
+    const clone = logo.cloneNode(true);
+    track.appendChild(clone);
+  });
+  
+  // Перезапуск анимации при скролле
+  track.addEventListener('animationiteration', () => {
+    track.style.animation = 'none';
+    void track.offsetWidth; // Trigger reflow
+    track.style.animation = 'scroll 40s linear infinite';
+  });
+});

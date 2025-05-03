@@ -1,23 +1,29 @@
 .hero {
-    width: 100%;
-    /* Ширина секции на всю доступную область */
-    height: 450px;
-    /* Высота секции на весь экран (можно изменить на фиксированную, например, 500px) */
-    overflow: hidden;
-    /* Обрезаем всё, что выходит за границы */
-    position: relative;
-    /* Для позиционирования внутри секции */
+    background-image: url(../img/main-photo.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    /* или другая высота */
+    display: flex;
+    align-items: center;
+    /* вертикальное выравнивание */
+    justify-content: center;
+    /* горизонтальное выравнивание */
+    text-align: center;
+    /* выравнивание текста внутри блока */
 }
 
-.hero img {
-    width: 100%;
-    /* Ширина картинки 100% от родителя */
-    height: 100%;
-    /* Высота картинки 100% от родителя */
-    object-fit: cover;
-    /* Заполняет всю область, обрезая лишнее (сохраняет пропорции) */
-    object-position: center;
-    /* Центрирует картинку */
-    display: block;
-    /* Убирает лишние отступы снизу */
+.main-content {
+    color: white;
+    /* если нужен светлый текст на темном фоне */
+    padding: 20px;
+    max-width: 800px;
+    /* ограничение ширины текстового блока */
+}
+
+.hero-title{
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 800;
+  font-style: normal;
+
 }

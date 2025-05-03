@@ -8,35 +8,14 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <header>
-    <div class="top-header" id="home">
+    <!-- <div class="top-header" id="home">
       <h1>
         <span>Корейські та Японські</span> <br />
         автозапчастини
       </h1>
       <h2>Правильний підбір<br />Доставка<br />Гарантія</h2>
-    </div>
-    <div class="midd-header">
-      <div class="entry-midd-header">
-        <nav class="navigation">
-          <ul class="chek-list">
-            <li class="chek-item">
-              <a href="#work-section">Як ми працюємо</a>
-            </li>
-            <li class="chek-item">
-              <a href="#brend">Марки автомобілів</a>
-            </li>
-            <li class="chek-item">
-              <a href="#parts">Запчастини</a>
-            </li>
-            <li class="chek-item"><a href="#main">Про магазин</a></li>
+    </div> -->
 
-            <li class="chek-item"><a href="">Доставка і оплата</a></li>
-            <li class="chek-item"><a href="">Гарантія і повернення</a></li>
-          </ul>
-          <button class="lang-btn">ua/ru</button>
-        </nav>
-      </div>
-    </div>
     <div class="bott-header">
       <a class="logo" href="./index.html">-AUTOLINE-</a>
       <div class="callback-form">
@@ -105,28 +84,357 @@
         </div>
       </div>
     </div>
+    <div class="midd-header">
+      <div class="entry-midd-header">
+        <nav class="navigation">
+          <ul class="chek-list">
+            <li class="chek-item">
+              <a href="#work-section">Як ми працюємо</a>
+            </li>
+            <li class="chek-item">
+              <a href="#brend">Марки автомобілів</a>
+            </li>
+            <li class="chek-item">
+              <a href="#parts">Запчастини</a>
+            </li>
+            <li class="chek-item"><a href="#main">Про магазин</a></li>
+
+            <li class="chek-item"><a href="">Доставка і оплата</a></li>
+            <li class="chek-item"><a href="">Гарантія і повернення</a></li>
+          </ul>
+          <button class="lang-btn">ua/ru</button>
+        </nav>
+      </div>
+    </div>
   </header>
   <body>
     <main>
       <section class="hero">
-        <img src="./src/img/main-photo.jpeg" alt="main-photo" />
+        <div class="main-content">
+          <h1 class="hero-title">
+            Правильний відбір корейських та японських автозапчастин з гаранією!
+          </h1>
+        </div>
       </section>
-      <section class="work-section" id="work-section">
-        <div class="work-img"><img src="./src/img/opis.webp" alt="opis" /></div>
-        <div class="work-content">
-          <h2>Як ми працюємо:</h2>
-          <ol>
-            <li>Тисніть кнопку "Замовити дзінок".</li>
-            <li>Заповнюйте форму</li>
-            <li>
-              Ми підберем всі можливі варіанти від бюджетного до найкращого
+      <section class="work-section">
+        <h2 class="work-title">Як ми працюємо:</h2>
+        <div>
+          <ul class="work-list">
+            <li class="work-item">
+              <div class="work-card">
+                <h4 class="card-title">Підбір</h4>
+                <ul class="work-features">
+                  <li>
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="#27ae60"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      />
+                    </svg>
+                    Точний підбір за VIN-кодом
+                  </li>
+                  <li>
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="#27ae60"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      />
+                    </svg>
+                    Оригінали та якісні аналоги
+                  </li>
+                  <li>
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="#27ae60"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      />
+                    </svg>
+                    Консультація автоексперта
+                  </li>
+                  <li>
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="#27ae60"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      />
+                    </svg>
+                    Пошук рідкісних позицій
+                  </li>
+                </ul>
+                <div class="work-time">
+                  <span>⏱ 15-30 хв</span> на підбір варіантів
+                </div>
+              </div>
             </li>
-            <li>І скинем Вам в телеграм або вайбер</li>
-          </ol>
-          <p>Або просто наберіть нас за номером 099 227 36 15</p>
+            <li class="work-item">
+              <div class="work-card">
+                <h4 class="card-title">Доставка</h4>
+                <div class="work-item-content">
+                  <ul class="work-features">
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      З наших складових по Україні
+                    </li>
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      Кур'єрська доставка по Харкову
+                    </li>
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      Можливість самовивозу
+                    </li>
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      Відстеження посилки онлайн
+                    </li>
+                  </ul>
+                  <div class="work-time">
+                    <span>🚚 2-5 днів</span> середній термін доставки
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="work-item">
+              <div class="work-card">
+                <h4 class="card-title">Гарантія</h4>
+                <div class="work-item-content">
+                  <ul class="work-features">
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      Офіційна гарантія від виробників
+                    </li>
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      Повернення/обмін 14 днів
+                    </li>
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      Фото-звіт перед відправкою
+                    </li>
+                    <li>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="#27ae60"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      Тестування критичних вузлів
+                    </li>
+                  </ul>
+                  <div class="work-time">
+                    <span>🛡 12-36 міс.</span> гарантійний термін
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section id="brend" class="brend-section">
+        <div class="container">
+          <h2 class="brend-title">
+            Бренди запчастин. Список виробників -AUTOLINE- Харків
+          </h2>
+
+          <div class="brend-carousel-container">
+            <ul class="image-grid">
+              <!-- Ваши логотипы -->
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/acura-1s.jpg"
+                  alt="acura"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/daewoo.jpg"
+                  alt="daewoo"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/daihatsu.jpg"
+                  alt="daihatsu"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/honda-1s.jpg"
+                  alt="honda"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/hyundai-1s.jpg"
+                  alt="hyundai"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/mazda-5s.jpg"
+                  alt="mazda"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/mitsubishi-1s.jpg"
+                  alt="mitsubishi"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/nissan-2s.jpg"
+                  alt="nissan"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/ssangyong.jpg"
+                  alt="ssangyong"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/subaru-logo-1_cr.jpg"
+                  alt="subaru"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/suzuki-1s.jpg"
+                  alt="suzuki"
+                  loading="lazy"
+                />
+              </li>
+              <li class="brend-item">
+                <img
+                  src="./src/img/logo/toyota-1s.jpg"
+                  alt="toyota"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="brend" class="brend-section">
+        <div class="container">
+          <h2 class="brend-title">
+            Бренди запчастин. Список виробників -AUTOLINE- Харків
+          </h2>
+
+          <div class="infinite-carousel">
+            <div class="carousel-track">
+              <img src="./src/img/logo/acura-1s.jpg" alt="acura" />
+              <img src="./src/img/logo/daewoo.jpg" alt="daewoo" />
+              <img src="./src/img/logo/daihatsu.jpg" alt="daihatsu" />
+              <img src="./src/img/logo/honda-1s.jpg" alt="honda" />
+              <img src="./src/img/logo/hyundai-1s.jpg" alt="hyundai" />
+              <img src="./src/img/logo/mazda-5s.jpg" alt="mazda" />
+              <img src="./src/img/logo/mitsubishi-1s.jpg" alt="mitsubishi" />
+              <img src="./src/img/logo/nissan-2s.jpg" alt="nissan" />
+              <img src="./src/img/logo/ssangyong.jpg" alt="ssangyong" />
+              <img src="./src/img/logo/subaru-logo-1_cr.jpg" alt="subaru" />
+              <img src="./src/img/logo/suzuki-1s.jpg" alt="suzuki" />
+              <img src="./src/img/logo/toyota-1s.jpg" alt="toyota" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="brend" class="brend-section">
         <h2 class="brend-title">
           Бренди запчастин. Список виробників -AUTOLINE- Харків
         </h2>
@@ -148,7 +456,7 @@
           <li><img src="./src/img/logo/suzuki-1s.jpg" alt="suzuki" /></li>
           <li><img src="./src/img/logo/toyota-1s.jpg" alt="toyota" /></li>
         </ul>
-      </section>
+      </section> -->
       <section id="parts" class="parts-section">
         <h2 class="parts-title">Підбір запчастин по категоріям в Україні</h2>
         <ul class="card-list">

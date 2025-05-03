@@ -1,4 +1,85 @@
-.brend-title{
+/* Основные стили */
+.brend-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.brend-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Карусель */
+.infinite-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.carousel-track img {
+    width: 150px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+    transform: scale(1.1);
+}
+
+/* Анимация */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 15px));
+    }
+}
+
+/* Адаптация */
+@media (max-width: 992px) {
+    .carousel-track img {
+        width: 120px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-track {
+        gap: 20px;
+        animation-duration: 30s;
+    }
+
+    .carousel-track img {
+        width: 100px;
+        height: 50px;
+    }
+}
+
+/* .brend-title{
 margin-top: 20px;
 margin-left: 20px;
 margin-bottom: 20px;
@@ -12,9 +93,7 @@ max-width: 1160px;
 .image-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 колонки */
     gap: 20px;
-    /* Отступы между элементами */
     padding: 0;
     margin: 0;
     list-style: none;
@@ -28,20 +107,15 @@ max-width: 1160px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Обрезает выходящие за границы части */
 }
 
 .image-grid img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    /* Заполняет контейнер без искажений */
-    transition: transform 0.3s ease;
-    /* Анимация при наведении */
-    
+    transition: transform 0.3s ease;    
 }
 
 .image-grid img:hover {
     transform: scale(1.05);
-    /* Эффект увеличения */
-}
+} */

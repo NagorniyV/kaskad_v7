@@ -21,6 +21,7 @@ header{
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 4px;
 }
 
 .entry-midd-header{
@@ -84,7 +85,7 @@ header{
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2px 14px;
+    padding: 4px 14px;
     align-items: center;
     background-color: white;
 }
