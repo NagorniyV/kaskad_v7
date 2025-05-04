@@ -191,23 +191,112 @@ header{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.mobile-header{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
 /* Адаптивность для мобильных */
 @media (max-width: 768px) {}
 
-@media (max-width: 480px) {
-.bott-header{
-    flex-direction: column;
-}
+/* Мобильная версия */
+@media (max-width: 479px) {
+    header {
+        padding: 8px 0;
+        position: relative;
+    }
 
-.callback-form{
-    display: none;
-}
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+    }
 
-.logo{
-    display: none;
-}
+    .mobile-menu-btn {
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+    }
 
-.contacts-div{
-    flex-direction: column;
-}
+    .logo {
+        font-size: 14px;
+        margin: 0;
+        color: darkred;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .mobile-icons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .icon-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .icon-circle svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Цвета иконок */
+    .icon-circle:first-child {
+        background-color: #f0f0f0;
+    }
+
+    .tg-icon {
+        background-color: #0088cc;
+    }
+
+    .viber-icon {
+        background-color: #7360F2;
+    }
+
+    /* Мобильное меню */
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 1000;
+        padding: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .chek-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .chek-item {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    /* Скрываем десктопные элементы */
+    .bott-header,
+    .midd-header,
+    .callback-form,
+    .contacts-div {
+        display: none;
+    }
 }

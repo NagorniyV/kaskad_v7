@@ -76,3 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+//кнопка-бургер
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  menuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+  });
+});
