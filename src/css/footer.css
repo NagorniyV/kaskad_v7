@@ -75,7 +75,7 @@
     gap: 8px;
 }
 
-.to-home {
+/* .to-home {
     display: inline-block;
     background: #45baf5;
     color: white;
@@ -88,12 +88,74 @@
     transition: all 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 4px;
+} */
+
+.to-home {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    background: #6f838c;
+    color: white;
+    height: 28px;
+    width: 28px;
+    /* Начальная ширина - квадрат */
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.to-home .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.to-home .text {
+    opacity: 0;
+    /* padding-right: 8px; */
+    transition: opacity 0.2s ease;
+    transform: translateX(-10px);
 }
 
 .to-home:hover {
-    background: #0077b3;
+    background: #455A64;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: auto;
+    /* Автоматическая ширина при наведении */
+    padding-right: 16px;
+}
+
+.to-home:hover .text {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s ease 0.1s, transform 0.3s ease;
+}
+
+/* Стили для адаптации у футера (как в предыдущем примере) */
+footer {
+    position: relative;
+    z-index: 50;
+    /* padding-bottom: 80px; */
+}
+
+.to-home.sticky-bottom {
+    position: absolute;
+    bottom: auto;
+    top: -60px;
+    margin-bottom: 20px;
 }
 
 .footer-title{
