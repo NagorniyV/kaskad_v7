@@ -1,13 +1,3 @@
-async function loadHTML(selector, file) {
-  const response = await fetch(file);
-  const html = await response.text();
-  document.querySelector(selector).innerHTML = html;
-}
-
-loadHTML("#header", "partials/header.html");
-loadHTML("#footer", "partials/footer.html");
-
-
 document.getElementById('callbackForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
@@ -67,25 +57,21 @@ document.addEventListener('DOMContentLoaded', function() {
   cardItems.forEach(item => {
     item.addEventListener('click', function() {
       const details = this.querySelector('.card-details');
-      const isActive = details.classList.contains('active');
+      const wasActive = this.classList.contains('active'); // Запоминаем предыдущее состояние
       
-      // Закрываем все другие элементы
-      document.querySelectorAll('.card-details').forEach(el => {
-        if (el !== details) {
-          el.classList.remove('active');
-          el.parentElement.classList.remove('active');
-        }
+      // Закрываем все элементы
+      cardItems.forEach(card => {
+        card.classList.remove('active');
+        const cardDetails = card.querySelector('.card-details');
+        cardDetails.classList.remove('active');
+        cardDetails.style.maxHeight = '0';
       });
       
-      // Переключаем текущий элемент
-      details.classList.toggle('active');
-      this.classList.toggle('active', !isActive);
-      
-      // Альтернатива с динамической высотой
-      if (!isActive) {
+      // Если элемент не был активным, открываем его
+      if (!wasActive) {
+        this.classList.add('active');
+        details.classList.add('active');
         details.style.maxHeight = details.scrollHeight + 'px';
-      } else {
-        details.style.maxHeight = '0';
       }
     });
   });
