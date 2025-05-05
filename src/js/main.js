@@ -49,3 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+//кнопка Піднятись в гору
+
+// Плавный скролл при клике на кнопку
+document.getElementById('back-to-top').addEventListener('click', function(e) {
+  e.preventDefault(); // Отменяем стандартное поведение ссылки
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Плавная прокрутка
+  });
+});

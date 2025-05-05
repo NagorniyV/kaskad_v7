@@ -1,13 +1,13 @@
 .developer{
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     display: flex;
     justify-content: flex-end;
     color: aliceblue;
     padding-top: 20px;
 }
 
-.main-footer{
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+footer{
+   background: linear-gradient(135deg, #303d47 0%, #455a64 50%, #4a6b8a 100%);
+   padding: 20px 30px;
 }
 
 .map-container {
@@ -29,7 +29,6 @@
 }
 
 .entry-footer{
-    border: 1px solid #4c4e61;
     border-radius: 4px;
     max-width: 1160px;
     margin-left: auto;
@@ -74,21 +73,6 @@
     flex-direction: column;
     gap: 8px;
 }
-
-/* .to-home {
-    display: inline-block;
-    background: #45baf5;
-    color: white;
-    padding: 4px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    transition: all 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 4px;
-} */
 
 .to-home {
     position: fixed;
@@ -170,4 +154,31 @@ color: whitesmoke
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+@media (max-width: 480px) {
+    .main-footer{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contacts-div-footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+          .middle-footer {
+              order: 1;
+              /* Перемещаем вверх */
+              text-align: center;
+              padding-bottom: 20px;
+              border-bottom: 1px solid #455A64;
+          }
+    
+          /* Нижние блоки (в 2 колонки) */
+          .right-footer,
+          .left-footer {
+              order: 2;
+              width: 100%;
+          }
 }
