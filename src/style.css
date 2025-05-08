@@ -2,7 +2,7 @@
 
 /* Sections style */
 @import url('./css/header.css');
-@import url('./css/footer.css');
+
 @import url('./css/hero.css');
 @import url('./css/main-section.css');
 @import url('./css/brend-section.css');
@@ -10,6 +10,7 @@
 @import url('./css/reset.css');
 @import url('./css/work-section.css');
 @import url('./css/partner-section.css');
+@import url('./css/footer.css');
 
 .container,
 footer,
