@@ -1,7 +1,7 @@
 .developer{
     display: flex;
     justify-content: flex-end;
-    color: aliceblue;
+    color: orange;
     padding-top: 20px;
 }
 
@@ -28,7 +28,7 @@
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(135deg, #303d47 0%, #455a64 50%, #4a6b8a 100%);
+    background: black;
     padding: 20px 30px;
 }
 
@@ -43,24 +43,32 @@
 }
 
 .title-card{
-    color: aliceblue;
+    color: orange;
     margin-bottom: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 24px;
 }
 
 .logo-footer{
     margin-left: 10px;
-    color: whitesmoke;
+    color: orangered;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 28px;
+    text-align: center;
 }
 
-.main-namber-footer{
-    color: whitesmoke;
+.left-footer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .right-footer{
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 8px;
 }
@@ -78,7 +86,7 @@
     z-index: 100;
     display: flex;
     align-items: center;
-    background: #6f838c;
+    background: orange;
     color: white;
     height: 28px;
     width: 28px;
@@ -111,7 +119,7 @@
 }
 
 .to-home:hover {
-    background: #455A64;
+    background: orangered;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: auto;
@@ -140,17 +148,24 @@ footer {
 }
 
 .footer-title{
-color: whitesmoke;
+    color: orange;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 26px;
 }
 
 .footer-slogon{
-color: whitesmoke
+    color: orange;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 22px;
 }
 
 .middle-footer{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex: 1;
 }
 
 @media (max-width: 480px) {

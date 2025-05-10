@@ -96,7 +96,7 @@ header{
     margin-bottom: auto;
     margin-left: 10px;
     /* margin-right: 160px; */
-    color: darkred;
+    color: orangered;
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -126,7 +126,7 @@ header{
 
   .viber-button {
       display: inline-block;
-      background: #7360F2;
+      background: orange;
       /* Фиолетовый цвет Viber */
       color: white;
       padding: 4px 24px;
@@ -140,14 +140,14 @@ header{
   }
 
 .viber-button:hover {
-    background: #5a4acf;
+    background: orangered;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .tg-button {
     display: inline-block;
-    background: #0088cc;
+    background: orange;
     color: white;
     padding: 4px 24px;
     border-radius: 50px;
@@ -161,7 +161,7 @@ header{
 }
     
 .tg-button:hover {
-    background: #0077b3;
+    background: orangered;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
