@@ -47,7 +47,7 @@
     margin-bottom: 4px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .logo-footer{
@@ -55,7 +55,7 @@
     color: orangered;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -151,14 +151,14 @@ footer {
     color: orange;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .footer-slogon{
     color: orange;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .middle-footer{
