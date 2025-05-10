@@ -18,7 +18,7 @@ header{
 
 .midd-header{
     padding: 2px 28px;
-    background: white;
+    background: black;
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -31,11 +31,20 @@ header{
     margin-right: auto;
 }
 
+.text-header{
+    color: orange;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 14px;
+}
+
 .chek-item {
     padding: 2px 14px;
     border: 1px solid #4c4e61;
     border-radius: 4px;
     background-color: orange;
+    color: black;
 }
 
 .header-container {
@@ -47,38 +56,33 @@ header{
     gap: 5px;
 }
 
-    .chek-container {
+.chek-container {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-        .chek-item:hover {
-            transform: scale(1.05);
-    
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    
-            z-index: 1;
-    
+.chek-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+    z-index: 1;
+    background-color: orangered;    
         }
     
-        .logo:hover {
-            transform: scale(1.05);
-    
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    
-            z-index: 1;
-    
-        }
+.logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
 
-        .navigation{
-            display: flex;
-            justify-content: space-between;
-        }
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
 
-        .lang-btn{
-            background-color: white;
-        }
+.lang-btn{
+    background-color: white;
+}
 
 .bott-header{
     display: flex;
@@ -88,7 +92,7 @@ header{
     margin-right: auto;
     padding: 4px 14px;
     align-items: center;
-    background-color: white;
+    background-color: black;
 }
 
 .logo {
@@ -124,20 +128,20 @@ header{
 
 }
 
-  .viber-button {
-      display: inline-block;
-      background: orange;
-      /* Фиолетовый цвет Viber */
-      color: white;
-      padding: 4px 24px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 16px;
-      transition: all 0.3s;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+.viber-button {
+    display: inline-block;
+    background: orange;
+    /* Фиолетовый цвет Viber */
+    color: black;
+    padding: 4px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
 .viber-button:hover {
     background: orangered;
@@ -148,7 +152,7 @@ header{
 .tg-button {
     display: inline-block;
     background: orange;
-    color: white;
+    color: black;
     padding: 4px 24px;
     border-radius: 50px;
     text-decoration: none;
@@ -177,17 +181,21 @@ header{
 }
 
 .callback-form button {
-    background: #0088cc;
-    color: white;
+    background: orange;
+    color: black;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 16px;
 }
 
 .callback-form button:hover {
-    background: #0077b3;
+    background: orangered;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

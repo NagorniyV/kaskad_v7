@@ -1,0 +1,90 @@
+.order-steps {
+text-align: center;
+padding: 20px 30px;
+background: black;
+}
+    
+
+.order-steps__title {
+    margin-bottom: 20px;
+    color: orange;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-size: 34px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.step {
+    flex: 1;
+    max-width: 200px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step__number {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 15px;
+    background: orange;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.step__desc {
+    font-size: 14px;
+    color: #666;
+}
+
+.step-arrow {
+    width: 40px;
+    height: 40px;
+    color: #ccc;
+    /* Цвет стрелки */
+    flex-shrink: 0;
+}
+
+.step-final {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+.step-arrow {
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .step {
+        flex: 0 0 80%;
+        /* Ширина шага */
+    }
+}

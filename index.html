@@ -19,7 +19,7 @@
     <div class="bott-header">
       <a class="logo" href="./index.html">-AUTOLINE-</a>
       <div class="callback-form">
-        <h3>Замовити дзвінок</h3>
+        <h3 class="text-header">Замовити дзвінок</h3>
         <form id="callbackForm">
           <input
             type="tel"
@@ -27,7 +27,7 @@
             placeholder="+380 XX XXX XX XX"
             required
           />
-          <button type="submit">Залишити номер</button>
+          <button class="text-header" type="submit">Залишити номер</button>
         </form>
         <div
           id="responseMessage"
@@ -36,9 +36,9 @@
       </div>
       <div class="contacts-div">
         <div class="main-namber">
-          <p>Зв'язок з нами:</p>
+          <p class="text-header">Зв'язок з нами:</p>
           <address class="contacts">
-            <a href="tel:+380992273615" class="contact-number"
+            <a href="tel:+380992273615" class="text-header"
               >+38 (073) 227-36-15</a
             >
           </address>
@@ -218,7 +218,7 @@
           <p class="hero-cont">Ваш автомобіль - наші клопоти</p>
         </div>
       </section>
-      <section class="work-section" id="work">
+      <!-- <section id="work" class="work-section">
         <h2 class="work-title">Як ми працюємо:</h2>
         <div>
           <ul class="work-list">
@@ -413,6 +413,89 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section> -->
+      <section class="order-steps">
+        <h2 class="order-steps__title">Зроби замовлення в 4 кроки:</h2>
+
+        <div class="steps-container">
+          <!-- Шаг 1 -->
+          <div class="step">
+            <div class="step__number">1</div>
+            <h3 class="step__title">Напишіть нам</h3>
+            <p class="step__desc">
+              розкажіть, яка запчастина потрібна (Фільтра і мастила на KIA
+              Picanto 2012)
+            </p>
+          </div>
+
+          <!-- Стрелка после 1-го шага -->
+          <svg class="step-arrow" viewBox="0 0 24 24">
+            <path
+              d="M8 4L16 12L8 20"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+
+          <!-- Шаг 2 -->
+          <div class="step">
+            <div class="step__number">2</div>
+            <h3 class="step__title">Надайте данні</h3>
+            <p class="step__desc">
+              VIN-код автомобіля або марка, модель, рік автомобіля
+            </p>
+          </div>
+
+          <!-- Стрелка после 2-го шага -->
+          <svg class="step-arrow" viewBox="0 0 24 24">
+            <path
+              d="M8 4L16 12L8 20"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+
+          <!-- Шаг 3 -->
+          <div class="step">
+            <div class="step__number">3</div>
+            <h3 class="step__title">Ми підбираєм запчастини для вас:</h3>
+            <p class="step__desc">
+              надамо всі можливі варіанти від бюджетного до найкращого
+            </p>
+          </div>
+
+          <!-- Стрелка после 3-го шага -->
+          <svg class="step-arrow" viewBox="0 0 24 24">
+            <path
+              d="M8 4L16 12L8 20"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+
+          <!-- Шаг 4 -->
+          <div class="step">
+            <div class="step__number">4</div>
+            <h3 class="step__title">
+              Робіть замовлення і ми відправляємо запчастину:
+            </h3>
+            <p class="step__desc">
+              самовивіз або доставка кур'єром по Харкову, чи відправка новою
+              поштою по Україні
+            </p>
+          </div>
+        </div>
+
+        <!-- Дополнительная ячейка (без стрелок) -->
+        <div class="step-final">
+          <p>
+            Бонус для міста Харків: Підберем перевірене СТО на вашому районі,
+            для встановлення придбаного обладнання
+          </p>
         </div>
       </section>
       <section id="parts" class="parts-section">
@@ -1159,7 +1242,7 @@
           </div>
         </div>
       </section>
-      <section class="partner-section" id="partner">
+      <section id="partner" class="partner-section">
         <h2 class="partner-title">Наші партнери у Харкові</h2>
         <div class="entry-partner">
           <div class="partner-content">
@@ -1284,7 +1367,7 @@
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.3847620552697!2d36.272624316204734!3d49.929121289392064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270da4b6664cb3%3A0x5cf2a23cef1978!2z0KHQotCeINCT0JHQng!5e0!3m2!1sru!2sua!4v1746106382093!5m2!1sru!2sua"
             width="300"
-            height="200"
+            height="150"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"

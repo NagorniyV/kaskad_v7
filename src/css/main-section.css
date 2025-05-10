@@ -20,6 +20,7 @@ color: orange;
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-size: 34px;
+    font-weight: 200;
 }
 
 .main-title-content{
@@ -27,12 +28,14 @@ color: orange;
     margin-top: 8px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    /* font-weight: 500; */
     font-size: 18px;
 }
 
 .main-text-content{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
+    font-weight: 100;
     font-size: 16px;
 }
 
