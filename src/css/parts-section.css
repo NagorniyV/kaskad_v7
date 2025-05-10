@@ -1,11 +1,19 @@
 .parts-section{
     padding: 20px 30px;
-    background: white;
+    background: black;
 }
 
 .parts-title{
     margin-bottom: 20px;
     text-align: center;
+    color: orange;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-size: 34px;
+}
+
+.card-item{
+    background-color: white;
 }
 
 .card-list {
@@ -45,7 +53,10 @@
 .card-text {
     padding: 15px;
     flex-grow: 1;
-    /* Занимает оставшееся пространство */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    color: black;
 }
 
 .card-item:hover {

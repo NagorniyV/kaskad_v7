@@ -1,31 +1,46 @@
 .hero {
-    /* background-image: url(../img/main-photo.jpeg); */
-    background-image: url(../img/hero-bg.jpeg);
-    background-size: cover;
-    background-position: center;
-    min-height: 450px;
-    /* или другая высота */
-    display: flex;
-    align-items: center;
-    /* вертикальное выравнивание */
-    justify-content: center;
-    /* горизонтальное выравнивание */
-    text-align: center;
-    /* выравнивание текста внутри блока */
+  position: relative;
+  background-image: url(../img/hero-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Затемнение фона */
+  z-index: 1;
 }
 
 .main-content {
-    color: white;
-    /* если нужен светлый текст на темном фоне */
-    padding: 20px;
-    max-width: 800px;
-    /* ограничение ширины текстового блока */
+  position: relative;
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+  z-index: 2;
+  /* Текст поверх затемнения */
 }
 
-.hero-title{
-  font-family: "Rubik Doodle Shadow", system-ui;
-  font-weight: 800;
+.hero-title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
   font-style: normal;
   color: azure;
-  font-size: 36px;
+  font-size: 42px;
+}
+
+.hero-cont {
+  color: white;
+  font-size: 24px;
+  margin-top: 16px;
 }

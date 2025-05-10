@@ -3,6 +3,7 @@ header{
     border-radius: 8px;
     margin-bottom: 4px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: black;
 }
 
 .top-header{
@@ -17,7 +18,7 @@ header{
 
 .midd-header{
     padding: 2px 28px;
-    background: #455A64;
+    background: white;
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -34,7 +35,7 @@ header{
     padding: 2px 14px;
     border: 1px solid #4c4e61;
     border-radius: 4px;
-    background-color: white;
+    background-color: orange;
 }
 
 .header-container {

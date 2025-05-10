@@ -1,15 +1,17 @@
 /* Основные стили */
 .brend-section {
     padding: 20px 30px;
-    background: white;
+    background: black;
     overflow: hidden;
 }
 
 .brend-title {
     text-align: center;
-    font-size: 2rem;
     margin-bottom: 40px;
-    color: #333;
+    color: orange;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-size: 34px;
 }
 
 /* Карусель */

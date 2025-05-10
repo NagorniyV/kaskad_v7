@@ -1,19 +1,40 @@
 .main-section{
     padding: 20px 30px;
-    background: white;
+    background: black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 300px;
+    gap: 12px;
+}
 
+.main-image{
+    border-radius: 10%;
 }
 
 .main-content{
-color: black;
+color: orange;
+}
+
+.main-h2{
+    margin-bottom: 8px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-size: 34px;
+}
+
+.main-title-content{
+    margin-bottom: 4px;
+    margin-top: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 18px;
 }
 
 .main-text-content{
-    margin-top: 20px;
-} 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+}
 
 @media (max-width: 480px) {
     .main-section {

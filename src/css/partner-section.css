@@ -1,14 +1,74 @@
-.partner-section{
+ .partner-section{
     padding: 20px 30px;
     background: white;
+    background-color: black;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.entry-partner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 300px;
+    gap: 12px;
+    color: orange;
 }
 
+.partner-title{
+    margin-bottom: 20px;
+    text-align: center;
+    color: orange;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-size: 34px;
+}
+
+.kharkiv-map{
+    border-radius: 10%;
+}
+
+.partners-description{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 22px;
+    margin-bottom: 42px;
+}
+
+.partner-content{
+    padding: 12px 12px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background-color: orange;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+}
+
+.cta-button:hover {
+    background-color: orangered;
+}
+
+/* Адаптивность */
+ @media (max-width: 768px) {
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .entry-partner{
+        display: flex;
+        flex-direction: column;
+    }
+ }
+/*
 .section-title {
     text-align: center;
     font-size: 32px;
@@ -69,29 +129,11 @@
     margin-top: 40px;
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 30px;
-    background-color: #0f3460;
-    color: white;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+
+
+.kharkiv_map{
+    max-height: 400px;
 }
 
-.cta-button:hover {
-    background-color: #16213e;
-}
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .partners-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-}
+}  */
