@@ -116,19 +116,19 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
             d="M3 12H21"
-            stroke="black"
+            stroke="orange"
             stroke-width="2"
             stroke-linecap="round"
           />
           <path
             d="M3 6H21"
-            stroke="black"
+            stroke="orange"
             stroke-width="2"
             stroke-linecap="round"
           />
           <path
             d="M3 18H21"
-            stroke="black"
+            stroke="orange"
             stroke-width="2"
             stroke-linecap="round"
           />
@@ -216,205 +216,23 @@
         <div class="main-content">
           <h1 class="hero-title">Підбір запчастин по VIN за 5 хвилин!</h1>
           <p class="hero-cont">Ваш автомобіль - наші клопоти</p>
+          <div class="callback-form">
+            <form id="callbackForm">
+              <input
+                type="tel"
+                id="phoneInput"
+                placeholder="+380 XX XXX XX XX"
+                required
+              />
+              <button class="text-header" type="submit">Залишити номер</button>
+            </form>
+            <div
+              id="responseMessage"
+              style="display: none; margin-top: 10px; color: green"
+            ></div>
+          </div>
         </div>
       </section>
-      <!-- <section id="work" class="work-section">
-        <h2 class="work-title">Як ми працюємо:</h2>
-        <div>
-          <ul class="work-list">
-            <li class="work-item">
-              <div class="work-card">
-                <h4 class="card-title">Підбір</h4>
-                <ul class="work-features">
-                  <li>
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="20"
-                      height="20"
-                      fill="#27ae60"
-                    >
-                      <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                      />
-                    </svg>
-                    Точний підбір за VIN-кодом
-                  </li>
-                  <li>
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="20"
-                      height="20"
-                      fill="#27ae60"
-                    >
-                      <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                      />
-                    </svg>
-                    Оригінали та якісні аналоги
-                  </li>
-                  <li>
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="20"
-                      height="20"
-                      fill="#27ae60"
-                    >
-                      <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                      />
-                    </svg>
-                    Консультація автоексперта
-                  </li>
-                  <li>
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="20"
-                      height="20"
-                      fill="#27ae60"
-                    >
-                      <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                      />
-                    </svg>
-                    Пошук рідкісних позицій
-                  </li>
-                </ul>
-                <div class="work-time">
-                  <span>⏱ 15-30 хв</span> на підбір варіантів
-                </div>
-              </div>
-            </li>
-            <li class="work-item">
-              <div class="work-card">
-                <h4 class="card-title">Доставка</h4>
-                <div class="work-item-content">
-                  <ul class="work-features">
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      З наших складових по Україні
-                    </li>
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      Кур'єрська доставка по Харкову
-                    </li>
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      Можливість самовивозу
-                    </li>
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      Відстеження посилки онлайн
-                    </li>
-                  </ul>
-                  <div class="work-time">
-                    <span>🚚 2-5 днів</span> середній термін доставки
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="work-item">
-              <div class="work-card">
-                <h4 class="card-title">Гарантія</h4>
-                <div class="work-item-content">
-                  <ul class="work-features">
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      Офіційна гарантія від виробників
-                    </li>
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      Повернення/обмін 14 днів
-                    </li>
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      Фото-звіт перед відправкою
-                    </li>
-                    <li>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                        fill="#27ae60"
-                      >
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                      Тестування критичних вузлів
-                    </li>
-                  </ul>
-                  <div class="work-time">
-                    <span>🛡 12-36 міс.</span> гарантійний термін
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section> -->
       <section class="order-steps">
         <h2 class="order-steps__title">Зроби замовлення в 4 кроки:</h2>
 
@@ -499,676 +317,155 @@
         </div>
       </section>
       <section id="parts" class="parts-section">
-        <div>
-          <h2 class="parts-title">Всі типи запчастин:</h2>
-          <ul class="card-list">
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/enero.jpg"
-                  alt="dvigatel"
-                />
-                <h4 class="card-text">Двигун і система вихлопу</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Двигун і елементи
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Деталі двигуна
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Прокладки двигуна
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Ремені, ланцюги і натягувачі
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Система випуску
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Паливна система управління двигуном
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Турбіни і компресори
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/pero.jpg"
-                  alt="korobka"
-                />
-                <h4 class="card-text">Коробка передач</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Запчасти трансмісії
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Зчеплення
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/body.jpg"
-                  alt="kuzov"
-                />
-                <h4 class="card-text">Кузовні деталі</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Внутрішні елементи
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Зовнішні частини
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Система склоочисника
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/galm.jpg"
-                  alt="tormiznie"
-                />
-                <h4 class="card-text">Гальмівна система</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Гальмівні елементи
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Гідравліка гальмівної системи
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Електронні компоненти
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/rulo.jpg"
-                  alt="podveska"
-                />
-                <h4 class="card-text">Підвіска та рульове</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Підвіска
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Рульове управління
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/lampo.jpg"
-                  alt="elektrika"
-                />
-                <h4 class="card-text">Електрика та освітлення</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Запалювання
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Освітлення
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Електрика
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Датчики
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/coldo.jpg"
-                  alt="ohlagdenie"
-                />
-                <h4 class="card-text">Охолодження та опалення</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Охолодження
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Система кондиціонування
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Система опалення
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/oilol.jpg"
-                  alt="zidkosti"
-                />
-                <h4 class="card-text">Автомобільні рідини та олії</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Масла
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Рідини
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Автохімія
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Автокосметика
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Мастила (Змащення)
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Фарби, лаки, грунтовки
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Фреон (Холодоагент)
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="card-item">
-              <div class="card-main">
-                <img
-                  class="card-image"
-                  src="./src/img/parts/tololol.jpg"
-                  alt="to"
-                />
-                <h4 class="card-text">Фільтри</h4>
-              </div>
-              <div class="card-details">
-                <ul class="details-list">
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Повітряний фільтр
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Масляний фільтр
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Паливний фільтр
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Фільтр коробки
-                  </li>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                        fill="#2196F3"
-                      />
-                    </svg>
-                    Фільтр салону
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+        <h2 class="parts-title">У нас є всі запчастини:</h2>
+        <div class="parts-carousel">
+          <div class="carousel-parts">
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/dvigatel.png"
+                alt="dvigatel"
+              />
+              <h4 class="card-text">Двигун і система вихлопу</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/korobka.png"
+                alt="korobka"
+              />
+              <h4 class="card-text">Коробка передач</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/kuzov.png"
+                alt="kuzov"
+              />
+              <h4 class="card-text">Кузовні деталі</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/tormozniye.png"
+                alt="tormiznie"
+              />
+              <h4 class="card-text">Гальмівна система</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/podweska.png"
+                alt="podveska"
+              />
+              <h4 class="card-text">Підвіска та рульове</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/elektrika.png"
+                alt="elektrika"
+              />
+              <h4 class="card-text">Електрика та освітлення</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/ohlajdeniye.png"
+                alt="ohlagdenie"
+              />
+              <h4 class="card-text">Охолодження та опалення</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/masla.png"
+                alt="zidkosti"
+              />
+              <h4 class="card-text">Автомобільні рідини та олії</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/to.png"
+                alt="to"
+              />
+              <h4 class="card-text">Фільтри</h4>
+            </div>
+
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/dvigatel.png"
+                alt="dvigatel"
+              />
+              <h4 class="card-text">Двигун і система вихлопу</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/korobka.png"
+                alt="korobka"
+              />
+              <h4 class="card-text">Коробка передач</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/kuzov.png"
+                alt="kuzov"
+              />
+              <h4 class="card-text">Кузовні деталі</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/tormozniye.png"
+                alt="tormiznie"
+              />
+              <h4 class="card-text">Гальмівна система</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/podweska.png"
+                alt="podveska"
+              />
+              <h4 class="card-text">Підвіска та рульове</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/elektrika.png"
+                alt="elektrika"
+              />
+              <h4 class="card-text">Електрика та освітлення</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/ohlajdeniye.png"
+                alt="ohlagdenie"
+              />
+              <h4 class="card-text">Охолодження та опалення</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/masla.png"
+                alt="zidkosti"
+              />
+              <h4 class="card-text">Автомобільні рідини та олії</h4>
+            </div>
+            <div class="card-parts">
+              <img
+                class="card-image"
+                src="./src/img/new-parts/to.png"
+                alt="to"
+              />
+              <h4 class="card-text">Фільтри</h4>
+            </div>
+          </div>
         </div>
       </section>
       <section id="main" class="main-section">

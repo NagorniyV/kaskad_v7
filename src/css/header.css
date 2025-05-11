@@ -235,7 +235,7 @@ header{
     .logo {
         font-size: 14px;
         margin: 0;
-        color: darkred;
+        color: orangered;
         font-weight: bold;
         white-space: nowrap;
     }
@@ -262,7 +262,7 @@ header{
 
     /* Цвета иконок */
     .icon-circle:first-child {
-        background-color: #f0f0f0;
+        background-color: orange;
     }
 
     .tg-icon {

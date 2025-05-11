@@ -77,7 +77,7 @@ background: black;
 }
 
 @media (max-width: 768px) {
-    .steps-container {
+    /* .steps-container {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
@@ -85,6 +85,15 @@ background: black;
 
     .step {
         flex: 0 0 80%;
-        /* Ширина шага */
+
+    } */
+
+    .steps-container{
+        display: flex;
+        flex-direction: column;
     }
+
+    .step-arrow {
+  transform: rotate(90deg);
+}
 }
