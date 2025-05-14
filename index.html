@@ -4,22 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>potapenko</title>
+    <title>AUTOLINE</title>
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/js/header.js" />
     <link rel="stylesheet" href="./src/js/main.js" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./src/js/language.js" />
   </head>
   <header id="to-home">
     <div class="bott-header">
       <a class="logo" href="./index.html">-AUTOLINE-</a>
       <div class="callback-form">
-        <h3 class="text-header">Замовити дзвінок</h3>
+        <h3 class="text-header" data-translate="tr-callback-txtcb">
+          Замовити дзвінок
+        </h3>
         <form id="callbackForm">
           <input
             type="tel"
@@ -27,7 +24,13 @@
             placeholder="+380 XX XXX XX XX"
             required
           />
-          <button class="text-header" type="submit">Залишити номер</button>
+          <button
+            class="text-header"
+            type="submit"
+            data-translate="tr-callback-btn"
+          >
+            Залишити номер
+          </button>
         </form>
         <div
           id="responseMessage"
@@ -36,7 +39,9 @@
       </div>
       <div class="contacts-div">
         <div class="main-namber">
-          <p class="text-header">Зв'язок з нами:</p>
+          <p class="text-header" data-translate="tr-callback-txt">
+            Зв'язок з нами:
+          </p>
           <address class="contacts">
             <a href="tel:+380992273615" class="text-header"
               >+38 (073) 227-36-15</a
@@ -56,7 +61,7 @@
                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.25 1.58-1.32 5.41-1.87 7.19-.14.47-.41.63-.68.63-.47 0-.74-.27-1.14-.52-.63-.44-1-.73-1.62-1.17-.56-.4-.2-.62.13-.99.09-.09 1.71-1.57 1.79-1.71.03-.06.05-.14-.03-.21-.08-.08-.21-.05-.29-.03-.12.05-2.02 1.34-2.71 1.79-.33.19-.64.28-.93.28-.31 0-.45-.14-.45-.5v-1.88c0-.37.14-.56.51-.56.18 0 .36.06.72.18.72.24 1.5.47 2.28.47.56 0 .78-.11.78-.41 0-.12-.01-.52-.15-1.48-.08-.56-.17-.78-.37-.84-.18-.06-.38-.1-.99-.1h-.84c-.31 0-.45-.14-.45-.45 0-.14.03-.31.06-.45.08-.25.22-.31.72-.31h4.23c.57 0 .79.11.79.5 0 .16-.02.69-.15 1.94z"
               />
             </svg>
-            Ми у Telegram
+            <span data-translate="tr-social-telegram">Ми у Telegram</span>
           </a>
           <a href="viber://chat?number=%2B380992273615" class="viber-button">
             <svg
@@ -83,7 +88,7 @@
                 fill="white"
               />
             </svg>
-            Ми у Viber
+            <span data-translate="tr-social-viber">Ми у Viber</span>
           </a>
         </div>
       </div>
@@ -93,20 +98,34 @@
         <nav class="navigation">
           <ul class="chek-list">
             <li class="chek-item">
-              <a href="#work-section">Як ми працюємо</a>
+              <a href="#order" data-translate="tr-header-nav1">Як замовити</a>
             </li>
             <li class="chek-item">
-              <a href="#brend">Марки автомобілів</a>
+              <a href="#main" data-translate="tr-header-nav2">Про магазин</a>
             </li>
             <li class="chek-item">
-              <a href="#parts">Запчастини</a>
+              <a href="#partner" data-translate="tr-header-nav3"
+                >Наші партнери</a
+              >
             </li>
-            <li class="chek-item"><a href="#main">Про магазин</a></li>
-
-            <li class="chek-item"><a href="">Доставка і оплата</a></li>
-            <li class="chek-item"><a href="">Гарантія і повернення</a></li>
           </ul>
-          <button class="lang-btn">ua/ru</button>
+          <div class="language-switcher">
+            <div class="current-language" id="currentLanguage">
+              <span class="lang-flag">🇷🇺</span>
+              <span class="lang-code">RU</span>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="language-options" id="languageOptions">
+              <div class="language-option" data-lang="ru">
+                <span class="lang-flag">🇷🇺</span>
+                <span class="lang-name">Русский</span>
+              </div>
+              <div class="language-option" data-lang="uk">
+                <span class="lang-flag">🇺🇦</span>
+                <span class="lang-name">Українська</span>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -191,7 +210,9 @@
     <!-- Мобильное меню (скрыто по умолчанию) -->
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-namber">
-        <p>Зв'язок з нами:</p>
+        <p class="text-header" data-translate="tr-callback-txt">
+          Зв'язок з нами:
+        </p>
         <address class="contacts">
           <a href="tel:+380992273615" class="contact-number"
             >+38 (099) 227-36-15</a
@@ -200,12 +221,15 @@
       </div>
       <nav class="navigation">
         <ul class="chek-list">
-          <li class="chek-item"><a href="#work">Як ми працюємо</a></li>
-          <li class="chek-item"><a href="#parts">Запчастини</a></li>
-          <li class="chek-item"><a href="#main">Про магазин</a></li>
-          <li class="chek-item"><a href="#brend">Марки автомобілів</a></li>
-          <li class="chek-item"><a href="#partner">Наші партнери</a></li>
-          <li><button class="lang-btn">ua/ru</button></li>
+          <li class="chek-item">
+            <a href="#order" data-translate="tr-header-nav1">Як замовити</a>
+          </li>
+          <li class="chek-item">
+            <a href="#main" data-translate="tr-header-nav2">Про магазин</a>
+          </li>
+          <li class="chek-item">
+            <a href="#partner" data-translate="tr-header-nav3">Наші партнери</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -214,9 +238,16 @@
     <main>
       <section class="hero">
         <div class="main-content">
-          <h1 class="hero-title">Підбір запчастин по VIN за 5 хвилин!</h1>
-          <p class="hero-cont">Ваш автомобіль - наші клопоти</p>
+          <h1 class="hero-title" data-translate="tr-hero-title">
+            Підбір запчастин по VIN за 5 хвилин!
+          </h1>
+          <p class="hero-cont" data-translate="tr-hero-slog">
+            Ваш автомобіль - наші клопоти
+          </p>
           <div class="callback-form">
+            <h3 class="text-header" data-translate="tr-callback-txtcb">
+              Замовити дзвінок
+            </h3>
             <form id="callbackForm">
               <input
                 type="tel"
@@ -224,7 +255,13 @@
                 placeholder="+380 XX XXX XX XX"
                 required
               />
-              <button class="text-header" type="submit">Залишити номер</button>
+              <button
+                class="text-header"
+                type="submit"
+                data-translate="tr-callback-btn"
+              >
+                Залишити номер
+              </button>
             </form>
             <div
               id="responseMessage"
@@ -233,15 +270,19 @@
           </div>
         </div>
       </section>
-      <section class="order-steps">
-        <h2 class="order-steps__title">Зроби замовлення в 4 кроки:</h2>
+      <section id="order" class="order-steps">
+        <h2 class="order-steps__title" data-translate="tr-order-title">
+          Зроби замовлення в 4 кроки:
+        </h2>
 
         <div class="steps-container">
           <!-- Шаг 1 -->
           <div class="step">
             <div class="step__number">1</div>
-            <h3 class="step__title">Напишіть нам</h3>
-            <p class="step__desc">
+            <h3 class="step__title" data-translate="tr-order-step1">
+              Напишіть нам
+            </h3>
+            <p class="step__desc" data-translate="tr-order-txt1">
               розкажіть, яка запчастина потрібна (Фільтра і мастила на KIA
               Picanto 2012)
             </p>
@@ -260,8 +301,10 @@
           <!-- Шаг 2 -->
           <div class="step">
             <div class="step__number">2</div>
-            <h3 class="step__title">Надайте данні</h3>
-            <p class="step__desc">
+            <h3 class="step__title" data-translate="tr-order-step2">
+              Надайте данні
+            </h3>
+            <p class="step__desc" data-translate="tr-order-txt2">
               VIN-код автомобіля або марка, модель, рік автомобіля
             </p>
           </div>
@@ -279,8 +322,10 @@
           <!-- Шаг 3 -->
           <div class="step">
             <div class="step__number">3</div>
-            <h3 class="step__title">Ми підбираєм запчастини для вас:</h3>
-            <p class="step__desc">
+            <h3 class="step__title" data-translate="tr-order-step3">
+              Ми підбираєм запчастини для вас:
+            </h3>
+            <p class="step__desc" data-translate="tr-order-txt3">
               надамо всі можливі варіанти від бюджетного до найкращого
             </p>
           </div>
@@ -298,10 +343,10 @@
           <!-- Шаг 4 -->
           <div class="step">
             <div class="step__number">4</div>
-            <h3 class="step__title">
+            <h3 class="step__title" data-translate="tr-order-step4">
               Робіть замовлення і ми відправляємо запчастину:
             </h3>
-            <p class="step__desc">
+            <p class="step__desc" data-translate="tr-order-txt4">
               самовивіз або доставка кур'єром по Харкову, чи відправка новою
               поштою по Україні
             </p>
@@ -310,14 +355,16 @@
 
         <!-- Дополнительная ячейка (без стрелок) -->
         <div class="step-final">
-          <p>
+          <p class="step__desc" data-translate="tr-order-txt">
             Бонус для міста Харків: Підберем перевірене СТО на вашому районі,
             для встановлення придбаного обладнання
           </p>
         </div>
       </section>
       <section id="parts" class="parts-section">
-        <h2 class="parts-title">У нас є всі запчастини:</h2>
+        <h2 class="parts-title" data-translate="tr-parts-title">
+          У нас є всі типи запчастин:
+        </h2>
         <div class="parts-carousel">
           <div class="carousel-parts">
             <div class="card-parts">
@@ -326,7 +373,9 @@
                 src="./src/img/new-parts/dvigatel.png"
                 alt="dvigatel"
               />
-              <h4 class="card-text">Двигун і система вихлопу</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts1">
+                Двигун і система вихлопу
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -334,7 +383,9 @@
                 src="./src/img/new-parts/korobka.png"
                 alt="korobka"
               />
-              <h4 class="card-text">Коробка передач</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts2">
+                Коробка передач
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -342,7 +393,9 @@
                 src="./src/img/new-parts/kuzov.png"
                 alt="kuzov"
               />
-              <h4 class="card-text">Кузовні деталі</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts3">
+                Кузовні деталі
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -350,7 +403,9 @@
                 src="./src/img/new-parts/tormozniye.png"
                 alt="tormiznie"
               />
-              <h4 class="card-text">Гальмівна система</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts4">
+                Гальмівна система
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -358,7 +413,9 @@
                 src="./src/img/new-parts/podweska.png"
                 alt="podveska"
               />
-              <h4 class="card-text">Підвіска та рульове</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts5">
+                Підвіска та рульове
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -366,7 +423,9 @@
                 src="./src/img/new-parts/elektrika.png"
                 alt="elektrika"
               />
-              <h4 class="card-text">Електрика та освітлення</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts6">
+                Електрика та освітлення
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -374,7 +433,9 @@
                 src="./src/img/new-parts/ohlajdeniye.png"
                 alt="ohlagdenie"
               />
-              <h4 class="card-text">Охолодження та опалення</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts7">
+                Охолодження та опалення
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -382,7 +443,9 @@
                 src="./src/img/new-parts/masla.png"
                 alt="zidkosti"
               />
-              <h4 class="card-text">Автомобільні рідини та олії</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts8">
+                Автомобільні рідини та олії
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -390,7 +453,9 @@
                 src="./src/img/new-parts/to.png"
                 alt="to"
               />
-              <h4 class="card-text">Фільтри</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts9">
+                Фільтри
+              </h4>
             </div>
 
             <div class="card-parts">
@@ -399,7 +464,9 @@
                 src="./src/img/new-parts/dvigatel.png"
                 alt="dvigatel"
               />
-              <h4 class="card-text">Двигун і система вихлопу</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts1">
+                Двигун і система вихлопу
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -407,7 +474,9 @@
                 src="./src/img/new-parts/korobka.png"
                 alt="korobka"
               />
-              <h4 class="card-text">Коробка передач</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts2">
+                Коробка передач
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -415,7 +484,9 @@
                 src="./src/img/new-parts/kuzov.png"
                 alt="kuzov"
               />
-              <h4 class="card-text">Кузовні деталі</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts3">
+                Кузовні деталі
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -423,7 +494,9 @@
                 src="./src/img/new-parts/tormozniye.png"
                 alt="tormiznie"
               />
-              <h4 class="card-text">Гальмівна система</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts4">
+                Гальмівна система
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -431,7 +504,9 @@
                 src="./src/img/new-parts/podweska.png"
                 alt="podveska"
               />
-              <h4 class="card-text">Підвіска та рульове</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts5">
+                Підвіска та рульове
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -439,7 +514,9 @@
                 src="./src/img/new-parts/elektrika.png"
                 alt="elektrika"
               />
-              <h4 class="card-text">Електрика та освітлення</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts6">
+                Електрика та освітлення
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -447,7 +524,9 @@
                 src="./src/img/new-parts/ohlajdeniye.png"
                 alt="ohlagdenie"
               />
-              <h4 class="card-text">Охолодження та опалення</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts7">
+                Охолодження та опалення
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -455,7 +534,9 @@
                 src="./src/img/new-parts/masla.png"
                 alt="zidkosti"
               />
-              <h4 class="card-text">Автомобільні рідини та олії</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts8">
+                Автомобільні рідини та олії
+              </h4>
             </div>
             <div class="card-parts">
               <img
@@ -463,7 +544,9 @@
                 src="./src/img/new-parts/to.png"
                 alt="to"
               />
-              <h4 class="card-text">Фільтри</h4>
+              <h4 class="card-text" data-translate="tr-parts-parts9">
+                Фільтри
+              </h4>
             </div>
           </div>
         </div>
@@ -477,40 +560,48 @@
           />
         </div>
         <div class="main-content">
-          <h2 class="main-h2">Наші переваги:</h2>
+          <h2 class="main-h2" data-translate="tr-main-title">Наші переваги:</h2>
           <ul>
             <li>
-              <h4 class="main-title-content">Індивідуальний підхід:</h4>
-              <p class="main-text-content">
+              <h4 class="main-title-content" data-translate="tr-main-title1">
+                Індивідуальний підхід:
+              </h4>
+              <p class="main-text-content" data-translate="tr-main-txt1">
                 Кожному клієнту – увага та допомога. Підберемо, проконсультуємо,
                 допоможемо із встановленням.
               </p>
             </li>
             <li>
-              <h4 class="main-title-content">Супровід на всіх етапах:</h4>
-              <p class="main-text-content">
+              <h4 class="main-title-content" data-translate="tr-main-title2">
+                Супровід на всіх етапах:
+              </h4>
+              <p class="main-text-content" data-translate="tr-main-txt2">
                 Ми не зникаємо після продажу. Залишаємось на зв'язку до повного
                 вирішення вашого завдання.
               </p>
             </li>
             <li>
-              <h4 class="main-title-content">Тільки перевірені запчастини:</h4>
-              <p class="main-text-content">
+              <h4 class="main-title-content" data-translate="tr-main-title3">
+                Тільки перевірені запчастини:
+              </h4>
+              <p class="main-text-content" data-translate="tr-main-txt3">
                 Оригінал або якісний аналог завжди перевіряємо надійність
                 постачальника.
               </p>
             </li>
             <li>
-              <h4 class="main-title-content">
+              <h4 class="main-title-content" data-translate="tr-main-title4">
                 10 років досвіду в ремонті авто:
               </h4>
-              <p class="main-text-content">
+              <p class="main-text-content" data-translate="tr-main-txt4">
                 Знаємо, як працює деталь у реальності, а не лише за каталогом.
               </p>
             </li>
             <li>
-              <h4 class="main-title-content">Чесність та прозорість:</h4>
-              <p class="main-text-content">
+              <h4 class="main-title-content" data-translate="tr-main-title5">
+                Чесність та прозорість:
+              </h4>
+              <p class="main-text-content" data-translate="tr-main-txt5">
                 Рекомендуємо те, що справді потрібно. Допомагаємо заощадити —
                 без втрати якості.
               </p>
@@ -519,8 +610,8 @@
         </div>
       </section>
       <section id="brend" class="brend-section">
-        <h2 class="brend-title">
-          Маєм запчастини до будь-яких корейських та японських марок:
+        <h2 class="brend-title" data-translate="tr-brend-title">
+          В наявності запчастини до будь-яких корейських та японських марок:
         </h2>
         <div class="infinite-carousel">
           <div class="carousel-track">
@@ -540,16 +631,18 @@
         </div>
       </section>
       <section id="partner" class="partner-section">
-        <h2 class="partner-title">Наші партнери у Харкові</h2>
+        <h2 class="partner-title" data-translate="tr-partner-title">
+          Наші партнери у Харкові
+        </h2>
         <div class="entry-partner">
           <div class="partner-content">
-            <p class="partners-description">
+            <p class="partners-description" data-translate="tr-partner-txt1">
               Запчастини, придбані у нас, ви можете встановити у наших
               перевірених партнерів по всьому Харкову. <br />
               Ми співпрацюємо тільки з перевіреними автосервісами, щоб
               гарантувати якісний монтаж та обслуговування.
             </p>
-            <p class="partners-description">
+            <p class="partners-description" data-translate="tr-partner-txt2">
               Просто скажіть в якому ви районі - ми порадимо найблищого
               партнера!
             </p>
@@ -566,6 +659,7 @@
       </section>
       <script type="module" src="./src/js/main.js"></script>
       <script type="module" src="./src/js/header.js"></script>
+      <script type="module" src="./src/js/language.js"></script>
     </main>
   </body>
   <footer>
@@ -574,14 +668,16 @@
         <div class="right-footer">
           <div class="contacts-div-footer">
             <div class="main-namber-footer">
-              <p class="footer-slogon">Зв'язок з нами:</p>
+              <p class="footer-slogon" data-translate="tr-footer-call">
+                Зв'язок з нами:
+              </p>
               <address class="contacts">
                 <a href="tel:+380992273615" class="footer-slogon"
                   >+38 (099) 227-36-15</a
                 >
               </address>
             </div>
-            <div class="social-footer">
+            <div class="social">
               <a
                 href="https://t.me/EEduarDDD"
                 target="_blank"
@@ -598,7 +694,7 @@
                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.25 1.58-1.32 5.41-1.87 7.19-.14.47-.41.63-.68.63-.47 0-.74-.27-1.14-.52-.63-.44-1-.73-1.62-1.17-.56-.4-.2-.62.13-.99.09-.09 1.71-1.57 1.79-1.71.03-.06.05-.14-.03-.21-.08-.08-.21-.05-.29-.03-.12.05-2.02 1.34-2.71 1.79-.33.19-.64.28-.93.28-.31 0-.45-.14-.45-.5v-1.88c0-.37.14-.56.51-.56.18 0 .36.06.72.18.72.24 1.5.47 2.28.47.56 0 .78-.11.78-.41 0-.12-.01-.52-.15-1.48-.08-.56-.17-.78-.37-.84-.18-.06-.38-.1-.99-.1h-.84c-.31 0-.45-.14-.45-.45 0-.14.03-.31.06-.45.08-.25.22-.31.72-.31h4.23c.57 0 .79.11.79.5 0 .16-.02.69-.15 1.94z"
                   />
                 </svg>
-                Ми у Telegram
+                <span data-translate="tr-social-telegram">Ми у Telegram</span>
               </a>
               <a
                 href="viber://chat?number=%2B380992273615"
@@ -628,7 +724,7 @@
                     fill="white"
                   />
                 </svg>
-                Ми у Viber
+                <span data-translate="tr-social-viber">Ми у Viber</span>
               </a>
             </div>
             <a href="#" class="to-home" id="back-to-top">
@@ -647,20 +743,26 @@
                   <path d="M18 15l-6-6-6 6" />
                 </svg>
               </span>
-              <span class="text">Піднятися в гору</span>
+              <span class="text" data-translate="tr-footer-up"
+                >Піднятися в гору</span
+              >
             </a>
           </div>
         </div>
         <div class="middle-footer">
           <a class="logo-footer" href="./index.html">-AUTOLINE-</a>
-          <h2 class="footer-title">
+          <h2 class="footer-title" data-translate="tr-footer-title">
             Підбір запчастин по VIN <br />
             за 5 хвилин!
           </h2>
-          <p class="footer-slogon">Ваш автомобіль - наші клопоти.</p>
+          <p class="footer-slogon" data-translate="tr-footer-slog">
+            Ваш автомобіль - наші клопоти.
+          </p>
         </div>
         <div class="left-footer">
-          <h3 class="title-card">Як нас знайти</h3>
+          <h3 class="title-card" data-translate="tr-footer-map">
+            Як нас знайти
+          </h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.3847620552697!2d36.272624316204734!3d49.929121289392064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270da4b6664cb3%3A0x5cf2a23cef1978!2z0KHQotCeINCT0JHQng!5e0!3m2!1sru!2sua!4v1746106382093!5m2!1sru!2sua"
             width="300"

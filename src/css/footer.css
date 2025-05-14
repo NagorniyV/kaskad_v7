@@ -36,7 +36,7 @@
     display: block;
 }
 
-.social-footer{
+footer .social{
     display: flex;
     flex-direction: column;
     max-width: 200px;
@@ -153,6 +153,7 @@ footer {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-size: 22px;
+    max-width: 280px;
 }
 
 .footer-slogon{

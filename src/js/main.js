@@ -8,7 +8,8 @@ document.getElementById('callbackForm').addEventListener('submit', function(e) {
     
     // Здесь нужно заменить YOUR_BOT_TOKEN и YOUR_CHAT_ID на реальные значения
     const botToken = '7679464526:AAFDTqmh8t8kW-IGP6R19fHOevH7g4-t7Yc';
-    const chatId = '398501551';
+  const chatId = '398501551';
+  // тут нужно подставить в чат айди массив с двух id пользователей
     
     const message = `Новий запит на дзвінок!\nНомер телефону: ${phoneNumber}`;
     
