@@ -5,6 +5,7 @@
     grid-template-columns: 1fr 1fr;
     min-height: 300px;
     gap: 12px;
+    border: 1px solid #4c4e61;
 }
 
 .main-image{

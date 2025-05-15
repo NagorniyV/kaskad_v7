@@ -3,6 +3,7 @@
     background: black;
     overflow: hidden;
     position: relative;
+    border: 1px solid #4c4e61;
 }
 
 .parts-title {

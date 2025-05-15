@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function applyTranslations(lang) {
     const translations = {
       ru: {
-        "tr-hero-title": "Подбор запчастей по VIN за 5 минут!",
-        "tr-hero-slog": "Ваш автомобиль - наши хлопоты",
+        "tr-hero-title": "Подбор запчастей по VIN за 5 минут",
+        "tr-hero-slog": "Ваш автомобиль - наши заботы!",
         "tr-order-title": "Сделай заказ в 4 шага:",
         "tr-order-step1": "Напиши нам",
         "tr-order-txt1": "расскажите, какая запчасть нужна (Фильтра и масла на KIA Picanto 2012)",
@@ -156,5 +156,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-//  data-translate=""
