@@ -45,16 +45,3 @@
   font-size: 24px;
   margin-top: 16px;
 }
-
-.callback-form-hero{
-  display: none;
-}
-
-    /* Адаптация под разные экраны */
-    @media (max-width: 768px) {
-      .callback-form {
-          display: flex;
-          margin-top: 74px;
-          flex-direction: column;
-        }
-    }

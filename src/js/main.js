@@ -73,3 +73,7 @@ document.getElementById('back-to-top').addEventListener('click', function(e) {
     behavior: 'smooth' // Плавная прокрутка
   });
 });
+
+
+// callback mobile version
+

@@ -45,3 +45,22 @@ color: orange;
         flex-direction: column;
     }
 }
+
+/* Исправление для мобильной версии */
+@media (max-width: 480px) {
+    .main-section {
+        position: relative;
+        /* Создаем новый контекст стекинга */
+        z-index: 1;
+        /* Значение меньше, чем у callback-формы (1000) */
+    }
+
+    .callback-overlay {
+        z-index: 1000;
+        /* Убедимся, что форма поверх всего */
+    }
+
+    .callback-modal {
+        z-index: 1001;
+        /* Модальное окно должно быть выше оверлея */
+    } }

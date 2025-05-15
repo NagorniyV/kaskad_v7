@@ -124,8 +124,6 @@ header{
 
 .social{
     display: block;
-
-
 }
 
 .viber-button {
@@ -206,13 +204,6 @@ header{
 
 .mobile-menu{
     display: none;
-}
-
-/* Адаптивность для мобильных */
-@media (min-width: 480px) {
-    .hero .callback-form{
-        display: none;
-    }
 }
 
 /* Мобильная версия */
@@ -308,12 +299,10 @@ header{
     /* Скрываем десктопные элементы */
     .bott-header,
     .midd-header,
-    .callback-form,
     .contacts-div {
         display: none;
     }
 }
-
 .mobile-namber{
     font-size: 20px;
     margin: 4px 0 8px 4px;

@@ -92,7 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "tr-callback-btn": "Оставить номер",
         "tr-callback-txtcb": "Заказать звонок",
         "tr-social-viber": "Мы в Viber",
-        "tr-social-telegram": "Мы в Telegram"         
+        "tr-social-telegram": "Мы в Telegram",
+        "tr-callback-txtmobile": "Позвольте нам решить Ваши проблеммы! Просто оставьте Ваш номер и мы поможем с подбором запчастей!"         
       },
       uk: {
         "tr-hero-title": "Підбір запчастин по VIN за 5 хвилин!",
@@ -130,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "tr-main-txt5": "Рекомендуємо те, що справді потрібно. Допомагаємо заощадити — без втрати якості.",
         "tr-brend-title": "В наявності запчастини до будь-яких корейських та японських марок:",
         "tr-partner-title": "Наші партнери у Харкові",
-        "tr-partner-txt1": "Запчастини, придбані у нас, ви можете встановити у наших перевірених партнерів по всьому Харкову. <br /> Ми співпрацюємо тільки з перевіреними автосервісами, щоб гарантувати якісний монтаж та обслуговування.",
+        "tr-partner-txt1": "Запчастини, придбані у нас, ви можете встановити у наших перевірених партнерів по всьому Харкову. Ми співпрацюємо тільки з перевіреними автосервісами, щоб гарантувати якісний монтаж та обслуговування.",
         "tr-partner-txt2": "Просто скажіть в якому ви районі - ми порадимо найблищого партнера!",
         "tr-footer-call" : "Зв'язок з нами:",
         "tr-footer-up" : "Піднятися в гору",
@@ -144,7 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "tr-callback-btn": "Залишити номер",
         "tr-callback-txtcb": "Замовити дзвінок",
         "tr-social-viber": "Ми у Viber",
-        "tr-social-telegram": "Ми у Telegram"
+        "tr-social-telegram": "Ми у Telegram",
+        "tr-callback-txtmobile": "Дозвольте нам вирішити Ваші проблеми! Просто надайте Ваш номер і ми допоможемо з підбором запчастин!"
       }
     };
     
