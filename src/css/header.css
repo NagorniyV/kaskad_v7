@@ -5,26 +5,19 @@ header{
     background-color: black;
 }
 
-.top-header{
+.desktop-header{
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
+    position: fixed;
+    top: 8px;
+    z-index: 5;
+    width: 100%;
 }
 
-.midd-header{
-    background: black;
-    max-width: 1260px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4px;
-}
-
-.entry-midd-header{
-    max-width: 1260px;
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 479px) {
+    .desktop-header{
+        display: none;
+    }
 }
 
 .text-header{
@@ -78,18 +71,6 @@ header{
 
 .lang-btn{
     background-color: white;
-}
-
-.bott-header{
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    max-width: 1260px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 4px;
-    align-items: center;
-    background-color: black;
 }
 
 .logo {
