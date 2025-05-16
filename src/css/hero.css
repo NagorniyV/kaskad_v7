@@ -3,7 +3,7 @@
   background-image: url(../img/hero-bg.jpeg);
   background-size: cover;
   background-position: center;
-  min-height: 600px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

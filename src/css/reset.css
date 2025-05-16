@@ -33,7 +33,7 @@ img {
     height: auto;
 }
 .container{
-    max-width: 1260px;
+    /* max-width: 1260px; */
 }
 
 html {
