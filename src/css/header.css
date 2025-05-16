@@ -8,15 +8,12 @@ header{
 .top-header{
     display: flex;
     justify-content: space-between;
-    /* max-width: 1160px; */
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    /* padding: 2px 14px; */
 }
 
 .midd-header{
-    /* padding: 2px 28px; */
     background: black;
     max-width: 1260px;
     margin-left: auto;
@@ -75,7 +72,7 @@ header{
 }
 
 .navigation{
-    display: flex;
+    display: none;
     justify-content: space-between;
 }
 
@@ -99,7 +96,6 @@ header{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
-    /* margin-right: 160px; */
     color: orangered;
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -110,32 +106,18 @@ header{
     color: black;
 }
 
-.social-link .team-icon {
-    fill: #f4f4fd;
-    position: absolute;
-}
-
-.contacts-div{
-    display: flex;
-    gap: 80px;
-    /* max-width: 550px; */
-        align-items: center;
-}
-
 .social{
-    display: block;
+    display: flex;
+    gap: 4px;
 }
 
 .viber-button {
-    display: inline-block;
+    display: flex;
     background: #7360F2;
-    /* Фиолетовый цвет Viber */
     color: white;
     padding: 4px 24px;
     border-radius: 50px;
     text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
     font-size: 16px;
     transition: all 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -147,15 +129,33 @@ header{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+
+.number-button {
+    display: flex;
+    background: #4CAF50;
+    color: white;
+    padding: 4px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4px;
+}
+
+.number-button:hover {
+    background: #3d8a40;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .tg-button {
-    display: inline-block;
+    display: flex;
     background: #0088CC;
     color: white;
     padding: 4px 24px;
     border-radius: 50px;
     text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
     font-size: 16px;
     transition: all 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -164,36 +164,6 @@ header{
     
 .tg-button:hover {
     background: #0078B4;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.callback-form h3 {
-    margin-top: 0;
-}
-
-#phoneInput {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.callback-form button {
-    background: orange;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-size: 16px;
-}
-
-.callback-form button:hover {
-    background: orangered;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -307,3 +277,4 @@ header{
     font-size: 20px;
     margin: 4px 0 8px 4px;
 }
+

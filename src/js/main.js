@@ -43,6 +43,26 @@ document.getElementById('callbackForm').addEventListener('submit', function(e) {
       });
 });
 
+// callback modal window
+
+  // Показываем модальное окно через 7 секунд
+  setTimeout(function() {
+    document.getElementById('callbackModal').style.display = 'flex';
+    
+    // Закрытие по клику вне формы
+    document.getElementById('callbackModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
+    
+    // Закрытие по кнопке
+    document.getElementById('closeModal').addEventListener('click', function() {
+      document.getElementById('callbackModal').style.display = 'none';
+    });
+    
+  }, 7000);
+
 //BREND SECTION
 
 // JavaScript для бесконечного эффекта
