@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "tr-callback-txtcb": "Заказать звонок",
         "tr-social-viber": "Мы в Viber",
         "tr-social-telegram": "Мы в Telegram",
-        "tr-callback-txtmobile": "Позвольте нам решить Ваши проблеммы! Просто оставьте Ваш номер и мы поможем с подбором запчастей!"         
+        "tr-callback-txtmobile": "Оставьте Ваш номер и мы поможем с подбором запчастей!"         
       },
       uk: {
         "tr-hero-title": "Підбір запчастин по VIN за 5 хвилин!",
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "tr-callback-txtcb": "Замовити дзвінок",
         "tr-social-viber": "Ми у Viber",
         "tr-social-telegram": "Ми у Telegram",
-        "tr-callback-txtmobile": "Дозвольте нам вирішити Ваші проблеми! Просто надайте Ваш номер і ми допоможемо з підбором запчастин!"
+        "tr-callback-txtmobile": "Залиште Ваш номер і ми допоможемо з підбором запчастин!"
       }
     };
     
