@@ -27,17 +27,18 @@
   position: relative;
   color: white;
   padding: 20px;
-  max-width: 800px;
+  max-width: 900px;
   z-index: 2;
   /* Текст поверх затемнения */
 }
 
 .hero-title {
-  font-family: "PT Sans Narrow", sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
   color: orange;
-  font-size: 42px;
+  font-size: 48px;
 }
 
 .hero-cont {
@@ -48,7 +49,6 @@
 
 /* callback btn */
 
-/* Стили для модального окна */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -127,5 +127,9 @@
   .callback-form {
     width: 85%;
     padding: 20px;
+  }
+
+  .hero-title{
+    font-size: 42px;
   }
 }

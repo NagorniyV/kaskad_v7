@@ -1,159 +1,228 @@
-header{
-    border-radius: 8px;
-    margin-bottom: 4px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    background-color: black;
-}
-
-.desktop-header{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 8px;
-    z-index: 5;
+ /* Стили для десктопного меню */
+ header{
     width: 100%;
-}
-
-@media (max-width: 479px) {
-    .desktop-header{
-        display: none;
-    }
-}
-
-.chek-item {
-    padding: 2px 14px;
-    border: 1px solid #4c4e61;
-    border-radius: 4px;
-    background-color: orange;
-    color: black;
-}
-
-.header-container {
-    display: flex;
-}
-
-.chek-list {
-    display: flex;
-    gap: 5px;
-}
-
-.chek-container {
     margin-left: auto;
     margin-right: auto;
-}
+ }
 
-.chek-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s;
-    z-index: 1;
-    background-color: orangered;    
-        }
-    
-.logo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    z-index: 1;
-}
+ header {
+     position: absolute;
+     z-index: 100000;
+     padding-top: 2px;
+     display: flex;
+ }
 
-.navigation{
-    display: none;
-    justify-content: space-between;
-}
+ section:first-child {
+    position: relative;
+    } 
+ 
+ .desktop-menu {
+     position: relative;
+     display: inline-block;
+ }
 
-.lang-btn{
-    background-color: white;
-}
+ .desktop-header {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+ }
 
-.logo {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 10px;
-    color: orangered;
+ .desktop-menu-btn {
+     background: none;
+     border: none;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .navigation {
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 150px;
+     background-color: black;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     border-radius: 4px;
+     overflow: hidden;
+     max-height: 0;
+     opacity: 0;
+     transition: max-height 0.3s ease, opacity 0.3s ease;
+     z-index: 100;
+ }
+
+ .desktop-menu.active .navigation {
+     max-height: 500px;
+     opacity: 1;
+ }
+
+ .chek-item {
+     padding: 2px 14px;
+     border: 1px solid #4c4e61;
+     border-radius: 4px;
+     background-color: orange;
+     color: black;
+ }
+
+ .chek-item:nth-child(2),
+ .chek-item:nth-child(3) {
+     margin-top: 2px;
+ }
+
+ .viber-button {
+     display: flex;
+     background: #7360F2;
+     color: white;
+     padding: 4px 24px;
+     border-radius: 50px;
+     text-decoration: none;
+     font-size: 16px;
+     transition: all 0.3s;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     margin-bottom: 4px;
+ }
+
+ .viber-button:hover {
+     background: #6858DA;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ .number-button {
+     display: flex;
+     background: #4CAF50;
+     color: white;
+     padding: 4px 24px;
+     border-radius: 50px;
+     text-decoration: none;
+     font-size: 16px;
+     transition: all 0.3s;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     margin-bottom: 4px;
+ }
+
+ .number-button:hover {
+     background: #3d8a40;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ .tg-button {
+     display: flex;
+     background: #0088CC;
+     color: white;
+     padding: 4px 24px;
+     border-radius: 50px;
+     text-decoration: none;
+     font-size: 16px;
+     transition: all 0.3s;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     margin-bottom: 4px;
+ }
+
+ .tg-button:hover {
+     background: #0078B4;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ .social {
+     display: flex;
+     gap: 4px;
+     font-family: "Roboto", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+     font-variation-settings:
+       "wdth" 100;
+ }
+
+ .logo {
+     margin-top: auto;
+     margin-bottom: auto;
+     color: orangered;
+     font-family: Arial, sans-serif;
+     font-weight: bold;
+     font-size: 16px;
+ }
+
+ .mobile-header {
+     display: none;
+ }
+
+ .phone-icon {
+     color: black;
+ }
+
+ /* КНОПКА ПЕРЕВОДА САЙТА */
+
+.language-switcher {
+    position: relative;
+    display: flex;
     font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
+    justify-content: flex-end;
 }
 
-.phone-icon{
-    color: black;
-}
-
-.social{
+.language-btn {
+    background: #f8f8f8;
+    border-radius: 4px;
+    padding: 2px 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
     display: flex;
-    gap: 4px;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 2px;
 }
 
-.viber-button {
-    display: flex;
-    background: #7360F2;
-    color: white;
-    padding: 4px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.language-btn:hover {
+    background: #eee;
 }
 
-.viber-button:hover {
-    background: #6858DA;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-
-.number-button {
-    display: flex;
-    background: #4CAF50;
-    color: white;
-    padding: 4px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 4px;
-}
-
-.number-button:hover {
-    background: #3d8a40;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.tg-button {
-    display: flex;
-    background: #0088CC;
-    color: white;
-    padding: 4px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 4px;
-}
-    
-.tg-button:hover {
-    background: #0078B4;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.mobile-header{
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: -1;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
+    z-index: 1000;
+    min-width: 150px;
 }
 
-.mobile-menu{
-    display: none;
+.language-dropdown.show {
+    display: block;
 }
 
-/* Мобильная версия */
+.language-option {
+    display: flex;
+    padding: 2px 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.language-option:hover {
+    background: #f5f5f5;
+}
+
+.language-flag {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 @media (max-width: 479px) {
-    header {
-        padding: 8px 0;
-        position: relative;
+    header{
+        display: flex;
+    }
+
+    .desktop-header {
+        display: none;
     }
 
     .mobile-header {
@@ -161,21 +230,7 @@ header{
         justify-content: space-between;
         align-items: center;
         padding: 0 12px;
-    }
-
-    .mobile-menu-btn {
-        background: none;
-        border: none;
-        padding: 8px;
-        cursor: pointer;
-    }
-
-    .logo {
-        font-size: 14px;
-        margin: 0;
-        color: orangered;
-        font-weight: bold;
-        white-space: nowrap;
+        width: 100%;
     }
 
     .mobile-icons {
@@ -198,20 +253,18 @@ header{
         height: 20px;
     }
 
-    /* Цвета иконок */
     .icon-circle:first-child {
-        background-color: orange;
+        background-color: #4CAF50;
     }
 
     .tg-icon {
-        background-color: #0088cc;
+        background-color: #0088CC;
     }
 
     .viber-icon {
         background-color: #7360F2;
     }
 
-    /* Мобильное меню */
     .mobile-menu {
         display: none;
         position: absolute;
@@ -239,15 +292,17 @@ header{
         border-radius: 4px;
     }
 
-    /* Скрываем десктопные элементы */
-    .bott-header,
-    .midd-header,
-    .contacts-div {
-        display: none;
+    .language-option{
+        padding: 8px 12px;
+    }
+
+    .language-btn{
+        padding: 8px 12px;
+    }
+
+    .text-header{
+        width: 295px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-.mobile-namber{
-    font-size: 20px;
-    margin: 4px 0 8px 4px;
-}
-

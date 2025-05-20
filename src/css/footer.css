@@ -40,10 +40,13 @@ footer .social{
 .title-card{
     color: orange;
     margin-bottom: 4px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+     font-variation-settings:
+       "wdth" 100;
+    font-size: 16px; 
 }
 
 .logo-footer{
@@ -143,16 +146,20 @@ footer .social{
     color: orange;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     font-size: 22px;
-    max-width: 280px;
 }
 
 .footer-slogon{
     color: orange;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+     font-variation-settings:
+       "wdth" 100;
+    font-size: 16px; 
 }
 
 .middle-footer{

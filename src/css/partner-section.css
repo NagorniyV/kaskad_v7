@@ -13,13 +13,14 @@
 }
 
 .partner-title{
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-align: center;
     color: orange;
-    font-family: "Lora", serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-size: 34px;
-    font-weight: 200;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
 }
 
 .kharkiv-map{
@@ -27,11 +28,18 @@
 }
 
 .partners-description{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+     font-variation-settings:
+       "wdth" 100;
+    font-size: 18px; 
     margin-bottom: 42px;
+    padding: 8px 12px;
+    background-color: #F5F5F5;
+    border-radius: 18px;
+    color: black;
 }
 
 .partner-content{
@@ -43,12 +51,18 @@
     margin-top: 15px;
     padding: 12px 30px;
     background-color: orange;
-    color: white;
+    color: black;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
-
+    font-family: "Roboto", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+     font-variation-settings:
+       "wdth" 100;
+    font-size: 16px; 
 }
 
 .cta-button:hover {

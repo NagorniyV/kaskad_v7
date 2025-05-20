@@ -6,6 +6,12 @@ h5,
 h6,
 p {
     margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
 p:last-child {
@@ -43,69 +49,13 @@ html {
 
 /* цвет фона */
 
-header, body, footer{
+body, footer{
 background: black;
 }
 
 body{
+    margin-top: 0;
     margin-left: 0;
     margin-right: 0;
 }
 
-/* КНОПКА ПЕРЕВОДА САЙТА */
-
-.language-switcher {
-    position: relative;
-    display: inline-block;
-    width: 90px;
-    padding-top: 2px;
-    font-family: Arial, sans-serif;
-    z-index: 1000;
-}
-
-.current-language {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.lang-flag {
-    font-size: 8px;
-}
-
-.arrow {
-    margin-left: auto;
-    font-size: 8px;
-}
-
-.language-options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    border-radius: 4px;
-    margin-top: 2px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: none;
-    padding: 8px 8px;
-}
-
-.language-option {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.language-option:hover {
-    background: #f5f5f5;
-}
-
-.language-switcher.active .language-options {
-    display: block;
-}
-
-.language-switcher.active .arrow {
-    transform: rotate(180deg); }

@@ -95,3 +95,25 @@ document.getElementById('back-to-top').addEventListener('click', function(e) {
     behavior: 'smooth' // Плавная прокрутка
   });
 });
+
+//кнопка-бургер
+document.addEventListener('DOMContentLoaded', function() {
+  const desktopMenu = document.querySelector('.desktop-menu');
+  const desktopMenuBtn = document.querySelector('.desktop-menu-btn');
+  
+  // Исправляем опечатку в селекторе (было .desktop-menu)
+  const desktopMenuContainer = document.querySelector('.desktop-menu');
+  
+  // Обработчик клика по кнопке
+  desktopMenuBtn.addEventListener('click', function() {
+      desktopMenuContainer.classList.toggle('active');
+  });
+  
+  // Закрытие меню при клике вне его области
+  document.addEventListener('click', function(e) {
+      if (!desktopMenuContainer.contains(e.target)) {
+          desktopMenuContainer.classList.remove('active');
+      }
+  });
+});
+
