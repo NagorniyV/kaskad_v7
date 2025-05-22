@@ -203,33 +203,6 @@
             Ваш автомобіль - наші клопоти
           </p>
         </div>
-        <div class="modal-overlay" id="callbackModal">
-          <div class="callback-form">
-            <button class="close-btn" id="closeModal">&times;</button>
-            <h3 class="text-header" data-translate="tr-callback-txtmobile">
-              Залиште Ваш номер і ми допоможемо з підбором запчастин!
-            </h3>
-            <form id="callbackForm">
-              <input
-                type="tel"
-                id="phoneInput"
-                placeholder="+380 XX XXX XX XX"
-                required
-              />
-              <button
-                class="text-header"
-                type="submit"
-                data-translate="tr-callback-btn"
-              >
-                Залишити номер
-              </button>
-            </form>
-            <div
-              id="responseMessage"
-              style="display: none; margin-top: 10px; color: green"
-            ></div>
-          </div>
-        </div>
       </section>
       <section id="parts-s" class="parts-section">
         <h2 class="parts-title" data-translate="tr-parts-title">
@@ -628,6 +601,9 @@
         <div class="right-footer">
           <div class="contacts-div-footer">
             <div class="social">
+              <h3 class="social-title" data-translate="tr-social-title">
+                Зв'язатись з нами:
+              </h3>
               <a href="tel:+380732273615" target="_blank" class="number-button">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                   <path
@@ -721,18 +697,38 @@
           </p>
         </div>
         <div class="left-footer">
-          <h3 class="title-card" data-translate="tr-footer-map">
-            Як нас знайти
-          </h3>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.3847620552697!2d36.272624316204734!3d49.929121289392064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270da4b6664cb3%3A0x5cf2a23cef1978!2z0KHQotCeINCT0JHQng!5e0!3m2!1sru!2sua!4v1746106382093!5m2!1sru!2sua"
-            width="300"
-            height="150"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="callback-form">
+            <h3 class="text-header" data-translate="tr-callback-txtmobile">
+              Замовити зворотній зв'язок:
+            </h3>
+            <form id="callbackForm">
+              <input type="text" id="nameInput" placeholder="Ваше ім'я" />
+              <!-- Телефон (обязательно) -->
+              <input
+                type="tel"
+                id="phoneInput"
+                placeholder="+380 XX XXX XX XX"
+                required
+              />
+              <!-- Сообщение (необязательно) -->
+              <textarea
+                id="messageInput"
+                placeholder="Тут можна залишити VIN та додаткову інформацію (необов'язково)"
+                rows="2"
+              ></textarea>
+              <button
+                class="text-header"
+                type="submit"
+                data-translate="tr-callback-btn"
+              >
+                Передзвоніть мені
+              </button>
+            </form>
+            <div
+              id="responseMessage"
+              style="display: none; margin-top: 10px; color: green"
+            ></div>
+          </div>
         </div>
       </div>
       <div class="developer">

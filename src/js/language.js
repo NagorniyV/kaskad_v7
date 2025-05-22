@@ -47,11 +47,14 @@ const translations = {
     "tr-header-nav2": "Про магазин",
     "tr-header-nav3": "Наши партнёры",
     "tr-callback-txt": "Связь с нами:",
-    "tr-callback-btn": "Оставить номер",
+    "tr-callback-btn": "Перезвоните мне",
     "tr-callback-txtcb": "Заказать звонок",
     "tr-social-viber": "Мы в Viber",
     "tr-social-telegram": "Мы в Telegram",
-    "tr-callback-txtmobile": "Оставьте Ваш номер и мы поможем с подбором запчастей!"         
+    "tr-callback-txtmobile": "Заказать обратный звонок",
+    "tr-social-title":"Связь с нами:",
+    "tr-callback-name":"Ваше имя",
+        "tr-callback-textarea":"Тут можно оставить VIN и дополнительную информацию (не обязательно)"         
   },
   uk: {
     "tr-hero-title": "Підбір запчастин по VIN за 5 хвилин!",
@@ -100,11 +103,14 @@ const translations = {
         "tr-header-nav2": "Про магазин",
         "tr-header-nav3": "Наші партнери",
         "tr-callback-txt": "Зв'язок з нами:",
-        "tr-callback-btn": "Залишити номер",
+        "tr-callback-btn": "Передзвоніть мені",
         "tr-callback-txtcb": "Замовити дзвінок",
         "tr-social-viber": "Ми у Viber",
         "tr-social-telegram": "Ми у Telegram",
-        "tr-callback-txtmobile": "Залиште Ваш номер і ми допоможемо з підбором запчастин!"
+    "tr-callback-txtmobile": "Замовити зворотній зв'язок:",
+    "tr-social-title": "Зв'язатись з нами",
+    "tr-callback-name": "Ваше ім'я",
+        "tr-callback-textarea":"Тут можна залишити VIN та додаткову інформацію (необов'язково)"
   }
 };
 

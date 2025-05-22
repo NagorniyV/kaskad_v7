@@ -195,3 +195,73 @@ footer .social{
               width: 100%;
           }
 }
+
+.social-title{
+    color: orange;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+   font-size: 18px;
+}
+
+/* callback btn */
+
+.callback-form {
+    background-color: black;
+    padding: 4px 8px;
+    border: #ddd 1px solid;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.callback-form h3 {
+    margin-bottom: 4px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: orange;
+    max-width: 100%;
+}
+
+.callback-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.callback-form input {
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.callback-form button {
+    padding: 4px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    max-width: 100%;
+}
+
+.callback-form button:hover {
+    background-color: orangered; 
+}
