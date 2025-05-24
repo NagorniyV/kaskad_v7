@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/logo.card.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -398,7 +398,7 @@
         <div class="main-img">
           <img
             class="main-image"
-            src="./src/img/main-img.jpeg"
+            src="./src/img/main-img.jpg"
             alt="Main image"
           />
         </div>
@@ -702,7 +702,12 @@
               Замовити зворотній зв'язок:
             </h3>
             <form id="callbackForm">
-              <input type="text" id="nameInput" placeholder="Ваше ім'я" />
+              <input
+                type="text"
+                id="nameInput"
+                data-translate="tr-callback-name"
+                placeholder="Ваше имя"
+              />
               <!-- Телефон (обязательно) -->
               <input
                 type="tel"
@@ -713,6 +718,7 @@
               <!-- Сообщение (необязательно) -->
               <textarea
                 id="messageInput"
+                data-translate="tr-callback-textarea"
                 placeholder="Тут можна залишити VIN та додаткову інформацію (необов'язково)"
                 rows="2"
               ></textarea>
