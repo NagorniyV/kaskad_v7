@@ -6,12 +6,6 @@ h5,
 h6,
 p {
     margin: 0;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
 }
 
 p:last-child {
@@ -38,24 +32,8 @@ img {
     max-width: 100%;
     height: auto;
 }
-.container{
-    /* max-width: 1260px; */
+
+body,
+footer {
+    background-color: #101010;
 }
-
-html {
-    scroll-behavior: smooth;
-    /* Плавный скролл */
-}
-
-/* цвет фона */
-
-body, footer{
-background: black;
-}
-
-body{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-}
-

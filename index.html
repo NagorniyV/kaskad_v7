@@ -15,729 +15,743 @@
     <link rel="stylesheet" href="./src/js/main.js" />
     <link rel="stylesheet" href="./src/js/language.js" />
   </head>
-  <header id="to-home">
-    <div class="desktop-menu">
-      <button class="desktop-menu-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M3 12H21"
-            stroke="orange"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M3 6H21"
-            stroke="orange"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M3 18H21"
-            stroke="orange"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
-      </button>
-      <nav class="navigation">
-        <div class="language-switcher">
-          <button class="language-btn" id="languageBtn">
-            <img
-              src="https://flagcdn.com/ru.svg"
-              class="language-flag"
-              alt="Русский"
-            />
-            <span>Русский</span> ▼
-          </button>
-          <div class="language-dropdown" id="languageDropdown">
-            <div class="language-option" data-lang="ru">
-              <img
-                src="https://flagcdn.com/ru.svg"
-                class="language-flag"
-                alt="Русский"
-              />
-              <span>Русский</span>
-            </div>
-            <div class="language-option" data-lang="uk">
-              <img
-                src="https://flagcdn.com/ua.svg"
-                class="language-flag"
-                alt="Українська"
-              />
-              <span>Українська</span>
-            </div>
-          </div>
-        </div>
-        <ul class="chek-list">
-          <li class="chek-item">
-            <a href="#order" data-translate="tr-header-nav1">Як замовити</a>
+  <header>
+    <div class="container header">
+      <nav>
+        <ul class="nav-list-header">
+          <li class="nav-item dropdown">
+            <a href="#">Услуги</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Двигун</a></li>
+              <li><a href="#">Ходова частина</a></li>
+              <li><a href="#">Електрика</a></li>
+              <li><a href="#">Гальмівна система</a></li>
+              <li><a href="#">Трансмісія</a></li>
+              <li><a href="#">Технічне обслуговування</a></li>
+              <li><a href="#">Обслуговуються марки</a></li>
+              <li><a href="#">Діагностика</a></li>
+              <li><a href="#">Чіп тюнінг</a></li>
+            </ul>
           </li>
-          <li class="chek-item">
-            <a href="#main" data-translate="tr-header-nav2">Про магазин</a>
-          </li>
-          <li class="chek-item">
-            <a href="#partner" data-translate="tr-header-nav3">Наші партнери</a>
-          </li>
+          <li class="nav-item"><a href="#">Почему мы</a></li>
+          <li class="nav-item"><a href="#">Специалисты</a></li>
+          <li class="nav-item"><a href="#">Фотогаллерея</a></li>
+          <li class="nav-item"><a href="#">Отзывы</a></li>
+          <li class="nav-item"><a href="#map-section">Контакты</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="desktop-header">
-      <a class="logo" href="./index.html">-AUTOLINE-</a>
-      <div class="social">
-        <a href="tel:+380732273615" target="_blank" class="number-button">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
-            />
-            <path
-              d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 00-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 00.043-1.391L6.859 3.513a1 1 0 00-1.391-.087l-2.17 1.861a1 1 0 00-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 00.648-.291l1.86-2.171a.997.997 0 00-.085-1.391l-4.064-3.696z"
-            />
-          </svg>
-          <span class="main-number">(073) 227-36-15</span>
-        </a>
-        <a href="https://t.me/EEduarDDD" target="_blank" class="tg-button">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="white"
-            style="vertical-align: middle; margin-right: 8px"
-          >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.25 1.58-1.32 5.41-1.87 7.19-.14.47-.41.63-.68.63-.47 0-.74-.27-1.14-.52-.63-.44-1-.73-1.62-1.17-.56-.4-.2-.62.13-.99.09-.09 1.71-1.57 1.79-1.71.03-.06.05-.14-.03-.21-.08-.08-.21-.05-.29-.03-.12.05-2.02 1.34-2.71 1.79-.33.19-.64.28-.93.28-.31 0-.45-.14-.45-.5v-1.88c0-.37.14-.56.51-.56.18 0 .36.06.72.18.72.24 1.5.47 2.28.47.56 0 .78-.11.78-.41 0-.12-.01-.52-.15-1.48-.08-.56-.17-.78-.37-.84-.18-.06-.38-.1-.99-.1h-.84c-.31 0-.45-.14-.45-.45 0-.14.03-.31.06-.45.08-.25.22-.31.72-.31h4.23c.57 0 .79.11.79.5 0 .16-.02.69-.15 1.94z"
-            />
-          </svg>
-          <span data-translate="tr-social-telegram">Ми у Telegram</span>
-        </a>
-        <a href="viber://chat?number=%2B380992273615" class="viber-button">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="white"
-            style="vertical-align: middle; margin-right: 8px"
-          >
-            <path
-              d="M21.5 2.5C19.5 2.5 18.5 3 17 3.5C15.5 3 13.5 2.5 12 2.5C6.5 2.5 2.5 6.5 2.5 12C2.5 13.5 3 15.5 3.5 17C3 18.5 2.5 19.5 2.5 21.5C2.5 22 3 22.5 3.5 22.5C5.5 22.5 6.5 22 8 21.5C9.5 22 11.5 22.5 13 22.5C18.5 22.5 22.5 18.5 22.5 13C22.5 11.5 22 9.5 21.5 8C22 6.5 22.5 5.5 22.5 3.5C22.5 3 22 2.5 21.5 2.5ZM19.5 17C19 15.5 19.5 13.5 19.5 12C19.5 7.5 16 4 11.5 4C9.5 4 7.5 4.5 6 5C4.5 4.5 3.5 4 3.5 4C4 4 4.5 4.5 5 5C5.5 5.5 6 6.5 6.5 8C6 9.5 5.5 11.5 5.5 13C5.5 17.5 9 21 13.5 21C15.5 21 17.5 20.5 19 20C20.5 20.5 21.5 21 21.5 21C21 21 20.5 20.5 20 20C19.5 19.5 19 18.5 18.5 17Z"
-              fill="white"
-            />
-            <path
-              d="M12 6C8.5 6 5.5 9 5.5 12.5C5.5 14 6 16 6.5 17.5C6 19 5.5 20 5.5 20C6 20 6.5 19.5 7 19C7.5 18.5 8 17.5 8.5 16C9.5 16.5 11 17 12.5 17C16 17 19 14 19 10.5C19 9 18.5 7 18 5.5C17 6 15.5 6 12 6Z"
-              fill="white"
-            />
-            <path
-              d="M13 8C13 8 13.5 8 14 8C15 8 16 9 16 10C16 10.5 16 11 15.5 11.5C15 12 14.5 12 14 12C13.5 12 13 12 12.5 11.5C12 11 11.5 10.5 11.5 10C11.5 9.5 11.5 9 12 8.5C12.5 8 13 8 13 8Z"
-              fill="white"
-            />
-            <path
-              d="M9 8C9 8 9.5 8 10 8C11 8 12 9 12 10C12 10.5 12 11 11.5 11.5C11 12 10.5 12 10 12C9.5 12 9 12 8.5 11.5C8 11 7.5 10.5 7.5 10C7.5 9.5 7.5 9 8 8.5C8.5 8 9 8 9 8Z"
-              fill="white"
-            />
-          </svg>
-          <span data-translate="tr-social-viber">Ми у Viber</span>
-        </a>
-      </div>
-    </div>
-    <div class="mobile-header">
-      <!-- Логотип -->
-      <a class="logo" href="./index.html">-AUTOLINE-</a>
-
-      <!-- Иконки -->
-      <div class="mobile-icons">
-        <!-- Телефон -->
-        <a href="tel:+380992273615" class="icon-circle">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
-            />
-            <path
-              d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 00-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 00.043-1.391L6.859 3.513a1 1 0 00-1.391-.087l-2.17 1.861a1 1 0 00-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 00.648-.291l1.86-2.171a.997.997 0 00-.085-1.391l-4.064-3.696z"
-            />
-          </svg>
-        </a>
-
-        <a
-          href="https://t.me/EEduarDDD"
-          target="_blank"
-          class="icon-circle tg-icon"
+      <a href="./index.html"
+        ><svg
+          width="200"
+          height="120"
+          viewBox="0 0 200 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.25 1.58-1.32 5.41-1.87 7.19-.14.47-.41.63-.68.63-.47 0-.74-.27-1.14-.52-.63-.44-1-.73-1.62-1.17-.56-.4-.2-.62.13-.99.09-.09 1.71-1.57 1.79-1.71.03-.06.05-.14-.03-.21-.08-.08-.21-.05-.29-.03-.12.05-2.02 1.34-2.71 1.79-.33.19-.64.28-.93.28-.31 0-.45-.14-.45-.5v-1.88c0-.37.14-.56.51-.56.18 0 .36.06.72.18.72.24 1.5.47 2.28.47.56 0 .78-.11.78-.41 0-.12-.01-.52-.15-1.48-.08-.56-.17-.78-.37-.84-.18-.06-.38-.1-.99-.1h-.84c-.31 0-.45-.14-.45-.45 0-.14.03-.31.06-.45.08-.25.22-.31.72-.31h4.23c.57 0 .79.11.79.5 0 .16-.02.69-.15 1.94z"
-            />
-          </svg>
-        </a>
+          <!-- Фон (опционально) -->
+          <rect width="200" height="120" rx="10" fill="none" />
 
-        <a
-          href="viber://chat?number=%2B380992273615"
-          class="icon-circle viber-icon"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M21.5 2.5C19.5 2.5 18.5 3 17 3.5C15.5 3 13.5 2.5 12 2.5C6.5 2.5 2.5 6.5 2.5 12C2.5 13.5 3 15.5 3.5 17C3 18.5 2.5 19.5 2.5 21.5C2.5 22 3 22.5 3.5 22.5C5.5 22.5 6.5 22 8 21.5C9.5 22 11.5 22.5 13 22.5C18.5 22.5 22.5 18.5 22.5 13C22.5 11.5 22 9.5 21.5 8C22 6.5 22.5 5.5 22.5 3.5C22.5 3 22 2.5 21.5 2.5ZM19.5 17C19 15.5 19.5 13.5 19.5 12C19.5 7.5 16 4 11.5 4C9.5 4 7.5 4.5 6 5C4.5 4.5 3.5 4 3.5 4C4 4 4.5 4.5 5 5C5.5 5.5 6 6.5 6.5 8C6 9.5 5.5 11.5 5.5 13C5.5 17.5 9 21 13.5 21C15.5 21 17.5 20.5 19 20C20.5 20.5 21.5 21 21.5 21C21 21 20.5 20.5 20 20C19.5 19.5 19 18.5 18.5 17Z"
-            />
-            <path
-              d="M12 6C8.5 6 5.5 9 5.5 12.5C5.5 14 6 16 6.5 17.5C6 19 5.5 20 5.5 20C6 20 6.5 19.5 7 19C7.5 18.5 8 17.5 8.5 16C9.5 16.5 11 17 12.5 17C16 17 19 14 19 10.5C19 9 18.5 7 18 5.5C17 6 15.5 6 12 6Z"
-            />
-            <path
-              d="M13 8C13 8 13.5 8 14 8C15 8 16 9 16 10C16 10.5 16 11 15.5 11.5C15 12 14.5 12 14 12C13.5 12 13 12 12.5 11.5C12 11 11.5 10.5 11.5 10C11.5 9.5 11.5 9 12 8.5C12.5 8 13 8 13 8Z"
-            />
-            <path
-              d="M9 8C9 8 9.5 8 10 8C11 8 12 9 12 10C12 10.5 12 11 11.5 11.5C11 12 10.5 12 10 12C9.5 12 9 12 8.5 11.5C8 11 7.5 10.5 7.5 10C7.5 9.5 7.5 9 8 8.5C8.5 8 9 8 9 8Z"
-            />
-          </svg>
-        </a>
-      </div>
+          <!-- Символ "каскада" (волны + шестерёнка) -->
+          <path
+            d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
+            stroke="green"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+
+          <!-- Текст -->
+          <text
+            x="100"
+            y="100"
+            font-family="Arial, sans-serif"
+            font-size="24"
+            font-weight="bold"
+            text-anchor="middle"
+            fill="#FFFFFF"
+            filter="drop-shadow(2px 2px 4px #000)"
+          >
+            АС КАСКАД
+          </text>
+        </svg></a
+      >
     </div>
   </header>
   <body>
     <main>
-      <section class="hero">
-        <div class="main-content">
-          <h1 class="hero-title" data-translate="tr-hero-title">
-            Підбір запчастин по VIN за 5 хвилин!
-          </h1>
-          <p class="hero-cont" data-translate="tr-hero-slog">
-            Ваш автомобіль - наші клопоти
-          </p>
-        </div>
-      </section>
-      <section id="parts-s" class="parts-section">
-        <h2 class="parts-title" data-translate="tr-parts-title">
-          У нас є всі типи запчастин:
-        </h2>
-        <div class="parts-carousel">
-          <div class="carousel-parts">
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/dvigatel.png"
-                alt="dvigatel"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts1">
-                Двигун і система вихлопу
-              </h4>
+      <div class="container">
+        <section class="hero">
+          <div class="hero-content">
+            <h1 class="hero-title">РЕМОНТ И ОБСЛУЖИВАНИЕ АВТО</h1>
+            <div class="hero-content-container">
+              <div>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 14H20M14 8L20 14L14 20"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <p>лучшее соотношение цена/качество</p>
+              </div>
+              <div>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 14H20M14 8L20 14L14 20"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <p>гарантии на все виды работ</p>
+              </div>
+              <div>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 14H20M14 8L20 14L14 20"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <p>оригинальные запчасти</p>
+              </div>
             </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/korobka.png"
-                alt="korobka"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts2">
-                Коробка передач
-              </h4>
+            <div class="btn-container">
+              <a href="/repair" class="details-btn">ЗАПИСАТЬСЯ</a>
             </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/kuzov.png"
-                alt="kuzov"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts3">
-                Кузовні деталі
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/tormozniye.png"
-                alt="tormiznie"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts4">
-                Гальмівна система
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/podweska.png"
-                alt="podveska"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts5">
-                Підвіска та рульове
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/elektrika.png"
-                alt="elektrika"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts6">
-                Електрика та освітлення
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/ohlajdeniye.png"
-                alt="ohlagdenie"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts7">
-                Охолодження та опалення
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/masla.png"
-                alt="zidkosti"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts8">
-                Автомобільні рідини та олії
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/to.png"
-                alt="to"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts9">
-                Фільтри
-              </h4>
-            </div>
-
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/dvigatel.png"
-                alt="dvigatel"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts1">
-                Двигун і система вихлопу
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/korobka.png"
-                alt="korobka"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts2">
-                Коробка передач
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/kuzov.png"
-                alt="kuzov"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts3">
-                Кузовні деталі
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/tormozniye.png"
-                alt="tormiznie"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts4">
-                Гальмівна система
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/podweska.png"
-                alt="podveska"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts5">
-                Підвіска та рульове
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/elektrika.png"
-                alt="elektrika"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts6">
-                Електрика та освітлення
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/ohlajdeniye.png"
-                alt="ohlagdenie"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts7">
-                Охолодження та опалення
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/masla.png"
-                alt="zidkosti"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts8">
-                Автомобільні рідини та олії
-              </h4>
-            </div>
-            <div class="card-parts">
-              <img
-                class="card-image"
-                src="./src/img/new-parts/to.png"
-                alt="to"
-              />
-              <h4 class="card-text" data-translate="tr-parts-parts9">
-                Фільтри
-              </h4>
-            </div>
+            <p class="discount">Скидка 20% по промокоду "АС КАСКАД"</p>
           </div>
-        </div>
-      </section>
-      <section id="main" class="main-section">
-        <div class="main-img">
-          <img
-            class="main-image"
-            src="./src/img/main-img.jpg"
-            alt="Main image"
-          />
-        </div>
-        <div class="main-content">
-          <h2 class="main-h2" data-translate="tr-main-title">Наші переваги:</h2>
-          <ul>
-            <li>
-              <h4 class="main-title-content" data-translate="tr-main-title1">
-                Індивідуальний підхід:
-              </h4>
-              <p class="main-text-content" data-translate="tr-main-txt1">
-                Кожному клієнту – увага та допомога. Підберемо, проконсультуємо,
-                допоможемо із встановленням.
+        </section>
+        <section class="work-process">
+          <div class="services-top">
+            <div class="services-top-content">
+              <h1 class="work-title">Процесс работы</h1>
+              <p class="work-subtitle">
+                Техническое обслуживание и ремонт автомобилей, проведение
+                диагностики
               </p>
-            </li>
-            <li>
-              <h4 class="main-title-content" data-translate="tr-main-title2">
-                Супровід на всіх етапах:
-              </h4>
-              <p class="main-text-content" data-translate="tr-main-txt2">
-                Ми не зникаємо після продажу. Залишаємось на зв'язку до повного
-                вирішення вашого завдання.
-              </p>
-            </li>
-            <li>
-              <h4 class="main-title-content" data-translate="tr-main-title3">
-                Тільки перевірені запчастини:
-              </h4>
-              <p class="main-text-content" data-translate="tr-main-txt3">
-                Оригінал або якісний аналог завжди перевіряємо надійність
-                постачальника.
-              </p>
-            </li>
-            <li>
-              <h4 class="main-title-content" data-translate="tr-main-title4">
-                10 років досвіду в ремонті авто:
-              </h4>
-              <p class="main-text-content" data-translate="tr-main-txt4">
-                Знаємо, як працює деталь у реальності, а не лише за каталогом.
-              </p>
-            </li>
-            <li>
-              <h4 class="main-title-content" data-translate="tr-main-title5">
-                Чесність та прозорість:
-              </h4>
-              <p class="main-text-content" data-translate="tr-main-txt5">
-                Рекомендуємо те, що справді потрібно. Допомагаємо заощадити —
-                без втрати якості.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section id="order" class="order-steps">
-        <h2 class="order-steps__title" data-translate="tr-order-title">
-          Зроби замовлення в 4 кроки:
-        </h2>
-
-        <div class="steps-container">
-          <!-- Шаг 1 -->
-          <div class="step">
-            <div class="step__number">1</div>
-            <h3 class="step__title" data-translate="tr-order-step1">
-              Напишіть нам
-            </h3>
-            <p class="step__desc" data-translate="tr-order-txt1">
-              розкажіть, яка запчастина потрібна (Фільтра і мастила на KIA
-              Picanto 2012)
-            </p>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-btn" id="prevBtn">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 14H8M14 8L8 14L14 20"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <button class="carousel-btn" id="nextBtn">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 14H20M14 8L20 14L14 20"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-
-          <!-- Стрелка после 1-го шага -->
-          <svg class="step-arrow" viewBox="0 0 24 24">
-            <path
-              d="M8 4L16 12L8 20"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-            />
-          </svg>
-
-          <!-- Шаг 2 -->
-          <div class="step">
-            <div class="step__number">2</div>
-            <h3 class="step__title" data-translate="tr-order-step2">
-              Надайте данні
-            </h3>
-            <p class="step__desc" data-translate="tr-order-txt2">
-              VIN-код автомобіля або марка, модель, рік автомобіля
-            </p>
-          </div>
-
-          <!-- Стрелка после 2-го шага -->
-          <svg class="step-arrow" viewBox="0 0 24 24">
-            <path
-              d="M8 4L16 12L8 20"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-            />
-          </svg>
-
-          <!-- Шаг 3 -->
-          <div class="step">
-            <div class="step__number">3</div>
-            <h3 class="step__title" data-translate="tr-order-step3">
-              Ми підбираєм запчастини для вас:
-            </h3>
-            <p class="step__desc" data-translate="tr-order-txt3">
-              надамо всі можливі варіанти від бюджетного до найкращого
-            </p>
-          </div>
-
-          <!-- Стрелка после 3-го шага -->
-          <svg class="step-arrow" viewBox="0 0 24 24">
-            <path
-              d="M8 4L16 12L8 20"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-            />
-          </svg>
-
-          <!-- Шаг 4 -->
-          <div class="step">
-            <div class="step__number">4</div>
-            <h3 class="step__title" data-translate="tr-order-step4">
-              Робіть замовлення і ми відправляємо запчастину:
-            </h3>
-            <p class="step__desc" data-translate="tr-order-txt4">
-              самовивіз або доставка кур'єром по Харкову, чи відправка новою
-              поштою по Україні
-            </p>
-          </div>
-        </div>
-
-        <!-- Дополнительная ячейка (без стрелок) -->
-        <div class="step-final">
-          <p class="step__desc" data-translate="tr-order-txt">
-            Бонус для міста Харків: Підберем перевірене СТО на вашому районі,
-            для встановлення придбаного обладнання
-          </p>
-        </div>
-      </section>
-      <section id="brend" class="brend-section">
-        <h2 class="brend-title" data-translate="tr-brend-title">
-          В наявності запчастини до корейських та японських марок:
-        </h2>
-        <div class="infinite-carousel">
-          <div class="carousel-track">
-            <img src="./src/img/logo/acura-1s.jpg" alt="acura" />
-            <img src="./src/img/logo/daewoo.jpg" alt="daewoo" />
-            <img src="./src/img/logo/daihatsu.jpg" alt="daihatsu" />
-            <img src="./src/img/logo/honda-1s.jpg" alt="honda" />
-            <img src="./src/img/logo/hyundai-1s.jpg" alt="hyundai" />
-            <img src="./src/img/logo/mazda-5s.jpg" alt="mazda" />
-            <img src="./src/img/logo/mitsubishi-1s.jpg" alt="mitsubishi" />
-            <img src="./src/img/logo/nissan-2s.jpg" alt="nissan" />
-            <img src="./src/img/logo/ssangyong.jpg" alt="ssangyong" />
-            <img src="./src/img/logo/subaru-logo-1_cr.jpg" alt="subaru" />
-            <img src="./src/img/logo/suzuki-1s.jpg" alt="suzuki" />
-            <img src="./src/img/logo/toyota-1s.jpg" alt="toyota" />
-          </div>
-        </div>
-      </section>
-      <section id="partner" class="partner-section">
-        <h2 class="partner-title" data-translate="tr-partner-title">
-          Наші партнери у Харкові
-        </h2>
-        <div class="entry-partner">
-          <div class="partner-content">
-            <p class="partners-description" data-translate="tr-partner-txt1">
-              Запчастини, придбані у нас, ви можете встановити у наших
-              перевірених партнерів по всьому Харкову. Ми співпрацюємо тільки з
-              перевіреними автосервісами, щоб гарантувати якісний монтаж та
-              обслуговування.
-            </p>
-            <p class="partners-description" data-translate="tr-partner-txt2">
-              Просто скажіть в якому ви районі - ми порадимо найблищого
-              партнера!
-            </p>
-            <a href="tel:+380992273615" class="cta-button"
-              >+38 (073) 227-36-15</a
+          <div class="services-carousel">
+            <div
+              class="services-container work-container"
+              id="servicesContainer"
             >
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Двигун</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Ходова частина</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Електрика</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Гальмівна система</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Трансмісія</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Технічне обслуговування</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Обслуговуються марки</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Діагностика</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+              <div class="service-card work-card">
+                <img src="./img/kaskad/hero1.jpg" alt="" />
+                <h3>Чіп тюнінг</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+              </div>
+            </div>
           </div>
-          <img
-            class="kharkiv-map"
-            src="./src/img/map_kh.jpg"
-            alt="kharkiv_map"
-          />
-        </div>
-      </section>
+        </section>
+        <section></section>
+        <section class="services-section">
+          <div class="services-top">
+            <div class="services-top-content">
+              <h1 class="services-title">Услуги и цены</h1>
+              <p class="services-subtitle">
+                Лучшее соотношение цена - качество в вашем городе!
+              </p>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-btn" id="prevBtn">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 14H8M14 8L8 14L14 20"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <button class="carousel-btn" id="nextBtn">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 14H20M14 8L20 14L14 20"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="services-carousel">
+            <div class="services-container" id="servicesContainer">
+              <div class="service-card">
+                <h3>РЕМОНТ И ТЕХ ОБСЛУЖИВАНИЕ</h3>
+                <p>
+                  Комплекс работ по диагностике автомобиля в целом или отдельных
+                  его агрегатов, регулировке систем/узлов, выполнению работ по
+                  регламентной замене деталей и/или технических жидкостей
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>ПРОДАЖА АВТОЗАПЧАСТЕЙ</h3>
+                <p>
+                  В наличии подвески, тормозные системы, системы зажигания,
+                  фильтры, системы управления, светотехника, трансмиссии,
+                  автоэлектроника, шины и диски
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>ЗАМЕНА ЖИДКОСТЕЙ</h3>
+                <p>
+                  Замена моторного масла, тормозной жидкости, антифриза,
+                  омывателя лобового стекла, масла коробки передач, хладагента
+                  кондиционера, и остальных технических жидкостей в автомобиле
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>ОСМОТР АВТО ПЕРЕД ПОКУПКОЙ</h3>
+                <p>
+                  Диагностика авто перед покупкой, проверка двигателя, коробки
+                  передач, электроники с помощью тест-драйва
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>ДИАГНОСТИКА ДВИГАТЕЛЯ</h3>
+                <p>
+                  Компьютерная диагностика двигателя, проверка состояния
+                  цилиндропоршневой группы, системы зажигания и впрыска
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>РЕМОНТ ТРАНСМИССИИ</h3>
+                <p>
+                  Диагностика и ремонт механических и автоматических коробок
+                  передач, редукторов, раздаточных коробок
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>РЕМОНТ ХОДОВОЙ</h3>
+                <p>
+                  Диагностика и ремонт подвески, замена амортизаторов, шаровых
+                  опор, рычагов, сайлентблоков
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>АВТОЭЛЕКТРИКА</h3>
+                <p>
+                  Диагностика и ремонт электрооборудования автомобиля, проводки,
+                  блоков управления, датчиков
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3>КУЗОВНОЙ РЕМОНТ</h3>
+                <p>
+                  Ремонт кузовных элементов, покраска, антикоррозийная
+                  обработка, рихтовка без покраски
+                </p>
+                <div class="btn-container">
+                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section></section>
+        <section id="brend" class="brend-section">
+          <h2 class="brend-title">СТО в Павлограде</h2>
+          <div class="infinite-carousel">
+            <div class="carousel-track">
+              <div>
+                <img src="./img/avto-logo/3037-256x256x32.png" alt="acura" />
+                <p class="text-brend">acura</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/4226-256x256x8.png"
+                  alt="daewoo"
+                />
+                <p class="text-brend">daewoo</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/4227-256x256x32.png"
+                  alt="daihatsu"
+                />
+                <p class="text-brend">daihatsu</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/acura_logo.png" alt="acura" />
+                <p class="text-brend">acura</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/acura_logo.png"
+                  alt="alfa-romeo"
+                />
+                <p class="text-brend">alfa-romeo</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/audi.png" alt="audi" />
+                <p class="text-brend">audi</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/chevrolet-logo.png"
+                  alt="chevrolet"
+                />
+                <p class="text-brend">chevrolet</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/daewoo-logo.png" alt="daewoo" />
+                <p class="text-brend">daewoo</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/citroen-logo.jpg" alt="citroen" />
+                <p class="text-brend">citroen</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/dodge-logo.png" alt="dodge" />
+                <p class="text-brend">dodge</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/fiat_logo.png" alt="fiat" />
+                <p class="text-brend">fiat</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/ford.png" alt="ford" />
+                <p class="text-brend">ford</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/honda-color-128.png"
+                  alt="honda"
+                />
+                <p class="text-brend">honda</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/hyundai-lg.png" alt="hyundai" />
+                <p class="text-brend">hyundai</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/infiniti.png" alt="infiniti" />
+                <p class="text-brend">infiniti</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/jaguar-logo.png" alt="jaguar" />
+                <p class="text-brend">jaguar</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/jeep-logo.png" alt="jeep" />
+                <p class="text-brend">jeep</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/kia_logo_256_003.png" alt="kia" />
+                <p class="text-brend">kia</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/land-rover1.png"
+                  alt="land-rover"
+                />
+                <p class="text-brend">land-rover</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/lexus-logo.png" alt="lexus" />
+                <p class="text-brend">lexus</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/lincoln-logo.png" alt="lincoln" />
+                <p class="text-brend">lincoln</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/logo_suzuki.png" alt="suzuki" />
+                <p class="text-brend">suzuki</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
+                  alt="mazda"
+                />
+                <p class="text-brend">mazda</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/mercedes_logo.png"
+                  alt="mercedes"
+                />
+                <p class="text-brend">mercedes</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/mitsubishi_logo.png"
+                  alt="mitsubishi"
+                />
+                <p class="text-brend">mitsubishi</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/nissan-logo-4.png" alt="nissan" />
+                <p class="text-brend">nissan</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/novosti-skoda-logo.gif"
+                  alt="skoda"
+                />
+                <p class="text-brend">skoda</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
+                  alt="opel"
+                />
+                <p class="text-brend">opel</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/peugeot_logo_128.png"
+                  alt="peugeot"
+                />
+                <p class="text-brend">peugeot</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/renault_logo.png" alt="renault" />
+                <p class="text-brend">renault</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/saab-logo.png" alt="saab" />
+                <p class="text-brend">saab</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/seat.png" alt="seat" />
+                <p class="text-brend">seat</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/smart-logo.png" alt="smart" />
+                <p class="text-brend">smart</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/ssangyong-logo.png"
+                  alt="ssangyong"
+                />
+                <p class="text-brend">ssangyong</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/subaru-logo-transparent.png"
+                  alt="subaru"
+                />
+                <p class="text-brend">subaru</p>
+              </div>
+              <div>
+                <img src="./src/img/avto-logo/toyota.png" alt="toyota" />
+                <p class="text-brend">toyota</p>
+              </div>
+              <div>
+                <img
+                  src="./src/img/avto-logo/volkswagen_logo.png"
+                  alt="volkswagen"
+                />
+                <p class="text-brend">volkswagen</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <script type="module" src="./src/js/main.js"></script>
       <script type="module" src="./src/js/language.js"></script>
     </main>
   </body>
-  <footer class="footer">
-    <div class="entry-footer">
-      <div class="main-footer">
-        <div class="right-footer">
-          <div class="contacts-div-footer">
-            <div class="social">
-              <h3 class="social-title" data-translate="tr-social-title">
-                Зв'язатись з нами:
-              </h3>
-              <a href="tel:+380732273615" target="_blank" class="number-button">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-                  <path
-                    d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
-                  />
-                  <path
-                    d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 00-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 00.043-1.391L6.859 3.513a1 1 0 00-1.391-.087l-2.17 1.861a1 1 0 00-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 00.648-.291l1.86-2.171a.997.997 0 00-.085-1.391l-4.064-3.696z"
-                  />
-                </svg>
-                <span class="main-number">(073) 227-36-15</span>
-              </a>
-              <a
-                href="https://t.me/EEduarDDD"
-                target="_blank"
-                class="tg-button"
+  <footer id="map-section">
+    <div class="container">
+      <div class="footer-container">
+        <div class="top-map-div">
+          <div class="title-map">
+            <h2 class="map-title">Мы на картах</h2>
+            <p class="map-content">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                  style="vertical-align: middle; margin-right: 8px"
-                >
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.25 1.58-1.32 5.41-1.87 7.19-.14.47-.41.63-.68.63-.47 0-.74-.27-1.14-.52-.63-.44-1-.73-1.62-1.17-.56-.4-.2-.62.13-.99.09-.09 1.71-1.57 1.79-1.71.03-.06.05-.14-.03-.21-.08-.08-.21-.05-.29-.03-.12.05-2.02 1.34-2.71 1.79-.33.19-.64.28-.93.28-.31 0-.45-.14-.45-.5v-1.88c0-.37.14-.56.51-.56.18 0 .36.06.72.18.72.24 1.5.47 2.28.47.56 0 .78-.11.78-.41 0-.12-.01-.52-.15-1.48-.08-.56-.17-.78-.37-.84-.18-.06-.38-.1-.99-.1h-.84c-.31 0-.45-.14-.45-.45 0-.14.03-.31.06-.45.08-.25.22-.31.72-.31h4.23c.57 0 .79.11.79.5 0 .16-.02.69-.15 1.94z"
-                  />
-                </svg>
-                <span data-translate="tr-social-telegram">Ми у Telegram</span>
-              </a>
-              <a
-                href="viber://chat?number=%2B380992273615"
-                class="viber-button"
+                <path
+                  d="M12 22C12 22 19 14.5 19 9C19 5.134 15.866 2 12 2C8.134 2 5 5.134 5 9C5 14.5 12 22 12 22Z"
+                  fill="#4285F4"
+                  stroke="#2C3E50"
+                  stroke-width="1.5"
+                />
+                <circle cx="12" cy="9" r="3" fill="white" />
+              </svg>
+              улица Ушинского, 2 а, Павлоград, Днепропетровская область
+            </p>
+          </div>
+          <a href="./index.html"
+            ><svg
+              width="200"
+              height="120"
+              viewBox="0 0 200 120"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Фон (опционально) -->
+              <rect width="200" height="120" rx="10" fill="none" />
+
+              <!-- Символ "каскада" (волны + шестерёнка) -->
+              <path
+                d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
+                stroke="green"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+
+              <!-- Текст -->
+              <text
+                x="100"
+                y="100"
+                font-family="Arial, sans-serif"
+                font-size="24"
+                font-weight="bold"
+                text-anchor="middle"
+                fill="#FFFFFF"
+                filter="drop-shadow(2px 2px 4px #000)"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                  style="vertical-align: middle; margin-right: 8px"
-                >
-                  <path
-                    d="M21.5 2.5C19.5 2.5 18.5 3 17 3.5C15.5 3 13.5 2.5 12 2.5C6.5 2.5 2.5 6.5 2.5 12C2.5 13.5 3 15.5 3.5 17C3 18.5 2.5 19.5 2.5 21.5C2.5 22 3 22.5 3.5 22.5C5.5 22.5 6.5 22 8 21.5C9.5 22 11.5 22.5 13 22.5C18.5 22.5 22.5 18.5 22.5 13C22.5 11.5 22 9.5 21.5 8C22 6.5 22.5 5.5 22.5 3.5C22.5 3 22 2.5 21.5 2.5ZM19.5 17C19 15.5 19.5 13.5 19.5 12C19.5 7.5 16 4 11.5 4C9.5 4 7.5 4.5 6 5C4.5 4.5 3.5 4 3.5 4C4 4 4.5 4.5 5 5C5.5 5.5 6 6.5 6.5 8C6 9.5 5.5 11.5 5.5 13C5.5 17.5 9 21 13.5 21C15.5 21 17.5 20.5 19 20C20.5 20.5 21.5 21 21.5 21C21 21 20.5 20.5 20 20C19.5 19.5 19 18.5 18.5 17Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M12 6C8.5 6 5.5 9 5.5 12.5C5.5 14 6 16 6.5 17.5C6 19 5.5 20 5.5 20C6 20 6.5 19.5 7 19C7.5 18.5 8 17.5 8.5 16C9.5 16.5 11 17 12.5 17C16 17 19 14 19 10.5C19 9 18.5 7 18 5.5C17 6 15.5 6 12 6Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M13 8C13 8 13.5 8 14 8C15 8 16 9 16 10C16 10.5 16 11 15.5 11.5C15 12 14.5 12 14 12C13.5 12 13 12 12.5 11.5C12 11 11.5 10.5 11.5 10C11.5 9.5 11.5 9 12 8.5C12.5 8 13 8 13 8Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M9 8C9 8 9.5 8 10 8C11 8 12 9 12 10C12 10.5 12 11 11.5 11.5C11 12 10.5 12 10 12C9.5 12 9 12 8.5 11.5C8 11 7.5 10.5 7.5 10C7.5 9.5 7.5 9 8 8.5C8.5 8 9 8 9 8Z"
-                    fill="white"
-                  />
-                </svg>
-                <span data-translate="tr-social-viber">Ми у Viber</span>
-              </a>
+                АС КАСКАД
+              </text>
+            </svg></a
+          >
+          <a href="#" class="to-home" id="back-to-top">
+            <span class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 15l-6-6-6 6" />
+              </svg>
+            </span>
+            <span class="text" data-translate="tr-footer-up"
+              >Піднятися в гору</span
+            >
+          </a>
+        </div>
+        <div class="bot-map-div">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671680623163!2d35.83637660000001!3d48.530028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1748441138956!5m2!1sru!2sua"
+            width="400"
+            height="300"
+            style="border-radius: 10px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="map-work-div">
+            <h4 class="map-work-title">Режим работы:</h4>
+            <p class="map-work-up">ПН-ПТ с 9:00 до 18:00,</p>
+            <p class="map-work-down">Сб и Вс - выходные дни</p>
+            <p class="map-work-number">+380502233959</p>
+            <div class="social-div">
+              <a href="viber://chat?number=+380502233959" class="viber-button"
+                ><img
+                  src="./img/svg/icon_new - white +purple bg.svg"
+                  alt="viber-icon"
+                />Наш Viber</a
+              >
+              <a href="https://t.me/RofLJeKee" class="telegram-button"
+                ><img
+                  src="./img/svg/icons-telegram.svg"
+                  alt="telegram-icon"
+                />Наш Telegram</a
+              >
             </div>
-            <a href="#" class="to-home" id="back-to-top">
-              <span class="icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 15l-6-6-6 6" />
-                </svg>
-              </span>
-              <span class="text" data-translate="tr-footer-up"
-                >Піднятися в гору</span
-              >
-            </a>
           </div>
+          <nav class="map-navi">
+            <p>Меню</p>
+            <ul class="nav-list">
+              <il>Услуги</il>
+              <il>Почему мы</il>
+              <il>Специалисты</il>
+              <il>Процесс работы</il>
+              <il>Отзывы</il>
+              <il>Контакты</il>
+            </ul>
+          </nav>
         </div>
-        <div class="middle-footer">
-          <a class="logo-footer" href="./index.html">-AUTOLINE-</a>
-          <h2 class="footer-title" data-translate="tr-footer-title">
-            Підбір запчастин по VIN <br />
-            за 5 хвилин!
-          </h2>
-          <p class="footer-slogon" data-translate="tr-footer-slog">
-            Ваш автомобіль - наші клопоти.
-          </p>
-        </div>
-        <div class="left-footer">
-          <div class="callback-form">
-            <h3 class="text-header" data-translate="tr-callback-txtmobile">
-              Замовити зворотній зв'язок:
-            </h3>
-            <form id="callbackForm">
-              <input
-                type="text"
-                id="nameInput"
-                data-translate="tr-callback-name"
-                placeholder="Ваше имя"
-              />
-              <!-- Телефон (обязательно) -->
-              <input
-                type="tel"
-                id="phoneInput"
-                placeholder="+380 XX XXX XX XX"
-                required
-              />
-              <!-- Сообщение (необязательно) -->
-              <textarea
-                id="messageInput"
-                data-translate="tr-callback-textarea"
-                placeholder="Тут можна залишити VIN та додаткову інформацію (необов'язково)"
-                rows="2"
-              ></textarea>
-              <button
-                class="text-header"
-                type="submit"
-                data-translate="tr-callback-btn"
-              >
-                Передзвоніть мені
-              </button>
-            </form>
-            <div
-              id="responseMessage"
-              style="display: none; margin-top: 10px; color: green"
-            ></div>
-          </div>
-        </div>
-      </div>
-      <div class="developer">
-        @2025. Developer
-        <a href="https://t.me/RofLJeKee" target="_blank">NahornyiV</a>
       </div>
     </div>
   </footer>

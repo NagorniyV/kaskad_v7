@@ -1,0 +1,23 @@
+/* Styles for Mobile devices */
+.container {
+    min-width: 320px;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+        border-left: 1px solid #f8f8f8;
+        border-right: 1px solid #f8f8f8;
+    }
+}
