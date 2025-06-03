@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
       rel="stylesheet"
     />
     <title>АС КАСКАД</title>
@@ -16,7 +18,7 @@
     <link rel="stylesheet" href="./src/js/language.js" />
   </head>
   <header>
-    <div class="container header">
+    <div class="header">
       <nav>
         <ul class="nav-list-header">
           <li class="nav-item dropdown">
@@ -43,18 +45,18 @@
       <a href="./index.html"
         ><svg
           width="200"
-          height="120"
+          height="80"
           viewBox="0 0 200 120"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <!-- Фон (опционально) -->
-          <rect width="200" height="120" rx="10" fill="none" />
+          <rect width="200" height="80" rx="10" fill="none" />
 
           <!-- Символ "каскада" (волны + шестерёнка) -->
           <path
             d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
-            stroke="green"
+            stroke="#24a7c1"
             stroke-width="4"
             stroke-linecap="round"
           />
@@ -135,9 +137,13 @@
                 <p>оригинальные запчасти</p>
               </div>
             </div>
-            <div class="btn-container">
-              <a href="/repair" class="details-btn">ЗАПИСАТЬСЯ</a>
-            </div>
+            <button
+              type="button"
+              onclick="window.location.href='#callback'"
+              class="details-hero-btn"
+            >
+              ЗАПИСАТЬСЯ
+            </button>
             <p class="discount">Скидка 20% по промокоду "АС КАСКАД"</p>
           </div>
         </section>
@@ -424,7 +430,76 @@
             </div>
           </div>
         </section>
-        <section></section>
+        <section id="callback" class="callback-section">
+          <h2 class="callback-main-title">Наши специалисты</h2>
+          <div class="callback-section-container">
+            <div class="callback-card-container">
+              <div class="team-card">
+                <img src="./src/img/team-card1.jpg" alt="" />
+                <h3 class="team-card-title">Филипов Павел</h3>
+                <p class="team-card-position">старший мастер автосервиса</p>
+                <p class="team-card-content">
+                  Техническое обслуживание и ремонт автомобилей, проведение
+                  диагностики, регулировка сходления.
+                </p>
+              </div>
+              <div class="team-card">
+                <img src="./src/img/team-card1.jpg" alt="" />
+                <h3 class="team-card-title">Юдин Максим</h3>
+                <p class="team-card-position">мастер автосервиса</p>
+                <p class="team-card-content">
+                  Диагностика электропроводки, тюнинг, установка светового
+                  оборудования.
+                </p>
+              </div>
+              <div class="team-card">
+                <img src="./src/img/team-card1.jpg" alt="" />
+                <h3 class="team-card-title">Соколов Вадим</h3>
+                <p class="team-card-position">автомеханик</p>
+                <p class="team-card-content">
+                  Электронный ремонт, сварочные работы, шиномонтаж, агрегатный
+                  ремонт.
+                </p>
+              </div>
+            </div>
+            <div class="callback-container">
+              <h3 class="callbaack-main-title">
+                ПОЛУЧИТЕ РЕКОМЕНДАЦИЮ ПО РЕШЕНИЮ ПРОБЛЕММЫ
+                <span class="span-cb-title">БЕСПЛАТНО!</span>
+              </h3>
+              <form id="callbackForm">
+                <input
+                  type="text"
+                  id="nameInput"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input
+                  type="text"
+                  id="messageInput"
+                  name="car"
+                  placeholder="Марка модель авто"
+                  required
+                />
+                <input
+                  type="tel"
+                  id="phoneInput"
+                  name="phone"
+                  placeholder="+380 50 025 25 25"
+                  required
+                />
+                <button type="submit" class="text-header">
+                  ПОЛУЧИТЬ РЕКОМЕНДАЦИЮ
+                </button>
+              </form>
+              <p class="cb-last-text">
+                Вы можете указать марку и модель авто и оставить Ваши контакты -
+                мы вам перезвоним
+              </p>
+            </div>
+          </div>
+        </section>
         <section id="brend" class="brend-section">
           <h2 class="brend-title">СТО в Павлограде</h2>
           <div class="infinite-carousel">
@@ -646,7 +721,7 @@
               >
                 <path
                   d="M12 22C12 22 19 14.5 19 9C19 5.134 15.866 2 12 2C8.134 2 5 5.134 5 9C5 14.5 12 22 12 22Z"
-                  fill="#4285F4"
+                  fill="#24a7c1"
                   stroke="#2C3E50"
                   stroke-width="1.5"
                 />
@@ -669,7 +744,7 @@
               <!-- Символ "каскада" (волны + шестерёнка) -->
               <path
                 d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
-                stroke="green"
+                stroke="#24a7c1"
                 stroke-width="4"
                 stroke-linecap="round"
               />

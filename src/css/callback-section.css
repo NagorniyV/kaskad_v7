@@ -1,0 +1,140 @@
+.callback-section{
+    background-color: #101010;
+    padding: 20px 100px;
+}
+
+.callback-main-title{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    color: #f8f8f8;
+    text-align: left;
+    margin-left: 150px;
+    margin-bottom: 48px;
+}
+
+.callback-section-container{
+    display: flex;
+    gap: 48px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.callback-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-top: 70px;
+}
+
+.team-card{
+    position: relative;
+    max-width: 320px;
+    border: 1px solid #f8f8f8;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100%;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    background: #2c2b2b;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.team-card > img{
+    position: absolute;
+    top: -40px;
+    right: 60px;
+    max-width: 260px;
+}
+
+.team-card-title{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.team-card-position{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.team-card-content{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 20px;
+    margin-top: 22px;
+}
+
+.callback-container{
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 34px 34px;
+    max-width: 380px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.callbaack-main-title{
+    color: #2c2b2b;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    margin-bottom: 58px;
+}
+
+.span-cb-title{
+    color: #101010;
+    font-weight: 800;
+}
+
+.text-header {
+    padding: 12px 35px;
+    border-radius: 25px;
+    background: #24a7c1;
+    color: #f8f8f8;
+    border: none;
+    font-size: 18px;
+}
+
+.text-header:hover {
+    background: #0e6374;
+}
+
+#callbackForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 400px;
+}
+
+#callbackForm input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; 
+    background-color: #d4d4d4;
+}
+
+.cb-last-text{
+    margin-top: 18px;
+    color: #2c2b2b;
+}

@@ -1,6 +1,8 @@
 .hero {
+    position: relative;
     color: white;
-    background-image: url(../img/pexels-photo-170813.jpeg);
+    /* background-image: url(../img/pexels-photo-170813.jpeg); */
+    background-color: #101010;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -9,6 +11,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-top: 1px solid #f8f8f8;
+    border-left: 1px solid #f8f8f8;
 }
 
 .hero-content-container {
@@ -41,48 +45,30 @@
     margin-right: auto;
 }
 
-.hero-content>.btn-container>.details-btn {
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    /* центрирование без transform */
-    padding: 12px 35px;
-    border-radius: 25px;
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.details-hero-btn{
     background: #24a7c1;
     color: #f8f8f8;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    z-index: 2;
-    width: max-content;
-    /* ширина по содержимому */
+    padding: 12px 35px;
+    border-radius: 25px;
+    margin-top: 16px;
+    display: block;
+    margin-right: auto; 
+    border: none;
 }
 
-.hero-content>.btn-container {
-    position: relative;
-    width: 100%;
-    margin-top: 50px;
-
-}
-
-.hero-content>.btn-container>.details-btn {
-    position: absolute;
-    left: 0;
-    /* Фиксируем у левого края */
-    bottom: -15px;
-    transform: none;
-    /* Убираем трансформацию */
-    margin: 0;
-    /* остальные стили */
+.details-hero-btn:hover, .details-hero-btn:focus{
+    background: #0e6374;
 }
 
 .discount {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 16px;
     color: rgb(180, 180, 189);
     font-size: 16px;
 }
