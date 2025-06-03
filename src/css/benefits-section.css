@@ -1,0 +1,84 @@
+.benefits-section{
+    background-color: #f8f8f8;
+    padding: 20px 100px;
+}
+
+.benefits-img{
+    max-width: 275px;
+    border-radius: 8px;
+    margin: 0px;
+}
+
+.benefits-container {
+    display: flex;
+    gap: 16px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefits-title{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    color: #101010;
+    margin-bottom: 58px;
+}
+
+.span-benefits-title{
+    color: #24a7c1;
+}
+
+.benefits-containers{
+    display: flex;
+    gap: 16px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+
+.benefits-container{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+
+}
+
+.benefits-top{
+    display: flex;
+    align-items: center;
+}
+
+.benefits-number{
+    color: #24a7c1;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+}
+
+.benefits-top-text{
+    max-width: 220px;
+    margin-left: 16px;
+    
+}
+
+.benefits-bot-text{
+    text-align: center;
+
+}
+
+.benefits-bot-text, .benefits-top-text{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 16px;
+}
