@@ -114,7 +114,7 @@
     z-index: 100;
     display: flex;
     align-items: center;
-    background: orange;
+    background: #24a7c1;
     color: white;
     height: 28px;
     width: 28px;
@@ -146,7 +146,7 @@
 }
 
 .to-home:hover {
-    background: orangered;
+    background: #0e6374;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: auto;

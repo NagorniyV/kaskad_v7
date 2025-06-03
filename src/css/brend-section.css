@@ -1,5 +1,5 @@
 .brend-section {
-    padding-bottom: 28px;
+    padding: 20px 20px;
     background: #101010;
     overflow: hidden;
     margin: 0 auto;
@@ -21,6 +21,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    padding: 20px 0px;
 }
 
 .carousel-track {
