@@ -17,14 +17,15 @@
     <link rel="stylesheet" href="./src/js/main.js" />
     <link rel="stylesheet" href="./src/js/language.js" />
   </head>
-  <header>
-    <div class="burger-menu">
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
-    </div>
-    <div class="header">
-      <nav>
+  <header id="header" class="header">
+    <div class="header-container">
+      <div class="burger-menu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </div>
+
+      <nav class="nav">
         <ul class="nav-list-header">
           <li class="nav-item dropdown">
             <a href="#">Услуги</a>
@@ -144,7 +145,7 @@
             </div>
             <button
               type="button"
-              onclick="window.location.href='#callback'"
+              onclick="window.location.href='#callbackForm'"
               class="details-hero-btn"
             >
               ЗАПИСАТЬСЯ
@@ -434,7 +435,7 @@
             </div>
           </div>
         </section>
-        <section id="callback" class="callback-section">
+        <section class="callback-section">
           <h2 class="callback-main-title">Наши специалисты</h2>
           <div class="callback-section-container">
             <div class="callback-card-container">
@@ -502,6 +503,20 @@
                 мы вам перезвоним
               </p>
               <p id="responseMessage" class="response-message"></p>
+              <div class="social-div">
+                <a href="viber://chat?number=+380502233959" class="viber-button"
+                  ><img
+                    src="./src/img/svg/icon_new - white +purple bg.svg"
+                    alt="viber-icon"
+                  />Наш Viber</a
+                >
+                <a href="https://t.me/RofLJeKee" class="telegram-button"
+                  ><img
+                    src="./src/img/svg/icons-telegram.svg"
+                    alt="telegram-icon"
+                  />Наш Telegram</a
+                >
+              </div>
             </div>
           </div>
         </section>
@@ -794,6 +809,7 @@
               height="120"
               viewBox="0 0 200 120"
               fill="none"
+              class="logo-footer"
               xmlns="http://www.w3.org/2000/svg"
             >
               <!-- Фон (опционально) -->
@@ -822,7 +838,7 @@
               </text>
             </svg></a
           >
-          <a href="#" class="to-home" id="back-to-top">
+          <a href="#header" class="to-home" id="back-to-top">
             <span class="icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -849,6 +865,7 @@
             width="400"
             height="300"
             style="border-radius: 10px"
+            class="iframe"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

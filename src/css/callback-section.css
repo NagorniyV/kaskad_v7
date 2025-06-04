@@ -48,7 +48,8 @@
 .team-card > img{
     position: absolute;
     top: -40px;
-    right: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 260px;
 }
 
@@ -153,4 +154,21 @@
 
 .response-message.error {
     background: #f8d7da;
-    color: #721c24; }
+    color: #721c24; 
+}
+
+@media (max-width: 480px){
+    .callback-section{
+        padding: 20px 20px;
+    }
+
+    .callback-main-title{
+        margin-left: 20px;
+        font-size: 38px;
+        margin-bottom: 0px;
+    }
+
+    .callback-section-container{
+        flex-direction: column;
+    }
+}

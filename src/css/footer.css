@@ -88,6 +88,7 @@
     gap: 12px;
     color: rgb(180, 180, 189);
     font-size: 12px;
+    text-decoration: none;
 }
 
 .viber-button:hover,
@@ -96,16 +97,6 @@
 .telegram-button:focus {
     color: white;
 }
-
-/* Styles for  mobi */
-@media (max-width: 420px) {
-    .map-section {
-        padding: 0;
-    }
-}
-
-/* Styles for Tablet devices */
-@media only screen and (max-width: 1024px) {}
 
 .to-home {
     position: fixed;
@@ -158,4 +149,59 @@
     opacity: 1;
     transform: translateX(0);
     transition: opacity 0.3s ease 0.1s, transform 0.3s ease;
+}
+
+@media (max-width: 480px){
+    .footer-container{
+        padding: 20px 20px;
+    }
+
+    .top-map-div{
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .bot-map-div{
+        flex-direction: column;
+    }
+
+    iframe{
+        width: 380px;
+        height: 300px;
+        margin-bottom: 24px;
+    }
+
+    .map-navi{
+        display: none;
+    }
+
+    .map-title {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .map-content{
+        text-align: center;
+        margin-right: 20px;
+        align-items: center;
+    }
+
+    .logo-footer{
+        display: none;
+    }
+
+
+    .map-work-div, .map-work-title{
+        font-size: 24px;
+    }
+
+    .map-work-div, .social-div {
+        margin: 28px 0px;
+    }
+
+    .viber-button, .telegram-button{
+        font-size: 18px;
+        color: #f8f8f8;
+        
+    }
 }

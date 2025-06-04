@@ -89,3 +89,14 @@
     color: rgb(180, 180, 189);
     font-size: 16px;
 }
+
+@media (max-width: 480px){
+    .hero-title{
+        font-size: 38px;
+        max-width: 320px;
+    }
+
+    .hero-content{
+        padding: 8px 10px;
+    }
+}

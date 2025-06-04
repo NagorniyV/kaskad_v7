@@ -52,3 +52,19 @@
 .work-container {
     margin-left: 80px;
 }
+
+@media (max-width: 480px) {
+    .work-title {
+        font-size: 36px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .work-container {
+        margin-left: 0px;
+    }
+
+    .work-process {
+        padding: 20px 0px;
+    }
+}

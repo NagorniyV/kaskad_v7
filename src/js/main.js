@@ -107,13 +107,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //кнопка Піднятись в гору
 
-// Плавный скролл при клике на кнопку
 document.getElementById('back-to-top').addEventListener('click', function(e) {
-e.preventDefault(); // Отменяем стандартное поведение ссылки
-window.scrollTo({
-  top: 0,
-  behavior: 'smooth' // Плавная прокрутка
-});
+  e.preventDefault(); // Отменяем стандартное поведение ссылки
+  
+  // Находим элемент header
+  const headerElement = document.getElementById('header');
+  
+  // Плавный скролл до header
+  if (headerElement) {
+    headerElement.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 });
 
 // ФОРМА ОБРАТНОЙ СВЯЗИ
@@ -182,22 +187,27 @@ document.getElementById('callbackForm').addEventListener('submit', function(e) {
 
 // БУРГЕР КНОПКА
 
-// Добавьте этот скрипт для работы бургер-меню
 document.addEventListener('DOMContentLoaded', function() {
-  const burgerMenu = document.querySelector('.burger-menu');
-  const headerNav = document.querySelector('.header-nav');
-  
-  burgerMenu.addEventListener('click', function() {
+  const burger = document.querySelector('.burger-menu');
+  const nav = document.querySelector('.nav');
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  // Бургер-меню
+  burger.addEventListener('click', function() {
     this.classList.toggle('active');
-    headerNav.classList.toggle('active');
+    nav.classList.toggle('active');
   });
-  
-  // Закрытие меню при клике на пункт (опционально)
-  const navItems = document.querySelectorAll('.nav-list-header a');
-  navItems.forEach(item => {
-    item.addEventListener('click', function() {
-      burgerMenu.classList.remove('active');
-      headerNav.classList.remove('active');
+
+  // Аккордеон для выпадающих пунктов
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      }
     });
   });
 });
