@@ -84,27 +84,6 @@
     background-color: #0e6374;
 }
 
-@media (max-width: 1024px) {
-    .service-card {
-        flex: 0 0 calc(33.33% - 20px);
-        /* 3 карточки */
-    }
-}
-
-@media (max-width: 768px) {
-    .service-card {
-        flex: 0 0 calc(50% - 20px);
-        /* 2 карточки */
-    }
-}
-
-@media (max-width: 480px) {
-    .service-card {
-        flex: 0 0 calc(100% - 20px);
-        /* 1 карточка */
-    }
-}
-
 .service-card {
     flex: 0 0 calc(20% - 20px);
     margin: 0 10px;
@@ -161,4 +140,25 @@
 
 .details-btn:hover {
     background: #0e6374;
+}
+
+@media (max-width: 1024px) {
+    .service-card {
+        flex: 0 0 calc(33.33% - 20px);
+        /* 3 карточки */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        flex: 0 0 calc(50% - 20px);
+        /* 2 карточки */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        flex: 0 0 calc(100% - 20px);
+        /* 1 карточка */
+    }
 }
