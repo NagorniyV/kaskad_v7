@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const link = dropdown.querySelector('a');
     
     link.addEventListener('click', function(e) {
-      if (window.innerWidth <= 992) {
+      if (window.innerWidth <= 992 && this.getAttribute('href') === '#') {
         e.preventDefault();
         const content = this.nextElementSibling;
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
