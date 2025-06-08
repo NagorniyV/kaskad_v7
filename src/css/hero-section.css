@@ -86,8 +86,8 @@
 .discount {
     text-align: left;
     margin-top: 16px;
-    color: rgb(180, 180, 189);
-    font-size: 16px;
+    color: #f8f8f8;
+    font-size: 20px;
 }
 
 @media (max-width: 480px){
@@ -98,5 +98,10 @@
 
     .hero-content{
         padding: 8px 10px;
+    }
+
+    .discount{
+        max-width: 360px;
+        text-align: center;
     }
 }
