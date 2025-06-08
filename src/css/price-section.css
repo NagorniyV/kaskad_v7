@@ -1,8 +1,5 @@
 .price-section{
     background-color: #f1f1f1;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px 20px;
 }
 
@@ -12,15 +9,27 @@
     margin: 20px;
 }
 
-.price-title {
-    color: #333;
-    text-align: center;
+.price-content{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    margin: 20px auto;
+    max-width: 1000px;    
+    font-size: 18px;
+    text-indent: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    table-layout: fixed;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th,
@@ -41,4 +50,14 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #f1f1f1;
+}
+
+.price-section > h2{
+    font-size: 24px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-weight: bold;
 }
