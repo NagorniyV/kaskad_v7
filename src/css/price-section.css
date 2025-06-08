@@ -72,3 +72,10 @@ tr:hover {
     font-weight: bold;
     margin-top: 8px;
 }
+
+.price-content-container{
+    display: flex;
+    gap: 8px;
+    max-width: 1000px;
+    margin: 0px auto 30px auto;
+}

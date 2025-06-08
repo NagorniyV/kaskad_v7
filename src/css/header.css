@@ -20,7 +20,7 @@ header {
 
 .nav-list-header {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-direction: row;
     margin-top: 38px;
     color: white;
@@ -30,6 +30,7 @@ header {
     padding: 16px 20px;
     font-size: 16px;
     position: relative;
+    font-size: 18px;
 }
 
 .nav-item a {
