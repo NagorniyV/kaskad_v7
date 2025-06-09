@@ -10,10 +10,9 @@
 }
 
 .contacts-section{
-    
     background-color: #f3f3f3;
     padding: 20px 0px;
-    
+
 }
 
 .contacts-div{
@@ -48,9 +47,14 @@
     margin-bottom: 8px;
 }
 
-.phone-link{
-    color: #0e6374;
+.number-link{
+    color: #24a7c1;
     margin-right: 8px;
+    text-decoration: none;
+}
+
+.number-link:hover {
+    color: #0e6374;
 }
 
 .soc-div > a{
@@ -59,16 +63,6 @@
 
 .number-div > div{
     margin-bottom: 12px;
-}
-
-.soc-div img {
-    width: 26px;
-    height: 26px;
-}
-
-.soc-div img:hover{
-    color: #101010;
-
 }
 
 .soc-div a {
@@ -80,11 +74,14 @@
     /* выравнивание по горизонтали (опционально) */
 }
 
-.soc-div img {
+.viber-img, .telegram-img {
     vertical-align: middle;
     /* дополнительное выравнивание */
     align-self: center;
-    /* на случай сложных случаев */ }
+    /* на случай сложных случаев */ 
+    height: 28px;
+    margin-right: 8px;
+}
 
 @media (max-width: 480px) {
     .contacts-div {

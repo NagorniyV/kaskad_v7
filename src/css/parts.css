@@ -1,0 +1,150 @@
+.hero-parts {
+    position: relative;
+    color: white;
+    background-image: url(../img/parts-hero.jpg);
+    background-color: #101010;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid #f8f8f8;
+}
+
+.hero-parts::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Чёрный с прозрачностью 50% */
+    z-index: 1;
+}
+
+/* Чтобы контент был поверх затемнения */
+.hero-parts>* {
+    position: relative;
+    z-index: 2;
+}
+
+.parts-section{
+    background-color: #f8f8f8;
+}
+
+.Our-Benefits{
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px 20px;
+}
+
+.Our-Benefits>h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #101010;
+    margin-bottom: 12px;
+}
+
+.Our-Benefits>p {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 18px;
+    color: #101010;
+    margin: 12px 0px;
+}
+
+.benefits-list{
+    list-style: disc;
+    line-height: 1.5;
+}
+
+.benefits-item{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 18px;
+    color: #101010;
+    margin-left: 24px;
+}
+
+.benefits-content{
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px 20px;
+}
+
+.benefits-content>p{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 18px;
+    color: #101010;
+    margin: 20px 0px;
+    text-indent: 30px;
+}
+
+.bene-span{
+    font-weight: bold;
+}
+
+.benefits-content>img{
+    display: block; 
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    /* Подстройте под ваш размер */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    width: 200%;
+    /* 2 изображения в ряд */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    display: block; 
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
+}

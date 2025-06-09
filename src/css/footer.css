@@ -1,14 +1,18 @@
 .footer-container {
-    background-color: #2c2b2b;
     border-bottom: 1px solid #f8f8f8;
     margin-bottom: 8px;
     padding: 20px 260px;
 }
 
-.top-map-div {
+.top-footer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
+}
+
+.bot-footer{
+    display: flex;
+    justify-content: space-between;
 }
 
 .map-title {
@@ -17,7 +21,7 @@
     font-weight: 700;
     font-style: normal;
     font-size: 56px;
-    color: white;
+    color: #f8f8f8;
 }
 
 .map-content {
@@ -31,71 +35,54 @@
     color: rgb(180, 180, 189);
 }
 
-.bot-map-div {
-    display: flex;
-    justify-content: space-between;
-}
-
-.map-work-div {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    color: white;
-}
-
-.map-work-title {
-    font-size: 16px;
-    margin-bottom: 24px;
-}
-
-.map-work-down {
-    color: rgb(180, 180, 189);
-    font-size: 12px;
-    margin-bottom: 24px;
-}
-
-.map-navi {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    color: white;
-}
-
-.nav-list {
+.bot-footer>div{
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    color: rgb(180, 180, 189);
-    font-size: 14px;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.social-div {
-    display: flex;
-    gap: 18px;
-    margin-top: 140px;
+.work-footer-div>h3{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    color: #f8f8f8;
 }
 
-.viber-button,
-.telegram-button {
-    display: flex;
-    height: 16px;
-    gap: 12px;
-    color: rgb(180, 180, 189);
-    font-size: 12px;
-    text-decoration: none;
+.work-footer-div>p{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 18px;
+    color: #f8f8f8;
+    margin-top: 4px;
 }
 
-.viber-button:hover,
-.viber-button:focus,
-.telegram-button:hover,
-.telegram-button:focus {
-    color: white;
+.number-footer-div>h3{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    color: #f8f8f8;
+    margin-top: 20px;
+}
+
+.number-footer-div>div{
+    color: #f8f8f8;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 18px;
+    margin-top: 12px;
 }
 
 .to-home {

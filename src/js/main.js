@@ -211,3 +211,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// КАРУСЕЛЬ ПОДБОРА ЗАПЧАСТЕЙ
+
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel');
+  const images = document.querySelectorAll('.carousel img');
+  let currentIndex = 0;
+  const visibleImages = 2; // Количество видимых изображений
+  
+  function showNextImages() {
+      // Скрываем все изображения
+      images.forEach(img => {
+          img.style.display = 'none';
+          img.classList.remove('active');
+          img.classList.remove('fade');
+      });
+      
+      // Показываем текущие 2 изображения
+      for (let i = 0; i < visibleImages; i++) {
+          const index = (currentIndex + i) % images.length;
+          images[index].style.display = 'block';
+          if (i === 0) {
+              images[index].classList.add('active');
+              images[index].classList.add('fade');
+          }
+      }
+      
+      // Обновляем индекс для следующего перехода
+      currentIndex = (currentIndex + 1) % (images.length - visibleImages + 1);
+  }
+  
+  // Запускаем карусель
+  showNextImages();
+  setInterval(showNextImages, 3000); // Смена каждые 3 секунды
+  
+  // Для адаптивности можно добавить обработчик изменения размера окна
+  window.addEventListener('resize', function() {
+      // При необходимости можно добавить логику адаптации
+  });
+});
