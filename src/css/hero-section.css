@@ -1,11 +1,11 @@
 .hero {
     position: relative;
     color: white;
-    background-image: url(../img/pexels-photo-170813.jpeg);
+    background-image: url(../img/test-hero-bg.jpg);
     background-color: #101010;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
