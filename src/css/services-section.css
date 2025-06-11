@@ -125,7 +125,7 @@
 .details-btn {
     position: absolute;
     bottom: -15px;
-    left: 50%;
+    /* left: 50%; */
     transform: translateX(-50%);
     padding: 12px 35px;
     border-radius: 25px;
@@ -134,13 +134,28 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
+    animation: subtlePulse 2.5s infinite ease-in-out;
     z-index: 2;
 }
 
-.details-btn:hover {
+.details-btn:hover,
+.details-btn:focus {
     background: #0e6374;
+    box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
+}
+
+@keyframes subtlePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
 }
 
 @media (max-width: 1024px) {

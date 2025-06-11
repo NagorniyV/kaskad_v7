@@ -68,19 +68,40 @@
     margin-top: auto;
 }
 
-.details-hero-btn{
+.details-hero-btn {
     background: #24a7c1;
     color: #f8f8f8;
     padding: 12px 35px;
     border-radius: 25px;
     margin-top: 16px;
     display: block;
-    margin-right: auto; 
+    margin-right: auto;
     border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
+    animation: combinedEffect 2.5s infinite ease-in-out;
 }
 
-.details-hero-btn:hover, .details-hero-btn:focus{
+.details-hero-btn:hover,
+.details-hero-btn:focus {
     background: #0e6374;
+    box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
+}
+
+@keyframes combinedEffect {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(36, 167, 193, 0.5);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(36, 167, 193, 0.8);
+    }
 }
 
 .discount {
