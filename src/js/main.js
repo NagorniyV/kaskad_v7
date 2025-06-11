@@ -85,19 +85,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //BREND SECTION
 
-// JavaScript для бесконечного эффекта
 document.addEventListener('DOMContentLoaded', function() {
   const track = document.querySelector('.carousel-track');
-  const logos = track.querySelectorAll('img');
-  const logosCount = logos.length;
+  const items = track.querySelectorAll('div'); // Выбираем все div-элементы, содержащие img и p
   
-  // Клонируем логотипы для бесшовности
-  logos.forEach(logo => {
-    const clone = logo.cloneNode(true);
+  // Клонируем все элементы (и изображения, и текст) для бесшовности
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
     track.appendChild(clone);
   });
   
-  // Перезапуск анимации при скролле
+  // Перезапуск анимации при скролле (опционально)
   track.addEventListener('animationiteration', () => {
     track.style.animation = 'none';
     void track.offsetWidth; // Trigger reflow

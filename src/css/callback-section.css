@@ -114,10 +114,16 @@
     color: #f8f8f8;
     border: none;
     font-size: 18px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
+    animation: subtlePulse 2.5s infinite ease-in-out;
+    z-index: 2;
 }
 
 .text-header:hover {
     background: #0e6374;
+    box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
 }
 
 #callbackForm {
