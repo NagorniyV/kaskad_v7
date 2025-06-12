@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Запускаем карусель
   showNextImages();
-  setInterval(showNextImages, 3000); // Смена каждые 3 секунды
+  setInterval(showNextImages, 4000); // Смена каждые 3 секунды
   
   // Для адаптивности можно добавить обработчик изменения размера окна
   window.addEventListener('resize', function() {

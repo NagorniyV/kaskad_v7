@@ -106,9 +106,9 @@
   <body>
     <main>
       <div class="container">
-        <section class="hero">
+        <section class="hero-gbo">
           <div class="hero-content">
-            <h1 class="hero-title">ТУТ БУДЕТ СЕКЦИЯ ПРО ГБО</h1>
+            <h1 class="hero-title">ГАЗОБАЛЛОННОЕ ОБОРУДОВАНИЕ В ПАВЛОГРАДЕ</h1>
             <div class="hero-content-container">
               <div>
                 <svg
@@ -125,7 +125,7 @@
                     stroke-linecap="round"
                   />
                 </svg>
-                <p>лучшее соотношение цена/качество</p>
+                <p>Установка, обслуживание и ремонт!</p>
               </div>
               <div>
                 <svg
@@ -142,7 +142,7 @@
                     stroke-linecap="round"
                   />
                 </svg>
-                <p>гарантии на все виды работ</p>
+                <p>Только лучшие, проверенные бренды!</p>
               </div>
               <div>
                 <svg
@@ -159,7 +159,7 @@
                     stroke-linecap="round"
                   />
                 </svg>
-                <p>оригинальные запчасти</p>
+                <p>Разбираемся во всех ходовых системах!</p>
               </div>
             </div>
             <button
@@ -167,159 +167,47 @@
               onclick="window.location.href='#callbackForm'"
               class="details-hero-btn"
             >
-              ЗАПИСАТЬСЯ
+              ЗАПИСАТЬСЯ НА ДИАГНОСТИКУ
             </button>
             <p class="discount">
-              Скидка 50% на первую диагностику по промокоду "АС КАСКАД"
+              Скидка 50% на первую замену фильтров по промокоду "АС КАСКАД"
             </p>
           </div>
         </section>
-        <section class="services-section">
-          <div class="services-top">
-            <div class="services-top-content">
-              <h1 class="services-title">Услуги и цены</h1>
-              <p class="services-subtitle">
-                Лучшее соотношение цена - качество в вашем городе!
+        <section class="benefits-section">
+          <h2 class="benefits-title">
+            Почему <span class="span-benefits-title"> выбирают нас</span>
+          </h2>
+          <div class="benefits-containers">
+            <div class="benefits-container">
+              <div class="benefits-top">
+                <p class="benefits-number">1</p>
+                <p class="benefits-top-text">ПОРЯДОЧНОСТЬ</p>
+              </div>
+              <img class="benefits-img" src="./src/img/bene-1.jpg" alt="" />
+              <p class="benefits-bot-text">
+                «Честный ремонт: только нужные работы, только нужные запчасти.»
               </p>
             </div>
-            <div class="carousel-nav">
-              <button class="carousel-btn" id="prevBtn">
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 28 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 14H8M14 8L8 14L14 20"
-                    stroke="white"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </button>
-              <button class="carousel-btn" id="nextBtn">
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 28 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 14H20M14 8L20 14L14 20"
-                    stroke="white"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </button>
+            <div class="benefits-container">
+              <div class="benefits-top">
+                <p class="benefits-number">2</p>
+                <p class="benefits-top-text">ОТВЕТСТВЕННОСТЬ</p>
+              </div>
+              <img class="benefits-img" src="./src/img/bene-2.jpg" alt="" />
+              <p class="benefits-bot-text">
+                «Гарантируем качество – отвечаем за результат!»
+              </p>
             </div>
-          </div>
-          <div class="services-carousel">
-            <div class="services-container" id="servicesContainer">
-              <div class="service-card">
-                <h3>РЕМОНТ И ТЕХ ОБСЛУЖИВАНИЕ</h3>
-                <p>
-                  Комплекс работ по диагностике автомобиля в целом или отдельных
-                  его агрегатов, регулировке систем/узлов, выполнению работ по
-                  регламентной замене деталей и/или технических жидкостей
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
+            <div class="benefits-container">
+              <div class="benefits-top">
+                <p class="benefits-number">3</p>
+                <p class="benefits-top-text">ОПЕРАТИВНОСТЬ</p>
               </div>
-
-              <div class="service-card">
-                <h3>ПРОДАЖА АВТОЗАПЧАСТЕЙ</h3>
-                <p>
-                  В наличии подвески, тормозные системы, системы зажигания,
-                  фильтры, системы управления, светотехника, трансмиссии,
-                  автоэлектроника, шины и диски
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-
-              <div class="service-card">
-                <h3>ЗАМЕНА ЖИДКОСТЕЙ</h3>
-                <p>
-                  Замена моторного масла, тормозной жидкости, антифриза,
-                  омывателя лобового стекла, масла коробки передач, хладагента
-                  кондиционера, и остальных технических жидкостей в автомобиле
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-
-              <div class="service-card">
-                <h3>ОСМОТР АВТО ПЕРЕД ПОКУПКОЙ</h3>
-                <p>
-                  Диагностика авто перед покупкой, проверка двигателя, коробки
-                  передач, электроники с помощью тест-драйва
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-
-              <div class="service-card">
-                <h3>ДИАГНОСТИКА ДВИГАТЕЛЯ</h3>
-                <p>
-                  Компьютерная диагностика двигателя, проверка состояния
-                  цилиндропоршневой группы, системы зажигания и впрыска
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-
-              <div class="service-card">
-                <h3>РЕМОНТ ТРАНСМИССИИ</h3>
-                <p>
-                  Диагностика и ремонт механических и автоматических коробок
-                  передач, редукторов, раздаточных коробок
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-
-              <div class="service-card">
-                <h3>РЕМОНТ ХОДОВОЙ</h3>
-                <p>
-                  Диагностика и ремонт подвески, замена амортизаторов, шаровых
-                  опор, рычагов, сайлентблоков
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-
-              <div class="service-card">
-                <h3>АВТОЭЛЕКТРИКА</h3>
-                <p>
-                  Диагностика и ремонт электрооборудования автомобиля, проводки,
-                  блоков управления, датчиков
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
-
-              <div class="service-card">
-                <h3>КУЗОВНОЙ РЕМОНТ</h3>
-                <p>
-                  Ремонт кузовных элементов, покраска, антикоррозийная
-                  обработка, рихтовка без покраски
-                </p>
-                <div class="btn-container">
-                  <a href="/repair" class="details-btn">ПОДРОБНЕЕ</a>
-                </div>
-              </div>
+              <img class="benefits-img" src="./src/img/bene-3.jpg" alt="" />
+              <p class="benefits-bot-text">
+                «Ваше авто не задержится у нас дольше необходимого.»
+              </p>
             </div>
           </div>
         </section>
@@ -357,7 +245,7 @@
             </div>
             <div class="callback-container">
               <h3 class="callbaack-main-title">
-                ПОЛУЧИТЕ РЕКОМЕНДАЦИЮ ПО РЕШЕНИЮ ПРОБЛЕММЫ
+                ПОЛУЧИТЕ ПРОСЧЕТ ЦЕНЫ НА ВАШ АВТОМОБИЛЬ СОВЕРШЕННО
                 <span class="span-cb-title">БЕСПЛАТНО!</span>
               </h3>
               <form id="callbackForm">
@@ -382,9 +270,7 @@
                   placeholder="+380 50 025 25 25"
                   required
                 />
-                <button type="submit" class="text-header">
-                  ПОЛУЧИТЬ РЕКОМЕНДАЦИЮ
-                </button>
+                <button type="submit" class="text-header">УЗНАТЬ ЦЕНУ</button>
               </form>
               <p class="cb-last-text">
                 Вы можете указать марку и модель авто и оставить Ваши контакты -
@@ -394,61 +280,8 @@
             </div>
           </div>
         </section>
-        <section class="benefits-section">
-          <h2 class="benefits-title">
-            Почему <span class="span-benefits-title"> выбирают нас</span>
-          </h2>
-          <div class="benefits-containers">
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">1</p>
-                <p class="benefits-top-text">
-                  Гарантия на выполненные работы до 24 мес
-                </p>
-              </div>
-              <img
-                class="benefits-img"
-                src="./src/img/kaskad/hero1.jpg"
-                alt=""
-              />
-              <p class="benefits-bot-text">Оснащен современным оборудованием</p>
-            </div>
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">2</p>
-                <p class="benefits-top-text">
-                  Профессиональное диагностическое оборудование
-                </p>
-              </div>
-              <img
-                class="benefits-img"
-                src="./src/img/kaskad/hero1.jpg"
-                alt=""
-              />
-              <p class="benefits-bot-text">
-                Качественные, рекомендованные производителем запчасти
-              </p>
-            </div>
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">3</p>
-                <p class="benefits-top-text">
-                  Скидки подписчикам и по промокоду
-                </p>
-              </div>
-              <img
-                class="benefits-img"
-                src="./src/img/kaskad/hero1.jpg"
-                alt=""
-              />
-              <p class="benefits-bot-text">
-                Квалифицированные специалисты с опытом
-              </p>
-            </div>
-          </div>
-        </section>
         <section id="brend" class="brend-section">
-          <h2 class="brend-title">СТО в Павлограде</h2>
+          <h2 class="brend-title">Устанавливаем газ на авто:</h2>
           <div class="infinite-carousel">
             <div class="carousel-track">
               <div>

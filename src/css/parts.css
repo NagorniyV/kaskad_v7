@@ -106,8 +106,8 @@
 
 .benefits-content>img{
     display: block; 
-    width: 500px;
-    height: auto;
+    width: auto;
+    max-height: 400px;
     margin: 0 auto;
 }
 
@@ -129,8 +129,8 @@
 
 .carousel img {
     display: block; 
-    width: 500px;
-    height: auto;
+    width: auto;
+    max-height: 400px;
     margin: 0 auto;
     object-fit: cover;
 }
@@ -148,3 +148,4 @@
         opacity: 1
     }
 }
+
