@@ -32,6 +32,10 @@
     z-index: 2;
 }
 
+.hero-contact-div{
+    display: block;
+}
+
 .hero-content-container {
     padding: 14px 14px;
     width: 320px;
@@ -43,6 +47,46 @@
 
 .hero-content-container div {
     display: flex;
+}
+
+.hero>div, .hero-gbo>div,.hero-price-section>div, .hero-parts>div, .hero-service-catalog>div, .hero-contacts-section>div {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding-top: 100px;
+}
+
+.hero-contact-div{
+    padding: 12px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.hero-contact-div>h3{
+    color: #f8f8f8;
+    font-size: 20px;
+    margin: 8px auto;
+    font-weight: bold;
+}
+
+.hero-contact-div>iframe{
+    padding: 20px 0px;
+    filter: brightness(0.8);
+}
+
+.hero-contact-number{
+    color: #f8f8f8;
+    font-size: 20px;
+    /* margin: 8px auto; */
+}
+
+.hero-contact-number{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .hero-title {
@@ -57,9 +101,7 @@
 }
 
 .hero-content {
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 550px;
 }
 
 .btn-container {
