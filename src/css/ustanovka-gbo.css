@@ -31,3 +31,61 @@
     position: relative;
     z-index: 2;
 }
+
+.gbo-section{
+    background-color: #f8f8f8;
+    padding-top: 20px;
+}
+
+.main-gbo{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 20px 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.main-gbo>div{
+    flex: 1;
+    min-width: 0;
+}
+
+.gbo-main-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    filter: brightness(95%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.gbo-section>h2{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+}
+
+.main-gbo-content>p, .main-gbo-content>ul{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 18px;
+    text-indent: 20px;
+}
+
+.gbo-span{
+    font-weight: bold;
+}
+
+.gbo-list>li{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
