@@ -119,69 +119,7 @@ document.getElementById('back-to-top').addEventListener('click', function(e) {
   }
 });
 
-// ФОРМА ОБРАТНОЙ СВЯЗИ
 
-document.getElementById('callbackForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const name = document.getElementById('nameInput').value.trim();
-  const phoneNumber = document.getElementById('phoneInput').value.trim();
-  const messageText = document.getElementById('messageInput').value.trim();
-  const responseMessage = document.getElementById('responseMessage');
-  
-  // Валидация номера телефона (минимум 10 цифр)
-  const phoneRegex = /[\d]{10,}/;
-  const cleanPhone = phoneNumber.replace(/\D/g, ''); // Удаляем всё, кроме цифр
-  
-  if (!phoneRegex.test(cleanPhone)) {
-    responseMessage.textContent = "Введіть коректний номер телефону!";
-    responseMessage.className = "response-message error";
-    responseMessage.style.display = "block";
-    return;
-  }
-
-  // Формируем сообщение для Telegram
-  const telegramMessage = `
-    Новий запит на дзвінок!
-    Ім'я: ${name || 'Не вказано'}
-    Телефон: ${phoneNumber}
-    Авто: ${messageText || 'Не вказано'}
-  `;
-
-  const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-  const adminChatIds = ['398501551'];
-  
-  // Отправляем запросы
-  Promise.all(
-    adminChatIds.map(chatId => 
-      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: telegramMessage
-        })
-      })
-    )
-  )
-  .then(responses => Promise.all(responses.map(res => res.json())))
-  .then(data => {
-    responseMessage.textContent = "Дякуємо! Ми вам зателефонуємо найближчим часом.";
-    responseMessage.className = "response-message success";
-    responseMessage.style.display = "block";
-    document.getElementById('callbackForm').reset();
-    
-    setTimeout(() => {
-      responseMessage.style.display = "none";
-    }, 5000);
-  })
-  .catch(error => {
-    console.error("Помилка відправки:", error);
-    responseMessage.textContent = "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.";
-    responseMessage.className = "response-message error";
-    responseMessage.style.display = "block";
-  });
-});
 
 // БУРГЕР КНОПКА
 
@@ -247,5 +185,157 @@ document.addEventListener('DOMContentLoaded', function() {
   // Для адаптивности можно добавить обработчик изменения размера окна
   window.addEventListener('resize', function() {
       // При необходимости можно добавить логику адаптации
+  });
+});
+
+// МОДАЛЬНОЕ ОКНО + ФОРМА ОБРАТНОЙ СВЯЗИ
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Общие настройки
+  const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
+  const adminChatIds = ['398501551'];
+
+  // ===== МОДАЛЬНОЕ ОКНО =====
+  const modal = document.getElementById('callbackModal');
+  const modalForm = document.getElementById('modalForm');
+  
+  // Открытие/закрытие модалки
+  document.querySelector('.details-hero-btn')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'block';
+    document.body.classList.add('modal-open');
+  });
+
+  // Закрытие при клике вне окна
+window.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  }
+});
+
+  document.querySelector('.modal-close')?.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  });
+
+  
+
+  // Обработка отправки формы модального окна
+  if (modalForm) {
+    modalForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      console.log('Форма модального окна отправлена'); // Для отладки
+      
+      // Получаем значения полей
+      const name = document.getElementById('modalName')?.value.trim();
+      const phone = document.getElementById('modalPhone')?.value.trim();
+      const vin = document.getElementById('modalVin')?.value.trim();
+      const carModel = document.getElementById('modalCar')?.value.trim();
+
+      // Валидация телефона
+      const phoneRegex = /^[\d\s\-+]{10,}$/;
+      const cleanPhone = phone?.replace(/\D/g, '') || '';
+
+      // Формируем сообщение
+      const message = `🚗 Новая заявка обратный звонок:\n\n` +
+                     `▪ Имя: ${name || 'не указано'}\n` +
+                     `▪ Телефон: ${phone}\n` +
+                     `▪ VIN: ${vin || 'не указан'}\n` +
+                     `▪ Авто: ${carModel || 'не указано'}`;
+
+      try {
+        console.log('Отправляем в Telegram:', message); // Для отладки
+        await sendToTelegram(message);
+        
+        // Успешная отправка
+        alert('✅ Ваша заявка принята! Мы свяжемся с вами в ближайшее время.');
+        modalForm.reset();
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+      } catch (error) {
+        console.error('Ошибка отправки:', error);
+        alert('⚠ Произошла ошибка. Пожалуйста, попробуйте ещё раз или позвоните нам.');
+      }
+    });
+  }
+
+  // ===== ОБЩАЯ ФУНКЦИЯ ОТПРАВКИ =====
+  async function sendToTelegram(text) {
+    const promises = adminChatIds.map(chatId => {
+      return fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text,
+          parse_mode: 'HTML'
+        })
+      });
+    });
+    
+    return await Promise.all(promises);
+  }
+});
+
+// ФОРМА ОБРАТНОЙ СВЯЗИ
+
+document.getElementById('callbackForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('nameInput').value.trim();
+  const phoneNumber = document.getElementById('phoneInput').value.trim();
+  const messageText = document.getElementById('messageInput').value.trim();
+  const responseMessage = document.getElementById('responseMessage');
+  
+  // Валидация номера телефона (минимум 10 цифр)
+  const phoneRegex = /[\d]{10,}/;
+  const cleanPhone = phoneNumber.replace(/\D/g, ''); // Удаляем всё, кроме цифр
+  
+  if (!phoneRegex.test(cleanPhone)) {
+    responseMessage.textContent = "Введіть коректний номер телефону!";
+    responseMessage.className = "response-message error";
+    responseMessage.style.display = "block";
+    return;
+  }
+
+  // Формируем сообщение для Telegram
+  const telegramMessage = `🚗 Новая заявка обратный звонок:\n\n` +
+                     `▪ Имя: ${name || 'не указано'}\n` +
+                     `▪ Телефон: ${phoneNumber}\n` +
+                     `▪ Авто: ${messageText || 'не указано'}`;
+
+  const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
+  const adminChatIds = ['398501551'];
+  
+  // Отправляем запросы
+  Promise.all(
+    adminChatIds.map(chatId => 
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: telegramMessage
+        })
+      })
+    )
+  )
+  .then(responses => Promise.all(responses.map(res => res.json())))
+  .then(data => {
+    responseMessage.textContent = "Дякуємо! Ми вам зателефонуємо найближчим часом.";
+    responseMessage.className = "response-message success";
+    responseMessage.style.display = "block";
+    document.getElementById('callbackForm').reset();
+    
+    setTimeout(() => {
+      responseMessage.style.display = "none";
+    }, 5000);
+  })
+  .catch(error => {
+    console.error("Помилка відправки:", error);
+    responseMessage.textContent = "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.";
+    responseMessage.className = "response-message error";
+    responseMessage.style.display = "block";
   });
 });

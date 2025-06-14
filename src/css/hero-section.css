@@ -101,7 +101,7 @@
 }
 
 .hero-content {
-    max-width: 550px;
+    max-width: 600px;
 }
 
 .btn-container {
@@ -167,4 +167,158 @@
         max-width: 360px;
         text-align: center;
     }
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #101010;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 500px;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+.modal-content>h3{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #f8f8f8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f8f8f8;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #f8f8f8;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f8f8f8;
+    border-radius: 4px;
+}
+
+/* Затемнение фона */
+body.modal-open {
+    overflow: hidden;
+}
+
+body.modal-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+}
+
+.submit-btn {
+    background: #24a7c1;
+    color: #f8f8f8;
+    padding: 12px 12px;
+    border-radius: 25px;
+    display: block;
+    border: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
+    animation: combinedEffect 2.5s infinite ease-in-out;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background: #0e6374;
+    box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
+}
+
+/* СОЦ СЕТИ */
+
+.social-fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.telegram {
+    background-color: #0088cc;
+}
+
+.viber {
+    background-color: #7360f2;
+}
+
+.phone {
+    background-color: #4CAF50;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
 }
