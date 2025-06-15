@@ -47,10 +47,11 @@
 
 .team-card > img{
     position: absolute;
-    top: -40px;
+    top: -60px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 260px;
+    max-height: 205px;
+    border-radius: 20px;
 }
 
 .team-card-title{
