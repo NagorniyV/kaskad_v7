@@ -143,19 +143,11 @@
         padding: 20px 20px;
     }
 
-    .top-map-div{
-        flex-direction: column;
-        margin-bottom: 24px;
-    }
-
-    .bot-map-div{
-        flex-direction: column;
-    }
-
     iframe{
-        width: 380px;
-        height: 300px;
-        margin-bottom: 24px;
+        max-width: 90%;
+        height: 250px;
+        padding: 0px;
+        margin: 24px auto;
     }
 
     .map-navi{
@@ -189,6 +181,9 @@
     .viber-button, .telegram-button{
         font-size: 18px;
         color: #f8f8f8;
-        
+    }
+
+    .bot-footer{
+        flex-direction: column;
     }
 }

@@ -155,7 +155,7 @@
 
 @media (max-width: 480px){
     .hero-title{
-        font-size: 38px;
+        font-size: 36px;
         max-width: 320px;
     }
 
@@ -167,6 +167,25 @@
         max-width: 360px;
         text-align: center;
     }
+
+        .hero>div,
+        .hero-gbo>div,
+        .hero-price-section>div,
+        .hero-parts>div,
+        .hero-service-catalog>div,
+        .hero-contacts-section>div{
+        flex-direction: column;
+    }
+
+        .hero{
+        height: 100vh;
+    }
+
+    .hero-contact-div>iframe{
+        width: 200px;
+        height: 120px;
+        padding: 0px;
+    }    
 }
 
 /* МОДАЛЬНОЕ ОКНО */

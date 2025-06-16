@@ -135,3 +135,17 @@
     margin: 12px auto;
     text-align: center;
 }
+
+@media (max-width: 480px) {
+    .hero-service-catalog{
+        height: 100vh;
+    }
+
+    .price-content-container{
+        flex-direction: column;
+    }
+
+    .catalog-list{
+        grid-template-columns: repeat(1, 1fr); /* 3 колонки */
+    }
+}

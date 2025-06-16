@@ -37,3 +37,9 @@
     font-size: 28px;
     max-width: 450px;
 }
+
+@media (max-width: 480px) {
+    .hero-price-section {
+        height: 100vh;
+    }
+}

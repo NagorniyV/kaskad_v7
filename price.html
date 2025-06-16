@@ -111,12 +111,8 @@
         <section class="hero-price-section">
           <div>
             <div class="hero-content">
-              <h1 class="hero-title">Прайс-лист автосервиса — КАСКАД</h1>
-              <button
-                type="button"
-                onclick="window.location.href='#callbackForm'"
-                class="details-hero-btn"
-              >
+              <h1 class="hero-title">Прайс-лист автосервиса "КАСКАД"</h1>
+              <button type="button" class="details-hero-btn" id="openModalBtn">
                 ЗАПИСАТЬСЯ
               </button>
               <p class="discount">
@@ -1639,6 +1635,31 @@
           >
         </a>
       </div>
+      <div id="callbackModal" class="modal">
+        <div class="modal-content">
+          <span class="modal-close">&times;</span>
+          <h3>Оставте Ваши данные и мы перезвоним с готовым решением.</h3>
+          <form class="modal-callbackForm" id="modalForm">
+            <div class="form-group">
+              <label for="name">Имя*</label>
+              <input type="text" id="modalName" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон*</label>
+              <input type="tel" id="modalPhone" name="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="vin">VIN код автомобиля</label>
+              <input type="text" id="modalVin" name="vin" />
+            </div>
+            <div class="form-group">
+              <label for="carModel">Марка/модель автомобиля</label>
+              <input type="text" id="modalCar" name="carModel" />
+            </div>
+            <button type="submit" class="submit-btn">Отправить</button>
+          </form>
+        </div>
+      </div>
     </main>
   </body>
   <footer id="map-section">
@@ -1704,7 +1725,7 @@
         </div>
         <div class="bot-footer">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d262.7286342547718!2d35.83691716651164!3d48.530077092994496!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1749559352690!5m2!1sru!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
             width="400"
             height="300"
             style="border-radius: 10px"

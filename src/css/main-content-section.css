@@ -54,5 +54,13 @@
 @media (max-width: 480px){
     .main-content-div{
         flex-direction: column;
+        padding: 0px 8px;
     }
+
+    .img-content{
+        max-width: 90%;
+        margin: 0px auto;
+    }
+
+
 }

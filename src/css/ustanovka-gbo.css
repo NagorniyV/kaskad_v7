@@ -196,4 +196,17 @@
     .service-gbo-img {
       height: 220px;
     }
+
+    .hero-gbo{
+      height: 100vh;
+    }
+
+    .main-gbo{
+      flex-direction: column;
+    }
+
+    .gbo-section>h2{
+      font-size: 32px;
+      max-width: 90%;
+    }
   }

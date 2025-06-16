@@ -136,4 +136,9 @@
     .contacts-footer{
         display: none;
     }
+
+    .contacts-map>iframe{
+        margin: 0px 12px;
+        max-width: 90%;
+    }
 }
