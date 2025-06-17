@@ -1,86 +1,141 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Находим все карусели на странице
-  const carousels = document.querySelectorAll('.services-carousel');
-  
-  // Инициализируем каждую карусель
-  carousels.forEach((carousel) => {
-      const container = carousel.querySelector('.services-container');
-      const prevBtn = carousel.parentElement.querySelector('#prevBtn');
-      const nextBtn = carousel.parentElement.querySelector('#nextBtn');
-      const cards = carousel.querySelectorAll('.service-card');
-      let currentIndex = 0;
+  try {
+    // Находим все карусели на странице
+    const carousels = document.querySelectorAll('.services-carousel');
+    
+    if (!carousels || carousels.length === 0) {
+      console.warn('Карусели услуг не найдены на странице');
+      return;
+    }
+    
+    // Инициализируем каждую карусель
+    carousels.forEach((carousel, carouselIndex) => {
+      try {
+        if (!carousel) return;
+        
+        const container = carousel.querySelector('.services-container');
+        const prevBtn = carousel.parentElement?.querySelector('#prevBtn');
+        const nextBtn = carousel.parentElement?.querySelector('#nextBtn');
+        const cards = carousel.querySelectorAll('.service-card');
+        let currentIndex = 0;
+        
+        // Проверка необходимых элементов
+        if (!container || !cards || cards.length === 0) {
+          console.warn(`Карусель #${carouselIndex} не содержит необходимых элементов`);
+          return;
+        }
 
-      // Определяем количество видимых карточек
-      function getCardsPerView() {
-          const containerWidth = carousel.offsetWidth;
-          if (cards.length === 0) return 0;
-          
-          const cardStyle = window.getComputedStyle(cards[0]);
-          const cardWidth = cards[0].offsetWidth + 
-                          parseInt(cardStyle.marginLeft) + 
-                          parseInt(cardStyle.marginRight);
-          
-          return Math.floor(containerWidth / cardWidth);
-      }
+        // Определяем количество видимых карточек
+        function getCardsPerView() {
+          try {
+            if (!carousel || cards.length === 0) return 0;
+            
+            const containerWidth = carousel.offsetWidth;
+            if (containerWidth <= 0) return 1; // Запасной вариант
+            
+            const cardStyle = window.getComputedStyle(cards[0]);
+            const cardWidth = cards[0].offsetWidth + 
+                            parseInt(cardStyle.marginLeft || 0) + 
+                            parseInt(cardStyle.marginRight || 0);
+            
+            return Math.max(Math.floor(containerWidth / cardWidth), 1);
+          } catch (e) {
+            console.error('Ошибка в getCardsPerView:', e);
+            return 1; // Возвращаем минимальное значение при ошибке
+          }
+        }
 
-      // Обновляем карусель
-      function updateCarousel() {
-          if (cards.length === 0) return;
-          
-          const cardStyle = window.getComputedStyle(cards[0]);
-          const cardWidth = cards[0].offsetWidth + 
-                          parseInt(cardStyle.marginLeft) + 
-                          parseInt(cardStyle.marginRight);
-          
-          container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-          
-          // Обновляем состояние кнопок
-          const cardsPerView = getCardsPerView();
-          const maxIndex = Math.max(cards.length - cardsPerView, 0);
-          
-          if (prevBtn) prevBtn.disabled = currentIndex === 0;
-          if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
-          
-          // Обновляем стили кнопок
-          if (prevBtn) prevBtn.style.opacity = prevBtn.disabled ? 0.5 : 1;
-          if (nextBtn) nextBtn.style.opacity = nextBtn.disabled ? 0.5 : 1;
-      }
+        // Обновляем карусель
+        function updateCarousel() {
+          try {
+            if (cards.length === 0 || !container) return;
+            
+            const cardStyle = window.getComputedStyle(cards[0]);
+            const cardWidth = cards[0].offsetWidth + 
+                            parseInt(cardStyle.marginLeft || 0) + 
+                            parseInt(cardStyle.marginRight || 0);
+            
+            container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            
+            // Обновляем состояние кнопок
+            const cardsPerView = getCardsPerView();
+            const maxIndex = Math.max(cards.length - cardsPerView, 0);
+            
+            if (prevBtn) {
+              prevBtn.disabled = currentIndex === 0;
+              prevBtn.style.opacity = prevBtn.disabled ? 0.5 : 1;
+            }
+            
+            if (nextBtn) {
+              nextBtn.disabled = currentIndex >= maxIndex;
+              nextBtn.style.opacity = nextBtn.disabled ? 0.5 : 1;
+            }
+          } catch (e) {
+            console.error('Ошибка в updateCarousel:', e);
+          }
+        }
 
-      // Обработчики кнопок
-      if (prevBtn) {
+        // Обработчики кнопок с проверкой существования
+        if (prevBtn) {
           prevBtn.addEventListener('click', () => {
-              if (currentIndex > 0) {
-                  currentIndex--;
-                  updateCarousel();
-              }
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateCarousel();
+            }
           });
-      }
+        } else {
+          console.warn(`Не найдена кнопка "Назад" для карусели #${carouselIndex}`);
+        }
 
-      if (nextBtn) {
+        if (nextBtn) {
           nextBtn.addEventListener('click', () => {
-              const cardsPerView = getCardsPerView();
-              const maxIndex = Math.max(cards.length - cardsPerView, 0);
-              
-              if (currentIndex < maxIndex) {
-                  currentIndex++;
-                  updateCarousel();
-              }
+            const cardsPerView = getCardsPerView();
+            const maxIndex = Math.max(cards.length - cardsPerView, 0);
+            
+            if (currentIndex < maxIndex) {
+              currentIndex++;
+              updateCarousel();
+            }
           });
-      }
+        } else {
+          console.warn(`Не найдена кнопка "Вперед" для карусели #${carouselIndex}`);
+        }
 
-      // Обработчик изменения размера окна с debounce
-      let resizeTimeout;
-      window.addEventListener('resize', () => {
+        // Обработчик изменения размера окна с debounce
+        let resizeTimeout;
+        function handleResize() {
           clearTimeout(resizeTimeout);
           resizeTimeout = setTimeout(() => {
-              currentIndex = 0;
-              updateCarousel();
+            currentIndex = 0;
+            updateCarousel();
           }, 100);
-      });
-
-      // Инициализация
-      updateCarousel();
-  });
+        }
+        
+        window.addEventListener('resize', handleResize);
+        
+        // Функция для очистки (на случай динамического удаления карусели)
+        function cleanup() {
+          window.removeEventListener('resize', handleResize);
+          clearTimeout(resizeTimeout);
+        }
+        
+        // Инициализация
+        updateCarousel();
+        
+        // Для возможного использования извне
+        carousel._carouselAPI = {
+          update: updateCarousel,
+          cleanup: cleanup
+        };
+        
+      } catch (e) {
+        console.error(`Ошибка при инициализации карусели #${carouselIndex}:`, e);
+      }
+    });
+    
+  } catch (e) {
+    console.error('Ошибка при инициализации каруселей услуг:', e);
+  }
 });
 
 //BREND SECTION
@@ -151,41 +206,66 @@ document.addEventListener('DOMContentLoaded', function() {
 // КАРУСЕЛЬ ПОДБОРА ЗАПЧАСТЕЙ
 
 document.addEventListener('DOMContentLoaded', function() {
-  const carousel = document.querySelector('.carousel');
-  const images = document.querySelectorAll('.carousel img');
-  let currentIndex = 0;
-  const visibleImages = 2; // Количество видимых изображений
-  
-  function showNextImages() {
-      // Скрываем все изображения
-      images.forEach(img => {
-          img.style.display = 'none';
-          img.classList.remove('active');
-          img.classList.remove('fade');
-      });
-      
-      // Показываем текущие 2 изображения
-      for (let i = 0; i < visibleImages; i++) {
+  try {
+    const carousel = document.querySelector('.carousel');
+    const images = document.querySelectorAll('.carousel img');
+    
+    // Проверяем, существуют ли элементы карусели
+    if (!carousel || !images || images.length === 0) {
+      console.error('Элементы карусели не найдены');
+      return;
+    }
+    
+    let currentIndex = 0;
+    const visibleImages = 2; // Количество видимых изображений
+    let carouselInterval;
+    
+    function showNextImages() {
+      try {
+        // Скрываем все изображения
+        images.forEach(img => {
+          if (img) { // Проверка на существование элемента
+            img.style.display = 'none';
+            img.classList.remove('active');
+            img.classList.remove('fade');
+          }
+        });
+        
+        // Проверяем, есть ли изображения для показа
+        if (images.length === 0) return;
+        
+        // Показываем текущие 2 изображения
+        for (let i = 0; i < visibleImages; i++) {
           const index = (currentIndex + i) % images.length;
-          images[index].style.display = 'block';
-          if (i === 0) {
+          if (images[index]) { // Проверка на существование элемента
+            images[index].style.display = 'block';
+            if (i === 0) {
               images[index].classList.add('active');
               images[index].classList.add('fade');
+            }
           }
+        }
+        
+        // Обновляем индекс для следующего перехода
+        currentIndex = (currentIndex + 1) % (images.length - visibleImages + 1);
+      } catch (e) {
+        console.error('Ошибка в функции showNextImages:', e);
+        clearInterval(carouselInterval); // Останавливаем интервал при ошибке
       }
-      
-      // Обновляем индекс для следующего перехода
-      currentIndex = (currentIndex + 1) % (images.length - visibleImages + 1);
-  }
-  
-  // Запускаем карусель
-  showNextImages();
-  setInterval(showNextImages, 4000); // Смена каждые 3 секунды
-  
-  // Для адаптивности можно добавить обработчик изменения размера окна
-  window.addEventListener('resize', function() {
+    }
+    
+    // Запускаем карусель
+    showNextImages();
+    carouselInterval = setInterval(showNextImages, 4000); // Смена каждые 4 секунды
+    
+    // Для адаптивности можно добавить обработчик изменения размера окна
+    window.addEventListener('resize', function() {
       // При необходимости можно добавить логику адаптации
-  });
+    });
+    
+  } catch (e) {
+    console.error('Ошибка при инициализации карусели:', e);
+  }
 });
 
 // МОДАЛЬНОЕ ОКНО + ФОРМА ОБРАТНОЙ СВЯЗИ
