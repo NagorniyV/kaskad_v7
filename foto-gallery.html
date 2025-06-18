@@ -31,47 +31,96 @@
       </div>
       <nav class="nav">
         <ul class="nav-list-header">
-          <li class="nav-item"><a href="./index.html">Главная</a></li>
           <li class="nav-item">
-            <a href="./foto-gallery.html">Фотогаллерея</a>
+            <a href="./index.html" data-translate="nav-item-main">Главная</a>
           </li>
           <li class="nav-item">
-            <a href="./parts.html">Подбор запчастей</a>
+            <a href="./foto-gallery.html" data-translate="nav-item-foto"
+              >Фотогаллерея</a
+            >
           </li>
           <li class="nav-item">
-            <a href="./ustanovka-gbo.html">Установка ГБО</a>
+            <a href="./parts.html" data-translate="nav-item-zapch"
+              >Подбор запчастей</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
+              >Установка ГБО</a
+            >
           </li>
 
           <li class="nav-item dropdown">
-            <a href="./service-catalog.html">Услуги</a>
+            <a href="./service-catalog.html" data-translate="nav-item-serv"
+              >Услуги</a
+            >
             <ul class="dropdown-content">
-              <li><a href="./service-catalog.html#dvigatel">Двигун</a></li>
               <li>
-                <a href="./service-catalog.html#hodovka">Ходова частина</a>
+                <a
+                  href="./service-catalog.html#dvigatel"
+                  data-translate="nav-item-dvig"
+                  >Двигун</a
+                >
               </li>
-              <li><a href="./service-catalog.html#electrika">Електрика</a></li>
               <li>
-                <a href="./service-catalog.html#tormoznaja"
+                <a
+                  href="./service-catalog.html#hodovka"
+                  data-translate="nav-item-hodov"
+                  >Ходова частина</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#electrika"
+                  data-translate="nav-item-elektro"
+                  >Електрика</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#tormoznaja"
+                  data-translate="nav-item-torm"
                   >Гальмівна система</a
                 >
               </li>
               <li>
-                <a href="./service-catalog.html#transmisija">Трансмісія</a>
+                <a
+                  href="./service-catalog.html#transmisija"
+                  data-translate="nav-item-trans"
+                  >Трансмісія</a
+                >
               </li>
               <li>
-                <a href="./service-catalog.html#servisnoe"
+                <a
+                  href="./service-catalog.html#servisnoe"
+                  data-translate="nav-item-to"
                   >Технічне обслуговування</a
                 >
               </li>
               <li><a href="./service-catalog.html#gbo">ГБО</a></li>
-              <li><a href="">Діагностика</a></li>
-              <li><a href="">Програмне тюнінгування</a></li>
+              <li>
+                <a href="" data-translate="nav-item-diagn">Діагностика</a>
+              </li>
+              <li>
+                <a href="" data-translate="nav-item-chip"
+                  >Програмне тюнінгування</a
+                >
+              </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="./contacts.html">Контакты</a>
+          </li> -->
+          <li class="nav-item">
+            <a href="./price.html" data-translate="nav-item-price">Цены</a>
           </li>
-          <li class="nav-item"><a href="./price.html">Цены</a></li>
+          <li class="nav-item">
+            <div class="language-switcher">
+              <button class="lang-btn active" data-lang="uk">Укр</button>
+              <span class="lang-divider">/</span>
+              <button class="lang-btn" data-lang="ru">Рус</button>
+            </div>
+          </li>
         </ul>
       </nav>
       <a href="./index.html"
@@ -243,7 +292,7 @@
       <div class="footer-container">
         <div class="top-footer">
           <div class="title-map">
-            <h2 class="map-title">Мы на картах</h2>
+            <h2 class="map-title" data-translate="map-title">Мы на картах</h2>
             <p class="map-content">
               <svg
                 width="36"
@@ -258,9 +307,10 @@
                   stroke="#2C3E50"
                   stroke-width="1.5"
                 />
-                <circle cx="12" cy="9" r="3" fill="white" />
-              </svg>
-              улица Ушинского, 2 а, Павлоград, Днепропетровская область
+                <circle cx="12" cy="9" r="3" fill="white" /></svg
+              ><span data-translate="map-content"
+                >улица Ушинского, 2 а, Павлоград, Днепропетровская область</span
+              >
             </p>
           </div>
           <a href="./index.html"
@@ -301,7 +351,7 @@
         </div>
         <div class="bot-footer">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d262.7286342547718!2d35.83691716651164!3d48.530077092994496!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1749559352690!5m2!1sru!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
             width="400"
             height="300"
             style="border-radius: 10px"
@@ -312,29 +362,29 @@
           ></iframe>
           <div>
             <div class="work-footer-div">
-              <h3>Работаем без выходных:</h3>
-              <p>Понедельник - Воскресенье</p>
-              <p>C 09:00 до 18:00</p>
+              <h3 data-translate="work-footer-title">Работаем без выходных:</h3>
+              <p data-translate="work-footer-txt">Понедельник - Воскресенье</p>
+              <p data-translate="work-footer-time">C 09:00 до 18:00</p>
             </div>
             <div class="number-footer-div">
-              <h3>Связь с нами:</h3>
+              <h3 data-translate="number-footer-title">Связь с нами:</h3>
               <div>
                 <a href="tel:+380668375666" class="number-link"
                   >+38 (066) 837−56−66</a
-                ><span> Офис</span>
+                ><span data-translate="number-footer-txt"> Офис</span>
               </div>
               <div>
                 <a href="tel:+380962110210" class="number-link"
                   >+38 (096) 211−02−10</a
                 >
-                <span>Офис</span>
+                <span data-translate="number-footer-txt">Офис</span>
               </div>
               <h3>Директор</h3>
               <div>
                 <a href="tel:+380502233959" class="number-link"
                   >+38 (050) 223−39−59</a
                 >
-                <span>Павел</span>
+                <span data-translate="number-footer-dir-name">Павел</span>
               </div>
             </div>
           </div>

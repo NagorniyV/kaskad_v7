@@ -27,47 +27,96 @@
       </div>
       <nav class="nav">
         <ul class="nav-list-header">
-          <li class="nav-item"><a href="./index.html">Главная</a></li>
           <li class="nav-item">
-            <a href="./foto-gallery.html">Фотогаллерея</a>
+            <a href="./index.html" data-translate="nav-item-main">Главная</a>
           </li>
           <li class="nav-item">
-            <a href="./parts.html">Подбор запчастей</a>
+            <a href="./foto-gallery.html" data-translate="nav-item-foto"
+              >Фотогаллерея</a
+            >
           </li>
           <li class="nav-item">
-            <a href="./ustanovka-gbo.html">Установка ГБО</a>
+            <a href="./parts.html" data-translate="nav-item-zapch"
+              >Подбор запчастей</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
+              >Установка ГБО</a
+            >
           </li>
 
           <li class="nav-item dropdown">
-            <a href="./service-catalog.html">Услуги</a>
+            <a href="./service-catalog.html" data-translate="nav-item-serv"
+              >Услуги</a
+            >
             <ul class="dropdown-content">
-              <li><a href="./service-catalog.html#dvigatel">Двигун</a></li>
               <li>
-                <a href="./service-catalog.html#hodovka">Ходова частина</a>
+                <a
+                  href="./service-catalog.html#dvigatel"
+                  data-translate="nav-item-dvig"
+                  >Двигун</a
+                >
               </li>
-              <li><a href="./service-catalog.html#electrika">Електрика</a></li>
               <li>
-                <a href="./service-catalog.html#tormoznaja"
+                <a
+                  href="./service-catalog.html#hodovka"
+                  data-translate="nav-item-hodov"
+                  >Ходова частина</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#electrika"
+                  data-translate="nav-item-elektro"
+                  >Електрика</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#tormoznaja"
+                  data-translate="nav-item-torm"
                   >Гальмівна система</a
                 >
               </li>
               <li>
-                <a href="./service-catalog.html#transmisija">Трансмісія</a>
+                <a
+                  href="./service-catalog.html#transmisija"
+                  data-translate="nav-item-trans"
+                  >Трансмісія</a
+                >
               </li>
               <li>
-                <a href="./service-catalog.html#servisnoe"
+                <a
+                  href="./service-catalog.html#servisnoe"
+                  data-translate="nav-item-to"
                   >Технічне обслуговування</a
                 >
               </li>
               <li><a href="./service-catalog.html#gbo">ГБО</a></li>
-              <li><a href="">Діагностика</a></li>
-              <li><a href="">Програмне тюнінгування</a></li>
+              <li>
+                <a href="" data-translate="nav-item-diagn">Діагностика</a>
+              </li>
+              <li>
+                <a href="" data-translate="nav-item-chip"
+                  >Програмне тюнінгування</a
+                >
+              </li>
             </ul>
           </li>
           <!-- <li class="nav-item">
             <a href="./contacts.html">Контакты</a>
           </li> -->
-          <li class="nav-item"><a href="./price.html">Цены</a></li>
+          <li class="nav-item">
+            <a href="./price.html" data-translate="nav-item-price">Цены</a>
+          </li>
+          <li class="nav-item">
+            <div class="language-switcher">
+              <button class="lang-btn active" data-lang="uk">Укр</button>
+              <span class="lang-divider">/</span>
+              <button class="lang-btn" data-lang="ru">Рус</button>
+            </div>
+          </li>
         </ul>
       </nav>
       <a href="./index.html"
@@ -112,7 +161,9 @@
         <section class="hero">
           <div>
             <div class="hero-content">
-              <h1 class="hero-title">РЕМОНТ И ОБСЛУЖИВАНИЕ АВТО</h1>
+              <h1 class="hero-title" data-translate="hero-title">
+                РЕМОНТ И ОБСЛУЖИВАНИЕ АВТО
+              </h1>
               <div class="hero-content-container">
                 <div>
                   <svg
@@ -129,7 +180,9 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p>лучшее соотношение цена/качество</p>
+                  <p data-translate="hero-content-1">
+                    Лучшее соотношение цена/качество.
+                  </p>
                 </div>
                 <div>
                   <svg
@@ -146,7 +199,9 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p>гарантии на все виды работ</p>
+                  <p data-translate="hero-content-2">
+                    Гарантия на все виды работ.
+                  </p>
                 </div>
                 <div>
                   <svg
@@ -163,18 +218,25 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p>оригинальные запчасти</p>
+                  <p data-translate="hero-content-3">Оригинальные запчасти.</p>
                 </div>
               </div>
-              <button type="button" class="details-hero-btn" id="openModalBtn">
+              <button
+                type="button"
+                class="details-hero-btn"
+                id="openModalBtn"
+                data-translate="details-hero-btn"
+              >
                 ЗАПИСАТЬСЯ
               </button>
-              <p class="discount">
-                Скидка 50% на первую диагностику по промокоду "АС КАСКАД"
+              <p class="discount" data-translate="discount">
+                Скидка 50% на первую диагностику по промокоду «АС КАСКАД»
               </p>
             </div>
             <div class="hero-contact-div">
-              <h3>Едь к нам прямо сейчас:</h3>
+              <h3 data-translate="hero-contact-div-map">
+                Едь к нам прямо сейчас:
+              </h3>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
                 width="250"
@@ -186,7 +248,9 @@
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
               <div class="hero-contact-number">
-                <h3>Ждем твоего звонка:</h3>
+                <h3 data-translate="hero-contact-div-number">
+                  Ждем твоего звонка:
+                </h3>
                 <a href="tel:+380668375666" class="number-link"
                   >+38 (066) 837−56−66</a
                 >
@@ -200,11 +264,11 @@
         <section class="main-content-section">
           <div class="main-content-div">
             <div class="main-content">
-              <h2>
+              <h2 data-translate="main-content-title">
                 Автосервис «Каскад» в Павлограде – надежный партнер для Вашего
                 автомобиля уже более 20 лет
               </h2>
-              <p>
+              <p data-translate="main-content-txt01">
                 Когда Вашему автомобилю требуется внимание, важно доверить его
                 тем, кто знает свое дело. Автосервис «Каскад» работает в
                 Павлограде с 2005 года, и за это время мы заслужили репутацию
@@ -212,7 +276,7 @@
                 задачу – от простого технического обслуживания до сложного
                 ремонта.
               </p>
-              <p>
+              <p data-translate="main-content-txt02">
                 Наш опыт – это тысячи отремонтированных автомобилей, довольные
                 клиенты и уверенность в том, что мы справимся даже с самыми
                 неочевидными неисправностями. Мы не просто меняем детали – мы
@@ -221,13 +285,13 @@
                 оборудование, качественные запчасти и команда мастеров, которые
                 действительно разбираются в своем деле.
               </p>
-              <p>
+              <p data-translate="main-content-txt03">
                 Здесь Вам не предложат ненужных услуг – только честную
                 диагностику и прозрачные цены. Мы понимаем, как важно для вас
                 быть уверенным в своем автомобиле, и делаем все, чтобы после
                 визита в «Каскад» Вы могли спокойно отправляться в дорогу.
               </p>
-              <p>
+              <p data-translate="main-content-txt04">
                 Приезжайте и убедитесь сами – Ваш автомобиль заслуживает лучшего
                 обслуживания!
               </p>
@@ -240,8 +304,10 @@
         <section class="services-section">
           <div class="services-top">
             <div class="services-top-content">
-              <h1 class="services-title">Услуги и цены</h1>
-              <p class="services-subtitle">
+              <h1 class="services-title" data-translate="services-title">
+                Услуги и цены
+              </h1>
+              <p class="services-subtitle" data-translate="services-subtitle">
                 Лучшее соотношение цена - качество в нашем городе!
               </p>
             </div>
@@ -283,120 +349,155 @@
           <div class="services-carousel">
             <div class="services-container" id="servicesContainer">
               <div class="service-card">
-                <h3>ПРОДАЖА АВТОЗАПЧАСТЕЙ</h3>
-                <p>
+                <h3 data-translate="services-h3-1">ПРОДАЖА АВТОЗАПЧАСТЕЙ</h3>
+                <p data-translate="services-p-1">
                   В наличии подвески, тормозные системы, системы зажигания,
                   фильтры, системы управления, светотехника, трансмиссии,
-                  автоэлектроника, шины и диски
+                  автоэлектроника, шины и диски.
                 </p>
                 <div class="btn-container">
-                  <a href="./parts.html" class="details-btn">ПОДРОБНЕЕ</a>
+                  <a
+                    href="./parts.html"
+                    class="details-btn"
+                    data-translate="details-btn"
+                    >ПОДРОБНЕЕ</a
+                  >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>УСТАНОВКА ГБО</h3>
-                <p>
+                <h3 data-translate="services-h3-2">УСТАНОВКА ГБО</h3>
+                <p data-translate="services-p-2">
                   Подбор, установка, настройка и обслуживание газобаллонного
                   оборудования любых производителей.
                 </p>
                 <div class="btn-container">
-                  <a href="./GBO.html" class="details-btn">ПОДРОБНЕЕ</a>
+                  <a
+                    href="./GBO.html"
+                    class="details-btn"
+                    data-translate="details-btn"
+                    >ПОДРОБНЕЕ</a
+                  >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>ДИАГНОСТИКА ДВИГАТЕЛЯ</h3>
-                <p>
+                <h3 data-translate="services-h3-3">ДИАГНОСТИКА ДВИГАТЕЛЯ</h3>
+                <p data-translate="services-p-3">
                   Компьютерная диагностика двигателя, проверка состояния
-                  цилиндропоршневой группы, системы зажигания и впрыска
+                  цилиндропоршневой группы, системы зажигания и впрыска.
                 </p>
                 <div class="btn-container">
-                  <a href="./service-catalog.html#dvigatel" class="details-btn"
+                  <a
+                    href="./service-catalog.html#dvigatel"
+                    class="details-btn"
+                    data-translate="details-btn"
                     >ПОДРОБНЕЕ</a
                   >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>РЕМОНТ ХОДОВОЙ</h3>
-                <p>
+                <h3 data-translate="services-h3-4">РЕМОНТ ХОДОВОЙ</h3>
+                <p data-translate="services-p-4">
                   Диагностика и ремонт подвески, замена амортизаторов, шаровых
-                  опор, рычагов, сайлентблоков
+                  опор, рычагов, сайлентблоков.
                 </p>
                 <div class="btn-container">
-                  <a href="./service-catalog.html#hodovka" class="details-btn"
+                  <a
+                    href="./service-catalog.html#hodovka"
+                    class="details-btn"
+                    data-translate="details-btn"
                     >ПОДРОБНЕЕ</a
                   >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>АВТОЭЛЕКТРИКА</h3>
-                <p>
+                <h3 data-translate="services-h3-5">АВТОЭЛЕКТРИКА</h3>
+                <p data-translate="services-p-5">
                   Диагностика и ремонт электрооборудования автомобиля, проводки,
-                  блоков управления, датчиков
+                  блоков управления, датчиков.
                 </p>
                 <div class="btn-container">
-                  <a href="./service-catalog.html#electrika" class="details-btn"
+                  <a
+                    href="./service-catalog.html#electrika"
+                    class="details-btn"
+                    data-translate="details-btn"
                     >ПОДРОБНЕЕ</a
                   >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>РЕМОНТ И ТЕХ ОБСЛУЖИВАНИЕ</h3>
-                <p>
+                <h3 data-translate="services-h3-6">
+                  РЕМОНТ И ТЕХ ОБСЛУЖИВАНИЕ
+                </h3>
+                <p data-translate="services-p-6">
                   Комплекс работ по диагностике автомобиля в целом или отдельных
                   его агрегатов, регулировке систем/узлов, выполнению работ по
-                  регламентной замене деталей и/или технических жидкостей
+                  регламентной замене деталей и/или технических жидкостей.
                 </p>
                 <div class="btn-container">
-                  <a href="./service-catalog.html#servisnoe" class="details-btn"
+                  <a
+                    href="./service-catalog.html#servisnoe"
+                    class="details-btn"
+                    data-translate="details-btn"
                     >ПОДРОБНЕЕ</a
                   >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>РЕМОНТ ТРАНСМИССИИ</h3>
-                <p>
+                <h3 data-translate="services-h3-7">РЕМОНТ ТРАНСМИССИИ</h3>
+                <p data-translate="services-p-7">
                   Диагностика и ремонт механических и автоматических коробок
-                  передач, редукторов, раздаточных коробок
+                  передач, редукторов, раздаточных коробок.
                 </p>
                 <div class="btn-container">
                   <a
                     href="./service-catalog.html#transmisija"
                     class="details-btn"
+                    data-translate="details-btn"
                     >ПОДРОБНЕЕ</a
                   >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>ОБСЛУГОВУВАННЯ ГАЛЬМІВНОЇ СИСТЕМИ</h3>
-                <p>
+                <h3 data-translate="services-h3-8">
+                  ОБСЛУГОВУВАННЯ ГАЛЬМІВНОЇ СИСТЕМИ
+                </h3>
+                <p data-translate="services-p-8">
                   Заміна гальмівної рідини, прокачування гальмівної системи,
                   діагностика гальмівних колодок і дисків, перевірка роботи ABS,
                   заміна гальмівних супортів та ремонт гідравлічної частини
                   гальмівної системи.
                 </p>
                 <div class="btn-container">
-                  <a href="./service-catalog.html#servisnoe" class="details-btn"
+                  <a
+                    href="./service-catalog.html#servisnoe"
+                    class="details-btn"
+                    data-translate="details-btn"
                     >ПОДРОБНЕЕ</a
                   >
                 </div>
               </div>
 
               <div class="service-card">
-                <h3>ОБСЛУЖИВАНИЕ КОНДИЦИОНЕРА</h3>
-                <p>
+                <h3 data-translate="services-h3-9">
+                  ОБСЛУЖИВАНИЕ КОНДИЦИОНЕРА
+                </h3>
+                <p data-translate="services-p-9">
                   Заправка та заміна хладагенту, промивка системи, заміна
                   фільтра-осушувача, діагностика тиску, перевірка герметичності,
-                  очищення випарника та дезінфекція системи кондиціонування
+                  очищення випарника та дезінфекція системи кондиціонування.
                 </p>
                 <div class="btn-container">
-                  <a href="./service-catalog.html#kondi" class="details-btn"
+                  <a
+                    href="./service-catalog.html#kondi"
+                    class="details-btn"
+                    data-translate="details-btn"
                     >ПОДРОБНЕЕ</a
                   >
                 </div>
@@ -406,36 +507,56 @@
         </section>
         <section class="benefits-section">
           <h2 class="benefits-title">
-            Почему <span class="span-benefits-title"> выбирают нас</span>
+            <span data-translate="benefits-title">Почему</span>
+            <span
+              class="span-benefits-title"
+              data-translate="span-benefits-title"
+              >выбирают нас</span
+            >
           </h2>
           <div class="benefits-containers">
             <div class="benefits-container">
               <div class="benefits-top">
                 <p class="benefits-number">1</p>
-                <p class="benefits-top-text">ПОРЯДОЧНОСТЬ</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text1"
+                >
+                  ПОРЯДОЧНОСТЬ
+                </p>
               </div>
               <img class="benefits-img" src="./src/img/bene-1.jpg" alt="" />
-              <p class="benefits-bot-text">
+              <p class="benefits-bot-text" data-translate="benefits-bot-text1">
                 «Честный ремонт: только нужные работы, только нужные запчасти.»
               </p>
             </div>
             <div class="benefits-container">
               <div class="benefits-top">
                 <p class="benefits-number">2</p>
-                <p class="benefits-top-text">ОТВЕТСТВЕННОСТЬ</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text2"
+                >
+                  ОТВЕТСТВЕННОСТЬ
+                </p>
               </div>
               <img class="benefits-img" src="./src/img/bene-2.jpg" alt="" />
-              <p class="benefits-bot-text">
+              <p class="benefits-bot-text" data-translate="benefits-bot-text2">
                 «Гарантируем качество – отвечаем за результат!»
               </p>
             </div>
             <div class="benefits-container">
               <div class="benefits-top">
                 <p class="benefits-number">3</p>
-                <p class="benefits-top-text">ОПЕРАТИВНОСТЬ</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text3"
+                >
+                  ОПЕРАТИВНОСТЬ
+                </p>
               </div>
               <img class="benefits-img" src="./src/img/bene-3.jpg" alt="" />
-              <p class="benefits-bot-text">
+              <p class="benefits-bot-text" data-translate="benefits-bot-text3">
                 «Ваше авто не задержится у нас дольше необходимого.»
               </p>
             </div>
@@ -444,11 +565,11 @@
         <section class="main-content-section">
           <div class="main-content-div">
             <div class="main-content">
-              <h2>
+              <h2 data-translate="main-content-title1">
                 Автосервис «Каскад» в Павлограде – это профессиональный уход для
                 Вашего автомобиля.
               </h2>
-              <p>
+              <p data-translate="main-content-txt1">
                 Мы предлагаем комплексный подход к обслуживанию автомобилей: от
                 качественных запчастей и технических жидкостей до
                 профессионального ремонта любой сложности. За 20 лет работы мы
@@ -460,7 +581,7 @@
                 результата. Подробнее о запчастях Вы можете узнать в
                 соответствующем разделе сайта.
               </p>
-              <p>
+              <p data-translate="main-content-txt2">
                 Выбирая «Каскад», Вы получаете не просто ремонт, а честный
                 сервис, внимательное отношение и гарантированный результат. Мы
                 работаем с автомобилями так же бережно, как с собственными, и
@@ -471,10 +592,13 @@
                 связанным с обслуживанием и ремонтом, и сделают все, чтобы Вы
                 остались довольны!
               </p>
-              <h2 class="two-title-content">
+              <h2
+                class="two-title-content"
+                data-translate="main-content-title2"
+              >
                 Комплексный ремонт и обслуживание автомобилей
               </h2>
-              <p>
+              <p data-translate="main-content-txt3">
                 Каждому автовладельцу рано или поздно приходится сталкиваться с
                 необходимостью ремонта – будь то плановое ТО или серьезное
                 восстановление узлов автомобиля. Это естественно: в процессе
@@ -485,7 +609,7 @@
                 нужно еще чаще – только так можно избежать неожиданных поломок и
                 дорогостоящего ремонта.
               </p>
-              <p>
+              <p data-translate="main-content-txt4">
                 Автосервис «Каскад» предлагает полный спектр услуг для
                 автомобилей любых марок. Какими бы ни были причины Вашего визита
                 – мы готовы помочь!
@@ -494,47 +618,80 @@
           </div>
         </section>
         <section class="callback-section">
-          <h2 class="callback-main-title">Наши специалисты</h2>
+          <h2 class="callback-main-title" data-translate="callback-main-title">
+            Наши специалисты
+          </h2>
           <div class="callback-section-container">
             <div class="callback-card-container">
               <div class="team-card">
                 <img src="./src/img/colleagues/dir.jpg" alt="dir_filipov_pp" />
-                <h3 class="team-card-title">Филипов Павел</h3>
-                <p class="team-card-position">директор автосервиса</p>
-                <p class="team-card-content">
-                  "Порядочность, отвественность и оперативность -
-                  основопологающие нашего сервиса!"
+                <h3 class="team-card-title" data-translate="card-dir-title">
+                  Филипов Павел
+                </h3>
+                <p
+                  class="team-card-position"
+                  data-translate="card-dir-position"
+                >
+                  директор автосервиса
+                </p>
+                <p class="team-card-content" data-translate="card-dir-content">
+                  «Место, где строгий контроль встречается с заботой о клиенте.»
                 </p>
               </div>
               <div class="team-card">
-                <img src="./src/img/team-card1.jpg" alt="" />
-                <h3 class="team-card-title">Юдин Максим</h3>
-                <p class="team-card-position">мастер автосервиса</p>
-                <p class="team-card-content">
-                  Диагностика электропроводки, тюнинг, установка светового
-                  оборудования.
+                <img
+                  src="./src/img/colleagues/colleagues-1.jpg"
+                  alt="colleagues-1"
+                />
+                <h3 class="team-card-title" data-translate="card-ant-title">
+                  Дмитренко Антон
+                </h3>
+                <p
+                  class="team-card-position"
+                  data-translate="card-ant-position"
+                >
+                  старший менеджер
+                </p>
+                <p class="team-card-content" data-translate="card-ant-content">
+                  «Одна команда — один стандарт качества.»
                 </p>
               </div>
               <div class="team-card">
-                <img src="./src/img/team-card1.jpg" alt="" />
-                <h3 class="team-card-title">Соколов Вадим</h3>
-                <p class="team-card-position">автомеханик</p>
-                <p class="team-card-content">
-                  Электронный ремонт, сварочные работы, шиномонтаж, агрегатный
-                  ремонт.
+                <img
+                  src="./src/img/colleagues/colleagues-2.jpg"
+                  alt="colleagues-2"
+                />
+                <h3 class="team-card-title" data-translate="card-vlad-title">
+                  Гиренко Владислав
+                </h3>
+                <p
+                  class="team-card-position"
+                  data-translate="card-vlad-position"
+                >
+                  старший механик
+                </p>
+                <p class="team-card-content" data-translate="card-vlad-content">
+                  «Современные технологии + старые добрые принципы работы»
                 </p>
               </div>
             </div>
             <div class="callback-container">
               <h3 class="callbaack-main-title">
-                ПОЛУЧИТЕ РЕКОМЕНДАЦИЮ ПО РЕШЕНИЮ ПРОБЛЕММЫ
-                <span class="span-cb-title">БЕСПЛАТНО!</span>
+                <span data-translate="callbaack-main-title"
+                  >ПОЛУЧИТЕ РЕКОМЕНДАЦИЮ ПО РЕШЕНИЮ ПРОБЛЕММЫ</span
+                >
+                <span
+                  class="span-cb-title"
+                  data-translate="callbaack-span-title"
+                  >БЕСПЛАТНО!</span
+                >
               </h3>
               <form id="callbackForm">
                 <input
                   type="text"
                   id="nameInput"
                   name="name"
+                  data-translate-placeholder="name-placeholder"
                   placeholder="Ваше имя*"
                   required
                 />
@@ -552,11 +709,15 @@
                   placeholder="Марка модель авто"
                   required
                 />
-                <button type="submit" class="text-header">
+                <button
+                  type="submit"
+                  class="text-header"
+                  data-translate="callbaack-text-header"
+                >
                   ПОЛУЧИТЬ РЕКОМЕНДАЦИЮ
                 </button>
               </form>
-              <p class="cb-last-text">
+              <p class="cb-last-text" data-translate="cb-last-text">
                 Вы можете указать марку и модель авто и оставить Ваши контакты -
                 мы вам перезвоним
               </p>
@@ -565,7 +726,9 @@
           </div>
         </section>
         <section id="brend" class="brend-section">
-          <h2 class="brend-title">СТО в Павлограде</h2>
+          <h2 class="brend-title" data-translate="brend-title">
+            СТО в Павлограде
+          </h2>
           <div class="infinite-carousel">
             <div class="carousel-track">
               <div>
@@ -768,25 +931,35 @@
       <div id="callbackModal" class="modal">
         <div class="modal-content">
           <span class="modal-close">&times;</span>
-          <h3>Оставте Ваши данные и мы перезвоним с готовым решением.</h3>
+          <h3 data-translate="modal-title">
+            Оставте Ваши данные и мы перезвоним с готовым решением.
+          </h3>
           <form class="modal-callbackForm" id="modalForm">
             <div class="form-group">
-              <label for="name">Имя*</label>
+              <label for="name" data-translate="name">Имя*</label>
               <input type="text" id="modalName" name="name" required />
             </div>
             <div class="form-group">
-              <label for="phone">Телефон*</label>
+              <label for="phone" data-translate="phone">Телефон*</label>
               <input type="tel" id="modalPhone" name="phone" required />
             </div>
             <div class="form-group">
-              <label for="vin">VIN код автомобиля</label>
+              <label for="vin" data-translate="vin">VIN код автомобиля</label>
               <input type="text" id="modalVin" name="vin" />
             </div>
             <div class="form-group">
-              <label for="carModel">Марка/модель автомобиля</label>
+              <label for="carModel" data-translate="carModel"
+                >Марка/модель автомобиля</label
+              >
               <input type="text" id="modalCar" name="carModel" />
             </div>
-            <button type="submit" class="submit-btn">Отправить</button>
+            <button
+              type="submit"
+              class="submit-btn"
+              data-translate="submit-btn"
+            >
+              Отправить
+            </button>
           </form>
         </div>
       </div>
@@ -898,9 +1071,7 @@
               <path d="M18 15l-6-6-6 6" />
             </svg>
           </span>
-          <span class="text" data-translate="tr-footer-up"
-            >Піднятися в гору</span
-          >
+          <span class="text" data-translate="up-btn">Піднятися в гору</span>
         </a>
       </div>
     </main>
@@ -910,7 +1081,7 @@
       <div class="footer-container">
         <div class="top-footer">
           <div class="title-map">
-            <h2 class="map-title">Мы на картах</h2>
+            <h2 class="map-title" data-translate="map-title">Мы на картах</h2>
             <p class="map-content">
               <svg
                 width="36"
@@ -927,7 +1098,9 @@
                 />
                 <circle cx="12" cy="9" r="3" fill="white" />
               </svg>
-              улица Ушинского, 2 а, Павлоград, Днепропетровская область
+              <span data-translate="map-content"
+                >улица Ушинского, 2 а, Павлоград, Днепропетровская область</span
+              >
             </p>
           </div>
           <a href="./index.html"
@@ -979,29 +1152,29 @@
           ></iframe>
           <div>
             <div class="work-footer-div">
-              <h3>Работаем без выходных:</h3>
-              <p>Понедельник - Воскресенье</p>
-              <p>C 09:00 до 18:00</p>
+              <h3 data-translate="work-footer-title">Работаем без выходных:</h3>
+              <p data-translate="work-footer-txt">Понедельник - Воскресенье</p>
+              <p data-translate="work-footer-time">C 09:00 до 18:00</p>
             </div>
             <div class="number-footer-div">
-              <h3>Связь с нами:</h3>
+              <h3 data-translate="number-footer-title">Связь с нами:</h3>
               <div>
                 <a href="tel:+380668375666" class="number-link"
                   >+38 (066) 837−56−66</a
-                ><span> Офис</span>
+                ><span data-translate="number-footer-txt"> Офис</span>
               </div>
               <div>
                 <a href="tel:+380962110210" class="number-link"
                   >+38 (096) 211−02−10</a
                 >
-                <span>Офис</span>
+                <span data-translate="number-footer-txt">Офис</span>
               </div>
               <h3>Директор</h3>
               <div>
                 <a href="tel:+380502233959" class="number-link"
                   >+38 (050) 223−39−59</a
                 >
-                <span>Павел</span>
+                <span data-translate="number-footer-dir-name">Павел</span>
               </div>
             </div>
           </div>

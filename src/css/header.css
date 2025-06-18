@@ -192,4 +192,30 @@ header {
     }
   }
 
+  /* КНОПКА ПЕРЕВОДА */
+
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
   
+  .lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s;
+  }
+  
+  .lang-btn.active {
+    color: #f8f8f8;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .lang-divider {
+    color: #666;
+  }
+

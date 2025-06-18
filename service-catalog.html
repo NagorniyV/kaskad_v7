@@ -26,47 +26,96 @@
       </div>
       <nav class="nav">
         <ul class="nav-list-header">
-          <li class="nav-item"><a href="./index.html">Главная</a></li>
           <li class="nav-item">
-            <a href="./foto-gallery.html">Фотогаллерея</a>
+            <a href="./index.html" data-translate="nav-item-main">Главная</a>
           </li>
           <li class="nav-item">
-            <a href="./parts.html">Подбор запчастей</a>
+            <a href="./foto-gallery.html" data-translate="nav-item-foto"
+              >Фотогаллерея</a
+            >
           </li>
           <li class="nav-item">
-            <a href="./ustanovka-gbo.html">Установка ГБО</a>
+            <a href="./parts.html" data-translate="nav-item-zapch"
+              >Подбор запчастей</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
+              >Установка ГБО</a
+            >
           </li>
 
           <li class="nav-item dropdown">
-            <a href="./service-catalog.html">Услуги</a>
+            <a href="./service-catalog.html" data-translate="nav-item-serv"
+              >Услуги</a
+            >
             <ul class="dropdown-content">
-              <li><a href="./service-catalog.html#dvigatel">Двигун</a></li>
               <li>
-                <a href="./service-catalog.html#hodovka">Ходова частина</a>
+                <a
+                  href="./service-catalog.html#dvigatel"
+                  data-translate="nav-item-dvig"
+                  >Двигун</a
+                >
               </li>
-              <li><a href="./service-catalog.html#electrika">Електрика</a></li>
               <li>
-                <a href="./service-catalog.html#tormoznaja"
+                <a
+                  href="./service-catalog.html#hodovka"
+                  data-translate="nav-item-hodov"
+                  >Ходова частина</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#electrika"
+                  data-translate="nav-item-elektro"
+                  >Електрика</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#tormoznaja"
+                  data-translate="nav-item-torm"
                   >Гальмівна система</a
                 >
               </li>
               <li>
-                <a href="./service-catalog.html#transmisija">Трансмісія</a>
+                <a
+                  href="./service-catalog.html#transmisija"
+                  data-translate="nav-item-trans"
+                  >Трансмісія</a
+                >
               </li>
               <li>
-                <a href="./service-catalog.html#servisnoe"
+                <a
+                  href="./service-catalog.html#servisnoe"
+                  data-translate="nav-item-to"
                   >Технічне обслуговування</a
                 >
               </li>
               <li><a href="./service-catalog.html#gbo">ГБО</a></li>
-              <li><a href="">Діагностика</a></li>
-              <li><a href="">Програмне тюнінгування</a></li>
+              <li>
+                <a href="" data-translate="nav-item-diagn">Діагностика</a>
+              </li>
+              <li>
+                <a href="" data-translate="nav-item-chip"
+                  >Програмне тюнінгування</a
+                >
+              </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="./contacts.html">Контакты</a>
+          </li> -->
+          <li class="nav-item">
+            <a href="./price.html" data-translate="nav-item-price">Цены</a>
           </li>
-          <li class="nav-item"><a href="./price.html">Цены</a></li>
+          <li class="nav-item">
+            <div class="language-switcher">
+              <button class="lang-btn active" data-lang="uk">Укр</button>
+              <span class="lang-divider">/</span>
+              <button class="lang-btn" data-lang="ru">Рус</button>
+            </div>
+          </li>
         </ul>
       </nav>
       <a href="./index.html"
@@ -111,20 +160,25 @@
         <section class="hero-service-catalog">
           <div>
             <div class="hero-content">
-              <h1 class="hero-title">УСЛУГИ НА АВТОСЕРВИСЕ "КАСКАД"</h1>
+              <h1 class="hero-title" data-translate="hero-service-title">
+                УСЛУГИ НА АВТОСЕРВИСЕ «КАСКАД»
+              </h1>
               <button
                 type="button"
                 onclick="window.location.href='#callbackForm'"
                 class="details-hero-btn"
+                data-translate="details-hero-btn"
               >
                 ЗАПИСАТЬСЯ
               </button>
-              <p class="discount">
+              <p class="discount" data-translate="discount">
                 Скидка 50% на первую диагностику по промокоду "АС КАСКАД"
               </p>
             </div>
             <div class="hero-contact-div">
-              <h3>Едь к нам прямо сейчас:</h3>
+              <h3 data-translate="hero-contact-div-map">
+                Едь к нам прямо сейчас:
+              </h3>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
                 width="250"
@@ -136,7 +190,9 @@
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
               <div class="hero-contact-number">
-                <h3>Ждем твоего звонка:</h3>
+                <h3 data-translate="hero-contact-div-number">
+                  Ждем твоего звонка:
+                </h3>
                 <a href="tel:+380668375666" class="number-link"
                   >+38 (066) 837−56−66</a
                 >
@@ -593,36 +649,56 @@
         </section>
         <section class="benefits-section">
           <h2 class="benefits-title">
-            Почему <span class="span-benefits-title"> выбирают нас</span>
+            <span data-translate="benefits-title">Почему</span>
+            <span
+              class="span-benefits-title"
+              data-translate="span-benefits-title"
+              >выбирают нас</span
+            >
           </h2>
           <div class="benefits-containers">
             <div class="benefits-container">
               <div class="benefits-top">
                 <p class="benefits-number">1</p>
-                <p class="benefits-top-text">ПОРЯДОЧНОСТЬ</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text1"
+                >
+                  ПОРЯДОЧНОСТЬ
+                </p>
               </div>
               <img class="benefits-img" src="./src/img/bene-1.jpg" alt="" />
-              <p class="benefits-bot-text">
+              <p class="benefits-bot-text" data-translate="benefits-bot-text1">
                 «Честный ремонт: только нужные работы, только нужные запчасти.»
               </p>
             </div>
             <div class="benefits-container">
               <div class="benefits-top">
                 <p class="benefits-number">2</p>
-                <p class="benefits-top-text">ОТВЕТСТВЕННОСТЬ</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text2"
+                >
+                  ОТВЕТСТВЕННОСТЬ
+                </p>
               </div>
               <img class="benefits-img" src="./src/img/bene-2.jpg" alt="" />
-              <p class="benefits-bot-text">
+              <p class="benefits-bot-text" data-translate="benefits-bot-text2">
                 «Гарантируем качество – отвечаем за результат!»
               </p>
             </div>
             <div class="benefits-container">
               <div class="benefits-top">
                 <p class="benefits-number">3</p>
-                <p class="benefits-top-text">ОПЕРАТИВНОСТЬ</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text3"
+                >
+                  ОПЕРАТИВНОСТЬ
+                </p>
               </div>
               <img class="benefits-img" src="./src/img/bene-3.jpg" alt="" />
-              <p class="benefits-bot-text">
+              <p class="benefits-bot-text" data-translate="benefits-bot-text3">
                 «Ваше авто не задержится у нас дольше необходимого.»
               </p>
             </div>
@@ -631,6 +707,42 @@
       </div>
       <script type="module" src="./src/js/main.js"></script>
       <script type="module" src="./src/js/language.js"></script>
+      <!-- Модальное окно -->
+      <div id="callbackModal" class="modal">
+        <div class="modal-content">
+          <span class="modal-close">&times;</span>
+          <h3 data-translate="modal-title">
+            Оставте Ваши данные и мы перезвоним с готовым решением.
+          </h3>
+          <form class="modal-callbackForm" id="modalForm">
+            <div class="form-group">
+              <label for="name" data-translate="name">Имя*</label>
+              <input type="text" id="modalName" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" data-translate="phone">Телефон*</label>
+              <input type="tel" id="modalPhone" name="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="vin" data-translate="vin">VIN код автомобиля</label>
+              <input type="text" id="modalVin" name="vin" />
+            </div>
+            <div class="form-group">
+              <label for="carModel" data-translate="carModel"
+                >Марка/модель автомобиля</label
+              >
+              <input type="text" id="modalCar" name="carModel" />
+            </div>
+            <button
+              type="submit"
+              class="submit-btn"
+              data-translate="submit-btn"
+            >
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
       <div class="social-fixed">
         <a
           href="https://t.me/RofLJeKee"
@@ -739,9 +851,7 @@
               <path d="M18 15l-6-6-6 6" />
             </svg>
           </span>
-          <span class="text" data-translate="tr-footer-up"
-            >Піднятися в гору</span
-          >
+          <span class="text" data-translate="up-btn">Піднятися в гору</span>
         </a>
       </div>
     </main>
@@ -751,7 +861,7 @@
       <div class="footer-container">
         <div class="top-footer">
           <div class="title-map">
-            <h2 class="map-title">Мы на картах</h2>
+            <h2 class="map-title" data-translate="map-title">Мы на картах</h2>
             <p class="map-content">
               <svg
                 width="36"
@@ -768,7 +878,9 @@
                 />
                 <circle cx="12" cy="9" r="3" fill="white" />
               </svg>
-              улица Ушинского, 2 а, Павлоград, Днепропетровская область
+              <span data-translate="map-content"
+                >улица Ушинского, 2 а, Павлоград, Днепропетровская область</span
+              >
             </p>
           </div>
           <a href="./index.html"
@@ -809,7 +921,7 @@
         </div>
         <div class="bot-footer">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d262.7286342547718!2d35.83691716651164!3d48.530077092994496!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1749559352690!5m2!1sru!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
             width="400"
             height="300"
             style="border-radius: 10px"
@@ -820,29 +932,29 @@
           ></iframe>
           <div>
             <div class="work-footer-div">
-              <h3>Работаем без выходных:</h3>
-              <p>Понедельник - Воскресенье</p>
-              <p>C 09:00 до 18:00</p>
+              <h3 data-translate="work-footer-title">Работаем без выходных:</h3>
+              <p data-translate="work-footer-txt">Понедельник - Воскресенье</p>
+              <p data-translate="work-footer-time">C 09:00 до 18:00</p>
             </div>
             <div class="number-footer-div">
-              <h3>Связь с нами:</h3>
+              <h3 data-translate="number-footer-title">Связь с нами:</h3>
               <div>
                 <a href="tel:+380668375666" class="number-link"
                   >+38 (066) 837−56−66</a
-                ><span> Офис</span>
+                ><span data-translate="number-footer-txt"> Офис</span>
               </div>
               <div>
                 <a href="tel:+380962110210" class="number-link"
                   >+38 (096) 211−02−10</a
                 >
-                <span>Офис</span>
+                <span data-translate="number-footer-txt">Офис</span>
               </div>
               <h3>Директор</h3>
               <div>
                 <a href="tel:+380502233959" class="number-link"
                   >+38 (050) 223−39−59</a
                 >
-                <span>Павел</span>
+                <span data-translate="number-footer-dir-name">Павел</span>
               </div>
             </div>
           </div>
