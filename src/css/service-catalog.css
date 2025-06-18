@@ -57,7 +57,7 @@
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
 }
 
@@ -149,3 +149,19 @@
         grid-template-columns: repeat(1, 1fr); /* 3 колонки */
     }
 }
+
+.price-content-container {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .price-content-container .price-content {
+    flex: 1; /* Равная ширина */
+    min-width: 0; /* Фикс для длинного текста */
+  }
+  
+  @media (max-width: 768px) {
+    .price-content-container {
+      flex-direction: column;
+    }
+  }

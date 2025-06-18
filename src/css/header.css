@@ -205,17 +205,17 @@ header {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #666;
+    color: #f3f3f3;
     transition: color 0.3s;
   }
   
   .lang-btn.active {
-    color: #f8f8f8;
+    color: #0e6374;
     font-weight: bold;
     text-decoration: underline;
   }
   
   .lang-divider {
-    color: #666;
+    color: #f3f3f3;
   }
 
