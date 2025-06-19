@@ -325,7 +325,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // МОДАЛЬНОЕ ОКНО + ФОРМА ОБРАТНОЙ СВЯЗИ
-
 document.addEventListener('DOMContentLoaded', function() {
   // Общие настройки
   const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
@@ -343,21 +342,68 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Закрытие при клике вне окна
-window.addEventListener('click', function(e) {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-open');
-  }
-});
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+    }
+  });
 
   document.querySelector('.modal-close')?.addEventListener('click', function() {
     modal.style.display = 'none';
     document.body.classList.remove('modal-open');
   });
 
-  
+  // ===== ОБРАБОТКА ПОЛЯ ТЕЛЕФОНА =====
+  const phoneInput = document.getElementById('modalPhone');
+if (phoneInput) {
+  // Автоматическое добавление +38 при фокусе
+  phoneInput.addEventListener('focus', function() {
+    if (!this.value.startsWith('+38')) {
+      this.value = '+38';
+    }
+  });
 
-  // Обработка отправки формы модального окна
+  // Форматирование ввода телефона
+  phoneInput.addEventListener('input', function(e) {
+    // Удаляем всё, кроме цифр
+    let cleaned = this.value.replace(/\D/g, '');
+    
+    // Добавляем +38, если его нет
+    if (!cleaned.startsWith('38')) {
+      cleaned = '38' + cleaned;
+    }
+    
+    // Обрезаем до 12 цифр (38 + 10 цифр)
+    cleaned = cleaned.substring(0, 12);
+    
+    // Форматируем: +38 XXX XXX XXXX (15 символов с пробелами)
+    let formatted = '+38';
+    if (cleaned.length > 2) {
+      formatted += ' ' + cleaned.substring(2, 5);
+    }
+    if (cleaned.length > 5) {
+      formatted += ' ' + cleaned.substring(5, 8);
+    }
+    if (cleaned.length > 8) {
+      formatted += ' ' + cleaned.substring(8, 12);
+    }
+    
+    this.value = formatted;
+  });
+
+  // Валидация при потере фокуса
+  phoneInput.addEventListener('blur', function() {
+    const digitsOnly = this.value.replace(/\D/g, '');
+    if (!digitsOnly.startsWith('38') || digitsOnly.length < 12) {
+      this.setCustomValidity('Введите 10 цифр номера после +38');
+    } else {
+      this.setCustomValidity('');
+    }
+  });
+}
+
+  // ===== ОБРАБОТКА ОТПРАВКИ ФОРМЫ =====
   if (modalForm) {
     modalForm.addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -370,8 +416,11 @@ window.addEventListener('click', function(e) {
       const carModel = document.getElementById('modalCar')?.value.trim();
 
       // Валидация телефона
-      const phoneRegex = /^[\d\s\-+]{10,}$/;
-      const cleanPhone = phone?.replace(/\D/g, '') || '';
+      const phoneRegex = /^\+38\s?\d{3}\s?\d{3}\s?\d{4}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Пожалуйста, введите корректный номер телефона в формате +38 XXX XXX XXXX');
+        return;
+      }
 
       // Формируем сообщение
       const message = `🚗 Новая заявка обратный звонок:\n\n` +
@@ -396,82 +445,132 @@ window.addEventListener('click', function(e) {
     });
   }
 
-  // ===== ОБЩАЯ ФУНКЦИЯ ОТПРАВКИ =====
-  async function sendToTelegram(text) {
-    const promises = adminChatIds.map(chatId => {
-      return fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+  // ===== ОТПРАВКА В TELEGRAM =====
+  async function sendToTelegram(message) {
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    
+    for (const chatId of adminChatIds) {
+      const response = await fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
           chat_id: chatId,
-          text: text,
+          text: message,
           parse_mode: 'HTML'
         })
       });
-    });
-    
-    return await Promise.all(promises);
+      
+      if (!response.ok) {
+        throw new Error(`Ошибка HTTP: ${response.status}`);
+      }
+    }
   }
 });
 
-// ФОРМА ОБРАТНОЙ СВЯЗИ
 
-document.getElementById('callbackForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+
+// ФОРМА ОБРАТНОЙ СВЯЗИ
+document.addEventListener('DOMContentLoaded', function() {
+  const phoneInput = document.getElementById('phoneInput');
+  const callbackForm = document.getElementById('callbackForm');
   
-  const name = document.getElementById('nameInput').value.trim();
-  const phoneNumber = document.getElementById('phoneInput').value.trim();
-  const messageText = document.getElementById('messageInput').value.trim();
-  const responseMessage = document.getElementById('responseMessage');
-  
-  // Валидация номера телефона (минимум 10 цифр)
-  const phoneRegex = /[\d]{10,}/;
-  const cleanPhone = phoneNumber.replace(/\D/g, ''); // Удаляем всё, кроме цифр
-  
-  if (!phoneRegex.test(cleanPhone)) {
-    responseMessage.textContent = "Введіть коректний номер телефону!";
-    responseMessage.className = "response-message error";
-    responseMessage.style.display = "block";
-    return;
+  // Автоматическое добавление +38 при фокусе
+  if (phoneInput) {
+    phoneInput.addEventListener('focus', function() {
+      if (!this.value.startsWith('+38')) {
+        this.value = '+38';
+      }
+    });
+
+    // Форматирование ввода телефона
+    phoneInput.addEventListener('input', function(e) {
+      // Удаляем всё, кроме цифр
+      let cleaned = this.value.replace(/\D/g, '');
+      
+      // Добавляем +38, если его нет
+      if (!cleaned.startsWith('38')) {
+        cleaned = '38' + cleaned;
+      }
+      
+      // Обрезаем до 12 цифр (38 + 10 цифр)
+      cleaned = cleaned.substring(0, 12);
+      
+      // Форматируем: +38 XXX XXX XXXX
+      let formatted = '+38';
+      if (cleaned.length > 2) {
+        formatted += ' ' + cleaned.substring(2, 5);
+      }
+      if (cleaned.length > 5) {
+        formatted += ' ' + cleaned.substring(5, 8);
+      }
+      if (cleaned.length > 8) {
+        formatted += ' ' + cleaned.substring(8, 12);
+      }
+      
+      this.value = formatted;
+    });
   }
 
-  // Формируем сообщение для Telegram
-  const telegramMessage = `🚗 Новая заявка обратный звонок:\n\n` +
-                     `▪ Имя: ${name || 'не указано'}\n` +
-                     `▪ Телефон: ${phoneNumber}\n` +
-                     `▪ Авто: ${messageText || 'не указано'}`;
+  // Обработка отправки формы
+  if (callbackForm) {
+    callbackForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('nameInput').value.trim();
+      const phoneNumber = document.getElementById('phoneInput').value.trim();
+      const messageText = document.getElementById('messageInput').value.trim();
+      const responseMessage = document.getElementById('responseMessage');
+      
+      // Валидация номера телефона (ровно 10 цифр после +38)
+      const cleanPhone = phoneNumber.replace(/\D/g, '');
+      if (!cleanPhone.startsWith('38') || cleanPhone.length !== 12) {
+        responseMessage.textContent = "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX!";
+        responseMessage.className = "response-message error";
+        responseMessage.style.display = "block";
+        return;
+      }
 
-  const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-  const adminChatIds = ['398501551'];
-  
-  // Отправляем запросы
-  Promise.all(
-    adminChatIds.map(chatId => 
-      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: telegramMessage
-        })
+      // Формируем сообщение для Telegram
+      const telegramMessage = `🚗 Новая заявка обратный звонок:\n\n` +
+                         `▪ Имя: ${name || 'не указано'}\n` +
+                         `▪ Телефон: ${phoneNumber}\n` +
+                         `▪ Авто: ${messageText || 'не указано'}`;
+
+      const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
+      const adminChatIds = ['398501551'];
+      
+      // Отправляем запросы
+      Promise.all(
+        adminChatIds.map(chatId => 
+          fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: telegramMessage
+            })
+          })
+        )
+      )
+      .then(responses => Promise.all(responses.map(res => res.json())))
+      .then(data => {
+        responseMessage.textContent = "Дякуємо! Ми вам зателефонуємо найближчим часом.";
+        responseMessage.className = "response-message success";
+        responseMessage.style.display = "block";
+        callbackForm.reset();
+        
+        setTimeout(() => {
+          responseMessage.style.display = "none";
+        }, 5000);
       })
-    )
-  )
-  .then(responses => Promise.all(responses.map(res => res.json())))
-  .then(data => {
-    responseMessage.textContent = "Дякуємо! Ми вам зателефонуємо найближчим часом.";
-    responseMessage.className = "response-message success";
-    responseMessage.style.display = "block";
-    document.getElementById('callbackForm').reset();
-    
-    setTimeout(() => {
-      responseMessage.style.display = "none";
-    }, 5000);
-  })
-  .catch(error => {
-    console.error("Помилка відправки:", error);
-    responseMessage.textContent = "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.";
-    responseMessage.className = "response-message error";
-    responseMessage.style.display = "block";
-  });
+      .catch(error => {
+        console.error("Помилка відправки:", error);
+        responseMessage.textContent = "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.";
+        responseMessage.className = "response-message error";
+        responseMessage.style.display = "block";
+      });
+    });
+  }
 });
