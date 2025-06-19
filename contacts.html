@@ -26,47 +26,98 @@
       </div>
       <nav class="nav">
         <ul class="nav-list-header">
-          <li class="nav-item"><a href="./index.html">Главная</a></li>
           <li class="nav-item">
-            <a href="./foto-gallery.html">Фотогаллерея</a>
+            <a href="./index.html" data-translate="nav-item-main">Главная</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="./foto-gallery.html" data-translate="nav-item-foto"
+              >Фотогаллерея</a
+            >
+          </li> -->
+          <li class="nav-item">
+            <a href="./parts.html" data-translate="nav-item-zapch"
+              >Подбор запчастей</a
+            >
           </li>
           <li class="nav-item">
-            <a href="./parts.html">Подбор запчастей</a>
-          </li>
-          <li class="nav-item">
-            <a href="./ustanovka-gbo.html">Установка ГБО</a>
+            <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
+              >Установка ГБО</a
+            >
           </li>
 
           <li class="nav-item dropdown">
-            <a href="./service-catalog.html">Услуги</a>
+            <a href="./service-catalog.html" data-translate="nav-item-serv"
+              >Услуги</a
+            >
             <ul class="dropdown-content">
-              <li><a href="./service-catalog.html#dvigatel">Двигун</a></li>
               <li>
-                <a href="./service-catalog.html#hodovka">Ходова частина</a>
+                <a
+                  href="./service-catalog.html#dvigatel"
+                  data-translate="nav-item-dvig"
+                  >Двигун</a
+                >
               </li>
-              <li><a href="./service-catalog.html#electrika">Електрика</a></li>
               <li>
-                <a href="./service-catalog.html#tormoznaja"
+                <a
+                  href="./service-catalog.html#hodovka"
+                  data-translate="nav-item-hodov"
+                  >Ходова частина</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#electrika"
+                  data-translate="nav-item-elektro"
+                  >Електрика</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service-catalog.html#tormoznaja"
+                  data-translate="nav-item-torm"
                   >Гальмівна система</a
                 >
               </li>
               <li>
-                <a href="./service-catalog.html#transmisija">Трансмісія</a>
+                <a
+                  href="./service-catalog.html#transmisija"
+                  data-translate="nav-item-trans"
+                  >Трансмісія</a
+                >
               </li>
               <li>
-                <a href="./service-catalog.html#servisnoe"
+                <a
+                  href="./service-catalog.html#servisnoe"
+                  data-translate="nav-item-to"
                   >Технічне обслуговування</a
                 >
               </li>
               <li><a href="./service-catalog.html#gbo">ГБО</a></li>
-              <li><a href="">Діагностика</a></li>
-              <li><a href="">Програмне тюнінгування</a></li>
+              <li>
+                <a href="" data-translate="nav-item-diagn">Діагностика</a>
+              </li>
+              <li>
+                <a href="" data-translate="nav-item-chip"
+                  >Програмне тюнінгування</a
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="./contacts.html">Контакты</a>
+            <a href="./contacts.html" data-translate="nav-item-contacts"
+              >Контакты</a
+            >
           </li>
-          <li class="nav-item"><a href="./price.html">Цены</a></li>
+          <li class="nav-item">
+            <a href="./price.html" data-translate="nav-item-price">Цены</a>
+          </li>
+          <li class="nav-item">
+            <div class="language-switcher">
+              <button class="lang-btn active" data-lang="uk">Укр</button>
+              <span class="lang-divider">/</span>
+              <button class="lang-btn" data-lang="ru">Рус</button>
+            </div>
+          </li>
         </ul>
       </nav>
       <a href="./index.html"
@@ -109,13 +160,20 @@
     <main>
       <div class="container">
         <section class="hero-contacts-section">
-          <div>
-            <div class="hero-content">
-              <h1 class="hero-title">РАБОТАЕМ В ПАВЛОГРАДЕ БОЛЕЕ 20 ЛЕТ</h1>
-              <button type="button" class="details-hero-btn" id="openModalBtn">
+          <div class="contacts-div">
+            <div class="hero-content-contacts">
+              <h1 class="hero-title" data-translate="hero-title-contacts">
+                РАБОТАЕМ В ПАВЛОГРАДЕ БОЛЕЕ 20 ЛЕТ
+              </h1>
+              <button
+                type="button"
+                class="details-hero-btn"
+                id="openModalBtn"
+                data-translate="details-hero-btn"
+              >
                 ЗАПИСАТЬСЯ
               </button>
-              <p class="discount">
+              <p class="discount" data-translate="discount">
                 Скидка 50% на первую диагностику по промокоду "АС КАСКАД"
               </p>
             </div>
@@ -125,7 +183,9 @@
           <section class="contacts-map">
             <div class="contacts-div-map">
               <div class="title-map">
-                <h2 class="map-title">Мы на картах</h2>
+                <h2 class="map-title" data-translate="map-title">
+                  Мы на картах
+                </h2>
                 <p class="map-content">
                   <svg
                     width="36"
@@ -142,7 +202,10 @@
                     />
                     <circle cx="12" cy="9" r="3" fill="white" />
                   </svg>
-                  улица Ушинского, 2 а, Павлоград, Днепропетровская область
+                  <span data-translate="map-content"
+                    >улица Ушинского, 2 а, Павлоград, Днепропетровская
+                    область</span
+                  >
                 </p>
               </div>
               <a href="./index.html"
@@ -257,11 +320,12 @@
                           d="M15.69922,4c-1.9,0 -6.59961,0.19961 -9.09961,2.59961c-1.8,1.7 -2.49961,4.30039 -2.59961,7.40039c-0.2,4.9 0.89922,7.99961 2.69922,9.59961c0.4,0.3 1.40078,1.10117 3.30078,1.70117v2.5c0,0 -0.00039,0.99922 0.59961,1.19922c0.1,0 0.20078,0.09961 0.30078,0.09961c0.6,0 1.09883,-0.70039 1.79883,-1.40039c0.6,-0.7 1.10039,-1.19922 1.40039,-1.69922h1.40039h0.80078c1.9,0 6.59961,-0.19961 9.09961,-2.59961c1.8,-1.8 2.5,-4.40117 2.5,-7.70117c0.1,-0.5 0.09961,-1.09922 0.09961,-1.69922c-0.1,-3.7 -1.19922,-6.19961 -2.69922,-7.59961c-0.6,-0.5 -3.20078,-2.40039 -8.80078,-2.40039zM15.5,5.90039h0.69922h0.10156h0.09961c5.3,0 7.3,1.70039 7.5,1.90039c1.2,1 1.9,3.19961 2,6.09961v0.40039c0.1,0.6 0.09961,1.09844 0.09961,1.39844c-0.1,3 -0.70039,5.00078 -1.90039,6.30078c-2.1,1.9 -6.49922,2 -7.69922,2h-0.70117h-0.09961h-0.09961h-1l-1.59961,1.80078l-1,1.09961l-0.20117,0.29883c-0.2,0.2 -0.49922,0.60117 -0.69922,0.70117v-0.20117v-4.29883c-2,-0.5 -2.8,-1.20039 -3,-1.40039c-1.4,-1.2 -2.2,-4.1 -2,-8v-1c0.2,-2.4 0.80078,-3.99961 1.80078,-5.09961c2.1,-1.9 6.49922,-2 7.69922,-2zM15.40039,8.09961c-0.5,0 -0.5,0.70117 0,0.70117c3.7,0 6.90039,2.49922 6.90039,7.19922c0,0.5 0.69922,0.5 0.69922,0c0,-5.1 -3.39961,-8.00039 -7.59961,-7.90039zM11.4375,9.02539c-0.2125,-0.025 -0.43672,0.02383 -0.63672,0.17383c-1,0.5 -2.00117,1.50156 -1.70117,2.60156c0,0 0.20078,0.89883 1.30078,2.79883c0.6,0.9 1.09961,1.70078 1.59961,2.30078c0.5,0.7 1.29961,1.49961 2.09961,2.09961c1.6,1.3 4.10117,2.60039 5.20117,2.90039c1,0.3 2.09961,-0.70117 2.59961,-1.70117c0.2,-0.4 0.09922,-0.89922 -0.30078,-1.19922c-0.6,-0.6 -1.59883,-1.29922 -2.29883,-1.69922c-0.5,-0.3 -1.10078,-0.10078 -1.30078,0.19922l-0.5,0.59961c-0.2,0.3 -0.69922,0.30078 -0.69922,0.30078c-3.3,-0.9 -4.20117,-4.30078 -4.20117,-4.30078c0,0 0.00078,-0.39922 0.30078,-0.69922l0.59961,-0.5c0.3,-0.2 0.49922,-0.80078 0.19922,-1.30078c-0.2,-0.3 -0.49883,-0.89922 -0.79883,-1.19922c-0.3,-0.4 -0.90039,-1.09961 -0.90039,-1.09961c-0.15,-0.15 -0.35,-0.25039 -0.5625,-0.27539zM16.09961,10.09961c-0.5,-0.1 -0.59961,0.70117 -0.09961,0.70117c2.8,0.2 4.40078,2.1 4.30078,4.5c-0.1,0.5 0.69922,0.5 0.69922,0c0.1,-2.8 -1.70039,-5.10117 -4.90039,-5.20117zM16.40039,12c-0.5,-0.1 -0.5,0.69922 0,0.69922c1.2,0 1.79883,0.70039 1.79883,1.90039c0.1,0.5 0.80078,0.5 0.80078,0c-0.1,-1.6 -0.99961,-2.59961 -2.59961,-2.59961z"
                         ></path>
                       </g>
-                    </g></svg
-                  >Наш Viber</a
-                >
-                <a href="https://t.me/RofLJeKee" class="telegram-button"
-                  ><svg
+                    </g>
+                  </svg>
+                  Наш Viber
+                </a>
+                <a href="https://t.me/RofLJeKee" class="telegram-button">
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
@@ -291,9 +355,10 @@
                           d="M46.137,6.552c-0.75,-0.636 -1.928,-0.727 -3.146,-0.238h-0.002c-1.281,0.514 -36.261,15.518 -37.685,16.131c-0.259,0.09 -2.521,0.934 -2.288,2.814c0.208,1.695 2.026,2.397 2.248,2.478l8.893,3.045c0.59,1.964 2.765,9.21 3.246,10.758c0.3,0.965 0.789,2.233 1.646,2.494c0.752,0.29 1.5,0.025 1.984,-0.355l5.437,-5.043l8.777,6.845l0.209,0.125c0.596,0.264 1.167,0.396 1.712,0.396c0.421,0 0.825,-0.079 1.211,-0.237c1.315,-0.54 1.841,-1.793 1.896,-1.935l6.556,-34.077c0.4,-1.82 -0.156,-2.746 -0.694,-3.201zM22,32l-3,8l-3,-10l23,-17z"
                         ></path>
                       </g>
-                    </g></svg
-                  >Наш Telegram</a
-                >
+                    </g>
+                  </svg>
+                  Наш Telegram
+                </a>
               </div>
             </div>
           </section>
