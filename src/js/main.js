@@ -189,17 +189,73 @@ document.addEventListener('DOMContentLoaded', function() {
     nav.classList.toggle('active');
   });
 
-  // Аккордеон для выпадающих пунктов
-  dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector('a');
-    
-    link.addEventListener('click', function(e) {
-      if (window.innerWidth <= 992 && this.getAttribute('href') === '#') {
-        e.preventDefault();
-        const content = this.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      }
+  // Проверка, мобильное ли устройство (или узкий экран)
+  const isMobile = () => window.innerWidth <= 992;
+
+  // Обработка выпадающего меню (только на компьютере)
+  if (!isMobile()) {
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('a');
+      const content = dropdown.querySelector('.dropdown-content');
+
+      // Показываем при наведении
+      dropdown.addEventListener('mouseenter', () => {
+        content.style.display = 'block';
+      });
+
+      // Скрываем при уходе курсора
+      dropdown.addEventListener('mouseleave', () => {
+        content.style.display = 'none';
+      });
+
+      // Отменяем стандартное поведение ссылки (если href="#")
+      link.addEventListener('click', (e) => {
+        if (link.getAttribute('href') === '#') {
+          e.preventDefault();
+        }
+      });
     });
+  }
+
+  // На мобильных устройствах dropdown-content НЕ показывается вообще
+  else {
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('a');
+      const content = dropdown.querySelector('.dropdown-content');
+
+      // Скрываем dropdown-content (если вдруг был виден)
+      content.style.display = 'none';
+
+      // Отключаем клик по ссылке (если href="#")
+      link.addEventListener('click', (e) => {
+        if (link.getAttribute('href') === '#') {
+          e.preventDefault();
+        }
+      });
+    });
+  }
+
+  // Обновляем поведение при изменении размера окна
+  window.addEventListener('resize', () => {
+    dropdowns.forEach(dropdown => {
+      const content = dropdown.querySelector('.dropdown-content');
+      content.style.display = 'none'; // Сбрасываем при любом изменении
+    });
+
+    // Если перешли в десктопный режим — включаем обработку наведения
+    if (!isMobile()) {
+      dropdowns.forEach(dropdown => {
+        const content = dropdown.querySelector('.dropdown-content');
+
+        dropdown.addEventListener('mouseenter', () => {
+          content.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+          content.style.display = 'none';
+        });
+      });
+    }
   });
 });
 
