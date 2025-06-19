@@ -186,6 +186,10 @@
         height: 120px;
         padding: 0px;
     }    
+
+    .hero{
+        height: 830px;
+    }
 }
 
 /* МОДАЛЬНОЕ ОКНО */

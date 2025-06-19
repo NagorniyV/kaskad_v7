@@ -103,17 +103,28 @@
 
 .service-card h3 {
     color: #f8f8f8;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
 }
 
 .service-card p {
     color: #f8f8f8;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 30px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .btn-container {
@@ -199,4 +210,6 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    
 }
