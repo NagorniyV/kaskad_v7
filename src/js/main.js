@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   // Общие настройки
   const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-  const adminChatIds = ['398501551'];
+  const adminChatIds = ['398501551, 537098969'];
 
   // ===== МОДАЛЬНОЕ ОКНО =====
   const modal = document.getElementById('callbackModal');
@@ -434,13 +434,13 @@ if (phoneInput) {
         await sendToTelegram(message);
         
         // Успешная отправка
-        alert('✅ Ваша заявка принята! Мы свяжемся с вами в ближайшее время.');
+        alert('✅ Дякуємо! Ми вам зателефонуємо найближчим часом.');
         modalForm.reset();
         modal.style.display = 'none';
         document.body.classList.remove('modal-open');
       } catch (error) {
-        console.error('Ошибка отправки:', error);
-        alert('⚠ Произошла ошибка. Пожалуйста, попробуйте ещё раз или позвоните нам.');
+        console.error('Відбулася помилка:', error);
+        alert('⚠ Відбулася помилка. Будь ласка, спробуйте ще раз або зателефонуйте нам.');
       }
     });
   }
@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
                          `▪ Авто: ${messageText || 'не указано'}`;
 
       const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-      const adminChatIds = ['398501551'];
+      const adminChatIds = ['398501551, 537098969'];
       
       // Отправляем запросы
       Promise.all(
