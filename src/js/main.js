@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   // Общие настройки
   const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-  const adminChatIds = ['398501551, 537098969'];
+  const adminChatIds = ['398501551, 5370980969, 5235424421'];
 
   // ===== МОДАЛЬНОЕ ОКНО =====
   const modal = document.getElementById('callbackModal');
@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
                          `▪ Авто: ${messageText || 'не указано'}`;
 
       const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-      const adminChatIds = ['398501551, 537098969'];
+      const adminChatIds = ['398501551, 5370980969, 5235424421'];
       
       // Отправляем запросы
       Promise.all(
