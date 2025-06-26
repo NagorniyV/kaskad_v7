@@ -1,7 +1,6 @@
 .hero {
     position: relative;
     color: white;
-    background-image: url(../img/test-hero-bg.jpg);
     background-color: #101010;
     background-size: cover;
     background-position: center;
@@ -12,6 +11,28 @@
     justify-content: center;
     text-align: center;
     border-top: 1px solid #f8f8f8;
+}
+
+    .hero {
+        /* Для смартфонов */
+        background-image: url(../img/small-hero-bg.webp);
+        background-image: url(../img/small-hero-bg.jpg);
+    }
+
+@media (min-width: 768px) {
+    .hero {
+        /* Для планшетов */
+        background-image: url(../img/medium-hero-bg.webp);
+        background-image: url(../img/medium-hero-bg.jpg);
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        /* Для десктопов */
+        background-image: url(../img/large-hero-bg.webp);
+        background-image: url(../img/large-hero-bg.jpg);
+    }
 }
 
 .hero::before {
