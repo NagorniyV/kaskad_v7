@@ -1,7 +1,6 @@
 .hero-service-catalog {
     position: relative;
     color: white;
-    background-image: url(../img/catalog-bg.jpg);
     background-color: #101010;
     background-size: cover;
     background-position: center;
@@ -12,6 +11,28 @@
     justify-content: center;
     text-align: center;
     border-top: 1px solid #f8f8f8;
+}
+
+.hero-service-catalog {
+    /* Для смартфонов */
+    background-image: url(../img/small-catalog-bg.webp);
+    background-image: url(../img/small-catalog-bg.jpg);
+}
+
+@media (min-width: 768px) {
+    .hero-service-catalog {
+        /* Для планшетов */
+        background-image: url(../img/medium-catalog-bg.webp);
+        background-image: url(../img/medium-catalog-bg.jpg);
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-service-catalog {
+        /* Для десктопов */
+        background-image: url(../img/large-catalog-bg.webp);
+        background-image: url(../img/large-catalog-bg.jpg);
+    }
 }
 
 .hero-service-catalog::before {

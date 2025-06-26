@@ -1,7 +1,6 @@
 .hero-parts {
     position: relative;
     color: white;
-    background-image: url(../img/parts-hero.jpg);
     background-color: #101010;
     background-size: cover;
     background-position: center;
@@ -12,6 +11,11 @@
     justify-content: center;
     text-align: center;
     border-top: 1px solid #f8f8f8;
+}
+
+.hero-parts {
+    background-image: url(../img/parts-hero.webp);
+    background-image: url(../img/parts-hero.jpg);
 }
 
 .hero-parts::before {
@@ -153,4 +157,28 @@
     .hero-parts {
         height: 715px;
     }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel picture {
+    position: absolute;
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.carousel picture.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
 }

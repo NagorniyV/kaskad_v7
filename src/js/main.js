@@ -264,59 +264,51 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   try {
     const carousel = document.querySelector('.carousel');
-    const images = document.querySelectorAll('.carousel img');
+    const pictures = document.querySelectorAll('.carousel picture');
     
-    // Проверяем, существуют ли элементы карусели
-    if (!carousel || !images || images.length === 0) {
+    if (!carousel || !pictures || pictures.length === 0) {
       console.error('Элементы карусели не найдены');
       return;
     }
     
     let currentIndex = 0;
-    const visibleImages = 2; // Количество видимых изображений
+    const transitionTime = 4000; // 4 секунды
     let carouselInterval;
     
-    function showNextImages() {
+    function showNextImage() {
       try {
-        // Скрываем все изображения
-        images.forEach(img => {
-          if (img) { // Проверка на существование элемента
-            img.style.display = 'none';
-            img.classList.remove('active');
-            img.classList.remove('fade');
-          }
-        });
-        
-        // Проверяем, есть ли изображения для показа
-        if (images.length === 0) return;
-        
-        // Показываем текущие 2 изображения
-        for (let i = 0; i < visibleImages; i++) {
-          const index = (currentIndex + i) % images.length;
-          if (images[index]) { // Проверка на существование элемента
-            images[index].style.display = 'block';
-            if (i === 0) {
-              images[index].classList.add('active');
-              images[index].classList.add('fade');
-            }
-          }
+        // Скрываем текущее активное изображение
+        const currentActive = document.querySelector('.carousel picture.active');
+        if (currentActive) {
+          currentActive.classList.remove('active');
         }
         
-        // Обновляем индекс для следующего перехода
-        currentIndex = (currentIndex + 1) % (images.length - visibleImages + 1);
+        // Показываем следующее изображение
+        currentIndex = (currentIndex + 1) % pictures.length;
+        pictures[currentIndex].classList.add('active');
+        
       } catch (e) {
-        console.error('Ошибка в функции showNextImages:', e);
-        clearInterval(carouselInterval); // Останавливаем интервал при ошибке
+        console.error('Ошибка в функции showNextImage:', e);
+        clearInterval(carouselInterval);
       }
     }
     
-    // Запускаем карусель
-    showNextImages();
-    carouselInterval = setInterval(showNextImages, 4000); // Смена каждые 4 секунды
+    // Инициализация - показываем первое изображение
+    if (pictures.length > 0) {
+      pictures[0].classList.add('active');
+    }
     
-    // Для адаптивности можно добавить обработчик изменения размера окна
-    window.addEventListener('resize', function() {
-      // При необходимости можно добавить логику адаптации
+    // Запускаем карусель
+    carouselInterval = setInterval(showNextImage, transitionTime);
+    
+    // Остановка при наведении
+    carousel.addEventListener('mouseenter', () => {
+      clearInterval(carouselInterval);
+    });
+    
+    // Возобновление при уходе курсора
+    carousel.addEventListener('mouseleave', () => {
+      carouselInterval = setInterval(showNextImage, transitionTime);
     });
     
   } catch (e) {

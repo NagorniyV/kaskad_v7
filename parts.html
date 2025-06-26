@@ -12,7 +12,21 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>АС КАСКАД</title>
+    <link rel="icon" href="./favicon.png" type="image/png" />
+    <title>Запчастини на авто в Павлограді | Деталі на авто</title>
+    <meta
+      name="description"
+      content="🔧 Автосервіс «Каскад» у Павлограді: професійний підбір автозапчастин
+
+      ✔ Підбір оригінальних та аналогових запчастин для будь-яких марок авто
+      ✔ Постачання деталей під замовлення (двигуни, коробки передач, ходова частина)
+      ✔ Консультація щодо сумісності та якості комплектуючих
+      ✔ Пошук рідкісних запчастин через перевірених постачальників
+      ✔ Гарантія на всі запчастини (оригінал та сертифіковані аналоги)
+      ✔ Діагностика перед замовленням для точного визначення необхідних деталей
+      
+      🚗 Знайдемо рішення для будь-якого авто! ☎️ Телефонуйте для консультації!"
+    />
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/js/main.js" />
     <link rel="stylesheet" href="./src/js/language.js" />
@@ -238,13 +252,31 @@
           </div>
           <div class="carousel-container">
             <div class="carousel">
-              <img src="./src/img/parts/p1.jpg" alt="Запчасти" class="active" />
-              <img src="./src/img/parts/p2.jpg" alt="Запчасти" />
-              <img src="./src/img/parts/p3.jpg" alt="Запчасти" />
-              <img src="./src/img/parts/p4.jpg" alt="Запчасти" />
-              <img src="./src/img/parts/p5.jpg" alt="Запчасти" />
-              <img src="./src/img/parts/p6.jpg" alt="Запчасти" />
-              <img src="./src/img/parts/p7.jpg" alt="Запчасти" />
+              <picture>
+                <source srcset="./src/img/parts/p1.webp" type="image/webp" />
+                <img
+                  src="./src/img/parts/p1.jpg"
+                  alt="Запчасти"
+                  class="active"
+                  loading="lazy"
+                />
+              </picture>
+              <picture>
+                <source srcset="./src/img/parts/p2.webp" type="image/webp" />
+                <img
+                  src="./src/img/parts/p2.jpg"
+                  alt="Запчасти"
+                  loading="lazy"
+                />
+              </picture>
+              <picture>
+                <source srcset="./src/img/parts/p6.webp" type="image/webp" />
+                <img
+                  src="./src/img/parts/p6.jpg"
+                  alt="Запчасти"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
           <div class="Our-Benefits">
@@ -312,7 +344,18 @@
           <div class="callback-section-container">
             <div class="callback-card-container">
               <div class="team-card">
-                <img src="./src/img/colleagues/dir.jpg" alt="dir_filipov_pp" />
+                <picture>
+                  <source
+                    srcset="./src/img/colleagues/dir.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/colleagues/dir.jpg"
+                    alt="dir_filipov_pp"
+                    class="team-card-img"
+                    loading="lazy"
+                  />
+                </picture>
                 <h3 class="team-card-title" data-translate="card-dir-title">
                   Филипов Павел
                 </h3>
@@ -327,10 +370,18 @@
                 </p>
               </div>
               <div class="team-card">
-                <img
-                  src="./src/img/colleagues/colleagues-1.jpg"
-                  alt="colleagues-1"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/colleagues/colleagues-1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/colleagues/colleagues-1.jpg"
+                    alt="Dmitrienko_Anton"
+                    class="team-card-img"
+                    loading="lazy"
+                  />
+                </picture>
                 <h3 class="team-card-title" data-translate="card-ant-title">
                   Дмитренко Антон
                 </h3>
@@ -345,10 +396,18 @@
                 </p>
               </div>
               <div class="team-card">
-                <img
-                  src="./src/img/colleagues/colleagues-2.jpg"
-                  alt="colleagues-2"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/colleagues/colleagues-2.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/colleagues/colleagues-2.jpg"
+                    alt="Girenko_Vlad"
+                    class="team-card-img"
+                    loading="lazy"
+                  />
+                </picture>
                 <h3 class="team-card-title" data-translate="card-vlad-title">
                   Гиренко Владислав
                 </h3>
@@ -387,7 +446,7 @@
                   type="tel"
                   id="phoneInput"
                   name="phone"
-                  placeholder="+380 50 025 25 25*"
+                  placeholder="+38 (___) ___ ____"
                   required
                 />
                 <input
@@ -420,192 +479,511 @@
           <div class="infinite-carousel">
             <div class="carousel-track">
               <div>
-                <img
-                  src="./src/img/avto-logo/4226-256x256x8.png"
-                  alt="daewoo"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/4226-256x256x8.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/4226-256x256x8.png"
+                    alt="daewoo"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">daewoo</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/4227-256x256x32.png"
-                  alt="daihatsu"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/4227-256x256x32.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/4227-256x256x32.png"
+                    alt="daihatsu"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">daihatsu</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/acura_logo.png" alt="acura" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/acura_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/acura_logo.png"
+                    alt="acura"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">acura</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/alfa-romeo-logo.png"
-                  alt="alfa-romeo"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/alfa-romeo-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/alfa-romeo-logo.png"
+                    alt="alfa-romeo"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">alfa-romeo</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/audi.png" alt="audi" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/audi.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/audi.png"
+                    alt="audi"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">audi</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/chevrolet-logo.png"
-                  alt="chevrolet"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/chevrolet-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/chevrolet-logo.png"
+                    alt="chevrolet"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">chevrolet</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/daewoo-logo.png" alt="daewoo" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/daewoo-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/daewoo-logo.png"
+                    alt="daewoo"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">daewoo</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/citroen-logo.jpg" alt="citroen" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/citroen-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/citroen-logo.jpg"
+                    alt="citroen"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">citroen</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/dodge-logo.png" alt="dodge" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/dodge-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/dodge-logo.png"
+                    alt="dodge"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">dodge</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/fiat_logo.png" alt="fiat" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/fiat_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/fiat_logo.png"
+                    alt="fiat"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">fiat</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/ford.png" alt="ford" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/ford.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/ford.png"
+                    alt="ford"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">ford</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/honda-color-128.png"
-                  alt="honda"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/honda-color-128.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/honda-color-128.png"
+                    alt="honda"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">honda</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/hyundai-lg.png" alt="hyundai" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/hyundai-lg.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/hyundai-lg.png"
+                    alt="hyundai"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">hyundai</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/infiniti.png" alt="infiniti" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/infiniti.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/infiniti.png"
+                    alt="infiniti"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">infiniti</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/jaguar-logo.png" alt="jaguar" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/jaguar-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/jaguar-logo.png"
+                    alt="jaguar"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">jaguar</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/jeep-logo.png" alt="jeep" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/jeep-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/jeep-logo.png"
+                    alt="jeep"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">jeep</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/kia_logo_256_003.png" alt="kia" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/kia_logo_256_003.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/kia_logo_256_003.png"
+                    alt="kia"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">kia</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/land-rover1.png"
-                  alt="land-rover"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/land-rover1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/land-rover1.png"
+                    alt="land-rover"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">land-rover</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/lexus-logo.png" alt="lexus" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/lexus-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/lexus-logo.png"
+                    alt="lexus"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">lexus</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/lincoln-logo.png" alt="lincoln" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/lincoln-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/lincoln-logo.png"
+                    alt="lincoln"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">lincoln</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/logo_suzuki.png" alt="suzuki" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/logo_suzuki.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/logo_suzuki.png"
+                    alt="suzuki"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">suzuki</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
-                  alt="mazda"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
+                    alt="mazda"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">mazda</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/mercedes_logo.png"
-                  alt="mercedes"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/mercedes_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/mercedes_logo.png"
+                    alt="mercedes"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">mercedes</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/mitsubishi_logo.png"
-                  alt="mitsubishi"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/mitsubishi_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/mitsubishi_logo.png"
+                    alt="mitsubishi"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">mitsubishi</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/nissan-logo-4.png" alt="nissan" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/nissan-logo-4.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/nissan-logo-4.png"
+                    alt="nissan"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">nissan</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/novosti-skoda-logo.gif"
-                  alt="skoda"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/novosti-skoda-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
+                    alt="skoda"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">skoda</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
-                  alt="opel"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
+                    alt="opel"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">opel</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/peugeot_logo_128.png"
-                  alt="peugeot"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/peugeot_logo_128.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/peugeot_logo_128.png"
+                    alt="peugeot"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">peugeot</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/renault_logo.png" alt="renault" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/renault_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/renault_logo.png"
+                    alt="renault"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">renault</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/saab-logo.png" alt="saab" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/saab-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/saab-logo.png"
+                    alt="saab"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">saab</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/seat.png" alt="seat" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/seat.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/seat.png"
+                    alt="seat"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">seat</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/smart-logo.png" alt="smart" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/smart-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/smart-logo.png"
+                    alt="smart"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">smart</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/ssangyong-logo.png"
-                  alt="ssangyong"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/ssangyong-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/ssangyong-logo.png"
+                    alt="ssangyong"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">ssangyong</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/subaru-logo-transparent.png"
-                  alt="subaru"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/subaru-logo-transparent.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/subaru-logo-transparent.png"
+                    alt="subaru"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">subaru</p>
               </div>
               <div>
-                <img src="./src/img/avto-logo/toyota.png" alt="toyota" />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/toyota.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/toyota.png"
+                    alt="toyota"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">toyota</p>
               </div>
               <div>
-                <img
-                  src="./src/img/avto-logo/volkswagen_logo.png"
-                  alt="volkswagen"
-                />
+                <picture>
+                  <source
+                    srcset="./src/img/avto-logo/volkswagen_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/volkswagen_logo.png"
+                    alt="volkswagen"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="text-brend">volkswagen</p>
               </div>
             </div>

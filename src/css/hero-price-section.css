@@ -1,7 +1,6 @@
 .hero-price-section {
     position: relative;
     color: white;
-    background-image: url(../img/price-auto-img.jpg);
     background-color: #101010;
     background-size: cover;
     background-position: center;
@@ -12,6 +11,11 @@
     justify-content: center;
     text-align: center;
     border-top: 1px solid #f8f8f8;
+}
+
+.hero-price-section {
+    background-image: url(../img/price-auto-img.webp);
+    background-image: url(../img/price-auto-img.jpg);
 }
 
 .hero-price-section::before {
