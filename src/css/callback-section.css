@@ -45,7 +45,8 @@
     color: #f8f8f8;
 }
 
-.team-card > img{
+.team-card>img,
+.team-card>picture>img{
     position: absolute;
     top: -60px;
     left: 50%;
