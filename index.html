@@ -257,6 +257,7 @@
                 height="200"
                 style="border-radius: 20px"
                 class="iframe"
+                title="Мапа розташування автосервісу Каскад на Google Maps"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -326,13 +327,18 @@
               </p>
             </div>
             <div class="carousel-nav">
-              <button class="carousel-btn" id="prevBtn">
+              <button
+                class="carousel-btn"
+                id="prevBtn"
+                aria-label="Минулий слайд"
+                disabled
+              >
                 <svg
+                  aria-hidden="true"
                   width="28"
                   height="28"
                   viewBox="0 0 28 28"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M20 14H8M14 8L8 14L14 20"
@@ -342,13 +348,18 @@
                   />
                 </svg>
               </button>
-              <button class="carousel-btn" id="nextBtn">
+
+              <button
+                class="carousel-btn"
+                id="nextBtn"
+                aria-label="Наступний слайд"
+              >
                 <svg
+                  aria-hidden="true"
                   width="28"
                   height="28"
                   viewBox="0 0 28 28"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M8 14H20M14 8L20 14L14 20"
@@ -1539,6 +1550,7 @@
             height="300"
             style="border-radius: 10px"
             class="iframe"
+            title="Мапа розташування автосервісу Каскад на Google Maps"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
