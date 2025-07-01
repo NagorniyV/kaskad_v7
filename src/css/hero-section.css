@@ -4,7 +4,7 @@
     background-color: #101010;
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -363,70 +363,4 @@ body.modal-open::after {
 .social-icon {
     color: white;
     font-size: 24px;
-}
-
-/* Стили для адаптивной карты */
-.map-container {
-    position: relative;
-    margin: 20px 0;
-}
-
-.map-placeholder {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.static-map {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s;
-}
-
-.map-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-
-.map-placeholder:hover .map-overlay {
-    opacity: 0.9;
-}
-
-.load-map-btn {
-    background: #24a7c1;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.load-map-btn:hover {
-    background: #1e8da3;
-    transform: scale(1.05);
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .map-container {
-        max-width: 100%;
-    }
-
-    .load-map-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
 }
