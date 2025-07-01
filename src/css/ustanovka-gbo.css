@@ -210,4 +210,8 @@
       font-size: 32px;
       max-width: 90%;
     }
+
+    .gbo-section{
+      padding: 8px;
+  }
   }

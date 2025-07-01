@@ -14,6 +14,25 @@ document.getElementById('back-to-top').addEventListener('click', function(e) {
   }
 });
 
+// КНОПКИ ПОЯВЛЯЮТСЯ ПОСЛЕ ПРОКРУТКИ
+
+document.addEventListener("DOMContentLoaded", function() {
+  const social = document.querySelector(".social-fixed");
+  const toHome = document.querySelector(".to-home");
+
+  window.addEventListener("scroll", function() {
+    if (window.innerWidth <= 1024) {
+      if (window.scrollY > 100) { // при прокрутке более 100px
+        social.classList.add("show");
+        toHome.classList.add("show");
+      } else {
+        social.classList.remove("show");
+        toHome.classList.remove("show");
+      }
+    }
+  });
+});
+
 // БУРГЕР КНОПКА
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -90,59 +90,6 @@
     margin-top: 12px;
 }
 
-.to-home {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    background: #24a7c1;
-    color: #f8f8f8;
-    height: 28px;
-    width: 28px;
-    /* Начальная ширина - квадрат */
-    border-radius: 40px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.to-home .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-}
-
-.to-home .text {
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    transform: translateX(-10px);
-}
-
-.to-home:hover {
-    background: #0e6374;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: auto;
-    /* Автоматическая ширина при наведении */
-    padding-right: 16px;
-}
-
-.to-home:hover .text {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.3s ease 0.1s, transform 0.3s ease;
-}
-
 @media (max-width: 480px){
     .footer-container{
         padding: 20px 20px;
