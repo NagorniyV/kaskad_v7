@@ -157,10 +157,6 @@
 }
 
 @media (max-width: 480px) {
-    .hero-service-catalog{
-        height: 725px;
-    }
-
     .price-content-container{
         flex-direction: column;
     }

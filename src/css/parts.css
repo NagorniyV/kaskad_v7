@@ -153,12 +153,6 @@
     }
 }
 
-@media (max-width: 480px){
-    .hero-parts {
-        height: 715px;
-    }
-}
-
 .carousel {
     position: relative;
     width: 100%;

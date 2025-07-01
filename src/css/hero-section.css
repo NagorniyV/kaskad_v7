@@ -52,7 +52,7 @@
 
 .hero-contact-div{
     display: block;
-    height: 380px;
+    /* height: 380px; */
 }
 
 .hero-content-container {
@@ -196,19 +196,11 @@
         flex-direction: column;
     }
 
-        .hero{
-        height: 100vh;
-    }
-
     .hero-contact-div>iframe{
         width: 200px;
         height: 120px;
         padding: 0px;
     }    
-
-    .hero{
-        height: 830px;
-    }
 }
 
 /* МОДАЛЬНОЕ ОКНО */
