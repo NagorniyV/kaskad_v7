@@ -566,3 +566,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Загрузка карты по клику
+document.getElementById('mapPlaceholder').addEventListener('click', function() {
+  const iframe = document.createElement('iframe');
+  iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua";
+  iframe.width = "250";
+  iframe.height = "200";
+  iframe.style.borderRadius = "20px";
+  iframe.loading = "lazy";
+  iframe.title = "Мапа розташування автосервісу Каскад на Google Maps";
+  iframe.allowFullscreen = true;
+  iframe.referrerPolicy = "no-referrer-when-downgrade";
+  
+  this.replaceWith(iframe);
+});
+
+// Открытие модального окна (если нужно)
+document.getElementById('openModalBtn').addEventListener('click', function() {
+  // Здесь код для открытия модалки
+  console.log('Открыть модальное окно записи');
+});
