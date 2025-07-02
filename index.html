@@ -79,8 +79,10 @@
         "@context": "https://schema.org",
         "@type": "AutoRepair",
         "name": "Автосервіс Каскад",
+        "alternateName": "СТО Каскад",
         "image": "https://kaskad.in.ua/images/logo.png",
         "url": "https://kaskad.in.ua",
+        "description": "Автосервис «Каскад» в Павлограде – профессиональный ремонт и обслуживание автомобилей, установка ГБО, диагностика, подбор и заказ автозапчастей. Качество, гарантия 20 лет опыта.",
         "telephone": "+380668375666",
         "address": {
           "@type": "PostalAddress",
@@ -90,13 +92,73 @@
           "postalCode": "51400",
           "addressCountry": "UA"
         },
-        "openingHours": "Mo-Sa 08:00-18:00",
-        "priceRange": "$$",
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": 48.52613,
           "longitude": 35.87073
-        }
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "servesCuisine": [
+          "Ремонт автомобилей",
+          "Установка ГБО",
+          "Диагностика",
+          "Техническое обслуживание",
+          "Подбор запчастей",
+          "Шиномонтаж"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Услуги автосервиса",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Диагностика автомобиля",
+              "description": "Компьютерная диагностика всех систем автомобиля"
+            },
+            {
+              "@type": "Offer",
+              "name": "Установка ГБО",
+              "description": "Профессиональная установка газобалонного оборудования"
+            },
+            {
+              "@type": "Offer",
+              "name": "Техническое обслуживание",
+              "description": "Полное ТО согласно регламенту производителя"
+            },
+            {
+              "@type": "Offer",
+              "name": "Подбор запчастей",
+              "description": "Подбор и заказ оригинальных и аналоговых запчастей"
+            }
+          ]
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Филипов Павел Петрович",
+          "description": "Основатель автосервиса с 20-летним опытом работы"
+        },
+        "foundingDate": "2003",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "47",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"]
       }
     </script>
   </head>
