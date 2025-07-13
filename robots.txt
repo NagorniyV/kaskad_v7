@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /tmp/
 Sitemap: https://kaskad.in.ua/sitemap.xml
