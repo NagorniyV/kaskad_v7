@@ -1,39 +1,35 @@
-.main-content-section{
+.main-content-section {
     background-color: #f3f3f3;
     padding: 20px 0px;
 }
 
-.main-content-div{
+.main-content-div {
     max-width: 1200px;
     margin: 20px auto;
     color: #101010;
-    display: flex;
-    gap: 20px;
     padding: 0px 20px;
 }
 
-.main-content{
-    max-width: 900px;
+.main-content {
     margin: 0px auto;
+    overflow: hidden;
 }
 
-.main-content-div>div{
-    flex: 1;
-}
-
-.main-content>h2{
+.main-content>h2 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size: 28px;
+    margin-top: 0;
+    clear: both;
 }
 
 .two-title-content {
     margin-top: 30px;
 }
 
-.main-content>p{
+.main-content>p {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -45,23 +41,53 @@
     text-indent: 30px;
 }
 
-.img-content{
+.img-content {
     display: block;
     max-width: 550px;
+    width: 45%;
+    /* Добавлено для адаптивности */
     height: auto;
     filter: brightness(0.7);
+    float: left;
+    /* Обтекание слева */
+    margin: 0 25px 20px 0;
+    /* Добавлено отступы: справа и снизу */
 }
 
-@media (max-width: 480px){
-    .main-content-div{
-        flex-direction: column;
+/* Для планшетов */
+@media (max-width: 768px) {
+    .img-content {
+        float: none;
+        /* Убираем обтекание */
+        width: 70%;
+        /* Уменьшаем ширину */
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+        /* Центрируем и добавляем отступ снизу */
+        display: block;
+        /* Делаем блочным элементом */
+    }
+
+    .main-content>p {
+        text-indent: 25px;
+        /* Немного уменьшаем отступ */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content-div {
         padding: 0px 8px;
     }
 
-    .img-content{
-        max-width: 90%;
-        margin: 0px auto;
+    .img-content {
+        float: none;
+        max-width: 100%;
+        width: 100%;
+        margin: 0px auto 20px auto;
     }
 
-
+    .main-content>p {
+        text-indent: 20px;
+        font-size: 16px;
+    }
 }

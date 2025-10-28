@@ -1,0 +1,61 @@
+.evacuator-section, .evacuator-price-section{
+    background-color: #f3f3f3;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.evacuator-section p, .evacuator-section li, .evacuator-price-section p, .evacuator-price-section li{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 16px;
+    text-indent: 20px;
+    margin: 8px 0px;
+}
+
+.evacuator-section h3,
+.evacuator-price-section h3,.evacuator-section h2,
+.evacuator-price-section h2{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.evacuator-section img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Первая картинка - обтекание слева */
+.evacuator-section img:first-of-type {
+    float: left;
+    margin: 0 25px 20px 0;
+}
+
+/* Вторая картинка - обтекание справа */
+.evacuator-section img:nth-of-type(2) {
+    float: right;
+    margin: 20px 0 20px 25px;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.benefits-list li svg {
+    flex-shrink: 0;
+}
+
+.benefits-list li p {
+    margin: 0;
+}

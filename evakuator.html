@@ -36,41 +36,72 @@
 
     <!-- Title & Meta Description -->
     <title>
-      Установка ГБО Павлоград – Установка, Настройка и Сервис ГБО | СТО Каскад
+      Эвакуатор Павлоград – Срочная служба эвакуации автомобилей | СТО Каскад
     </title>
     <meta
       name="description"
-      content="Установка, настройка и обслуживание ГБО в Павлограде на СТО «Каскад». Работаем с Lovato, Tomasetto, Digitronic и другими. Гарантия, качественный монтаж и сертификат."
+      content="Срочный эвакуатор в Павлограде и области. Срочный вызов, быстрая подача до 30 минут. Эвакуация легковых, грузовых авто и спецтехники. Доступные цены от 15 грн/км."
     />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://kaskad.in.ua/gbo" />
+    <link rel="canonical" href="https://kaskad.in.ua/evakuator.html" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Газобалонне обладнання у Павлограді | Встановлення ГБО"
+      content="Эвакуатор Павлоград - Срочная служба эвакуации | СТО Каскад"
     />
     <meta
       property="og:description"
-      content="Автосервіс Каскад: встановлення, діагностика, ремонт та обслуговування ГБО. Гарантія якості, економія пального, професійний підхід."
+      content="Срочный вызов эвакуатора в Павлограде. Работаем 24/7, быстрая подача, все виды транспорта. Гарантия безопасности перевозки."
     />
-    <meta property="og:image" content="https://kaskad.in.ua/images/logo.png" />
-    <meta property="og:url" content="https://kaskad.in.ua/gbo" />
+    <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
+    <meta property="og:url" content="https://kaskad.in.ua/evakuator.html" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ГБО у Павлограді | Автосервіс Каскад" />
+    <meta name="twitter:title" content="Эвакуатор Павлоград | СТО Каскад" />
     <meta
       name="twitter:description"
-      content="Газ на авто — якісно, безпечно, вигідно. Дзвоніть!"
+      content="Срочный эвакуатор - быстро, надежно, недорого. Вызов за 30 минут!"
     />
     <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
 
     <!-- Scripts -->
     <script src="./src/js/main.js" defer></script>
     <script src="./src/js/language.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Эвакуатор Павлоград - СТО Каскад",
+        "description": "Срочная служба эвакуации автомобилей в Павлограде и Днепропетровской области",
+        "url": "https://kaskad.in.ua/evakuator.html",
+        "telephone": "+380-66-837-56-66",
+        "areaServed": {
+          "@type": "City",
+          "name": "Павлоград"
+        },
+        "serviceType": "Эвакуация автомобилей",
+        "provider": {
+          "@type": "AutoRepair",
+          "name": "СТО Каскад"
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.5167",
+            "longitude": "35.8667"
+          },
+          "geoRadius": "50000"
+        }
+      }
+    </script>
   </head>
   <header id="header" class="header">
     <div class="header-container">
@@ -90,13 +121,18 @@
             >
           </li> -->
           <li class="nav-item">
-            <a href="./parts.html" data-translate="nav-item-zapch"
-              >Подбор запчастей</a
+            <a href="./parts.html" data-translate="">Подбор запчастей</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./evakuator.html" data-translate="nav-item"
+              >Послуги евакуатора</a
             >
           </li>
+
           <li class="nav-item">
-            <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
-              >Установка ГБО</a
+            <a href="./toplivnaya-sistema.html" data-translate="nav-item"
+              >Паливна система</a
             >
           </li>
 
@@ -151,6 +187,11 @@
               <li>
                 <a href="./air-conditioning.html" data-translate="nav-item-chip"
                   >Автокондиционеры</a
+                >
+              </li>
+              <li>
+                <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
+                  >Установка ГБО</a
                 >
               </li>
             </ul>
@@ -214,8 +255,8 @@
         <section class="hero-gbo">
           <div>
             <div class="hero-content">
-              <h1 class="hero-title" data-translate="hero-title-gbo">
-                ГАЗОБАЛЛОННОЕ ОБОРУДОВАНИЕ В ПАВЛОГРАДЕ
+              <h1 class="hero-title" data-translate="hero-title-">
+                ЭВАКУАТОР ПАВЛОГРАД
               </h1>
               <div class="hero-content-container">
                 <div>
@@ -233,8 +274,8 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p data-translate="hero-content-gbo1">
-                    Установка, обслуживание и ремонт!
+                  <p data-translate="hero-content-">
+                    Быстрая подача эвакуатора.
                   </p>
                 </div>
                 <div>
@@ -252,8 +293,8 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p data-translate="hero-content-gbo2">
-                    Только лучшие, проверенные бренды!
+                  <p data-translate="hero-content-">
+                    Надежная транспортировка авто.
                   </p>
                 </div>
                 <div>
@@ -271,18 +312,16 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p data-translate="hero-content-gbo3">
-                    Разбираемся во всех ходовых системах!
-                  </p>
+                  <p data-translate="hero-content-">Гарантия качества услуг!</p>
                 </div>
               </div>
               <button
                 type="button"
                 class="details-hero-btn"
                 id="openModalBtn"
-                data-translate="details-hero-btn-gbo"
+                data-translate="details-hero-btn-"
               >
-                ЗАПИСАТЬСЯ НА ДИАГНОСТИКУ
+                ЗАКАЗАТЬ ЭВАКУАТОР
               </button>
               <p class="discount" data-translate="discount">
                 Скидка 50% на первую диагностику по промокоду «АС КАСКАД»
@@ -317,428 +356,314 @@
             </div>
           </div>
         </section>
-        <section class="gbo-section">
-          <h2 data-translate="gbo-section-title">
-            Установка ГБО на «АС КАСКАД»
-          </h2>
-          <div class="main-gbo">
-            <div class="main-gbo-content">
-              <p>
-                <span class="gbo-span" data-translate="gbo-span"
-                  >Сервис установки ГБО в Павлограде «АС КАСКАД»
-                </span>
-                <span data-translate="gbo-span2">
-                  — это место, где вы сможете безопасно, удобно и с комфортом
-                  решить все вопросы, связанные с установкой и обслуживанием ГБО
-                  для вашего автомобиля. Мы гарантируем высочайшее качество
-                  работ, индивидуальный подход к каждому автомобилю и клиенту.
-                  Полный комплекс услуг и по-настоящему внимательный
-                  сервис.</span
-                >
-              </p>
-              <ul class="gbo-list">
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <span data-translate="gbo-list1"
-                    >Установка ГБО за 1 день.</span
-                  >
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <span data-translate="gbo-list2"
-                    >Гарантия на работу и оборудование до 12 мес.</span
-                  >
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <span data-translate="gbo-list3"
-                    >Сертификация ГБО, сразу после установки.</span
-                  >
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <span data-translate="gbo-list4"
-                    >Техническое обслуживание автомобиля.</span
-                  >
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <span data-translate="gbo-list5"
-                    >Ремонт и настройка систем.</span
-                  >
-                </li>
-              </ul>
+        <section class="evacuator-section">
+          <img src="./src/img/kaskad-evakuator-img1.webp" alt="" />
+          <p>
+            Автомобиль, как и любое транспортное средство, может попасть в
+            дорожную аварию, заглохнуть в самый неподходящий момент или на
+            оживленном участке дороги. А еще у него может элементарно
+            закончиться топливо. Итог - складывается ситуация, когда дальнейшее
+            самостоятельное передвижение становится невозможным и требуется
+            срочная эвакуация.
+          </p>
+
+          <h3>Служба эвакуации в Павлограде</h3>
+          <p>
+            Если неприятность случилась с вами в Павлограде или Днепропетровской
+            области - быстро придем на помощь! В любой период дня или ночи вы
+            можете вызвать эвакуатор службы «Каскад». Вызов будет мгновенно
+            принят нашими диспетчерами, и уже через 20-30 минут эвакуатор
+            прибудет к вам.
+          </p>
+
+          <h3>Как заказать эвакуатор в Павлограде?</h3>
+          <p>
+            Заказ эвакуационной техники можно по телефону. Рекомендуется
+            сообщить нам:
+          </p>
+          <ul class="benefits-list">
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Марку и модель вашего авто</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Массу и габаритные размеры</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Место нахождения автомобиля</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Тип возникшей проблемы</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Адрес доставки автомобиля</p>
+            </li>
+          </ul>
+          <p>Это поможет нам выбрать оптимальную технику для вашего случая.</p>
+
+          <h3>Надежность и безопасность перевозки</h3>
+          <p>
+            Мы гарантируем безопасность перевозки поврежденного автомобиля.
+            После подъема на платформу транспортное средство жестко фиксируется
+            с помощью крепежных элементов и специальных ремней. Время погрузки
+            зависит от сложности ситуации - при блокировке колес или других
+            проблемах может потребоваться дополнительное оборудование.
+          </p>
+          <img src="./src/img/kaskad-evakuator-img2.webp" alt="" />
+          <h3>Какие транспортные средства мы эвакуируем?</h3>
+          <p>
+            Наша служба эвакуации в Павлограде обслуживает все типы транспортных
+            средств:
+          </p>
+          <ul class="benefits-list">
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Легковые автомобили всех марок</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Внедорожники и джипы</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Микроавтобусы и автобусы</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Грузовые автомобили до 3.5 тонн</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Мотоциклы и квадроциклы</p>
+            </li>
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="#24a7c1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>Сельскохозяйственную технику</p>
+            </li>
+          </ul>
+
+          <h3>Преимущества службы эвакуации «Каскад»</h3>
+          <div class="advantages-grid">
+            <div class="advantage-item">
+              <h4>Круглосуточная работа</h4>
+              <p>Работаем 24/7, включая выходные и праздничные дни</p>
             </div>
-            <div>
-              <picture>
-                <source
-                  srcset="./src/img/gbo/gaz-na-avto.webp"
-                  type="image/webp"
-                />
-                <img
-                  src="./src/img/gbo/gaz-na-avto.jpg"
-                  alt="shema-ustanovki"
-                  class="gbo-main-img"
-                  loading="lazy"
-                />
-              </picture>
+            <div class="advantage-item">
+              <h4>Быстрая подача</h4>
+              <p>Время подачи эвакуатора по Павлограду - до 30 минут</p>
+            </div>
+            <div class="advantage-item">
+              <h4>Опытные водители</h4>
+              <p>Все водители имеют многолетний стаж работы</p>
+            </div>
+            <div class="advantage-item">
+              <h4>Доступные цены</h4>
+              <p>Конкурентоспособные цены от 15 грн/км</p>
             </div>
           </div>
+
+          <h3>Эвакуатор в Павлограде - надежная помощь на дороге</h3>
+          <p>
+            Служба эвакуации «Каскад» в Павлограде предлагает профессиональные
+            услуги по транспортировке автомобилей с 2010 года. Мы
+            специализируемся на эвакуации легковых и грузовых автомобилей,
+            внедорожников, микроавтобусов и специальной техники. Наш автопарк
+            включает современные эвакуаторы с гидравлическими платформами и
+            дополнительным оборудованием для сложных случаев.
+          </p>
+
+          <p>
+            Если вам нужен
+            <strong>эвакуатор в Павлограде недорого</strong>, вы обратились по
+            адресу. Мы работаем по всей Днепропетровской области, включая
+            соседние населенные пункты. Наши услуги особенно востребованы при
+            ДТП, технических неисправностях, заблокированных колесах, а также
+            для транспортировки новых автомобилей из салонов.
+          </p>
+
+          <p>
+            Что делать при поломке автомобиля? Сохраняйте спокойствие и
+            вызывайте эвакуатор службы «Каскад». Установите аварийный знак,
+            включите аварийную сигнализацию и отойдите на безопасное расстояние.
+            Наши диспетчеры проконсультируют вас по всем вопросам и направят
+            ближайший свободный эвакуатор.
+          </p>
         </section>
-        <section class="service-gbo">
-          <h2 class="service-gbo-title" data-translate="service-gbo-title">
-            Мы устанавливаем профессионально, надёжно, с гарантией!
-          </h2>
-          <div class="service-gbo-cards">
-            <div class="service-gbo-card">
-              <picture>
-                <source
-                  srcset="./src/img/gbo/ustanovka-gbo.webp"
-                  type="image/webp"
-                />
-                <img
-                  src="./src/img/gbo/ustanovka-gbo.jpg"
-                  alt="ustanovka_gbo"
-                  class="service-gbo-img"
-                  loading="lazy"
-                />
-              </picture>
-              <h3 class="service-gbo-h3" data-translate="service-gbo-h3">
-                Установка ГБО
-              </h3>
-              <ul class="service-gbo-list">
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list1">
-                    На любой тип двигателя
-                  </p>
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list2">
-                    На любой тип транспорта
-                  </p>
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list3">
-                    2-е, 4-е, gdi, tfsi - системмы
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="service-gbo-card">
-              <picture>
-                <source
-                  srcset="./src/img/gbo/remont-gbo.webp"
-                  type="image/webp"
-                />
-                <img
-                  src="./src/img/gbo/remont-gbo.jpg"
-                  alt="obslugivaniye_i_remont"
-                  class="service-gbo-img"
-                  loading="lazy"
-                />
-              </picture>
-              <h3 class="service-gbo-h3" data-translate="service-gbo-h3-card2">
-                Обслуживание и ремонт ГБО
-              </h3>
-              <ul class="service-gbo-list">
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card21">
-                    Правильная регулировка расхода газа
-                  </p>
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card22">Замена РТИ</p>
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card23">
-                    Устранение запахов газа в салоне
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="service-gbo-card">
-              <picture>
-                <source
-                  srcset="./src/img/gbo/diagnostika-gbo.webp"
-                  type="image/webp"
-                />
-                <img
-                  src="./src/img/gbo/diagnostika-gbo.jpg"
-                  alt="diagnostika"
-                  class="service-gbo-img"
-                  loading="lazy"
-                />
-              </picture>
-              <h3 class="service-gbo-h3" data-translate="service-gbo-h3-card3">
-                Диагновстика авто
-              </h3>
-              <ul class="service-gbo-list">
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card31">
-                    Диагностика топливных систем
-                  </p>
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card32">
-                    Диагновстика электронных систем
-                  </p>
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card33">
-                    Диагностика ГБО
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="service-gbo-card">
-              <picture>
-                <source
-                  srcset="./src/img/gbo/sertifikacija-gbo.webp"
-                  type="image/webp"
-                />
-                <img
-                  src="./src/img/gbo/sertifikacija-gbo.jpg"
-                  alt="registracija_v_mreo"
-                  class="service-gbo-img"
-                  loading="lazy"
-                />
-              </picture>
-              <h3 class="service-gbo-h3" data-translate="service-gbo-h3-card4">
-                Регистрация в МРЕО
-              </h3>
-              <ul class="service-gbo-list">
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card41">
-                    Гарантия на регистрацию
-                  </p>
-                </li>
-                <li>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12L10 17L20 7"
-                      stroke="#24a7c1"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p data-translate="service-gbo-list-card42">
-                    Полный пакет документов
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <section class="evacuator-price-section">
+          <h2>Цены на услуги эвакуатора в Павлограде</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Найменування послуг:</th>
+                <th>Ціна від, грн.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Легковое авто</td>
+                <td class="price">від 1000 грн.</td>
+              </tr>
+              <tr>
+                <td>Джип, Бус</td>
+                <td class="price">від 1100 грн.</td>
+              </tr>
+              <tr>
+                <td>Міні спец техніка</td>
+                <td class="price">від 1200 грн.</td>
+              </tr>
+              <tr>
+                <td>Негабарит</td>
+                <td class="price">Договірна</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
         <section class="benefits-section">
           <h2 class="benefits-title">
@@ -824,141 +749,6 @@
               <p class="benefits-bot-text" data-translate="benefits-bot-text3">
                 «Ваше авто не задержится у нас дольше необходимого.»
               </p>
-            </div>
-          </div>
-        </section>
-        <section class="callback-section">
-          <h2 class="callback-main-title" data-translate="callback-main-title">
-            Наши специалисты
-          </h2>
-          <div class="callback-section-container">
-            <div class="callback-card-container">
-              <div class="team-card">
-                <picture>
-                  <source
-                    srcset="./src/img/colleagues/dir.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/colleagues/dir.jpg"
-                    alt="dir_filipov_pp"
-                    class="team-card-img"
-                    loading="lazy"
-                  />
-                </picture>
-                <h3 class="team-card-title" data-translate="card-dir-title">
-                  Филипов Павел
-                </h3>
-                <p
-                  class="team-card-position"
-                  data-translate="card-dir-position"
-                >
-                  директор автосервиса
-                </p>
-                <p class="team-card-content" data-translate="card-dir-content">
-                  «Место, где строгий контроль встречается с заботой о клиенте.»
-                </p>
-              </div>
-              <div class="team-card">
-                <picture>
-                  <source
-                    srcset="./src/img/colleagues/colleagues-1.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/colleagues/colleagues-1.jpg"
-                    alt="Dmitrienko_Anton"
-                    class="team-card-img"
-                    loading="lazy"
-                  />
-                </picture>
-                <h3 class="team-card-title" data-translate="card-ant-title">
-                  Дмитренко Антон
-                </h3>
-                <p
-                  class="team-card-position"
-                  data-translate="card-ant-position"
-                >
-                  старший менеджер
-                </p>
-                <p class="team-card-content" data-translate="card-ant-content">
-                  «Одна команда — один стандарт качества.»
-                </p>
-              </div>
-              <!-- <div class="team-card">
-                <picture>
-                  <source
-                    srcset="./src/img/colleagues/colleagues-2.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/colleagues/colleagues-2.jpg"
-                    alt="Girenko_Vlad"
-                    class="team-card-img"
-                    loading="lazy"
-                  />
-                </picture>
-                <h3 class="team-card-title" data-translate="card-vlad-title">
-                  Гиренко Владислав
-                </h3>
-                <p
-                  class="team-card-position"
-                  data-translate="card-vlad-position"
-                >
-                  старший механик
-                </p>
-                <p class="team-card-content" data-translate="card-vlad-content">
-                  «Современные технологии + старые добрые принципы работы»
-                </p>
-              </div> -->
-            </div>
-            <div class="callback-container">
-              <h3 class="callbaack-main-title">
-                <span data-translate="callbaack-main-title"
-                  >ПОЛУЧИТЕ РЕКОМЕНДАЦИЮ ПО РЕШЕНИЮ ПРОБЛЕММЫ</span
-                >
-                <span
-                  class="span-cb-title"
-                  data-translate="callbaack-span-title"
-                  >БЕСПЛАТНО!</span
-                >
-              </h3>
-              <form id="callbackForm">
-                <input
-                  type="text"
-                  id="nameInput"
-                  name="name"
-                  data-translate-placeholder="name-placeholder"
-                  placeholder="Ваше имя*"
-                  required
-                />
-                <input
-                  type="tel"
-                  id="phoneInput"
-                  name="phone"
-                  placeholder="+38 (___) ___ ____"
-                  required
-                />
-                <input
-                  type="text"
-                  id="messageInput"
-                  name="car"
-                  placeholder="Марка модель авто"
-                  required
-                />
-                <button
-                  type="submit"
-                  class="text-header"
-                  data-translate="callbaack-text-header"
-                >
-                  ПОЛУЧИТЬ РЕКОМЕНДАЦИЮ
-                </button>
-              </form>
-              <p class="cb-last-text" data-translate="cb-last-text">
-                Вы можете указать марку и модель авто и оставить Ваши контакты -
-                мы вам перезвоним
-              </p>
-              <p id="responseMessage" class="response-message"></p>
             </div>
           </div>
         </section>
