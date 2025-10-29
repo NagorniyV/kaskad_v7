@@ -1,10 +1,33 @@
-.evacuator-section, .evacuator-price-section{
+    .hero-EVA {
+        background-image: url(../img/kaskad-evakuator-hero480.webp);
+        background-image: url(../img/kaskad-evakuator-hero480.jpg);
+    }
+
+    @media (min-width: 768px) {
+        .hero-EVA {
+            background-image: url(../img/kaskad-evakuator-hero720.webp);
+            background-image: url(../img/kaskad-evakuator-hero720.jpg);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .hero-EVA {
+            background-image: url(../img/kaskad-evakuator-hero1200.webp);
+            background-image: url(../img/kaskad-evakuator-hero1200.jpg);
+        }
+    }
+
+.evacuator-section,
+.evacuator-price-section {
     background-color: #f3f3f3;
     padding: 40px;
     overflow: hidden;
 }
 
-.evacuator-section p, .evacuator-section li, .evacuator-price-section p, .evacuator-price-section li{
+.evacuator-section p,
+.evacuator-section li,
+.evacuator-price-section p,
+.evacuator-price-section li {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -16,8 +39,9 @@
 }
 
 .evacuator-section h3,
-.evacuator-price-section h3,.evacuator-section h2,
-.evacuator-price-section h2{
+.evacuator-price-section h3,
+.evacuator-section h2,
+.evacuator-price-section h2 {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -44,6 +68,53 @@
 .evacuator-section img:nth-of-type(2) {
     float: right;
     margin: 20px 0 20px 25px;
+}
+
+/* Адаптация для планшетов и мобильных устройств */
+@media (max-width: 768px) {
+
+    .evacuator-section,
+    .evacuator-price-section {
+        padding: 20px;
+    }
+
+    .evacuator-section img {
+        max-width: 100%;
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .evacuator-section img:first-of-type,
+    .evacuator-section img:nth-of-type(2) {
+        float: none;
+        margin: 20px auto;
+    }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+
+    .evacuator-section,
+    .evacuator-price-section {
+        padding: 15px;
+    }
+
+    .evacuator-section p,
+    .evacuator-section li,
+    .evacuator-price-section p,
+    .evacuator-price-section li {
+        font-size: 14px;
+        text-indent: 15px;
+    }
+
+    .evacuator-section h3,
+    .evacuator-price-section h3,
+    .evacuator-section h2,
+    .evacuator-price-section h2 {
+        font-size: 18px;
+        margin: 15px 0px;
+    }
 }
 
 .benefits-list li {

@@ -1,3 +1,22 @@
+    .hero-ts {
+        background-image: url(../img/promyvka-ts-hero480.webp);
+        background-image: url(../img/promyvka-ts-hero480.jpg);
+    }
+
+    @media (min-width: 768px) {
+        .hero-ts {
+            background-image: url(../img/promyvka-ts-hero720.webp);
+            background-image: url(../img/promyvka-ts-hero720.jpg);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .hero-ts {
+            background-image: url(../img/promyvka-ts-hero1200.webp);
+            background-image: url(../img/promyvka-ts-hero1200.jpg);
+        }
+    }
+
 .TS-section{
     background-color: #f3f3f3;
     padding: 40px;
@@ -92,6 +111,27 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     align-items: stretch;
+}
+
+/* До 1000px - 3 в ряд */
+@media (max-width: 1000px) {
+    .service-TS-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* До 720px - 2 в ряд */
+@media (max-width: 720px) {
+    .service-TS-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* До 480px - по 1 в столб */
+@media (max-width: 480px) {
+    .service-TS-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 .service-TS-card {
@@ -203,6 +243,22 @@
     .TS-content-media {
         width: 100%;
         /* На всю ширину */
+    }
+
+    .TS-title, .service-TS-title, .service-TS-title-black{
+        font-size: 28px;
+    }
+
+    .TS-section p, .service-TS p, .TS-seo-content p,.TS-section li,
+    .service-TS li,
+    .TS-seo-content li{
+        font-size: 14px;
+    }
+
+    .TS-section h3,
+    .service-TS h3,
+    .TS-seo-content h3{
+        font-size: 18px
     }
 }
 
