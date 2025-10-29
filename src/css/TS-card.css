@@ -246,19 +246,19 @@
     }
 
     .TS-title, .service-TS-title, .service-TS-title-black{
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .TS-section p, .service-TS p, .TS-seo-content p,.TS-section li,
     .service-TS li,
     .TS-seo-content li{
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .TS-section h3,
     .service-TS h3,
     .TS-seo-content h3{
-        font-size: 18px
+        font-size: 22px
     }
 }
 
