@@ -1,96 +1,200 @@
 .seasonal-offers {
-    padding: 20px 20px;
+    padding: 60px 20px;
+    background: #0a0a0a;
     text-align: center;
-    background-color: #101010;
 }
 
 .seasonal-offers h2 {
-    text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
     font-size: 42px;
-    color: #f3f3f3;
+    font-weight: 700;
+    color: #fff;
     margin-bottom: 40px;
 }
 
-.offers-slider {
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    border-radius: 15px;
-    height: 500px;
-    /* Фиксированная высота 500px */
-    max-width: 1200px;
-    /* Ограничиваем максимальную ширину */
+.seasonal-offers h2 span {
+    color: #24a7c1;
 }
 
 .slider-track {
     display: flex;
     transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    height: 500px;
-    /* Фиксированная высота трека */
 }
 
 .slide {
+    flex: 0 0 100%;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-container {
+    display: flex;
+    min-height: 400px;
+    max-height: 500px;
+    background: linear-gradient(135deg, #101010 0%, #182c35 25%, #24a7c1 75%, #e8f4f7 100%);
+    border: 2px solid #24a7c1;
+    border-radius: 18px;
+}
+
+.seasonal-content {
+    width: 65%;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-right: 100px;
+}
+
+.seasonal-content h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.seasonal-content p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #f3f3f3;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #24a7c1;
+    margin-bottom: 25px;
+}
+
+.seasonal-media {
+    width: 35%;
+    position: relative;
+    overflow: hidden;
+}
+
+.seasonal-media video {
     width: 100%;
-    flex-shrink: 0;
-    height: 500px;
-    /* Фиксированная высота слайда */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Навигационные точки */
+.slider-dots {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: #f8f8f8;
-    /* Фон на случай если картинка загружается */
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.slide img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: scale-down;
-    /* Равномерное масштабирование */
-    display: block;
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-/* Адаптация для планшетов */
-@media (max-width: 768px) {
-    .offers-slider {
-        height: 400px;
-        max-height: 400px;
+.dot.active {
+    background: #24a7c1;
+    transform: scale(1.2);
+    border-color: #fff;
+}
+
+.dot:hover {
+    background: #1d8fa5;
+    transform: scale(1.1);
+}
+
+/* Адаптация для 720px и меньше */
+@media (max-width: 720px) {
+    .slide-container {
+        flex-direction: column;
+        min-height: auto;
     }
 
-    .slider-track {
-        height: 400px;
+    .seasonal-content {
+        width: 100%;
+        padding: 40px 30px;
+        text-align: center;
+        padding-right: 30px;
     }
 
-    .slide {
-        height: 400px;
+    .seasonal-media {
+        width: 100%;
+        height: 300px;
+        order: 2;
+        /* Видео будет внизу */
+    }
+
+    .seasonal-content {
+        order: 1;
+        /* Текст будет сверху */
     }
 
     .seasonal-offers h2 {
-        font-size: 36px;
+        font-size: 32px;
+    }
+
+    .seasonal-content h3 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .seasonal-content p {
+        font-size: 16px;
     }
 }
 
 /* Адаптация для мобильных */
 @media (max-width: 480px) {
-    .offers-slider {
-        height: 300px;
-        max-height: 300px;
-    }
-
-    .slider-track {
-        height: 300px;
-    }
-
-    .slide {
-        height: 300px;
+    .seasonal-offers {
+        padding: 40px 15px;
     }
 
     .seasonal-offers h2 {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .seasonal-content {
+        padding: 30px 20px;
+    }
+
+    .seasonal-content h3 {
+        font-size: 22px;
+    }
+
+    .seasonal-content p {
+        font-size: 15px;
+    }
+
+    .seasonal-media {
+        height: 250px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .slider-dots {
+        gap: 10px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
     }
 }
