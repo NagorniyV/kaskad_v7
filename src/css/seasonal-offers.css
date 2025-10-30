@@ -12,7 +12,7 @@
     margin-bottom: 40px;
 }
 
-.seasonal-offers h2 span {
+.seasonal-offers-h2-span {
     color: #24a7c1;
 }
 
@@ -55,7 +55,7 @@
 
 .seasonal-content h3 {
     font-family: "Montserrat", sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: #fff;
     margin-bottom: 40px;
@@ -70,7 +70,7 @@
     margin-bottom: 20px;
 }
 
-.price {
+.seasonal-price {
     font-family: "Montserrat", sans-serif;
     font-size: 28px;
     font-weight: 700;
@@ -88,6 +88,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1.55);
+    /* Увеличивает на 10% */
+    transform-origin: center;
+    /* Масштабирование от центра */
 }
 
 /* Навигационные точки */
@@ -122,27 +126,19 @@
 /* Адаптация для 720px и меньше */
 @media (max-width: 720px) {
     .slide-container {
-        flex-direction: column;
         min-height: auto;
     }
 
     .seasonal-content {
         width: 100%;
         padding: 40px 30px;
-        text-align: center;
-        padding-right: 30px;
+        order: 1;
     }
 
     .seasonal-media {
         width: 100%;
-        height: 300px;
+        height: 500px;
         order: 2;
-        /* Видео будет внизу */
-    }
-
-    .seasonal-content {
-        order: 1;
-        /* Текст будет сверху */
     }
 
     .seasonal-offers h2 {
@@ -156,17 +152,29 @@
 
     .seasonal-content p {
         font-size: 16px;
+        text-align: left;
+        max-width: 620px;
+    }
+
+    .seasonal-btn{
+        display: none;
     }
 }
 
 /* Адаптация для мобильных */
 @media (max-width: 480px) {
+    .slide-container{
+        flex-direction: column;
+        min-height: 500px;
+        border: none;
+    }
+
     .seasonal-offers {
-        padding: 40px 15px;
+        padding: 20px 15px;
     }
 
     .seasonal-offers h2 {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     .seasonal-content {
@@ -175,18 +183,25 @@
 
     .seasonal-content h3 {
         font-size: 22px;
+        width: 90%;
     }
 
     .seasonal-content p {
         font-size: 15px;
+        width: 90%;
     }
 
-    .seasonal-media {
-        height: 250px;
+    .seasonal-media video {
+        transform: scale(3);
     }
 
-    .price {
-        font-size: 24px;
+    .seasonal-media{
+        max-height: 200px;
+    }
+
+    .seasonal-price {
+        font-size: 22px;
+        margin-bottom: 0px;
     }
 
     .slider-dots {
