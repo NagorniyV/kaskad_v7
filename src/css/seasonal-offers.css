@@ -191,9 +191,10 @@
         width: 90%;
     }
 
-    .seasonal-media video {
-        transform: scale(3);
-    }
+.seasonal-media video {
+    transform: scale(1);
+    transform-origin: center;
+}
 
     .seasonal-media{
         max-height: 200px;
@@ -212,4 +213,60 @@
         width: 12px;
         height: 12px;
     }
+}
+
+/* Основные исправления для устранения горизонтального скролла */
+.offers-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    min-width: 0;
+    /* Важно для flex-элементов */
+}
+
+/* Дополнительные исправления для контейнера */
+.seasonal-offers {
+    padding: 60px 20px;
+    background: #0a0a0a;
+    text-align: center;
+    overflow: hidden;
+    /* Добавляем */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Для мобильных устройств добавьте */
+@media (max-width: 720px) {
+    .offers-slider {
+        padding: 0 10px;
+        /* Добавляем отступы по бокам */
+        box-sizing: border-box;
+    }
+
+    .slide-container {
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Дополнительная страховка - скрываем любой возможный overflow */
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
