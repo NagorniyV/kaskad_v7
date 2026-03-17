@@ -33,336 +33,395 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// БУРГЕР КНОПКА
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".burger-menu");
+  const nav = document.querySelector(".nav");
+  const mobileBreakpoint = 992;
 
-document.addEventListener('DOMContentLoaded', function() {
-  const burger = document.querySelector('.burger-menu');
-  const nav = document.querySelector('.nav');
-  const dropdowns = document.querySelectorAll('.dropdown');
+  function isMobile() {
+    return window.innerWidth <= mobileBreakpoint;
+  }
 
-  // Бургер-меню
-  burger.addEventListener('click', function() {
-    this.classList.toggle('active');
-    nav.classList.toggle('active');
+  function closeMenu() {
+    burger?.classList.remove("active");
+    nav?.classList.remove("active");
+    document.querySelectorAll(".has-submenu.open").forEach((item) => {
+      item.classList.remove("open");
+    });
+  }
+
+  burger?.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
   });
 
-  // Проверка, мобильное ли устройство (или узкий экран)
-  const isMobile = () => window.innerWidth <= 992;
+  document.addEventListener("click", (e) => {
+    const toggleBtn = e.target.closest(".menu-toggle");
 
-  // Обработка выпадающего меню (только на компьютере)
-  if (!isMobile()) {
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      const content = dropdown.querySelector('.dropdown-content');
+    if (toggleBtn && isMobile()) {
+      e.preventDefault();
 
-      // Показываем при наведении
-      dropdown.addEventListener('mouseenter', () => {
-        content.style.display = 'block';
-      });
+      const currentItem = toggleBtn.closest(".has-submenu");
+      const siblings = currentItem.parentElement.querySelectorAll(":scope > .has-submenu");
 
-      // Скрываем при уходе курсора
-      dropdown.addEventListener('mouseleave', () => {
-        content.style.display = 'none';
-      });
-
-      // Отменяем стандартное поведение ссылки (если href="#")
-      link.addEventListener('click', (e) => {
-        if (link.getAttribute('href') === '#') {
-          e.preventDefault();
+      siblings.forEach((item) => {
+        if (item !== currentItem) {
+          item.classList.remove("open");
         }
       });
-    });
-  }
 
-  // На мобильных устройствах dropdown-content НЕ показывается вообще
-  else {
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      const content = dropdown.querySelector('.dropdown-content');
+      currentItem.classList.toggle("open");
+      return;
+    }
 
-      // Скрываем dropdown-content (если вдруг был виден)
-      content.style.display = 'none';
+    if (!e.target.closest(".header") && isMobile()) {
+      closeMenu();
+    }
+  });
 
-      // Отключаем клик по ссылке (если href="#")
-      link.addEventListener('click', (e) => {
-        if (link.getAttribute('href') === '#') {
-          e.preventDefault();
-        }
-      });
-    });
-  }
-
-  // Обновляем поведение при изменении размера окна
-  window.addEventListener('resize', () => {
-    dropdowns.forEach(dropdown => {
-      const content = dropdown.querySelector('.dropdown-content');
-      content.style.display = 'none'; // Сбрасываем при любом изменении
-    });
-
-    // Если перешли в десктопный режим — включаем обработку наведения
+  window.addEventListener("resize", () => {
     if (!isMobile()) {
-      dropdowns.forEach(dropdown => {
-        const content = dropdown.querySelector('.dropdown-content');
-
-        dropdown.addEventListener('mouseenter', () => {
-          content.style.display = 'block';
-        });
-
-        dropdown.addEventListener('mouseleave', () => {
-          content.style.display = 'none';
-        });
-      });
+      closeMenu();
     }
   });
 });
 
-// МОДАЛЬНОЕ ОКНО + ФОРМА ОБРАТНОЙ СВЯЗИ
-document.addEventListener('DOMContentLoaded', function() {
-  // Общие настройки
-  const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-  const adminChatIds = ['398501551', '5370980969', '5235424421'];
 
-  // ===== МОДАЛЬНОЕ ОКНО =====
-  const modal = document.getElementById('callbackModal');
-  const modalForm = document.getElementById('modalForm');
-  
-  // Открытие/закрытие модалки
-  document.querySelector('.details-hero-btn')?.addEventListener('click', function(e) {
-    e.preventDefault();
-    modal.style.display = 'block';
-    document.body.classList.add('modal-open');
-  });
+//КОЛБЕК
+document.addEventListener("DOMContentLoaded", () => {
+  const botToken = "7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA";
+  const adminChatIds = ["398501551", "5370980969", "5235424421"];
 
-  // Закрытие при клике вне окна
-  window.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      document.body.classList.remove('modal-open');
+  const modal = document.getElementById("callbackModal");
+  const modalCloseBtn = document.querySelector(".modal-close");
+  const heroModalBtn = document.querySelector(".details-hero-btn");
+
+  const callbackForm = document.getElementById("callbackForm");
+  const modalForm = document.getElementById("modalForm");
+  const responseMessage = document.getElementById("responseMessage");
+
+  // ===== УТИЛИТЫ =====
+  const getValue = (id) => document.getElementById(id)?.value.trim() || "";
+
+  function isRazborkaForm(form) {
+    return (
+      form?.dataset.leadType === "razborka" ||
+      document.body?.dataset.leadType === "razborka"
+    );
+  }
+
+  function formatPhone(value) {
+    let cleaned = value.replace(/\D/g, "");
+
+    if (!cleaned.startsWith("38")) {
+      cleaned = "38" + cleaned;
     }
-  });
 
-  document.querySelector('.modal-close')?.addEventListener('click', function() {
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-open');
-  });
-
-  // ===== ОБРАБОТКА ПОЛЯ ТЕЛЕФОНА =====
-  const phoneInput = document.getElementById('modalPhone');
-if (phoneInput) {
-  // Автоматическое добавление +38 при фокусе
-  phoneInput.addEventListener('focus', function() {
-    if (!this.value.startsWith('+38')) {
-      this.value = '+38';
-    }
-  });
-
-  // Форматирование ввода телефона
-  phoneInput.addEventListener('input', function(e) {
-    // Удаляем всё, кроме цифр
-    let cleaned = this.value.replace(/\D/g, '');
-    
-    // Добавляем +38, если его нет
-    if (!cleaned.startsWith('38')) {
-      cleaned = '38' + cleaned;
-    }
-    
-    // Обрезаем до 12 цифр (38 + 10 цифр)
     cleaned = cleaned.substring(0, 12);
-    
-    // Форматируем: +38 XXX XXX XXXX (15 символов с пробелами)
-    let formatted = '+38';
-    if (cleaned.length > 2) {
-      formatted += ' ' + cleaned.substring(2, 5);
-    }
-    if (cleaned.length > 5) {
-      formatted += ' ' + cleaned.substring(5, 8);
-    }
-    if (cleaned.length > 8) {
-      formatted += ' ' + cleaned.substring(8, 12);
-    }
-    
-    this.value = formatted;
-  });
 
-  // Валидация при потере фокуса
-  phoneInput.addEventListener('blur', function() {
-    const digitsOnly = this.value.replace(/\D/g, '');
-    if (!digitsOnly.startsWith('38') || digitsOnly.length < 12) {
-      this.setCustomValidity('Введите 10 цифр номера после +38');
-    } else {
-      this.setCustomValidity('');
-    }
-  });
-}
+    let formatted = "+38";
+    if (cleaned.length > 2) formatted += " " + cleaned.substring(2, 5);
+    if (cleaned.length > 5) formatted += " " + cleaned.substring(5, 8);
+    if (cleaned.length > 8) formatted += " " + cleaned.substring(8, 12);
 
-  // ===== ОБРАБОТКА ОТПРАВКИ ФОРМЫ =====
-  if (modalForm) {
-    modalForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      console.log('Форма модального окна отправлена'); // Для отладки
-      
-      // Получаем значения полей
-      const name = document.getElementById('modalName')?.value.trim();
-      const phone = document.getElementById('modalPhone')?.value.trim();
-      const vin = document.getElementById('modalVin')?.value.trim();
-      const carModel = document.getElementById('modalCar')?.value.trim();
+    return formatted;
+  }
 
-      // Валидация телефона
-      const phoneRegex = /^\+38\s?\d{3}\s?\d{3}\s?\d{4}$/;
-      if (!phoneRegex.test(phone)) {
-        alert('Пожалуйста, введите корректный номер телефона в формате +38 XXX XXX XXXX');
-        return;
+  function isValidPhone(value) {
+    const digits = value.replace(/\D/g, "");
+    return digits.startsWith("38") && digits.length === 12;
+  }
+
+  function initPhoneInput(input) {
+    if (!input) return;
+
+    input.addEventListener("focus", function () {
+      if (!this.value.startsWith("+38")) {
+        this.value = "+38";
       }
+    });
 
-      // Формируем сообщение
-      const message = `🚗 Новая заявка обратный звонок:\n\n` +
-                     `▪ Имя: ${name || 'не указано'}\n` +
-                     `▪ Телефон: ${phone}\n` +
-                     `▪ VIN: ${vin || 'не указан'}\n` +
-                     `▪ Авто: ${carModel || 'не указано'}`;
+    input.addEventListener("input", function () {
+      this.value = formatPhone(this.value);
+    });
 
-      try {
-        console.log('Отправляем в Telegram:', message); // Для отладки
-        await sendToTelegram(message);
-        
-        // Успешная отправка
-        alert('✅ Дякуємо! Ми вам зателефонуємо найближчим часом.');
-        modalForm.reset();
-        modal.style.display = 'none';
-        document.body.classList.remove('modal-open');
-      } catch (error) {
-        console.error('Відбулася помилка:', error);
-        alert('⚠ Відбулася помилка. Будь ласка, спробуйте ще раз або зателефонуйте нам.');
+    input.addEventListener("blur", function () {
+      if (this.value && !isValidPhone(this.value)) {
+        this.setCustomValidity(
+          "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX"
+        );
+      } else {
+        this.setCustomValidity("");
       }
     });
   }
 
-  // ===== ОТПРАВКА В TELEGRAM =====
+  function showResponse(message, type = "success") {
+    if (!responseMessage) return;
+
+    responseMessage.textContent = message;
+    responseMessage.className = `response-message ${type}`;
+    responseMessage.style.display = "block";
+
+    if (type === "success") {
+      setTimeout(() => {
+        responseMessage.style.display = "none";
+      }, 5000);
+    }
+  }
+
   async function sendToTelegram(message) {
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-    
+
     for (const chatId of adminChatIds) {
       const response = await fetch(url, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           chat_id: chatId,
-          text: message,
-          parse_mode: 'HTML'
+          text: message
         })
       });
-      
+
       if (!response.ok) {
-        throw new Error(`Ошибка HTTP: ${response.status}`);
+        throw new Error(`Telegram HTTP error: ${response.status}`);
       }
     }
   }
-});
 
+  function buildMessage({ form, source, name, phone, car, vin, part, message }) {
+    const isRazborka = isRazborkaForm(form);
+    const lines = [];
 
+    lines.push(
+      isRazborka
+        ? "🚗 РОЗБІРКА — нова заявка на зворотний дзвінок"
+        : "📩 Нова заявка на зворотний дзвінок"
+    );
 
-// ФОРМА ОБРАТНОЙ СВЯЗИ
-document.addEventListener('DOMContentLoaded', function() {
-  const phoneInput = document.getElementById('phoneInput');
-  const callbackForm = document.getElementById('callbackForm');
-  
-  // Автоматическое добавление +38 при фокусе
-  if (phoneInput) {
-    phoneInput.addEventListener('focus', function() {
-      if (!this.value.startsWith('+38')) {
-        this.value = '+38';
-      }
-    });
+    lines.push(`Джерело: ${source}`);
+    lines.push(`Сторінка: ${window.location.href}`);
+    lines.push("");
 
-    // Форматирование ввода телефона
-    phoneInput.addEventListener('input', function(e) {
-      // Удаляем всё, кроме цифр
-      let cleaned = this.value.replace(/\D/g, '');
-      
-      // Добавляем +38, если его нет
-      if (!cleaned.startsWith('38')) {
-        cleaned = '38' + cleaned;
-      }
-      
-      // Обрезаем до 12 цифр (38 + 10 цифр)
-      cleaned = cleaned.substring(0, 12);
-      
-      // Форматируем: +38 XXX XXX XXXX
-      let formatted = '+38';
-      if (cleaned.length > 2) {
-        formatted += ' ' + cleaned.substring(2, 5);
-      }
-      if (cleaned.length > 5) {
-        formatted += ' ' + cleaned.substring(5, 8);
-      }
-      if (cleaned.length > 8) {
-        formatted += ' ' + cleaned.substring(8, 12);
-      }
-      
-      this.value = formatted;
-    });
+    if (name) lines.push(`▪ Ім’я: ${name}`);
+    lines.push(`▪ Телефон: ${phone}`);
+
+    if (isRazborka) {
+      lines.push(`▪ Авто: ${car || "не вказано"}`);
+      lines.push(`▪ Потрібна запчастина: ${part || "не вказано"}`);
+      lines.push(`▪ VIN: ${vin || "не вказано"}`);
+    } else {
+      lines.push(`▪ Повідомлення: ${message || car || "не вказано"}`);
+    }
+
+    return lines.join("\n");
   }
 
-  // Обработка отправки формы
+  // ===== МОДАЛКА =====
+  function openModal() {
+    if (!modal) return;
+    modal.style.display = "block";
+    document.body.classList.add("modal-open");
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+
+  heroModalBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
+  modalCloseBtn?.addEventListener("click", closeModal);
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // ===== ИНИЦИАЛИЗАЦИЯ ТЕЛЕФОНОВ =====
+  initPhoneInput(document.getElementById("phoneInput"));
+  initPhoneInput(document.getElementById("modalPhone"));
+
+  // ===== ОБЫЧНАЯ ФОРМА =====
   if (callbackForm) {
-    callbackForm.addEventListener('submit', function(e) {
+    callbackForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      
-      const name = document.getElementById('nameInput').value.trim();
-      const phoneNumber = document.getElementById('phoneInput').value.trim();
-      const messageText = document.getElementById('messageInput').value.trim();
-      const responseMessage = document.getElementById('responseMessage');
-      
-      // Валидация номера телефона (ровно 10 цифр после +38)
-      const cleanPhone = phoneNumber.replace(/\D/g, '');
-      if (!cleanPhone.startsWith('38') || cleanPhone.length !== 12) {
-        responseMessage.textContent = "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX!";
-        responseMessage.className = "response-message error";
-        responseMessage.style.display = "block";
+
+      const name = getValue("nameInput");
+      const phone = getValue("phoneInput");
+
+      // Совместимость со старым сайтом:
+      // если есть carInput / partInput — берём их,
+      // если нет — используем старый messageInput
+      const car = getValue("carInput");
+      const part = getValue("partInput");
+      const legacyMessage = getValue("messageInput");
+
+      if (!isValidPhone(phone)) {
+        showResponse(
+          "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX",
+          "error"
+        );
         return;
       }
 
-      // Формируем сообщение для Telegram
-      const telegramMessage = `🚗 Новая заявка обратный звонок:\n\n` +
-                         `▪ Имя: ${name || 'не указано'}\n` +
-                         `▪ Телефон: ${phoneNumber}\n` +
-                         `▪ Авто: ${messageText || 'не указано'}`;
-
-      const botToken = '7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA';
-      const adminChatIds = ['398501551', '5370980969', '5235424421'];
-      
-      // Отправляем запросы
-      Promise.all(
-        adminChatIds.map(chatId => 
-          fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              chat_id: chatId,
-              text: telegramMessage
-            })
-          })
-        )
-      )
-      .then(responses => Promise.all(responses.map(res => res.json())))
-      .then(data => {
-        responseMessage.textContent = "Дякуємо! Ми вам зателефонуємо найближчим часом.";
-        responseMessage.className = "response-message success";
-        responseMessage.style.display = "block";
-        callbackForm.reset();
-        
-        setTimeout(() => {
-          responseMessage.style.display = "none";
-        }, 5000);
-      })
-      .catch(error => {
-        console.error("Помилка відправки:", error);
-        responseMessage.textContent = "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.";
-        responseMessage.className = "response-message error";
-        responseMessage.style.display = "block";
+      const telegramMessage = buildMessage({
+        form: callbackForm,
+        source: "Форма на сторінці",
+        name,
+        phone,
+        car,
+        part,
+        vin: "",
+        message: legacyMessage
       });
+
+      try {
+        await sendToTelegram(telegramMessage);
+        showResponse(
+          "Дякуємо! Ми вам зателефонуємо найближчим часом.",
+          "success"
+        );
+        callbackForm.reset();
+      } catch (error) {
+        console.error("Помилка відправки форми:", error);
+        showResponse(
+          "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.",
+          "error"
+        );
+      }
     });
   }
+
+  // ===== МОДАЛЬНАЯ ФОРМА =====
+  if (modalForm) {
+    modalForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = getValue("modalName");
+      const phone = getValue("modalPhone");
+      const vin = getValue("modalVin");
+      const car = getValue("modalCar");
+      const part = getValue("modalPart");
+
+      if (!isValidPhone(phone)) {
+        alert("Введіть коректний номер телефону у форматі +38 XXX XXX XXXX");
+        return;
+      }
+
+      const telegramMessage = buildMessage({
+        form: modalForm,
+        source: "Модальне вікно",
+        name,
+        phone,
+        car,
+        part,
+        vin,
+        message: ""
+      });
+
+      try {
+        await sendToTelegram(telegramMessage);
+        alert("✅ Дякуємо! Ми вам зателефонуємо найближчим часом.");
+        modalForm.reset();
+        closeModal();
+      } catch (error) {
+        console.error("Помилка відправки модальної форми:", error);
+        alert("⚠ Сталася помилка. Спробуйте ще раз або зателефонуйте нам.");
+      }
+    });
+  }
+});
+
+//Запчасти страница с машиной, ее фото
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector("[data-kaskad-rzbk-slider]");
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll(".kaskad-rzbk-vehicle-slide");
+  const prevBtn = slider.querySelector(".kaskad-rzbk-vehicle-slider-btn--prev");
+  const nextBtn = slider.querySelector(".kaskad-rzbk-vehicle-slider-btn--next");
+  const dotsWrap = slider.querySelector(".kaskad-rzbk-vehicle-slider-dots");
+
+  let currentIndex = 0;
+  let startX = 0;
+  let endX = 0;
+
+  function renderDots() {
+    dotsWrap.innerHTML = "";
+
+    slides.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "kaskad-rzbk-vehicle-slider-dot";
+      if (index === currentIndex) {
+        dot.classList.add("kaskad-rzbk-vehicle-slider-dot--active");
+      }
+
+      dot.addEventListener("click", () => {
+        currentIndex = index;
+        updateSlider();
+      });
+
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function updateSlider() {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle(
+        "kaskad-rzbk-vehicle-slide--active",
+        index === currentIndex
+      );
+    });
+
+    const dots = dotsWrap.querySelectorAll(".kaskad-rzbk-vehicle-slider-dot");
+    dots.forEach((dot, index) => {
+      dot.classList.toggle(
+        "kaskad-rzbk-vehicle-slider-dot--active",
+        index === currentIndex
+      );
+    });
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
+
+  prevBtn?.addEventListener("click", showPrev);
+  nextBtn?.addEventListener("click", showNext);
+
+  slider.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0].clientX;
+  });
+
+  slider.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        showNext();
+      } else {
+        showPrev();
+      }
+    }
+  });
+
+  renderDots();
+  updateSlider();
 });

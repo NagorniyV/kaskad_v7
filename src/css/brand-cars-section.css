@@ -1,0 +1,181 @@
+.kaskad-rzbk-brand-cars-section {
+    padding: 80px 20px;
+    background: #101010;
+    color: #f8f8f8;
+}
+
+.kaskad-rzbk-brand-cars-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.kaskad-rzbk-brand-cars-head {
+    max-width: 860px;
+    margin-bottom: 32px;
+}
+
+.kaskad-rzbk-brand-cars-title {
+    margin: 0 0 12px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.kaskad-rzbk-brand-cars-subtitle {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: #d6d6d6;
+}
+
+.kaskad-rzbk-brand-cars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+.kaskad-rzbk-brand-car-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #1b1b1b;
+    border: 1px solid rgba(36, 167, 193, 0.24);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kaskad-rzbk-brand-car-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(36, 167, 193, 0.52);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.kaskad-rzbk-brand-car-card-image {
+    background: #181818;
+    border-bottom: 1px solid rgba(36, 167, 193, 0.18);
+}
+
+.kaskad-rzbk-brand-car-card-image img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.kaskad-rzbk-brand-car-card-body {
+    padding: 24px;
+}
+
+.kaskad-rzbk-brand-car-card-title {
+    margin: 0 0 18px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    line-height: 1.25;
+    color: #ffffff;
+}
+
+.kaskad-rzbk-brand-car-card-specs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.kaskad-rzbk-brand-car-card-spec {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #252525;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kaskad-rzbk-brand-car-card-spec-label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: #24a7c1;
+}
+
+.kaskad-rzbk-brand-car-card-spec-value {
+    font-family: "Roboto", sans-serif;
+    text-align: right;
+    color: #f8f8f8;
+}
+
+.kaskad-rzbk-brand-cars-seo {
+    margin-top: 26px;
+    padding: 22px 24px;
+    background: #1b1b1b;
+    border: 1px solid rgba(36, 167, 193, 0.24);
+    border-radius: 18px;
+}
+
+.kaskad-rzbk-brand-cars-seo p {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #d6d6d6;
+    text-indent: 30px;
+}
+
+.kaskad-rzbk-brand-cars-seo a {
+    color: #24a7c1;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.kaskad-rzbk-brand-cars-seo a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .kaskad-rzbk-brand-cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kaskad-rzbk-brand-cars-title {
+        font-size: 32px;
+    }
+
+    .kaskad-rzbk-brand-car-card-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kaskad-rzbk-brand-cars-section {
+        padding: 56px 14px;
+    }
+
+    .kaskad-rzbk-brand-cars-title {
+        font-size: 26px;
+    }
+
+    .kaskad-rzbk-brand-cars-subtitle,
+    .kaskad-rzbk-brand-cars-seo p {
+        font-size: 15px;
+    }
+
+    .kaskad-rzbk-brand-car-card-image img {
+        height: 240px;
+    }
+
+    .kaskad-rzbk-brand-car-card-body,
+    .kaskad-rzbk-brand-cars-seo {
+        padding: 18px 16px;
+    }
+
+    .kaskad-rzbk-brand-car-card-spec {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .kaskad-rzbk-brand-car-card-spec-value {
+        text-align: left;
+    }
+}

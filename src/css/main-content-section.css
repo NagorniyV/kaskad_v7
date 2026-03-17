@@ -20,9 +20,11 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 28px;
+    font-size: 32px;
     margin-top: 0;
     clear: both;
+    /* max-width: 80vh; */
+    text-align: center;
 }
 
 .two-title-content {
