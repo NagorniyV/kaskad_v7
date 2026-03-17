@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -165,136 +165,21 @@
   </head>
   <header id="header" class="header">
     <div class="header-container">
-      <div class="burger-menu">
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-      </div>
-      <nav class="nav">
-        <ul class="nav-list-header">
-          <li class="nav-item">
-            <a href="./index.html" data-translate="nav-item-main">Главная</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a href="./foto-gallery.html" data-translate="nav-item-foto"
-              >Фотогаллерея</a
-            >
-          </li> -->
-          <li class="nav-item">
-            <a href="./parts.html" data-translate="nav-item-zapch"
-              >Подбор запчастей</a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a href="./evakuator.html" data-translate="nav-item-EVA"
-              >Эвакуатор</a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a href="./toplivnaya-sistema.html" data-translate="nav-item-TS"
-              >Топливная система</a
-            >
-          </li>
-
-          <li class="nav-item dropdown">
-            <a href="./service-catalog.html" data-translate="nav-item-serv"
-              >Услуги</a
-            >
-            <ul class="dropdown-content">
-              <li>
-                <a
-                  href="./remont-dvigatelya.html"
-                  data-translate="nav-item-dvig"
-                  >Двигун</a
-                >
-              </li>
-              <li>
-                <a href="./remont-hodovoy.html" data-translate="nav-item-hodov"
-                  >Ходова частина</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-elektriki.html"
-                  data-translate="nav-item-elektro"
-                  >Електрика</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-tormoznoi-sistemy.html"
-                  data-translate="nav-item-torm"
-                  >Гальмівна система</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-transmissii.html"
-                  data-translate="nav-item-trans"
-                  >Трансмісія</a
-                >
-              </li>
-              <li>
-                <a href="./technical-service.html" data-translate="nav-item-to"
-                  >Технічне обслуговування</a
-                >
-              </li>
-              <li>
-                <a href="./car-diagnostics.html" data-translate="nav-item-diagn"
-                  >Діагностика</a
-                >
-              </li>
-              <li>
-                <a href="./air-conditioning.html" data-translate="nav-item-chip"
-                  >Автокондиционеры</a
-                >
-              </li>
-              <li>
-                <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
-                  >Установка ГБО</a
-                >
-              </li>
-            </ul>
-          </li>
-          <!-- <li class="nav-item">
-            <a href="./contacts.html" data-translate="nav-item-contacts"
-              >Контакты</a
-            >
-          </li> -->
-          <li class="nav-item">
-            <a href="./price.html" data-translate="nav-item-price">Цены</a>
-          </li>
-          <li class="nav-item">
-            <div class="language-switcher">
-              <button class="lang-btn active" data-lang="uk">Укр</button>
-              <span class="lang-divider">/</span>
-              <button class="lang-btn" data-lang="ru">Рус</button>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <a href="./index.html"
-        ><svg
+      <a href="/index.html" class="logo" aria-label="Автосервіс Каскад">
+        <svg
           width="140"
           height="80"
           viewBox="0 0 200 120"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <!-- Фон (опционально) -->
           <rect width="200" height="80" rx="10" fill="none" />
-
-          <!-- Символ "каскада" (волны + шестерёнка) -->
           <path
             d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
             stroke="#24a7c1"
             stroke-width="4"
             stroke-linecap="round"
           />
-
-          <!-- Текст -->
           <text
             x="100"
             y="100"
@@ -307,8 +192,285 @@
           >
             АС КАСКАД
           </text>
-        </svg></a
-      >
+        </svg>
+      </a>
+
+      <button class="burger-menu" type="button" aria-label="Відкрити меню">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav-list-header">
+          <li class="nav-item">
+            <a href="/index.html" data-translate="nav-item-main">Головна</a>
+          </li>
+
+          <li class="nav-item has-submenu">
+            <div class="nav-link-row">
+              <p data-translate="nav-item-zapch">Підбір запчастин</p>
+              <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Відкрити підменю"
+              ></button>
+            </div>
+
+            <ul class="submenu">
+              <li class="submenu-item">
+                <a href="/parts.html">Нові запчастини</a>
+              </li>
+
+              <li class="submenu-item has-submenu">
+                <div class="submenu-link-row">
+                  <a href="/razborka/index.html">Запчастини з розбірки</a>
+                  <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Відкрити підменю"
+                  ></button>
+                </div>
+
+                <ul class="submenu submenu-right">
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/audi.html">Audi</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/audi/a6-c5.html"
+                          >Audi A6 C5 2.4 V6</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/fiat.html">Fiat</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/fiat/panda-169.html"
+                          >Fiat Panda 169</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/hyundai.html">Hyundai</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/hyundai/santa-fe.html"
+                          >Hyundai Santa Fe 2.0</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/kia.html">Kia</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/kia/sorento.html"
+                          >Kia Sorento 2.5 CRDi</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/mitsubishi.html">Mitsubishi</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/mitsubishi/pajero-wagon.html">
+                          Mitsubishi Pajero Wagon 3.2 DI-D
+                        </a>
+                      </li>
+                      <li class="submenu-item">
+                        <a href="/razborka/mitsubishi/outlander.html">
+                          Mitsubishi Outlander 2.0 DI-D
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/ssangyong.html">SsangYong</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/ssangyong/rexton.html"
+                          >SsangYong Rexton 2.7 XDi</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/suzuki.html">Suzuki</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/suzuki/vitara.html"
+                          >Suzuki Vitara 2.0 TD</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item has-submenu">
+                    <div class="submenu-link-row">
+                      <a href="/razborka/volkswagen.html">Volkswagen</a>
+                      <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Відкрити підменю"
+                      ></button>
+                    </div>
+                    <ul class="submenu submenu-right">
+                      <li class="submenu-item">
+                        <a href="/razborka/volkswagen/t4.html"
+                          >Volkswagen T4 2.5</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/evakuator.html" data-translate="nav-item-EVA"
+              >Евакуатор</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a href="/air-conditioning.html" data-translate="nav-item-chip"
+              >Автокондиціонери</a
+            >
+          </li>
+
+          <li class="nav-item has-submenu">
+            <div class="nav-link-row">
+              <a href="/service-catalog.html" data-translate="nav-item-serv"
+                >Послуги</a
+              >
+              <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Відкрити підменю"
+              ></button>
+            </div>
+
+            <ul class="submenu">
+              <li class="submenu-item">
+                <a href="/remont-dvigatelya.html" data-translate="nav-item-dvig"
+                  >Двигун</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a href="/remont-hodovoy.html" data-translate="nav-item-hodov"
+                  >Ходова частина</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a
+                  href="/remont-elektriki.html"
+                  data-translate="nav-item-elektro"
+                  >Електрика</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a
+                  href="/remont-tormoznoi-sistemy.html"
+                  data-translate="nav-item-torm"
+                  >Гальмівна система</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a
+                  href="/remont-transmissii.html"
+                  data-translate="nav-item-trans"
+                  >Трансмісія</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a href="/technical-service.html" data-translate="nav-item-to"
+                  >Технічне обслуговування</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a href="/car-diagnostics.html" data-translate="nav-item-diagn"
+                  >Діагностика</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a href="/ustanovka-gbo.html" data-translate="nav-item-gbo"
+                  >Встановлення ГБО</a
+                >
+              </li>
+              <li class="submenu-item">
+                <a href="/toplivnaya-sistema.html" data-translate="nav-item-TS"
+                  >Паливна система</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/price.html" data-translate="nav-item-price">Ціни</a>
+          </li>
+
+          <li class="nav-item">
+            <div class="language-switcher">
+              <button class="lang-btn active" data-lang="uk">Укр</button>
+              <span class="lang-divider">/</span>
+              <button class="lang-btn" data-lang="ru">Рос</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
   <body>
