@@ -104,11 +104,13 @@
 }
 
 .kaskad-rzbk-vehicle-title {
-    margin: 0 0 18px;
     font-family: "Montserrat", sans-serif;
-    font-size: 34px;
-    line-height: 1.2;
-    color: #ffffff;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    color: #f3f3f3;
+    margin: 14px 0px;
 }
 
 .kaskad-rzbk-vehicle-text {
@@ -116,7 +118,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 17px;
     line-height: 1.65;
-    color: #d6d6d6;
+    color: #f3f3f3;
 }
 
 .kaskad-rzbk-vehicle-specs {
@@ -142,7 +144,7 @@
 
 .kaskad-rzbk-vehicle-spec-value {
     text-align: right;
-    color: #f8f8f8;
+    color: #f3f3f3;
 }
 
 .kaskad-rzbk-vehicle-parts {
@@ -153,11 +155,13 @@
 }
 
 .kaskad-rzbk-vehicle-parts-title {
-    margin: 0 0 12px;
     font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     font-size: 28px;
-    line-height: 1.2;
-    color: #ffffff;
+    color: #f3f3f3;
+    margin: 14px 0px;
 }
 
 .kaskad-rzbk-vehicle-parts-text {
@@ -165,7 +169,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.65;
-    color: #d6d6d6;
+    color: #f3f3f3;
 }
 
 .kaskad-rzbk-vehicle-parts-grid {

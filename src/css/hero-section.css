@@ -113,10 +113,11 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 56px;
+    font-size: 48px;
     color: #f8f8f8;
     max-width: 600px;
     text-align: left;
+    margin-bottom: 5vh;
 }
 
 .hero-content {
