@@ -52,7 +52,6 @@
 
 .hero-contact-div{
     display: block;
-    /* height: 380px; */
 }
 
 .hero-content-container {
@@ -66,6 +65,7 @@
 
 .hero-content-container div {
     display: flex;
+    align-items: center;
 }
 
 .hero>div, .hero-gbo>div,.hero-price-section>div, .hero-parts>div, .hero-service-catalog>div, .hero-contacts-section>div {
