@@ -1,17 +1,16 @@
 async function loadHeader() {
-  const headerContainer = document.getElementById("site-header");
-  if (!headerContainer) return;
+  const container = document.getElementById("site-header");
+  if (!container) return;
+
+  const basePath = window.__BASE_PATH__ || "/";
 
   try {
-    const response = await fetch("/src/includes/header.html");
-
+    const response = await fetch(`${basePath}src/includes/header.html`);
     if (!response.ok) {
-      throw new Error(`Failed to load header: ${response.status}`);
+      throw new Error(`Header not loaded: ${response.status}`);
     }
 
-    const html = await response.text();
-    headerContainer.innerHTML = html;
-
+    container.innerHTML = await response.text();
     initHeaderMenu();
   } catch (error) {
     console.error("Header include error:", error);

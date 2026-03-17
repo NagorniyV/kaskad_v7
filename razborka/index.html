@@ -44,8 +44,39 @@
       rel="stylesheet"
     />
 
+        <!-- Прогрузка хедера -->
+    <script>
+  (function () {
+    const host = window.location.hostname;
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+    let basePath = "/";
+
+    // GitHub Pages repo site: /kaskad_v7/
+    if (host.endsWith("github.io") && pathParts.length > 0) {
+      basePath = "/" + pathParts[0] + "/";
+    }
+
+    // Custom domain и Live Server
+    if (
+      host === "kaskad.in.ua" ||
+      host === "www.kaskad.in.ua" ||
+      host === "localhost" ||
+      host === "127.0.0.1"
+    ) {
+      basePath = "/";
+    }
+
+    window.__BASE_PATH__ = basePath;
+
+    const base = document.createElement("base");
+    base.href = basePath;
+    document.head.prepend(base);
+  })();
+</script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -73,11 +104,11 @@
     <meta name="twitter:image" content="https://kaskad.in.ua/img/logo.png" />
 
     <!-- Scripts -->
-    <script src="../src/js/main.js" defer></script>
-    <script src="../src/js/include-header.js" defer></script>
-    <script src="../src/js/language.js" defer></script>
-    <script src="../src/js/services-carousel.js" defer></script>
-    <script src="../src/js/seasonal-offers.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+    <script src="src/js/include-header.js" defer></script>
+    <script src="src/js/language.js" defer></script>
+    <script src="src/js/services-carousel.js" defer></script>
+    <script src="src/js/seasonal-offers.js" defer></script>
 
     <!-- Schema.org -->
     <script type="application/ld+json">
