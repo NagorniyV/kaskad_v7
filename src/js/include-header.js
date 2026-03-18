@@ -89,24 +89,23 @@ function initHeaderMenu() {
     nav?.classList.toggle("active");
   });
 
-  const clickableRows = header.querySelectorAll(
-    ".has-submenu > .nav-link-row, .has-submenu > .submenu-link-row"
-  );
+  const submenuButtons = header.querySelectorAll(".menu-toggle");
 
-  clickableRows.forEach((row) => {
-    row.addEventListener("click", (e) => {
+  submenuButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
       if (!isMobile()) return;
 
       e.preventDefault();
       e.stopPropagation();
 
-      const currentItem = row.closest(".has-submenu");
+      const currentItem = button.closest(".has-submenu");
       toggleCurrentSubmenu(currentItem);
     });
   });
 
   document.addEventListener("click", (e) => {
     if (!isMobile()) return;
+
     if (!e.target.closest(".header")) {
       closeMenu();
     }
