@@ -24,22 +24,17 @@
       Розбірка Suzuki у Павлограді — б/в запчастини Suzuki | Автосервіс Каскад
     </title>
 
-    <!-- Meta -->
+    <!-- Meta description -->
     <meta
       name="description"
-      content="Розбірка Suzuki у Павлограді від Автосервісу Каскад. Б/в запчастини Suzuki з підбором за VIN: двигуни, КПП, роздатки, кузовні деталі, ходова, електрика та навісне обладнання."
-    />
-
-    <meta
-      name="keywords"
-      content="розбірка suzuki, авторазбірка suzuki, бв запчастини suzuki, бу запчастини suzuki, розбірка сузукі, двигун suzuki, кпп suzuki, роздатка suzuki, кузовні запчастини suzuki, suzuki vitara розбірка"
+      content="Розбірка Suzuki у Павлограді від Автосервісу Каскад. Б/в запчастини Suzuki з підбором по VIN, перевіркою сумісності та можливістю переходу до моделі Suzuki Vitara для пошуку потрібної деталі."
     />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://kaskad.in.ua/razborka/suzuki.html" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,8 +44,39 @@
       rel="stylesheet"
     />
 
+    <!-- Прогрузка хедера -->
+    <script>
+      (function () {
+        const host = window.location.hostname;
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+        let basePath = "/";
+
+        // GitHub Pages repo site: /kaskad_v7/
+        if (host.endsWith("github.io") && pathParts.length > 0) {
+          basePath = "/" + pathParts[0] + "/";
+        }
+
+        // Custom domain и Live Server
+        if (
+          host === "kaskad.in.ua" ||
+          host === "www.kaskad.in.ua" ||
+          host === "localhost" ||
+          host === "127.0.0.1"
+        ) {
+          basePath = "/";
+        }
+
+        window.__BASE_PATH__ = basePath;
+
+        const base = document.createElement("base");
+        base.href = basePath;
+        document.head.prepend(base);
+      })();
+    </script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -60,13 +86,13 @@
     />
     <meta
       property="og:description"
-      content="Автосервіс Каскад: б/в запчастини Suzuki з підбором за VIN. Двигуни, КПП, роздатки, кузовні деталі, оптика, електрика та інші вузли."
+      content="Б/в запчастини Suzuki з підбором по VIN, перевіркою сумісності та можливістю переходу до моделі Suzuki Vitara в Автосервісі Каскад."
     />
-    <meta property="og:image" content="https://kaskad.in.ua/images/logo.png" />
     <meta
       property="og:url"
       content="https://kaskad.in.ua/razborka/suzuki.html"
     />
+    <meta property="og:image" content="https://kaskad.in.ua/images/logo.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -76,15 +102,16 @@
     />
     <meta
       name="twitter:description"
-      content="Двигуни, КПП, роздатки, кузовні деталі та інші б/в запчастини Suzuki. Підбір за VIN від Автосервісу Каскад."
+      content="Б/в запчастини Suzuki з підбором по VIN, перевіркою сумісності та можливістю переходу до моделі Suzuki Vitara."
     />
     <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
 
     <!-- Scripts -->
-    <script src="/src/js/main.js" defer></script>
-    <script src="/src/js/language.js" defer></script>
-    <script src="/src/js/services-carousel.js" defer></script>
-    <script src="/src/js/seasonal-offers.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+    <script src="src/js/include-header.js" defer></script>
+    <script src="src/js/language.js" defer></script>
+    <script src="src/js/services-carousel.js" defer></script>
+    <script src="src/js/seasonal-offers.js" defer></script>
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -95,7 +122,7 @@
         "image": "https://kaskad.in.ua/images/logo.png",
         "url": "https://kaskad.in.ua/razborka/suzuki.html",
         "telephone": "+380668375666",
-        "description": "Розбірка Suzuki від Автосервісу Каскад — б/в запчастини Suzuki з підбором за VIN: двигуни, КПП, роздатки, кузовні деталі, ходова, електрика та інші вузли.",
+        "description": "Розбірка Suzuki у Павлограді від Автосервісу Каскад. Б/в запчастини Suzuki з підбором по VIN, перевіркою сумісності та переходом до моделі Suzuki Vitara.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "вул. Ушинського, 2 а",
@@ -114,144 +141,8 @@
       }
     </script>
   </head>
-  <header id="header" class="header">
-    <div class="header-container">
-      <div class="burger-menu">
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-      </div>
-      <nav class="nav">
-        <ul class="nav-list-header">
-          <li class="nav-item">
-            <a href="./index.html" data-translate="nav-item-main">Головна</a>
-          </li>
-          <li class="nav-item">
-            <a href="./razborka.html" data-translate="">Розбірка</a>
-          </li>
 
-          <li class="nav-item">
-            <a href="./evakuator.html" data-translate="nav-item-EVA"
-              >Евакуатор</a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a href="./air-conditioning.html" data-translate=""
-              >Автокондиціонери</a
-            >
-          </li>
-
-          <li class="nav-item dropdown">
-            <a href="./service-catalog.html" data-translate="nav-item-serv"
-              >Послуги</a
-            >
-            <ul class="dropdown-content">
-              <li>
-                <a
-                  href="./remont-dvigatelya.html"
-                  data-translate="nav-item-dvig"
-                  >Двигун</a
-                >
-              </li>
-              <li>
-                <a href="./remont-hodovoy.html" data-translate="nav-item-hodov"
-                  >Ходова частина</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-elektriki.html"
-                  data-translate="nav-item-elektro"
-                  >Електрика</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-tormoznoi-sistemy.html"
-                  data-translate="nav-item-torm"
-                  >Гальмівна система</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-transmissii.html"
-                  data-translate="nav-item-trans"
-                  >Трансмісія</a
-                >
-              </li>
-              <li>
-                <a href="./technical-service.html" data-translate="nav-item-to"
-                  >Технічне обслуговування</a
-                >
-              </li>
-              <li>
-                <a href="./car-diagnostics.html" data-translate="nav-item-diagn"
-                  >Діагностика</a
-                >
-              </li>
-              <li>
-                <a href="./air-conditioning.html" data-translate="nav-item-chip"
-                  >Автокондиціонери</a
-                >
-              </li>
-              <li>
-                <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
-                  >Встановлення ГБО</a
-                >
-              </li>
-            </ul>
-          </li>
-          <!-- <li class="nav-item">
-          <a href="./contacts.html" data-translate="nav-item-contacts"
-            >Контакти</a
-          >
-        </li> -->
-          <li class="nav-item">
-            <a href="./price.html" data-translate="nav-item-price">Ціни</a>
-          </li>
-          <li class="nav-item">
-            <div class="language-switcher">
-              <button class="lang-btn active" data-lang="uk">Укр</button>
-              <span class="lang-divider">/</span>
-              <button class="lang-btn" data-lang="ru">Рус</button>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <a href="./index.html"
-        ><svg
-          width="140"
-          height="80"
-          viewBox="0 0 200 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="200" height="80" rx="10" fill="none" />
-
-          <path
-            d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
-            stroke="#24a7c1"
-            stroke-width="4"
-            stroke-linecap="round"
-          />
-
-          <text
-            x="100"
-            y="100"
-            font-family="Arial, sans-serif"
-            font-size="24"
-            font-weight="bold"
-            text-anchor="middle"
-            fill="#FFFFFF"
-            filter="drop-shadow(2px 2px 4px #000)"
-          >
-            АС КАСКАД
-          </text>
-        </svg></a
-      >
-    </div>
-  </header>
+  <div id="site-header"></div>
   <body>
     <main>
       <div class="container">
@@ -259,7 +150,8 @@
           <div>
             <div class="hero-content">
               <h1 class="hero-title" data-translate="">
-                Розбірка Suzuki у Павлограді
+                Розбірка Suzuki у Павлограді<br />
+                Б/в запчастини Suzuki
               </h1>
               <div class="hero-content-container">
                 <div>
@@ -328,23 +220,23 @@
               >
                 ПІДІБРАТИ ЗАПЧАСТИНУ
               </button>
-              <p class="discount" data-translate="discount">
-                Набери зараз та отримай безкоштовну консультацію
-              </p>
             </div>
             <div class="hero-contact-div">
-              <h3 data-translate="hero-contact-div-map">Завітайте до нас:</h3>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
-                width="250"
-                height="200"
-                style="border-radius: 20px"
-                class="iframe"
-                title="Мапа розташування автосервісу Каскад на Google Maps"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/logo_suzuki.webp"
+                    type="image/webp"
+                    style="width: 100%"
+                  />
+                  <img
+                    src="src/img/avto-logo/logo_suzuki.png"
+                    style="width: 100%"
+                    alt="Логотип Suzuki для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
               <div class="hero-contact-number">
                 <h3 data-translate="hero-contact-div-number">
                   Телефонуйте просто зараз:
@@ -359,11 +251,227 @@
             </div>
           </div>
         </section>
+        <section class="kaskad-rzbk-brand-cars-section">
+          <div class="kaskad-rzbk-brand-cars-wrap">
+            <div class="kaskad-rzbk-brand-cars-head">
+              <h2 class="kaskad-rzbk-brand-cars-title">
+                Автомобілі Suzuki
+                <span class="span-benefits-title">у розбірці:</span>
+              </h2>
+              <p class="kaskad-rzbk-brand-cars-subtitle">
+                Оберіть автомобіль Suzuki, щоб перейти на його сторінку та
+                переглянути доступні запчастини.
+              </p>
+            </div>
+
+            <div class="kaskad-rzbk-brand-cars-grid">
+              <a
+                class="kaskad-rzbk-brand-car-card"
+                href="razborka/suzuki/vitara.html"
+              >
+                <div class="kaskad-rzbk-brand-car-card-image">
+                  <img
+                    src="razborka/suzuki/vitara/зображення_viber_2026-03-13_12-28-07-351.webp"
+                    alt="Розбірка Suzuki Vitara 2.0 TD механіка 2001"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="kaskad-rzbk-brand-car-card-body">
+                  <h3 class="kaskad-rzbk-brand-car-card-title">
+                    Suzuki Vitara 2.0 TD механіка
+                  </h3>
+
+                  <div class="kaskad-rzbk-brand-car-card-specs">
+                    <div class="kaskad-rzbk-brand-car-card-spec">
+                      <span class="kaskad-rzbk-brand-car-card-spec-label"
+                        >Марка:</span
+                      >
+                      <span class="kaskad-rzbk-brand-car-card-spec-value"
+                        >Suzuki</span
+                      >
+                    </div>
+
+                    <div class="kaskad-rzbk-brand-car-card-spec">
+                      <span class="kaskad-rzbk-brand-car-card-spec-label"
+                        >Модель:</span
+                      >
+                      <span class="kaskad-rzbk-brand-car-card-spec-value"
+                        >Vitara</span
+                      >
+                    </div>
+
+                    <div class="kaskad-rzbk-brand-car-card-spec">
+                      <span class="kaskad-rzbk-brand-car-card-spec-label"
+                        >Рік:</span
+                      >
+                      <span class="kaskad-rzbk-brand-car-card-spec-value"
+                        >2001</span
+                      >
+                    </div>
+
+                    <div class="kaskad-rzbk-brand-car-card-spec">
+                      <span class="kaskad-rzbk-brand-car-card-spec-label"
+                        >Двигун:</span
+                      >
+                      <span class="kaskad-rzbk-brand-car-card-spec-value"
+                        >2.0 TD</span
+                      >
+                    </div>
+
+                    <div class="kaskad-rzbk-brand-car-card-spec">
+                      <span class="kaskad-rzbk-brand-car-card-spec-label"
+                        >КПП:</span
+                      >
+                      <span class="kaskad-rzbk-brand-car-card-spec-value"
+                        >Механіка</span
+                      >
+                    </div>
+
+                    <div class="kaskad-rzbk-brand-car-card-spec">
+                      <span class="kaskad-rzbk-brand-car-card-spec-label"
+                        >VIN-код:</span
+                      >
+                      <span class="kaskad-rzbk-brand-car-card-spec-value"
+                        >SAFID32V00100324</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!--
+      Скопіюйте картку нижче для наступного авто Suzuki
+
+      <a
+        class="kaskad-rzbk-brand-car-card"
+        href="https://kaskad.in.ua/razborka/suzuki/slug-modeli.html"
+      >
+        <div class="kaskad-rzbk-brand-car-card-image">
+          <img
+            src="/images/razborka/suzuki/slug-modeli/main.jpg"
+            alt="Розбірка Suzuki ..."
+            loading="lazy"
+          />
+        </div>
+
+        <div class="kaskad-rzbk-brand-car-card-body">
+          <h3 class="kaskad-rzbk-brand-car-card-title">Suzuki ...</h3>
+
+          <div class="kaskad-rzbk-brand-car-card-specs">
+            <div class="kaskad-rzbk-brand-car-card-spec">
+              <span class="kaskad-rzbk-brand-car-card-spec-label">Марка:</span>
+              <span class="kaskad-rzbk-brand-car-card-spec-value">Suzuki</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      -->
+            </div>
+
+            <div class="kaskad-rzbk-brand-cars-seo">
+              <p>
+                <span
+                  >Не знайшли серед представлених авто потрібну модель Suzuki
+                  або не бачите на сторінці потрібної запчастини?</span
+                >
+                <br />Телефонуйте за номером
+                <a href="tel:+380502233959">050 223-39-59</a>. Автосервіс Каскад
+                допомагає з підбором б/в запчастин Suzuki для різних моделей,
+                поколінь і комплектацій. Сайт авторазбірки постійно
+                наповнюється, тому не всі автомобілі Suzuki та не всі доступні
+                запчастини вже встигли потрапити на сторінки сайту. Якщо вам
+                потрібна деталь на Suzuki Vitara, Grand Vitara, SX4, Jimny,
+                Swift, XL-7 або іншу модель Suzuki, достатньо звернутися до нас
+                з базовими даними по авто. Бажано одразу вказати модель,
+                покоління, рік випуску, тип двигуна, коробку передач, тип
+                приводу, VIN-код і назву потрібної запчастини. Такий підхід
+                дозволяє швидше перевірити сумісність, уточнити наявність і
+                підібрати відповідний вузол без помилки. Навіть якщо конкретної
+                моделі Suzuki зараз немає серед опублікованих карток, це не
+                означає, що ми не зможемо вам допомогти.
+                <br />
+                <span
+                  >По будь-яких запчастинах Suzuki ви можете одразу телефонувати
+                  або заповнювати форму на сайті — ми перевіримо наявність,
+                  підкажемо по сумісності та допоможемо підібрати потрібний
+                  варіант під конкретну модель Suzuki без зайвого хаотичного
+                  пошуку.</span
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="main-content-section">
+          <div class="main-content-div">
+            <div class="main-content">
+              <h2>Б/в запчастини Suzuki з розбірки у Павлограді</h2>
+
+              <p>
+                Розбірка Suzuki у Павлограді від Автосервісу Каскад створена для
+                тих, кому потрібні б/в запчастини Suzuki з нормальним підбором,
+                перевіркою сумісності та зрозумілою подачею заявки. На цій
+                сторінці зібраний напрямок розбірки Suzuki з переходами на
+                окремі моделі, де можна уточнити наявність деталей, переглянути
+                автомобілі у розбірці та залишити запит на потрібний вузол.
+                Такий формат дозволяє швидше перейти від загального запиту по
+                марці до конкретної моделі та потрібної запчастини.
+              </p>
+
+              <p>
+                Власники Suzuki часто шукають двигуни, коробки передач,
+                роздатки, редуктори, елементи підвіски, кузовні деталі, оптику,
+                електрику, блоки керування, деталі салону та інші б/в
+                комплектуючі. Для цієї марки особливо важливо враховувати не
+                лише модель, а й покоління, тип двигуна, коробку передач і тип
+                приводу, тому що навіть у межах однієї лінійки Suzuki сумісність
+                вузлів може помітно відрізнятися по роках випуску, рестайлінгу
+                та технічній версії автомобіля.
+              </p>
+
+              <p>
+                Якщо вас цікавить Suzuki Vitara 2.0 TD, бажано одразу вказувати
+                модель, рік випуску, двигун, коробку передач та VIN-код. Для
+                позашляховиків і кросоверів Suzuki це особливо важливо, тому що
+                тут часто є відмінності по трансмісії, ходовій частині,
+                роздатці, навісному обладнанню двигуна, електриці та кузовних
+                елементах. Чим точніше стартові дані по авто, тим швидше можна
+                перевірити сумісність, знайти потрібний варіант і уникнути
+                помилки при замовленні.
+              </p>
+
+              <p>
+                Перевага Автосервісу Каскад у тому, що ми працюємо не просто як
+                продавець запчастин, а як сервіс, який розуміє логіку ремонту.
+                Ми допомагаємо підібрати б/в запчастини Suzuki по моделі,
+                поколінню та VIN-коду, підказуємо, що саме варто уточнити перед
+                замовленням, і за потреби орієнтуємо по подальшому встановленню.
+                Клієнту не потрібно окремо шукати продавця, окремо перевіряти
+                сумісність і окремо вирішувати, чи підійде деталь саме на його
+                авто.
+              </p>
+
+              <p>
+                Якщо ви не знайшли на сторінці потрібну модель Suzuki або не
+                бачите конкретну запчастину серед опублікованих напрямків, це не
+                означає, що ми не зможемо допомогти. Краще одразу залишити
+                заявку через сайт або зателефонувати й вказати модель, рік
+                випуску, покоління, тип двигуна, коробку передач, тип приводу,
+                VIN-код і назву потрібної деталі. Чим точніша інформація на
+                старті, тим швидше можна перевірити сумісність, уточнити
+                наявність і запропонувати відповідний варіант. Якщо вам потрібна
+                розбірка Suzuki у Павлограді, запчастини Suzuki з розбірки або
+                підбір по VIN, Автосервіс Каскад допоможе зробити це швидше,
+                точніше і без зайвого хаотичного пошуку.
+              </p>
+            </div>
+          </div>
+        </section>
         <section class="benefits-section">
           <h2 class="benefits-title">
             <span data-translate="">Як замовити запчастину</span>
             <span class="span-benefits-title" data-translate="">
-              з авторазборки
+              з авторозбірки
             </span>
           </h2>
 
@@ -375,19 +483,19 @@
               </div>
 
               <picture>
-                <source srcset="../src/img/bene-1.webp" type="image/webp" />
+                <source srcset="src/img/bene-1.webp" type="image/webp" />
                 <img
                   class="benefits-img"
-                  src="../src/img/bene-1.jpg"
-                  alt="Вибір автомобіля на авторазборці для підбору запчастин"
+                  src="src/img/bene-1.jpg"
+                  alt="Вибір автомобіля на авторазбірці для підбору б/в запчастин"
                   loading="lazy"
                 />
               </picture>
 
               <p class="benefits-bot-text" data-translate="">
-                Перейдіть у розділ авторазборки, оберіть марку та модель
-                автомобіля, перегляньте фото, опис та доступні запчастини з
-                автомобіля-донора.
+                Перейдіть у розділ авторазбірки, оберіть марку та модель
+                автомобіля, перегляньте фото авто, опис та доступні б/в
+                запчастини з автомобіля-донора.
               </p>
             </div>
 
@@ -395,24 +503,24 @@
               <div class="benefits-top">
                 <p class="benefits-number">2</p>
                 <p class="benefits-top-text" data-translate="">
-                  УТОЧНІТЬ ДЕТАЛЬ
+                  УТОЧНІТЬ ЗАПЧАСТИНУ
                 </p>
               </div>
 
               <picture>
-                <source srcset="../src/img/bene-2.webp" type="image/webp" />
+                <source srcset="src/img/bene-2.webp" type="image/webp" />
                 <img
                   class="benefits-img"
-                  src="../src/img/bene-2.jpg"
-                  alt="Підбір запчастини з авторазборки по фото, VIN-коду або моделі автомобіля"
+                  src="src/img/bene-2.jpg"
+                  alt="Підбір запчастини з авторазбірки по VIN-коду, фото або моделі автомобіля"
                   loading="lazy"
                 />
               </picture>
 
               <p class="benefits-bot-text" data-translate="">
-                Зв'яжіться з нами телефоном або у месенджері. Ми допоможемо
-                підібрати двигун, коробку передач, турбіну або іншу деталь за
-                моделлю автомобіля, двигуном або VIN-кодом.
+                Зв’яжіться з нами телефоном або в месенджері. Ми допоможемо
+                підібрати потрібну запчастину з авторазбірки за моделлю авто,
+                двигуном, фото деталі або VIN-кодом і уточнимо сумісність.
               </p>
             </div>
 
@@ -425,83 +533,19 @@
               </div>
 
               <picture>
-                <source srcset="../src/img/bene-3.webp" type="image/webp" />
+                <source srcset="src/img/bene-3.webp" type="image/webp" />
                 <img
                   class="benefits-img"
-                  src="../src/img/bene-3.jpg"
-                  alt="Купівля та доставка запчастин з авторазборки по Україні"
+                  src="src/img/bene-3.jpg"
+                  alt="Купівля, доставка та встановлення запчастин з авторазбірки"
                   loading="lazy"
                 />
               </picture>
 
               <p class="benefits-bot-text" data-translate="">
-                Після підтвердження наявності та стану деталі ми погодимо оплату
-                та відправимо запчастину по Україні або запропонуємо
-                встановлення на СТО Каскад у Павлограді.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section class="main-content-section">
-          <div class="main-content-div">
-            <div class="main-content">
-              <h2 style="text-align: center; font-size: xx-large">
-                Купити двигун, КПП або інші запчастини до Suzuki
-              </h2>
-              <p>
-                Розбірка Suzuki у Павлограді від Автосервісу Каскад — це зручний
-                формат для власників автомобілів Suzuki, яким потрібні б/в
-                запчастини з нормальною обробкою запиту та можливістю підбору по
-                автомобілю. Якщо вам потрібен двигун, коробка передач, роздатка,
-                редуктор, навісне обладнання, елементи ходової частини, кузовні
-                деталі, оптика, електрика або інші комплектуючі, ви можете
-                залишити заявку через сайт. Ми працюємо як діючий автосервіс,
-                тому розуміємо, що при підборі деталей важлива не лише назва
-                моделі, а й конкретна технічна сумісність з вашим автомобілем.
-              </p>
-              <p>
-                Б/в запчастини Suzuki часто шукають власники машин, які хочуть
-                відновити автомобіль без зайвих витрат і знайти оригінальні
-                вузли за більш доступною ціною. На авторазбірці можуть бути
-                потрібні двигун Suzuki, АКПП, механічна коробка, роздатка,
-                кардан, редуктор, генератор, стартер, компресор кондиціонера,
-                рульова рейка, півосі, важелі, маточини, підрамник, двері,
-                крила, капот, бампер, фари, ліхтарі, дзеркала, блоки
-                електроніки, салонні деталі та інші комплектуючі. Особливо
-                актуально це для кросоверів і повнопривідних моделей, де
-                вартість окремих нових вузлів може бути доволі високою.
-              </p>
-              <p>
-                Підбір запчастин Suzuki потребує уважності, оскільки різні
-                покоління, двигуни, коробки передач і типи приводу можуть
-                суттєво впливати на сумісність. Саме тому ми рекомендуємо одразу
-                надсилати модель автомобіля, рік випуску, тип двигуна, коробку
-                передач, привід і VIN-код. Якщо назва потрібної деталі невідома,
-                можна описати проблему або надіслати фото вузла. Це допомагає
-                точніше зрозуміти запит і швидше зорієнтуватися щодо можливого
-                підбору. Для дорогих вузлів, таких як двигун, коробка, роздатка,
-                редуктор, кузовні елементи та електроніка, точна інформація
-                особливо важлива.
-              </p>
-              <p>
-                Підбір запчастин Suzuki потребує уважності, оскільки різні
-                покоління, двигуни, коробки передач і типи приводу можуть
-                суттєво впливати на сумісність. Саме тому ми рекомендуємо одразу
-                надсилати модель автомобіля, рік випуску, тип двигуна, коробку
-                передач, привід і VIN-код. Якщо назва потрібної деталі невідома,
-                можна описати проблему або надіслати фото вузла. Це допомагає
-                точніше зрозуміти запит і швидше зорієнтуватися щодо можливого
-                підбору. Для дорогих вузлів, таких як двигун, коробка, роздатка,
-                редуктор, кузовні елементи та електроніка, точна інформація
-                особливо важлива.
-              </p>
-              <p>
-                Якщо вам потрібна розбірка Suzuki у Павлограді, звертайтеся в
-                Автосервіс Каскад. У заявці бажано одразу вказати модель
-                автомобіля, VIN-код, рік випуску та перелік потрібних б/в
-                запчастин Suzuki. Такий формат звернення допомагає швидше
-                обробити запит, уточнити сумісність і допомогти з підбором
-                потрібних комплектуючих для ремонту або відновлення автомобіля.
+                Після підтвердження наявності, стану та сумісності деталі ми
+                погодимо оплату, організуємо доставку по Україні або
+                запропонуємо встановлення на СТО Каскад у Павлограді.
               </p>
             </div>
           </div>
@@ -515,11 +559,11 @@
               <div class="team-card">
                 <picture>
                   <source
-                    srcset="../src/img/colleagues/dir.webp"
+                    srcset="src/img/colleagues/dir.webp"
                     type="image/webp"
                   />
                   <img
-                    src="../src/img/colleagues/dir.jpg"
+                    src="src/img/colleagues/dir.jpg"
                     alt="dir_filipov_pp"
                     class="team-card-img"
                     loading="lazy"
@@ -542,11 +586,11 @@
               <div class="team-card">
                 <picture>
                   <source
-                    srcset="../src/img/colleagues/colleagues-1.webp"
+                    srcset="src/img/colleagues/colleagues-1.webp"
                     type="image/webp"
                   />
                   <img
-                    src="../src/img/colleagues/colleagues-1.jpg"
+                    src="src/img/colleagues/colleagues-1.jpg"
                     alt="Dmitrienko_Anton"
                     class="team-card-img"
                     loading="lazy"
@@ -565,32 +609,6 @@
                   «Одна команда — один стандарт якості.»
                 </p>
               </div>
-              <!-- <div class="team-card">
-        <picture>
-          <source
-            srcset="./src/img/colleagues/colleagues-2.webp"
-            type="image/webp"
-          />
-          <img
-            src="./src/img/colleagues/colleagues-2.jpg"
-            alt="Girenko_Vlad"
-            class="team-card-img"
-            loading="lazy"
-          />
-        </picture>
-        <h3 class="team-card-title" data-translate="card-vlad-title">
-          Гиренко Владислав
-        </h3>
-        <p
-          class="team-card-position"
-          data-translate="card-vlad-position"
-        >
-          старший механік
-        </p>
-        <p class="team-card-content" data-translate="card-vlad-content">
-          «Сучасні технології + старі добрі принципи роботи»
-        </p>
-      </div> -->
             </div>
             <div class="callback-container">
               <h3 class="callbaack-main-title">
@@ -603,14 +621,13 @@
                   >БЕЗКОШТОВНО!</span
                 >
               </h3>
-              <form id="callbackForm">
+              <form id="callbackForm" data-lead-type="razborka">
                 <input
                   type="text"
                   id="nameInput"
                   name="name"
                   data-translate-placeholder="name-placeholder"
-                  placeholder="Ваше ім’я*"
-                  required
+                  placeholder="Ваше ім’я"
                 />
                 <input
                   type="tel"
@@ -621,10 +638,15 @@
                 />
                 <input
                   type="text"
-                  id="messageInput"
+                  id="carInput"
                   name="car"
                   placeholder="Марка та модель авто"
-                  required
+                />
+                <input
+                  type="text"
+                  id="partInput"
+                  name="part"
+                  placeholder="Потрібна запчастина"
                 />
                 <button
                   type="submit"
@@ -642,6 +664,560 @@
             </div>
           </div>
         </section>
+        <section id="brend" class="brend-section">
+          <h2 class="brend-title" data-translate="">
+            Підберемо запчастини для
+            <span class="span-benefits-title">будь-якого авто</span>
+          </h2>
+
+          <div class="infinite-carousel">
+            <div class="carousel-track">
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/4226-256x256x8.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/4226-256x256x8.png"
+                    alt="Логотип Daewoo для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Daewoo</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/4227-256x256x32.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/4227-256x256x32.png"
+                    alt="Логотип Daihatsu для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Daihatsu</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/acura_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/acura_logo.png"
+                    alt="Логотип Acura для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Acura</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/alfa-romeo-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/alfa-romeo-logo.png"
+                    alt="Логотип Alfa Romeo для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Alfa Romeo</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/audi.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/audi.png"
+                    alt="Логотип Audi для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Audi</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/chevrolet-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/chevrolet-logo.png"
+                    alt="Логотип Chevrolet для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Chevrolet</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/daewoo-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/daewoo-logo.png"
+                    alt="Логотип Daewoo для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Daewoo</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/citroen-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/citroen-logo.jpg"
+                    alt="Логотип Citroen для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Citroen</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/dodge-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/dodge-logo.png"
+                    alt="Логотип Dodge для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Dodge</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/fiat_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/fiat_logo.png"
+                    alt="Логотип Fiat для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Fiat</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/ford.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/ford.png"
+                    alt="Логотип Ford для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Ford</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/honda-color-128.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/honda-color-128.png"
+                    alt="Логотип Honda для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Honda</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/hyundai-lg.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/hyundai-lg.png"
+                    alt="Логотип Hyundai для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Hyundai</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/infiniti.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/infiniti.png"
+                    alt="Логотип Infiniti для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Infiniti</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/jaguar-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/jaguar-logo.png"
+                    alt="Логотип Jaguar для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Jaguar</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/jeep-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/jeep-logo.png"
+                    alt="Логотип Jeep для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Jeep</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/kia_logo_256_003.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/kia_logo_256_003.png"
+                    alt="Логотип Kia для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Kia</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/land-rover1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/land-rover1.png"
+                    alt="Логотип Land Rover для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Land Rover</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/lexus-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/lexus-logo.png"
+                    alt="Логотип Lexus для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Lexus</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/lincoln-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/lincoln-logo.png"
+                    alt="Логотип Lincoln для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Lincoln</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/logo_suzuki.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/logo_suzuki.png"
+                    alt="Логотип Suzuki для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Suzuki</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="
+                      src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
+                    alt="Логотип Mazda для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Mazda</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/mercedes_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/mercedes_logo.png"
+                    alt="Логотип Mercedes для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Mercedes</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/mitsubishi_logo.png"
+                    alt="Логотип Mitsubishi для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Mitsubishi</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/nissan-logo-4.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/nissan-logo-4.png"
+                    alt="Логотип Nissan для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Nissan</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/novosti-skoda-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/novosti-skoda-logo.gif"
+                    alt="Логотип Skoda для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Skoda</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="
+                      src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
+                    alt="Логотип Opel для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Opel</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/peugeot_logo_128.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/peugeot_logo_128.png"
+                    alt="Логотип Peugeot для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Peugeot</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/renault_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/renault_logo.png"
+                    alt="Логотип Renault для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Renault</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/saab-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/saab-logo.png"
+                    alt="Логотип Saab для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Saab</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/seat.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/seat.png"
+                    alt="Логотип Seat для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Seat</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/smart-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/smart-logo.png"
+                    alt="Логотип Smart для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Smart</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/ssangyong-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/ssangyong-logo.png"
+                    alt="Логотип SsangYong для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">SsangYong</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/subaru-logo-transparent.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/subaru-logo-transparent.png"
+                    alt="Логотип Subaru для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Subaru</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/toyota.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/toyota.png"
+                    alt="Логотип Toyota для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Toyota</p>
+              </div>
+
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/volkswagen_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="src/img/avto-logo/volkswagen_logo.png"
+                    alt="Логотип Volkswagen для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">Volkswagen</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <!-- Модальное окно -->
       <div id="callbackModal" class="modal">
@@ -650,13 +1226,18 @@
           <h3 data-translate="modal-title">
             Залиште ваші дані, і ми передзвонимо з готовим рішенням.
           </h3>
-          <form class="modal-callbackForm" id="modalForm">
+          <form
+            class="modal-callbackForm"
+            id="modalForm"
+            data-lead-type="razborka"
+          >
             <div class="form-group">
-              <label for="name" data-translate="name">Ім’я*</label>
-              <input type="text" id="modalName" name="name" required />
+              <label for="modalName" data-translate="name">Ім’я</label>
+              <input type="text" id="modalName" name="name" />
             </div>
+
             <div class="form-group">
-              <label for="phone" data-translate="phone">Телефон*</label>
+              <label for="modalPhone" data-translate="phone">Телефон*</label>
               <input
                 type="tel"
                 id="modalPhone"
@@ -665,16 +1246,24 @@
                 required
               />
             </div>
+
             <div class="form-group">
-              <label for="vin" data-translate="vin">VIN-код автомобіля</label>
+              <label for="modalVin" data-translate="vin"
+                >VIN-код автомобіля</label
+              >
               <input type="text" id="modalVin" name="vin" />
             </div>
+
             <div class="form-group">
-              <label for="carModel" data-translate="carModel"
-                >Марка / модель автомобіля</label
-              >
+              <label for="modalCar">Марка / модель автомобіля</label>
               <input type="text" id="modalCar" name="carModel" />
             </div>
+
+            <div class="form-group">
+              <label for="modalPart">Потрібна запчастина</label>
+              <input type="text" id="modalPart" name="part" />
+            </div>
+
             <button
               type="submit"
               class="submit-btn"
