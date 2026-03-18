@@ -236,26 +236,43 @@ body {
     }
 
     .nav-item>a,
-    .nav-link-row>a {
+    .nav-link-row>a,
+    .nav-link-row>p {
         display: block;
         width: 100%;
         padding: 18px 0;
+        margin: 0;
     }
 
     .nav-link-row,
     .submenu-link-row {
+        display: flex;
+        align-items: center;
         justify-content: space-between;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-link-row>a,
+    .nav-link-row>p,
+    .submenu-link-row>a {
+        flex: 1;
     }
 
     .menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 44px;
         height: 44px;
+        flex-shrink: 0;
     }
 
     .submenu,
     .submenu-right {
         position: static;
+        top: auto;
+        left: auto;
         min-width: 100%;
         margin-left: 0;
         padding: 0;
@@ -271,22 +288,25 @@ body {
         transition: max-height 0.3s ease;
     }
 
+    .submenu .submenu {
+        background: #232323;
+    }
+
+    .submenu-item>a,
+    .submenu-link-row>a {
+        display: block;
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
     .has-submenu:hover>.submenu {
         max-height: 0;
     }
 
     .has-submenu.open>.submenu {
-        max-height: 1200px;
-    }
-
-    .submenu-item>a,
-    .submenu-link-row>a {
-        padding: 14px 18px;
-        font-size: 16px;
-    }
-
-    .submenu .submenu {
-        background: #232323;
+        max-height: 3000px;
     }
 
     .burger-menu.active .burger-line:nth-child(1) {
