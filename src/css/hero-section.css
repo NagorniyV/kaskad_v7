@@ -320,6 +320,7 @@ body.modal-open::after {
     bottom: 20px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 10px;
     z-index: 1000;
 }
@@ -339,6 +340,61 @@ body.modal-open::after {
 .social-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.callback-fixed-btn {
+    border: none;
+    outline: none;
+    background: #f3f3f3;
+    color: #24a7c1;
+    height: 50px;
+    max-width: 50px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0 16px 0 13px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: max-width 0.35s ease, transform 0.3s, box-shadow 0.3s,
+        background 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.callback-fixed-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #0e6374;
+}
+
+.callback-fixed-btn__icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.callback-fixed-btn__text {
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.callback-fixed-btn.is-expanded {
+    max-width: 290px;
+}
+
+.callback-fixed-btn.is-expanded .callback-fixed-btn__text {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .telegram {

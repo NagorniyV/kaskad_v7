@@ -40,11 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const modal = document.getElementById("callbackModal");
   const modalCloseBtn = document.querySelector(".modal-close");
-  const heroModalBtn = document.querySelector(".details-hero-btn");
 
   const callbackForm = document.getElementById("callbackForm");
   const modalForm = document.getElementById("modalForm");
   const responseMessage = document.getElementById("responseMessage");
+
+  const fixedCallbackBtn = document.getElementById("fixedCallbackBtn");
+  const heroButtons = document.querySelectorAll(".details-hero-btn");
+
+  let autoExpandDisabled = false;
+  let autoExpandTimer = null;
 
   // ===== УТИЛИТЫ =====
   const getValue = (id) => document.getElementById(id)?.value.trim() || "";
@@ -178,9 +183,35 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("modal-open");
   }
 
-  heroModalBtn?.addEventListener("click", (e) => {
-    e.preventDefault();
-    openModal();
+  // ===== ФИКСИРОВАННАЯ КНОПКА =====
+  function expandFixedButton() {
+    if (!fixedCallbackBtn || autoExpandDisabled) return;
+    fixedCallbackBtn.classList.add("is-expanded");
+  }
+
+  function collapseFixedButton() {
+    if (!fixedCallbackBtn) return;
+    fixedCallbackBtn.classList.remove("is-expanded");
+  }
+
+  if (fixedCallbackBtn) {
+    autoExpandTimer = setTimeout(() => {
+      expandFixedButton();
+    }, 5000);
+
+    fixedCallbackBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      collapseFixedButton();
+      openModal();
+    });
+  }
+
+  // ===== ВСЕ HERO-КНОПКИ =====
+  heroButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
   });
 
   modalCloseBtn?.addEventListener("click", closeModal);
@@ -202,10 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const name = getValue("nameInput");
       const phone = getValue("phoneInput");
-
-      // Совместимость со старым сайтом:
-      // если есть carInput / partInput — берём их,
-      // если нет — используем старый messageInput
       const car = getValue("carInput");
       const part = getValue("partInput");
       const legacyMessage = getValue("messageInput");
@@ -275,6 +302,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         await sendToTelegram(telegramMessage);
+
+        autoExpandDisabled = true;
+        clearTimeout(autoExpandTimer);
+        collapseFixedButton();
+
         alert("✅ Дякуємо! Ми вам зателефонуємо найближчим часом.");
         modalForm.reset();
         closeModal();

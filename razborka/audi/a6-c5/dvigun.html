@@ -230,18 +230,21 @@
               </button>
             </div>
             <div class="hero-contact-div">
-              <h3 data-translate="hero-contact-div-map">Завітайте до нас:</h3>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
-                width="250"
-                height="200"
-                style="border-radius: 20px"
-                class="iframe"
-                title="Мапа розташування автосервісу Каскад на Google Maps"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/audi.webp"
+                    type="image/webp"
+                    style="width: 100%"
+                  />
+                  <img
+                    src="src/img/avto-logo/audi.png"
+                    style="width: 100%"
+                    alt="Логотип Audi для підбору б/в запчастин"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
               <div class="hero-contact-number">
                 <h3 data-translate="hero-contact-div-number">
                   Телефонуйте просто зараз:
@@ -1355,6 +1358,17 @@
         </div>
       </div>
       <div class="social-fixed">
+        <button
+          type="button"
+          class="callback-fixed-btn"
+          id="fixedCallbackBtn"
+          aria-label="Замовити зворотній дзвінок"
+        >
+          <span class="callback-fixed-btn__icon">
+            <img src="../src/img/callback-btn-img.png" alt="" />
+          </span>
+          <span class="callback-fixed-btn__text">Отримати консультацію</span>
+        </button>
         <a
           href="https://t.me/kkua1210"
           target="_blank"
