@@ -1631,15 +1631,20 @@
         <div class="modal-content">
           <span class="modal-close">&times;</span>
           <h3 data-translate="modal-title">
-            Оставте Ваши данные и мы перезвоним с готовым решением.
+            Залиште ваші дані, і ми передзвонимо з готовим рішенням.
           </h3>
-          <form class="modal-callbackForm" id="modalForm">
+          <form
+            class="modal-callbackForm"
+            id="modalForm"
+            data-lead-type="razborka"
+          >
             <div class="form-group">
-              <label for="name" data-translate="name">Имя*</label>
-              <input type="text" id="modalName" name="name" required />
+              <label for="modalName" data-translate="name">Ім’я</label>
+              <input type="text" id="modalName" name="name" />
             </div>
+
             <div class="form-group">
-              <label for="phone" data-translate="phone">Телефон*</label>
+              <label for="modalPhone" data-translate="phone">Телефон*</label>
               <input
                 type="tel"
                 id="modalPhone"
@@ -1648,22 +1653,25 @@
                 required
               />
             </div>
+
             <div class="form-group">
-              <label for="vin" data-translate="vin">VIN код автомобиля</label>
+              <label for="modalVin" data-translate="vin"
+                >VIN-код автомобіля</label
+              >
               <input type="text" id="modalVin" name="vin" />
             </div>
+
             <div class="form-group">
-              <label for="carModel" data-translate="carModel"
-                >Марка/модель автомобиля</label
-              >
+              <label for="modalCar">Марка / модель автомобіля</label>
               <input type="text" id="modalCar" name="carModel" />
             </div>
+
             <button
               type="submit"
               class="submit-btn"
               data-translate="submit-btn"
             >
-              Отправить
+              Надіслати
             </button>
           </form>
         </div>
