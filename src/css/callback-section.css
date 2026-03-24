@@ -1,110 +1,119 @@
-.callback-section{
+.callback-section {
     background-color: #101010;
-    padding: 20px 100px;
+    padding: 60px 20px;
 }
 
-.callback-main-title{
+.callback-main-title {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 56px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #f8f8f8;
     text-align: left;
-    margin-left: 150px;
-    margin-bottom: 48px;
+    max-width: 900px;
+    margin: 0 auto 32px auto;
 }
 
-.callback-section-container{
+.callback-section-container {
     display: flex;
     gap: 48px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    align-items: flex-start;
 }
 
-.callback-card-container{
+.callback-card-container {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 80px;
     padding-top: 70px;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
-.team-card{
+.team-card {
     position: relative;
+    width: 100%;
     max-width: 320px;
     border: 1px solid #f8f8f8;
-    border-radius: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 100%;
-    padding-top: 150px;
-    padding-bottom: 30px;
+    border-radius: 12px;
+    padding: 150px 30px 30px 30px;
     background: #2c2b2b;
     text-align: center;
     color: #f8f8f8;
+    box-sizing: border-box;
 }
 
 .team-card>img,
-.team-card>picture>img{
+.team-card>picture>img {
     position: absolute;
     top: -60px;
     left: 50%;
     transform: translateX(-50%);
     max-height: 205px;
+    width: auto;
+    max-width: calc(100% - 40px);
     border-radius: 20px;
+    display: block;
 }
 
-.team-card-title{
+.team-card-title {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size: 22px;
+    line-height: 1.2;
+    margin: 0;
 }
 
-.team-card-position{
+.team-card-position {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: "wdth" 100;
     font-size: 14px;
+    line-height: 1.45;
     margin-top: 4px;
 }
 
-.team-card-content{
+.team-card-content {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    font-size: 20px;
-    margin-top: 22px;
+    font-variation-settings: "wdth" 100;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 18px;
 }
 
-.callback-container{
+.callback-container {
     background-color: #f8f8f8;
     text-align: center;
     padding: 34px 34px;
     max-width: 380px;
     border-radius: 8px;
     height: 100%;
+    box-sizing: border-box;
 }
 
-.callbaack-main-title{
+.callbaack-main-title {
     color: #2c2b2b;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
     font-size: 22px;
-    margin-bottom: 58px;
+    line-height: 1.35;
+    margin-bottom: 36px;
 }
 
-.span-cb-title{
+.span-cb-title {
     color: #101010;
     font-weight: 800;
 }
@@ -116,11 +125,14 @@
     color: #f8f8f8;
     border: none;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     transition: all 0.4s ease;
     box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
     animation: subtlePulse 2.5s infinite ease-in-out;
     z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-header:hover {
@@ -139,13 +151,17 @@
     padding: 12px 15px;
     border: none;
     border-radius: 8px;
-    font-size: 16px; 
+    font-size: 16px;
     background-color: #d4d4d4;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.cb-last-text{
+.cb-last-text {
     margin-top: 18px;
     color: #2c2b2b;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .response-message {
@@ -162,21 +178,109 @@
 
 .response-message.error {
     background: #f8d7da;
-    color: #721c24; 
+    color: #721c24;
 }
 
-@media (max-width: 480px){
-    .callback-section{
-        padding: 20px 20px;
+/* обычная анимация для callback-кнопок */
+@keyframes subtlePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
     }
 
-    .callback-main-title{
-        margin-left: 20px;
-        font-size: 38px;
-        margin-bottom: 0px;
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* отдельная анимация только для кнопки в секции услуг */
+@keyframes detailsPulse {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
     }
 
-    .callback-section-container{
+    50% {
+        transform: translateX(-50%) scale(1.02);
+    }
+}
+
+@media (max-width: 768px) {
+    .callback-section {
+        padding: 40px 16px;
+    }
+
+    .callback-main-title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .callback-section-container {
+        gap: 32px;
+    }
+
+    .callback-card-container {
+        gap: 56px;
+        padding-top: 56px;
+    }
+
+    .team-card-content {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .callback-section {
+        padding: 20px 12px;
+    }
+
+    .callback-main-title {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .callback-section-container {
         flex-direction: column;
+        gap: 28px;
+    }
+
+    .callback-card-container {
+        gap: 70px;
+        padding-top: 48px;
+        align-items: center;
+    }
+
+    .team-card {
+        max-width: 100%;
+        padding: 140px 20px 24px 20px;
+    }
+
+    .team-card>img,
+    .team-card>picture>img {
+        top: -52px;
+        max-height: 185px;
+    }
+
+    .team-card-title {
+        font-size: 20px;
+    }
+
+    .team-card-content {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .callbaack-main-title {
+        font-size: 20px;
+        margin-bottom: 28px;
+    }
+
+    .text-header {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
     }
 }

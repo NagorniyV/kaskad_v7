@@ -1,24 +1,25 @@
 .services-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0px;
+    padding: 60px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .services-top {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
+    margin: 0 auto 32px auto;
+    gap: 24px;
 }
 
 .services-top-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    text-align: left;
 }
 
 .services-title {
@@ -26,7 +27,8 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #f8f8f8;
     margin-bottom: 12px;
 }
@@ -36,11 +38,12 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    font-size: 16px;
+    font-variation-settings: "wdth" 100;
+    font-size: 18px;
+    line-height: 1.6;
     color: #f8f8f8;
-    /* width: 240px; */
+    max-width: 520px;
+    margin: 0;
 }
 
 .services-carousel {
@@ -53,14 +56,15 @@
 .services-container {
     display: flex;
     transition: transform 0.5s ease;
-    padding-bottom: 20px;
     will-change: transform;
+    padding: 0 2px 20px 2px;
 }
 
 .carousel-nav {
     display: flex;
     justify-content: center;
     margin-top: auto;
+    gap: 14px;
 }
 
 .carousel-btn {
@@ -68,17 +72,17 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
-    margin: 0 15px;
     color: #f8f8f8;
     outline: none;
     background-color: #24a7c1;
-    width: 40px;
-    height: 40px;
-    border-radius: 10%;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
+    flex-shrink: 0;
 }
 
 .carousel-btn:hover {
@@ -90,21 +94,24 @@
     margin: 0 10px;
     text-align: left;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 290px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    border-radius: 10px;
-    padding: 25px;
-    padding-top: 16px;
-    max-width: 350px;
+    border-radius: 12px;
+    padding: 20px 20px 56px 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     overflow: visible;
+    box-sizing: border-box;
 }
 
 .service-card h3 {
     color: #f8f8f8;
     font-size: 22px;
-    margin-bottom: 15px;
+    line-height: 1.25;
+    margin: 0 0 14px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: "Montserrat", sans-serif;
@@ -117,14 +124,13 @@
 .service-card p {
     color: #f8f8f8;
     font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin: 0;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: "wdth" 100;
 }
 
 .btn-container {
@@ -135,19 +141,22 @@
 
 .details-btn {
     position: absolute;
+    left: 50%;
     bottom: -15px;
-    /* left: 50%; */
     transform: translateX(-50%);
-    padding: 12px 35px;
+    padding: 12px 28px;
     border-radius: 25px;
     background: #24a7c1;
     color: #f8f8f8;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
     transition: all 0.4s ease;
     box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
-    animation: subtlePulse 2.5s infinite ease-in-out;
+    animation: detailsPulse 2.5s infinite ease-in-out;
     z-index: 2;
 }
 
@@ -161,55 +170,124 @@
 
     0%,
     100% {
-        transform: scale(1);
+        transform: translateX(-50%) scale(1);
     }
 
     50% {
-        transform: scale(1.02);
+        transform: translateX(-50%) scale(1.02);
     }
 }
 
 @media (max-width: 1024px) {
+    .services-section {
+        padding: 40px 16px;
+    }
+
+    .services-title {
+        font-size: 32px;
+    }
+
+    .services-subtitle {
+        font-size: 17px;
+    }
+
     .service-card {
-        flex: 0 0 calc(33.33% - 20px);
-        /* 3 карточки */
+        flex: 0 0 calc(33.333% - 20px);
+        min-height: 280px;
+        padding: 18px 18px 54px 18px;
     }
 }
 
 @media (max-width: 768px) {
+    .services-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        margin-bottom: 24px;
+    }
+
+    .services-top-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .services-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .services-subtitle {
+        font-size: 16px;
+        line-height: 1.55;
+        max-width: 100%;
+    }
+
     .service-card {
         flex: 0 0 calc(50% - 20px);
-        /* 2 карточки */
+        min-height: 260px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 15px;
     }
 }
 
 @media (max-width: 480px) {
+    .services-section {
+        padding: 20px 12px;
+    }
+
+    .services-top {
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .services-title {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    .services-subtitle {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .services-container {
+        padding: 0 0 20px 0;
+    }
+
     .service-card {
-        flex: 0 0 calc(100% - 20px);
-        /* 1 карточка */
+        flex: 0 0 calc(100% - 16px);
+        margin: 0 8px;
+        min-height: 240px;
+        padding: 16px 16px 52px 16px;
     }
 
-    .services-top{
-        flex-direction: column;
-        gap: 24px;
-        margin-left: 10px;
-        align-items: center;
-    }
-
-    .services-title{
-        font-size: 38px;
+    .service-card h3 {
+        font-size: 18px;
         margin-bottom: 12px;
     }
 
-    .service-card{
-        max-width: 80%;
+    .service-card p {
+        font-size: 15px;
+        line-height: 1.55;
     }
 
-    .services-container{
-        max-width: 90%;
-        padding-left: 10px;
-        padding-right: 10px;
+    .details-btn {
+        bottom: -14px;
+        padding: 11px 22px;
+        font-size: 13px;
     }
 
-    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
 }

@@ -1,108 +1,174 @@
-.benefits-section{
+.benefits-section {
     background-color: #f3f3f3;
-    padding: 20px 100px;
+    padding: 60px 0;
 }
 
-.benefits-img{
-    max-width: 275px;
-    border-radius: 8px;
-    margin: 0px;
-}
-
-.benefits-container {
-    display: flex;
-    gap: 16px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 275px;
-}
-
-.benefits-title{
+.benefits-title {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #101010;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
-.span-benefits-title{
+.span-benefits-title {
     color: #24a7c1;
 }
 
-.benefits-containers{
-    display: flex;
-    gap: 16px;
+.benefits-containers {
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 16px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.benefits-container{
+.benefits-container {
+    flex: 1 1 0;
+    max-width: calc((100% - 48px) / 3);
     display: flex;
-    align-items: center; 
     flex-direction: column;
     align-items: flex-start;
 }
 
-.benefits-top{
+.benefits-top {
     display: flex;
     align-items: center;
-
+    margin-bottom: 12px;
+    min-height: 72px;
 }
 
-.benefits-number{
+.benefits-number {
     color: #24a7c1;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size: 56px;
-    margin-left: 20px;
+    line-height: 1;
+    margin: 0 16px 0 0;
+    flex-shrink: 0;
 }
 
-.benefits-top-text{
-    max-width: 220px;
-    margin-left: 16px;
-}
-
-.benefits-bot-text{
-    text-align: center;
-
-}
-
-.benefits-bot-text, .benefits-top-text{
+.benefits-top-text,
+.benefits-bot-text {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: "wdth" 100;
     font-size: 16px;
+    line-height: 1.5;
+    color: #101010;
+    margin: 0;
 }
 
-@media (max-width: 480px){
-    .benefits-section{
-        padding: 20px 20px;
+.benefits-top-text {
+    max-width: 220px;
+}
+
+.benefits-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 0 12px 0;
+}
+
+.benefits-bot-text {
+    text-align: left;
+}
+
+/* Планшет */
+@media (max-width: 768px) {
+    .benefits-section {
+        padding: 40px 0;
     }
 
-    .benefits-containers{
-        flex-direction: column;
-        gap: 24px;
+    .benefits-title {
+        font-size: 32px;
+        margin-bottom: 24px;
     }
 
-    .benefits-title{
-        font-size: 38px;
+    .benefits-containers {
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .benefits-container {
+        max-width: calc((100% - 32px) / 3);
+    }
+
+    .benefits-number {
+        font-size: 46px;
+        margin-right: 12px;
+    }
+
+    .benefits-top-text,
+    .benefits-bot-text {
+        font-size: 15px;
+    }
+}
+
+/* Телефон */
+@media (max-width: 480px) {
+    .benefits-section {
+        padding: 20px 0;
+    }
+
+    .benefits-title {
+        font-size: 28px;
+        line-height: 1.2;
         margin-bottom: 20px;
+        padding: 0 12px;
     }
 
-    .benefits-container{
-        border: 1px solid #24a7c1;
-        border-radius: 8px;
-        padding: 12px 4px;
+    .benefits-containers {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 12px;
+    }
+
+    .benefits-container {
+        width: 100%;
+        max-width: 100%;
+        align-items: stretch;
+    }
+
+    .benefits-container picture {
+        display: block;
+        width: 100%;
+    }
+
+    .benefits-img {
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+
+    .benefits-top {
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+
+    .benefits-number {
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+    .benefits-top-text,
+    .benefits-bot-text {
+        font-size: 16px;
+        line-height: 1.55;
+        text-align: center;
     }
 }

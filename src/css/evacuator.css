@@ -1,27 +1,35 @@
+.hero-EVA {
+    background-image: url(img/kaskad-evakuator-hero480.webp);
+    background-image: url(img/kaskad-evakuator-hero480.jpg);
+}
+
+@media (min-width: 768px) {
     .hero-EVA {
-        background-image: url(../img/kaskad-evakuator-hero480.webp);
-        background-image: url(../img/kaskad-evakuator-hero480.jpg);
+        background-image: url(img/kaskad-evakuator-hero720.webp);
+        background-image: url(img/kaskad-evakuator-hero720.jpg);
     }
+}
 
-    @media (min-width: 768px) {
-        .hero-EVA {
-            background-image: url(../img/kaskad-evakuator-hero720.webp);
-            background-image: url(../img/kaskad-evakuator-hero720.jpg);
-        }
+@media (min-width: 1200px) {
+    .hero-EVA {
+        background-image: url(img/kaskad-evakuator-hero1200.webp);
+        background-image: url(img/kaskad-evakuator-hero1200.jpg);
     }
-
-    @media (min-width: 1200px) {
-        .hero-EVA {
-            background-image: url(../img/kaskad-evakuator-hero1200.webp);
-            background-image: url(../img/kaskad-evakuator-hero1200.jpg);
-        }
-    }
+}
 
 .evacuator-section,
 .evacuator-price-section {
     background-color: #f3f3f3;
-    padding: 40px;
+    padding: 60px 20px;
     overflow: hidden;
+    box-sizing: border-box;
+}
+
+.evacuator-section>*,
+.evacuator-price-section>* {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .evacuator-section p,
@@ -33,13 +41,21 @@
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    font-size: 16px;
-    text-indent: 20px;
-    margin: 8px 0px;
+    font-size: 18px;
+    line-height: 1.75;
+    color: #101010;
+    margin: 18px 0 0 0;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
 }
 
-.evacuator-section h3,
-.evacuator-price-section h3,
+.evacuator-section p,
+.evacuator-price-section p {
+    text-indent: 30px;
+}
+
 .evacuator-section h2,
 .evacuator-price-section h2 {
     text-align: center;
@@ -47,42 +63,107 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 20px;
-    margin: 20px 0px;
+    font-size: 42px;
+    line-height: 1.15;
+    color: #101010;
+    margin: 0 auto 32px auto;
+    max-width: 1200px;
+}
+
+.evacuator-section h3,
+.evacuator-price-section h3 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #101010;
+    margin: 40px auto 20px auto;
+    max-width: 1200px;
 }
 
 .evacuator-section img {
-    max-width: 45%;
+    display: block;
+    width: 100%;
+    max-width: 420px;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(16, 16, 16, 0.12);
+    object-fit: cover;
 }
 
-/* Первая картинка - обтекание слева */
+/* Первая картинка — аккуратно слева */
 .evacuator-section img:first-of-type {
     float: left;
-    margin: 0 25px 20px 0;
+    margin: 6px 30px 18px 0;
 }
 
-/* Вторая картинка - обтекание справа */
+/* Вторая картинка — аккуратно справа */
 .evacuator-section img:nth-of-type(2) {
     float: right;
-    margin: 20px 0 20px 25px;
+    margin: 6px 0 18px 30px;
 }
 
-/* Адаптация для планшетов и мобильных устройств */
+.benefits-list {
+    margin: 18px 0 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 0 12px 0;
+}
+
+.benefits-list li svg {
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+.benefits-list li p {
+    margin: 0;
+    text-indent: 0;
+    line-height: 1.7;
+}
+
 @media (max-width: 768px) {
 
     .evacuator-section,
     .evacuator-price-section {
-        padding: 20px;
+        padding: 40px 16px;
+    }
+
+    .evacuator-section h2,
+    .evacuator-price-section h2 {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .evacuator-section h3,
+    .evacuator-price-section h3 {
+        font-size: 24px;
+        margin: 32px auto 18px auto;
+    }
+
+    .evacuator-section p,
+    .evacuator-section li,
+    .evacuator-price-section p,
+    .evacuator-price-section li {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .evacuator-section p,
+    .evacuator-price-section p {
+        text-indent: 26px;
     }
 
     .evacuator-section img {
-        max-width: 100%;
-        float: none;
-        display: block;
-        margin: 20px auto;
+        max-width: 360px;
     }
 
     .evacuator-section img:first-of-type,
@@ -92,41 +173,57 @@
     }
 }
 
-/* Дополнительная адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
 
     .evacuator-section,
     .evacuator-price-section {
-        padding: 15px;
+        padding: 20px 12px;
+    }
+
+    .evacuator-section h2,
+    .evacuator-price-section h2 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .evacuator-section h3,
+    .evacuator-price-section h3 {
+        font-size: 22px;
+        margin: 28px auto 16px auto;
     }
 
     .evacuator-section p,
     .evacuator-section li,
     .evacuator-price-section p,
     .evacuator-price-section li {
-        font-size: 14px;
-        text-indent: 15px;
+        font-size: 16px;
+        line-height: 1.65;
     }
 
-    .evacuator-section h3,
-    .evacuator-price-section h3,
-    .evacuator-section h2,
-    .evacuator-price-section h2 {
-        font-size: 18px;
-        margin: 15px 0px;
+    .evacuator-section p,
+    .evacuator-price-section p {
+        text-indent: 24px;
     }
-}
 
-.benefits-list li {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
+    .evacuator-section img {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(16, 16, 16, 0.1);
+    }
 
-.benefits-list li svg {
-    flex-shrink: 0;
-}
+    .evacuator-section img:first-of-type,
+    .evacuator-section img:nth-of-type(2) {
+        float: none;
+        margin: 18px auto;
+    }
 
-.benefits-list li p {
-    margin: 0;
+    .benefits-list li {
+        gap: 8px;
+    }
+
+    .benefits-list li svg {
+        margin-top: 4px;
+    }
 }

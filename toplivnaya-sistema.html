@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -12,7 +12,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-LFYC21VZB6");
     </script>
 
@@ -21,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="icon" href="./favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,53 +30,99 @@
       rel="stylesheet"
     />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./src/style.css" />
+    <!-- Прогрузка хедера -->
+    <script>
+      (function () {
+        const host = window.location.hostname;
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
 
-    <!-- Title & Meta Description -->
+        let basePath = "/";
+
+        if (host.endsWith("github.io") && pathParts.length > 0) {
+          basePath = "/" + pathParts[0] + "/";
+        }
+
+        if (
+          host === "kaskad.in.ua" ||
+          host === "www.kaskad.in.ua" ||
+          host === "localhost" ||
+          host === "127.0.0.1"
+        ) {
+          basePath = "/";
+        }
+
+        window.__BASE_PATH__ = basePath;
+
+        const base = document.createElement("base");
+        base.href = basePath;
+        document.head.prepend(base);
+      })();
+    </script>
+
+    <!-- SEO -->
     <title>
-      Промывка системы охлаждения Павлоград – Чистка радиатора печки и замена
-      антифриза | СТО Каскад
+      Промывка системы охлаждения в Павлограде — чистка радиатора печки и замена
+      антифриза | Автосервис Каскад
     </title>
     <meta
       name="description"
-      content="Профессиональная промывка системы охлаждения в Павлограде. Чистка радиатора печки, замена антифриза, удаление воздушных пробок. Гарантия качества в автосервисе Каскад."
+      content="Промывка системы охлаждения в Павлограде: чистка радиатора печки, замена антифриза, удаление воздушных пробок, диагностика перегрева двигателя и плохого обогрева салона. Автосервис Каскад."
     />
+    <meta
+      name="keywords"
+      content="промывка системы охлаждения Павлоград, чистка радиатора печки Павлоград, замена антифриза Павлоград, промывка печки авто Павлоград, перегрев двигателя Павлоград, автосервис Каскад"
+    />
+    <meta name="robots" content="index, follow" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://kaskad.in.ua/toplivnaya-sistema.html" />
+    <link
+      rel="canonical"
+      href="https://kaskad.in.ua/promyvka-sistemy-okhlazhdeniya.html"
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Промывка системы охлаждения Павлоград | Чистка радиатора печки"
+      content="Промывка системы охлаждения в Павлограде — чистка печки и замена антифриза | Автосервис Каскад"
     />
     <meta
       property="og:description"
-      content="Верните тепло в салон автомобиля! Профессиональная промывка системы охлаждения, чистка радиатора печки и замена антифриза в Павлограде."
+      content="Промывка системы охлаждения, чистка радиатора печки, замена антифриза и устранение проблем с перегревом или слабым обогревом салона в Павлограде."
     />
-    <meta property="og:image" content="https://kaskad.in.ua/images/logo.png" />
+    <meta
+      property="og:image"
+      content="https://kaskad.in.ua/images/promyvka-sistemy-okhlazhdeniya-cover.jpg"
+    />
     <meta
       property="og:url"
-      content="https://kaskad.in.ua/toplivnaya-sistema.html"
+      content="https://kaskad.in.ua/promyvka-sistemy-okhlazhdeniya.html"
     />
+    <meta property="og:site_name" content="Автосервис Каскад" />
+    <meta property="og:locale" content="ru_UA" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Промывка системы охлаждения | Автосервис Каскад Павлоград"
+      content="Промывка системы охлаждения в Павлограде | Автосервис Каскад"
     />
     <meta
       name="twitter:description"
-      content="Профессиональное обслуживание системы охлаждения автомобиля. Чистка печки, замена антифриза, гарантия качества."
+      content="Чистка радиатора печки, замена антифриза, удаление воздушных пробок и обслуживание системы охлаждения автомобиля."
     />
-    <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
+    <meta
+      name="twitter:image"
+      content="https://kaskad.in.ua/images/promyvka-sistemy-okhlazhdeniya-cover.jpg"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/style.css" />
 
     <!-- Scripts -->
-    <script src="./src/js/main.js" defer></script>
-    <script src="./src/js/language.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+    <script src="src/js/include-header.js" defer></script>
+    <script src="src/js/language.js" defer></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -86,8 +131,8 @@
         "@type": "AutoRepair",
         "name": "Автосервис Каскад",
         "description": "Профессиональная промывка системы охлаждения автомобиля в Павлограде",
-        "url": "https://kaskad.in.ua/toplivnaya-sistema.html",
-        "telephone": "+380-050-223−39−59",
+        "url": "https://kaskad.in.ua/promyvka-sistemy-okhlazhdeniya.html",
+        "telephone": "+380502233959",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Павлоград",
@@ -98,154 +143,7 @@
       }
     </script>
   </head>
-  <header id="header" class="header">
-    <div class="header-container">
-      <div class="burger-menu">
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-      </div>
-      <nav class="nav">
-        <ul class="nav-list-header">
-          <li class="nav-item">
-            <a href="./index.html" data-translate="nav-item-main">Главная</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a href="./foto-gallery.html" data-translate="nav-item-foto"
-              >Фотогаллерея</a
-            >
-          </li> -->
-          <li class="nav-item">
-            <a href="./parts.html" data-translate="nav-item-zapch"
-              >Подбор запчастей</a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a href="./evakuator.html" data-translate="nav-item-EVA"
-              >Эвакуатор</a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a href="./toplivnaya-sistema.html" data-translate="nav-item-TS"
-              >Топливная система</a
-            >
-          </li>
-
-          <li class="nav-item dropdown">
-            <a href="./service-catalog.html" data-translate="nav-item-serv"
-              >Услуги</a
-            >
-            <ul class="dropdown-content">
-              <li>
-                <a
-                  href="./remont-dvigatelya.html"
-                  data-translate="nav-item-dvig"
-                  >Двигун</a
-                >
-              </li>
-              <li>
-                <a href="./remont-hodovoy.html" data-translate="nav-item-hodov"
-                  >Ходова частина</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-elektriki.html"
-                  data-translate="nav-item-elektro"
-                  >Електрика</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-tormoznoi-sistemy.html"
-                  data-translate="nav-item-torm"
-                  >Гальмівна система</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./remont-transmissii.html"
-                  data-translate="nav-item-trans"
-                  >Трансмісія</a
-                >
-              </li>
-              <li>
-                <a href="./technical-service.html" data-translate="nav-item-to"
-                  >Технічне обслуговування</a
-                >
-              </li>
-              <li>
-                <a href="./car-diagnostics.html" data-translate="nav-item-diagn"
-                  >Діагностика</a
-                >
-              </li>
-              <li>
-                <a href="./air-conditioning.html" data-translate="nav-item-chip"
-                  >Автокондиционеры</a
-                >
-              </li>
-              <li>
-                <a href="./ustanovka-gbo.html" data-translate="nav-item-gbo"
-                  >Установка ГБО</a
-                >
-              </li>
-            </ul>
-          </li>
-          <!-- <li class="nav-item">
-            <a href="./contacts.html" data-translate="nav-item-contacts"
-              >Контакты</a
-            >
-          </li> -->
-          <li class="nav-item">
-            <a href="./price.html" data-translate="nav-item-price">Цены</a>
-          </li>
-          <li class="nav-item">
-            <div class="language-switcher">
-              <button class="lang-btn active" data-lang="uk">Укр</button>
-              <span class="lang-divider">/</span>
-              <button class="lang-btn" data-lang="ru">Рус</button>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <a href="./index.html"
-        ><svg
-          width="140"
-          height="80"
-          viewBox="0 0 200 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <!-- Фон (опционально) -->
-          <rect width="200" height="80" rx="10" fill="none" />
-
-          <!-- Символ "каскада" (волны + шестерёнка) -->
-          <path
-            d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
-            stroke="#24a7c1"
-            stroke-width="4"
-            stroke-linecap="round"
-          />
-
-          <!-- Текст -->
-          <text
-            x="100"
-            y="100"
-            font-family="Arial, sans-serif"
-            font-size="24"
-            font-weight="bold"
-            text-anchor="middle"
-            fill="#FFFFFF"
-            filter="drop-shadow(2px 2px 4px #000)"
-          >
-            АС КАСКАД
-          </text>
-        </svg></a
-      >
-    </div>
-  </header>
+  <div id="site-header"></div>
   <body>
     <main>
       <div class="container">
@@ -477,7 +375,15 @@
                 src="https://www.youtube.com/embed/CO-Rue2dBzA?si=3pGQEe90gUs7cn8F"
                 title="Процесс промывки системы охлаждения"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
                 data-translate="TS-content-text-p6"
@@ -491,20 +397,21 @@
         <section class="service-TS">
           <h2 class="service-TS-title">
             <span data-translate="TS-section-h22">Услуги по обслуживанию</span>
-            <span class="span-TS-title" data-translate="TS-section-h22span"
-              >системы охлаждения:</span
-            >
+            <span class="span-TS-title" data-translate="TS-section-h22span">
+              системы охлаждения:
+            </span>
           </h2>
+
           <div class="service-TS-cards">
             <div class="service-TS-card">
               <picture>
                 <source
-                  srcset="./src/img/promyvka-sist-ohl.webp"
+                  srcset="src/img/promyvka-sist-ohl.webp"
                   type="image/webp"
                 />
                 <img
-                  src="./src/img/promyvka-sist-ohl.jpg"
-                  alt="ustanovka_gbo"
+                  src="src/img/promyvka-sist-ohl.jpg"
+                  alt="Промывка системы охлаждения автомобиля в Павлограде — автосервис Каскад"
                   class="service-gbo-img"
                   loading="lazy"
                 />
@@ -514,8 +421,9 @@
                   Промывка системы охлаждения
                 </h3>
                 <p data-translate="TS-content-text-p7">
-                  Комплексная очистка всей системы специальным оборудованием.
-                  Улучшает циркуляцию и теплообмен.
+                  Комплексная очистка системы охлаждения специальным
+                  оборудованием для улучшения циркуляции жидкости и эффективного
+                  теплообмена.
                 </p>
                 <div
                   class="TS-service-price"
@@ -525,15 +433,16 @@
                 </div>
               </div>
             </div>
+
             <div class="service-TS-card">
               <picture>
                 <source
-                  srcset="./src/img/chistka-raiatora.webp"
+                  srcset="src/img/chistka-raiatora.webp"
                   type="image/webp"
                 />
                 <img
-                  src="./src/img/chistka-raiatora.jpg"
-                  alt="obslugivaniye_i_remont"
+                  src="src/img/chistka-raiatora.jpg"
+                  alt="Чистка радиатора печки в Павлограде — восстановление обогрева салона"
                   class="service-gbo-img"
                   loading="lazy"
                 />
@@ -543,8 +452,8 @@
                   Чистка радиатора печки
                 </h3>
                 <p data-translate="TS-content-text-p8">
-                  Специальная промывка радиатора отопителя для восстановления
-                  тепла и уюта в салоне.
+                  Профессиональная промывка радиатора отопителя для
+                  восстановления нормального обогрева салона в холодное время.
                 </p>
                 <div
                   class="TS-service-price"
@@ -554,15 +463,16 @@
                 </div>
               </div>
             </div>
+
             <div class="service-TS-card">
               <picture>
                 <source
-                  srcset="./src/img/zamena-antifriza.webp"
+                  srcset="src/img/zamena-antifriza.webp"
                   type="image/webp"
                 />
                 <img
-                  src="./src/img/zamena-antifriza.jpg"
-                  alt="diagnostika"
+                  src="src/img/zamena-antifriza.jpg"
+                  alt="Замена антифриза в Павлограде — обслуживание системы охлаждения авто"
                   class="service-gbo-img"
                   loading="lazy"
                 />
@@ -572,8 +482,8 @@
                   Замена антифриза
                 </h3>
                 <p data-translate="TS-content-text-p9">
-                  Слив старой жидкости, промывка и замена на качественный
-                  антифриз с гарантией.
+                  Слив старой охлаждающей жидкости, промывка системы и заливка
+                  качественного антифриза с контролем работы системы.
                 </p>
                 <div
                   class="TS-service-price"
@@ -583,15 +493,16 @@
                 </div>
               </div>
             </div>
+
             <div class="service-TS-card">
               <picture>
                 <source
-                  srcset="./src/img/kompleksnoe-obslugivanie.webp"
+                  srcset="src/img/kompleksnoe-obslugivanie.webp"
                   type="image/webp"
                 />
                 <img
-                  src="./src/img/kompleksnoe-obslugivanie.jpg"
-                  alt="registracija_v_mreo"
+                  src="src/img/kompleksnoe-obslugivanie.jpg"
+                  alt="Комплексное обслуживание системы охлаждения автомобиля в Павлограде"
                   class="service-gbo-img"
                   loading="lazy"
                 />
@@ -601,8 +512,9 @@
                   Комплексное обслуживание
                 </h3>
                 <p data-translate="TS-content-text-p10">
-                  Промывка системы + замена антифриза + диагностика всех
-                  элементов + удаление воздушных пробок.
+                  Промывка системы, замена антифриза, проверка основных
+                  элементов и удаление воздушных пробок для стабильной работы
+                  охлаждения.
                 </p>
                 <div
                   class="TS-service-price"
@@ -793,11 +705,11 @@
               <div class="team-card">
                 <picture>
                   <source
-                    srcset="./src/img/colleagues/dir.webp"
+                    srcset="src/img/colleagues/dir.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/colleagues/dir.jpg"
+                    src="src/img/colleagues/dir.jpg"
                     alt="dir_filipov_pp"
                     class="team-card-img"
                     loading="lazy"
@@ -819,11 +731,11 @@
               <div class="team-card">
                 <picture>
                   <source
-                    srcset="./src/img/colleagues/colleagues-1.webp"
+                    srcset="src/img/colleagues/colleagues-1.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/colleagues/colleagues-1.jpg"
+                    src="src/img/colleagues/colleagues-1.jpg"
                     alt="Dmitrienko_Anton"
                     class="team-card-img"
                     loading="lazy"
@@ -842,32 +754,6 @@
                   «Одна команда — один стандарт качества.»
                 </p>
               </div>
-              <!-- <div class="team-card">
-                <picture>
-                  <source
-                    srcset="./src/img/colleagues/colleagues-2.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/colleagues/colleagues-2.jpg"
-                    alt="Girenko_Vlad"
-                    class="team-card-img"
-                    loading="lazy"
-                  />
-                </picture>
-                <h3 class="team-card-title" data-translate="card-vlad-title">
-                  Гиренко Владислав
-                </h3>
-                <p
-                  class="team-card-position"
-                  data-translate="card-vlad-position"
-                >
-                  старший механик
-                </p>
-                <p class="team-card-content" data-translate="card-vlad-content">
-                  «Современные технологии + старые добрые принципы работы»
-                </p>
-              </div> -->
             </div>
             <div class="callback-container">
               <h3 class="callbaack-main-title">
@@ -928,12 +814,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/4226-256x256x8.webp"
+                    srcset="src/img/avto-logo/4226-256x256x8.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/4226-256x256x8.png"
-                    alt="daewoo"
+                    src="src/img/avto-logo/4226-256x256x8.png"
+                    alt="Логотип Daewoo для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -942,12 +828,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/4227-256x256x32.webp"
+                    srcset="src/img/avto-logo/4227-256x256x32.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/4227-256x256x32.png"
-                    alt="daihatsu"
+                    src="src/img/avto-logo/4227-256x256x32.png"
+                    alt="Логотип Daihatsu для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -956,12 +842,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/acura_logo.webp"
+                    srcset="src/img/avto-logo/acura_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/acura_logo.png"
-                    alt="acura"
+                    src="src/img/avto-logo/acura_logo.png"
+                    alt="Логотип Acura для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -970,12 +856,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/alfa-romeo-logo.webp"
+                    srcset="src/img/avto-logo/alfa-romeo-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/alfa-romeo-logo.png"
-                    alt="alfa-romeo"
+                    src="src/img/avto-logo/alfa-romeo-logo.png"
+                    alt="Логотип Alfa Romeo для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -984,12 +870,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/audi.webp"
+                    srcset="src/img/avto-logo/audi.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/audi.png"
-                    alt="audi"
+                    src="src/img/avto-logo/audi.png"
+                    alt="Логотип Audi для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -998,12 +884,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/chevrolet-logo.webp"
+                    srcset="src/img/avto-logo/chevrolet-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/chevrolet-logo.png"
-                    alt="chevrolet"
+                    src="src/img/avto-logo/chevrolet-logo.png"
+                    alt="Логотип Chevrolet для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1012,12 +898,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/daewoo-logo.webp"
+                    srcset="src/img/avto-logo/daewoo-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/daewoo-logo.png"
-                    alt="daewoo"
+                    src="src/img/avto-logo/daewoo-logo.png"
+                    alt="Логотип Daewoo для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1026,12 +912,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/citroen-logo.webp"
+                    srcset="src/img/avto-logo/citroen-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/citroen-logo.jpg"
-                    alt="citroen"
+                    src="src/img/avto-logo/citroen-logo.jpg"
+                    alt="Логотип Citroen для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1040,12 +926,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/dodge-logo.webp"
+                    srcset="src/img/avto-logo/dodge-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/dodge-logo.png"
-                    alt="dodge"
+                    src="src/img/avto-logo/dodge-logo.png"
+                    alt="Логотип Dodge для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1054,12 +940,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/fiat_logo.webp"
+                    srcset="src/img/avto-logo/fiat_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/fiat_logo.png"
-                    alt="fiat"
+                    src="src/img/avto-logo/fiat_logo.png"
+                    alt="Логотип Fiat для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1068,12 +954,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/ford.webp"
+                    srcset="src/img/avto-logo/ford.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/ford.png"
-                    alt="ford"
+                    src="src/img/avto-logo/ford.png"
+                    alt="Логотип Ford для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1082,12 +968,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/honda-color-128.webp"
+                    srcset="src/img/avto-logo/honda-color-128.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/honda-color-128.png"
-                    alt="honda"
+                    src="src/img/avto-logo/honda-color-128.png"
+                    alt="Логотип Honda для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1096,12 +982,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/hyundai-lg.webp"
+                    srcset="src/img/avto-logo/hyundai-lg.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/hyundai-lg.png"
-                    alt="hyundai"
+                    src="src/img/avto-logo/hyundai-lg.png"
+                    alt="Логотип Hyundai для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1110,12 +996,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/infiniti.webp"
+                    srcset="src/img/avto-logo/infiniti.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/infiniti.png"
-                    alt="infiniti"
+                    src="src/img/avto-logo/infiniti.png"
+                    alt="Логотип Infiniti для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1124,12 +1010,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/jaguar-logo.webp"
+                    srcset="src/img/avto-logo/jaguar-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/jaguar-logo.png"
-                    alt="jaguar"
+                    src="src/img/avto-logo/jaguar-logo.png"
+                    alt="Логотип Jaguar для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1138,12 +1024,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/jeep-logo.webp"
+                    srcset="src/img/avto-logo/jeep-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/jeep-logo.png"
-                    alt="jeep"
+                    src="src/img/avto-logo/jeep-logo.png"
+                    alt="Логотип Jeep для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1152,12 +1038,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/kia_logo_256_003.webp"
+                    srcset="src/img/avto-logo/kia_logo_256_003.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/kia_logo_256_003.png"
-                    alt="kia"
+                    src="src/img/avto-logo/kia_logo_256_003.png"
+                    alt="Логотип Kia для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1166,12 +1052,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/land-rover1.webp"
+                    srcset="src/img/avto-logo/land-rover1.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/land-rover1.png"
-                    alt="land-rover"
+                    src="src/img/avto-logo/land-rover1.png"
+                    alt="Логотип Land Rover для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1180,12 +1066,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/lexus-logo.webp"
+                    srcset="src/img/avto-logo/lexus-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/lexus-logo.png"
-                    alt="lexus"
+                    src="src/img/avto-logo/lexus-logo.png"
+                    alt="Логотип Lexus для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1194,12 +1080,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/lincoln-logo.webp"
+                    srcset="src/img/avto-logo/lincoln-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/lincoln-logo.png"
-                    alt="lincoln"
+                    src="src/img/avto-logo/lincoln-logo.png"
+                    alt="Логотип Lincoln для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1208,12 +1094,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/logo_suzuki.webp"
+                    srcset="src/img/avto-logo/logo_suzuki.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/logo_suzuki.png"
-                    alt="suzuki"
+                    src="src/img/avto-logo/logo_suzuki.png"
+                    alt="Логотип Suzuki для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1223,13 +1109,13 @@
                 <picture>
                   <source
                     srcset="
-                      ./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
+                      src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
                     "
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
-                    alt="mazda"
+                    src="src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
+                    alt="Логотип Mazda для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1238,12 +1124,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/mercedes_logo.webp"
+                    srcset="src/img/avto-logo/mercedes_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/mercedes_logo.png"
-                    alt="mercedes"
+                    src="src/img/avto-logo/mercedes_logo.png"
+                    alt="Логотип Mercedes-Benz для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1252,12 +1138,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/mitsubishi_logo.webp"
+                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/mitsubishi_logo.png"
-                    alt="mitsubishi"
+                    src="src/img/avto-logo/mitsubishi_logo.png"
+                    alt="Логотип Mitsubishi для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1266,12 +1152,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/nissan-logo-4.webp"
+                    srcset="src/img/avto-logo/nissan-logo-4.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/nissan-logo-4.png"
-                    alt="nissan"
+                    src="src/img/avto-logo/nissan-logo-4.png"
+                    alt="Логотип Nissan для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1280,12 +1166,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/novosti-skoda-logo.webp"
+                    srcset="src/img/avto-logo/novosti-skoda-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
-                    alt="skoda"
+                    src="src/img/avto-logo/novosti-skoda-logo.gif"
+                    alt="Логотип Skoda для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1295,13 +1181,13 @@
                 <picture>
                   <source
                     srcset="
-                      ./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
+                      src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
                     "
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
-                    alt="opel"
+                    src="src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
+                    alt="Логотип Opel для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1310,12 +1196,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/peugeot_logo_128.webp"
+                    srcset="src/img/avto-logo/peugeot_logo_128.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/peugeot_logo_128.png"
-                    alt="peugeot"
+                    src="src/img/avto-logo/peugeot_logo_128.png"
+                    alt="Логотип Peugeot для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1324,12 +1210,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/renault_logo.webp"
+                    srcset="src/img/avto-logo/renault_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/renault_logo.png"
-                    alt="renault"
+                    src="src/img/avto-logo/renault_logo.png"
+                    alt="Логотип Renault для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1338,12 +1224,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/saab-logo.webp"
+                    srcset="src/img/avto-logo/saab-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/saab-logo.png"
-                    alt="saab"
+                    src="src/img/avto-logo/saab-logo.png"
+                    alt="Логотип Saab для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1352,12 +1238,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/seat.webp"
+                    srcset="src/img/avto-logo/seat.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/seat.png"
-                    alt="seat"
+                    src="src/img/avto-logo/seat.png"
+                    alt="Логотип SEAT для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1366,12 +1252,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/smart-logo.webp"
+                    srcset="src/img/avto-logo/smart-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/smart-logo.png"
-                    alt="smart"
+                    src="src/img/avto-logo/smart-logo.png"
+                    alt="Логотип Smart для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1380,12 +1266,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/ssangyong-logo.webp"
+                    srcset="src/img/avto-logo/ssangyong-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/ssangyong-logo.png"
-                    alt="ssangyong"
+                    src="src/img/avto-logo/ssangyong-logo.png"
+                    alt="Логотип SsangYong для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1394,12 +1280,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/subaru-logo-transparent.webp"
+                    srcset="src/img/avto-logo/subaru-logo-transparent.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/subaru-logo-transparent.png"
-                    alt="subaru"
+                    src="src/img/avto-logo/subaru-logo-transparent.png"
+                    alt="Логотип Subaru для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1408,12 +1294,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/toyota.webp"
+                    srcset="src/img/avto-logo/toyota.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/toyota.png"
-                    alt="toyota"
+                    src="src/img/avto-logo/toyota.png"
+                    alt="Логотип Toyota для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1422,12 +1308,12 @@
               <div>
                 <picture>
                   <source
-                    srcset="./src/img/avto-logo/volkswagen_logo.webp"
+                    srcset="src/img/avto-logo/volkswagen_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./src/img/avto-logo/volkswagen_logo.png"
-                    alt="volkswagen"
+                    src="src/img/avto-logo/volkswagen_logo.png"
+                    alt="Логотип Volkswagen для ремонту та обслуговування авто в Автосервісі Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1442,15 +1328,20 @@
         <div class="modal-content">
           <span class="modal-close">&times;</span>
           <h3 data-translate="modal-title">
-            Оставте Ваши данные и мы перезвоним с готовым решением.
+            Залиште ваші дані, і ми передзвонимо з готовим рішенням.
           </h3>
-          <form class="modal-callbackForm" id="modalForm">
+          <form
+            class="modal-callbackForm"
+            id="modalForm"
+            data-lead-type="razborka"
+          >
             <div class="form-group">
-              <label for="name" data-translate="name">Имя*</label>
-              <input type="text" id="modalName" name="name" required />
+              <label for="modalName" data-translate="name">Ім’я</label>
+              <input type="text" id="modalName" name="name" />
             </div>
+
             <div class="form-group">
-              <label for="phone" data-translate="phone">Телефон*</label>
+              <label for="modalPhone" data-translate="phone">Телефон*</label>
               <input
                 type="tel"
                 id="modalPhone"
@@ -1459,27 +1350,41 @@
                 required
               />
             </div>
+
             <div class="form-group">
-              <label for="vin" data-translate="vin">VIN код автомобиля</label>
+              <label for="modalVin" data-translate="vin"
+                >VIN-код автомобіля</label
+              >
               <input type="text" id="modalVin" name="vin" />
             </div>
+
             <div class="form-group">
-              <label for="carModel" data-translate="carModel"
-                >Марка/модель автомобиля</label
-              >
+              <label for="modalCar">Марка / модель автомобіля</label>
               <input type="text" id="modalCar" name="carModel" />
             </div>
+
             <button
               type="submit"
               class="submit-btn"
               data-translate="submit-btn"
             >
-              Отправить
+              Надіслати
             </button>
           </form>
         </div>
       </div>
       <div class="social-fixed">
+        <button
+          type="button"
+          class="callback-fixed-btn"
+          id="fixedCallbackBtn"
+          aria-label="Замовити зворотній дзвінок"
+        >
+          <span class="callback-fixed-btn__icon">
+            <img src="src/img/callback-btn-img.png" alt="" />
+          </span>
+          <span class="callback-fixed-btn__text">Отримати консультацію</span>
+        </button>
         <a
           href="https://t.me/kkua1210"
           target="_blank"
