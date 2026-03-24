@@ -2,6 +2,9 @@
     padding: 60px 20px;
     background: #0a0a0a;
     text-align: center;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .seasonal-offers h2 {
@@ -16,18 +19,28 @@
     color: #24a7c1;
 }
 
+.offers-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
 .slider-track {
     display: flex;
+    width: 100%;
     transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .slide {
     flex: 0 0 100%;
+    min-width: 0;
     text-decoration: none;
     color: inherit;
     display: block;
     opacity: 0;
     transition: opacity 0.8s ease;
+    box-sizing: border-box;
 }
 
 .slide.active {
@@ -36,21 +49,24 @@
 
 .slide-container {
     display: flex;
-    min-height: 400px;
-    max-height: 500px;
+    align-items: stretch;
+    min-height: 420px;
     background: linear-gradient(135deg, #101010 0%, #182c35 25%, #24a7c1 75%, #e8f4f7 100%);
     border: 2px solid #24a7c1;
     border-radius: 18px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .seasonal-content {
     width: 65%;
-    padding: 60px 40px;
+    padding: 48px 40px;
+    padding-right: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding-right: 100px;
+    box-sizing: border-box;
 }
 
 .seasonal-content h3 {
@@ -58,8 +74,7 @@
     font-size: 28px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 40px;
-    align-items: center;
+    margin-bottom: 28px;
 }
 
 .seasonal-content p {
@@ -67,7 +82,7 @@
     font-size: 18px;
     color: #f3f3f3;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .seasonal-price {
@@ -80,18 +95,21 @@
 
 .seasonal-media {
     width: 35%;
+    min-width: 0;
+    min-height: 420px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .seasonal-media video {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.55);
-    /* Увеличивает на 10% */
+    object-position: center;
+    transform: scale(1.2);
     transform-origin: center;
-    /* Масштабирование от центра */
 }
 
 /* Навигационные точки */
@@ -123,90 +141,133 @@
     transform: scale(1.1);
 }
 
-/* Адаптация для 720px и меньше */
-@media (max-width: 720px) {
-    .slide-container {
-        min-height: auto;
-    }
-
+/* Планшет и ниже */
+@media (max-width: 991px) {
     .seasonal-content {
-        width: 100%;
-        padding: 40px 30px;
-        order: 1;
+        padding: 36px 28px;
+        padding-right: 36px;
     }
 
-    .seasonal-media {
-        width: 100%;
-        height: 500px;
-        order: 2;
+    .seasonal-content h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .seasonal-content p {
+        font-size: 16px;
+    }
+
+    .seasonal-price {
+        font-size: 24px;
+    }
+}
+
+/* 720px и меньше — сразу переводим карточку в колонку */
+@media (max-width: 720px) {
+    .seasonal-offers {
+        padding: 30px 14px;
     }
 
     .seasonal-offers h2 {
         font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .offers-slider {
+        padding: 0;
+    }
+
+    .slide-container {
+        flex-direction: column;
+        min-height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .seasonal-content {
+        width: 100%;
+        order: 1;
+        padding: 32px 22px 24px;
     }
 
     .seasonal-content h3 {
-        font-size: 26px;
-        margin-bottom: 25px;
+        font-size: 24px;
+        margin-bottom: 18px;
     }
 
     .seasonal-content p {
         font-size: 16px;
         text-align: left;
-        max-width: 620px;
+        max-width: 100%;
     }
 
-    .seasonal-btn{
+    .seasonal-media {
+        width: 100%;
+        height: 420px;
+        min-height: 420px;
+        order: 2;
+    }
+
+    .seasonal-media video {
+        transform: scale(1.08);
+    }
+
+    .seasonal-btn {
         display: none;
     }
 }
 
-/* Адаптация для мобильных */
+/* Телефон */
 @media (max-width: 480px) {
-    .slide-container{
-        flex-direction: column;
-        min-height: 500px;
-        border: none;
-    }
-
     .seasonal-offers {
-        padding: 20px 15px;
+        padding: 20px 12px;
     }
 
     .seasonal-offers h2 {
-        font-size: 32px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .slide-container {
+        border: none;
+        border-radius: 16px;
     }
 
     .seasonal-content {
-        padding: 30px 20px;
+        padding: 24px 16px 18px;
     }
 
     .seasonal-content h3 {
         font-size: 22px;
-        width: 90%;
+        width: 100%;
+        margin-bottom: 16px;
     }
 
     .seasonal-content p {
         font-size: 15px;
-        width: 90%;
-    }
-
-.seasonal-media video {
-    transform: scale(1);
-    transform-origin: center;
-}
-
-    .seasonal-media{
-        max-height: 200px;
+        width: 100%;
+        margin-bottom: 14px;
     }
 
     .seasonal-price {
         font-size: 22px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
+    }
+
+    .seasonal-media {
+        width: 100%;
+        height: 320px;
+        min-height: 320px;
+        max-height: none;
+    }
+
+    .seasonal-media video {
+        transform: scale(1);
     }
 
     .slider-dots {
         gap: 10px;
+        margin-top: 16px;
     }
 
     .dot {
@@ -215,57 +276,7 @@
     }
 }
 
-/* Основные исправления для устранения горизонтального скролла */
-.offers-slider {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-.slider-track {
-    display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    width: 100%;
-}
-
-.slide {
-    flex: 0 0 100%;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    min-width: 0;
-    /* Важно для flex-элементов */
-}
-
-/* Дополнительные исправления для контейнера */
-.seasonal-offers {
-    padding: 60px 20px;
-    background: #0a0a0a;
-    text-align: center;
-    overflow: hidden;
-    /* Добавляем */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Для мобильных устройств добавьте */
-@media (max-width: 720px) {
-    .offers-slider {
-        padding: 0 10px;
-        /* Добавляем отступы по бокам */
-        box-sizing: border-box;
-    }
-
-    .slide-container {
-        margin: 0 auto;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-/* Дополнительная страховка - скрываем любой возможный overflow */
+/* Страховка от горизонтального скролла */
 body {
     overflow-x: hidden;
     width: 100%;

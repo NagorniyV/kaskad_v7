@@ -1,17 +1,18 @@
 .main-content-section {
     background-color: #f3f3f3;
-    padding: 20px 0px;
+    padding: 60px 0;
 }
 
 .main-content-div {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0 auto;
     color: #101010;
-    padding: 0px 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .main-content {
-    margin: 0px auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -20,13 +21,14 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 1.15;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 .two-title-content {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .main-content>p {
@@ -34,60 +36,90 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: "wdth" 100;
     font-size: 18px;
-    margin-top: 20px;
-    text-indent: 30px;
+    line-height: 1.75;
+    margin-top: 18px;
+    text-indent: 24px;
 }
 
 .img-content {
     display: block;
     max-width: 550px;
     width: 45%;
-    /* Добавлено для адаптивности */
     height: auto;
-    filter: brightness(0.7);
+    filter: brightness(0.75);
     float: left;
-    /* Обтекание слева */
-    margin: 0 25px 20px 0;
-    /* Добавлено отступы: справа и снизу */
+    margin: 0 30px 20px 0;
+    border-radius: 12px;
 }
 
-/* Для планшетов */
+/* Планшет */
 @media (max-width: 768px) {
+    .main-content-section {
+        padding: 40px 0;
+    }
+
+    .main-content-div {
+        padding: 0 16px;
+    }
+
+    .main-content>h2 {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .two-title-content {
+        margin-top: 32px;
+    }
+
     .img-content {
         float: none;
-        /* Убираем обтекание */
         width: 70%;
-        /* Уменьшаем ширину */
         max-width: 400px;
         margin: 0 auto 20px auto;
-        /* Центрируем и добавляем отступ снизу */
-        display: block;
-        /* Делаем блочным элементом */
     }
 
     .main-content>p {
-        text-indent: 25px;
-        /* Немного уменьшаем отступ */
+        font-size: 17px;
+        line-height: 1.7;
+        text-indent: 20px;
+        margin-top: 16px;
     }
 }
 
+/* Телефон */
 @media (max-width: 480px) {
+    .main-content-section {
+        padding: 20px 0;
+    }
+
     .main-content-div {
-        padding: 0px 8px;
+        padding: 0 12px;
+    }
+
+    .main-content>h2 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .two-title-content {
+        margin-top: 24px;
     }
 
     .img-content {
         float: none;
         max-width: 100%;
         width: 100%;
-        margin: 0px auto 20px auto;
+        margin: 0 auto 16px auto;
+        border-radius: 10px;
     }
 
     .main-content>p {
-        text-indent: 20px;
         font-size: 16px;
+        line-height: 1.65;
+        text-indent: 16px;
+        margin-top: 14px;
     }
 }
