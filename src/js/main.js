@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (type === "success") {
       setTimeout(() => {
         responseMessage.style.display = "none";
-      }, 5000);
+      }, 7000);
     }
   }
 
