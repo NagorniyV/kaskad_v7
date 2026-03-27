@@ -1,92 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://kaskad.in.ua/</loc>
-  <lastmod>2025-10-30T14:20:10+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/index.html</loc>
-  <lastmod>2025-10-30T14:20:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/parts.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/evakuator.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/toplivnaya-sistema.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/service-catalog.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/remont-dvigatelya.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/remont-hodovoy.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/remont-elektriki.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/remont-tormoznoi-sistemy.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/remont-transmissii.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/technical-service.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/car-diagnostics.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/air-conditioning.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/ustanovka-gbo.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaskad.in.ua/price.html</loc>
-  <lastmod>2025-10-30T13:47:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://kaskad.in.ua/</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/parts.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/price.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/service-catalog.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/remont-dvigatelya.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/remont-hodovoy.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/remont-elektriki.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/remont-tormoznoi-sistemy.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/remont-transmissii.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/technical-service.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/car-diagnostics.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/ustanovka-gbo.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/air-conditioning.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/evakuator.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/toplivnaya-sistema.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/index.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/audi.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/audi/a6-c5.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/audi/a6-c5/dvigun.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/audi/a6-c5/fara-perednyaya.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/audi/a6-c5/kapot.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/fiat.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/fiat/panda-169.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/fiat/panda-169/dvigatel.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/fiat/panda-169/mkpp.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/fiat/panda-169/balka-zadnyaya.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/hyundai.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/hyundai/santa-fe.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/hyundai/santa-fe/mkpp.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/hyundai/santa-fe/rulevaya-reyka.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/hyundai/santa-fe/fara-perednyaya.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/kia.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/kia/sorento.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/kia/sorento/razdatochnaya-korobka.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/kia/sorento/turbokompressor.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/kia/sorento/toplivnye-forsunki.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/pajero-wagon.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/pajero-wagon/dvigatel.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/pajero-wagon/akpp.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/pajero-wagon/razdatochnaya-korobka.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/outlander.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/outlander/dvigatel.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/outlander/akpp.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/mitsubishi/outlander/kompressor-kondicionera.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/ssangyong.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/ssangyong/rexton.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/ssangyong/rexton/akpp.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/ssangyong/rexton/toplivnye-forsunki.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/ssangyong/rexton/turbokompressor.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/suzuki.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/suzuki/vitara.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/suzuki/vitara/dvigatel.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/suzuki/vitara/mkpp.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/suzuki/vitara/gbc.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/volkswagen.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/volkswagen/t4.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/volkswagen/t4/dvigatel.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/volkswagen/t4/mkpp.html</loc><lastmod>2026-03-27</lastmod></url>
+  <url><loc>https://kaskad.in.ua/razborka/volkswagen/t4/toplivnyy-nasos.html</loc><lastmod>2026-03-27</lastmod></url>
 </urlset>
