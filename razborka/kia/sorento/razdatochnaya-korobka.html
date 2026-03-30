@@ -697,12 +697,12 @@
             <div class="callback-container">
               <h3 class="callbaack-main-title">
                 <span data-translate="callbaack-main-title"
-                  >ОТРИМАЙТЕ РЕКОМЕНДАЦІЮ ЩОДО ВИРІШЕННЯ ПРОБЛЕМИ</span
+                  >ПОЛУЧИТЕ РЕКОМЕНДАЦИЮ ПО РЕШЕНИЮ ПРОБЛЕММЫ</span
                 >
                 <span
                   class="span-cb-title"
                   data-translate="callbaack-span-title"
-                  >БЕЗКОШТОВНО!</span
+                  >БЕСПЛАТНО!</span
                 >
               </h3>
               <form id="callbackForm" data-lead-type="razborka">
@@ -711,7 +711,8 @@
                   id="nameInput"
                   name="name"
                   data-translate-placeholder="name-placeholder"
-                  placeholder="Ваше ім’я"
+                  placeholder="Ваше имя"
+                  required
                 />
                 <input
                   type="tel"
@@ -720,29 +721,39 @@
                   placeholder="+38 (___) ___ ____"
                   required
                 />
+
                 <input
                   type="text"
                   id="carInput"
                   name="car"
                   placeholder="Марка та модель авто"
                 />
+
                 <input
                   type="text"
                   id="partInput"
                   name="part"
                   placeholder="Потрібна запчастина"
                 />
+
+                <input
+                  type="text"
+                  id="vinInput"
+                  name="vin"
+                  placeholder="VIN-код автомобіля"
+                />
+
                 <button
                   type="submit"
                   class="text-header"
                   data-translate="callbaack-text-header"
                 >
-                  ОТРИМАТИ РЕКОМЕНДАЦІЮ
+                  ПОЛУЧИТЬ РЕКОМЕНДАЦИЮ
                 </button>
               </form>
               <p class="cb-last-text" data-translate="cb-last-text">
-                Ви можете вказати марку та модель авто і залишити ваші контакти
-                — ми вам передзвонимо
+                Вы можете указать марку и модель авто и оставить Ваши контакты -
+                мы вам перезвоним
               </p>
               <p id="responseMessage" class="response-message"></p>
             </div>
@@ -1332,15 +1343,20 @@
             </div>
 
             <div class="form-group">
+              <label for="modalCar">Марка / модель автомобіля</label>
+              <input type="text" id="modalCar" name="carModel" />
+            </div>
+
+            <div class="form-group">
+              <label for="modalCar">Потрібна запчастина</label>
+              <input type="text" id="partInput" name="part" />
+            </div>
+
+            <div class="form-group">
               <label for="modalVin" data-translate="vin"
                 >VIN-код автомобіля</label
               >
               <input type="text" id="modalVin" name="vin" />
-            </div>
-
-            <div class="form-group">
-              <label for="modalCar">Марка / модель автомобіля</label>
-              <input type="text" id="modalCar" name="carModel" />
             </div>
 
             <button

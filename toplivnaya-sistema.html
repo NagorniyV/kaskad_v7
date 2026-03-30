@@ -772,7 +772,7 @@
                   id="nameInput"
                   name="name"
                   data-translate-placeholder="name-placeholder"
-                  placeholder="Ваше имя*"
+                  placeholder="Ваше имя"
                   required
                 />
                 <input
@@ -782,13 +782,21 @@
                   placeholder="+38 (___) ___ ____"
                   required
                 />
+
                 <input
                   type="text"
-                  id="messageInput"
+                  id="carInput"
                   name="car"
-                  placeholder="Марка модель авто"
-                  required
+                  placeholder="Марка та модель авто"
                 />
+
+                <input
+                  type="text"
+                  id="vinInput"
+                  name="vin"
+                  placeholder="VIN-код автомобіля"
+                />
+
                 <button
                   type="submit"
                   class="text-header"
@@ -1348,15 +1356,15 @@
             </div>
 
             <div class="form-group">
+              <label for="modalCar">Марка / модель автомобіля</label>
+              <input type="text" id="modalCar" name="carModel" />
+            </div>
+
+            <div class="form-group">
               <label for="modalVin" data-translate="vin"
                 >VIN-код автомобіля</label
               >
               <input type="text" id="modalVin" name="vin" />
-            </div>
-
-            <div class="form-group">
-              <label for="modalCar">Марка / модель автомобіля</label>
-              <input type="text" id="modalCar" name="carModel" />
             </div>
 
             <button

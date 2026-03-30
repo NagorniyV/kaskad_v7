@@ -33,17 +33,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-//КОЛБЕК
+// КОЛБЕК — универсальный JS для всех страниц
 document.addEventListener("DOMContentLoaded", () => {
+  // =========================
+  // НАСТРОЙКИ
+  // =========================
   const botToken = "7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA";
-  const adminChatIds = ["398501551", "5370980969", "5235424421"];
+const adminChatIds = ["398501551", "5370980969", "5235424421"];
 
+  // =========================
+  // ЭЛЕМЕНТЫ
+  // =========================
   const modal = document.getElementById("callbackModal");
   const modalCloseBtn = document.querySelector(".modal-close");
 
   const callbackForm = document.getElementById("callbackForm");
   const modalForm = document.getElementById("modalForm");
-  const responseMessage = document.getElementById("responseMessage");
 
   const fixedCallbackBtn = document.getElementById("fixedCallbackBtn");
   const heroButtons = document.querySelectorAll(".details-hero-btn");
@@ -51,19 +56,51 @@ document.addEventListener("DOMContentLoaded", () => {
   let autoExpandDisabled = false;
   let autoExpandTimer = null;
 
-  // ===== УТИЛИТЫ =====
-  const getValue = (id) => document.getElementById(id)?.value.trim() || "";
-
-  function isRazborkaForm(form) {
+  // =========================
+  // УТИЛИТЫ
+  // =========================
+  function getLeadType(form) {
     return (
-      form?.dataset.leadType === "razborka" ||
-      document.body?.dataset.leadType === "razborka"
+      form?.dataset?.leadType?.trim().toLowerCase() ||
+      document.body?.dataset?.leadType?.trim().toLowerCase() ||
+      ""
     );
   }
 
-  function formatPhone(value) {
-    let cleaned = value.replace(/\D/g, "");
+  function isRazborkaForm(form) {
+    return getLeadType(form) === "razborka";
+  }
 
+  function getLeadHeading(form) {
+    const leadType = getLeadType(form);
+
+    const headings = {
+      razborka: "🚗 РОЗБІРКА — нова заявка на зворотний дзвінок",
+      service: "🛠 СЕРВІС — нова заявка на зворотний дзвінок",
+      hodovka: "🛞 ХОДОВА — нова заявка на зворотний дзвінок",
+      diagnostics: "🔍 ДІАГНОСТИКА — нова заявка на зворотний дзвінок",
+      gbo: "⛽ ГБО — нова заявка на зворотний дзвінок",
+      cooling: "❄️ СИСТЕМА ОХОЛОДЖЕННЯ — нова заявка на зворотний дзвінок",
+      evacuator: "🚚 ЕВАКУАТОР — нова заявка на зворотний дзвінок"
+    };
+
+    return headings[leadType] || "📩 Нова заявка на зворотний дзвінок";
+  }
+
+  function getFormValue(form, selectors = []) {
+    for (const selector of selectors) {
+      const field = form?.querySelector(selector);
+      if (field && typeof field.value === "string") {
+        return field.value.trim();
+      }
+    }
+    return "";
+  }
+
+  function formatPhone(value) {
+    let cleaned = String(value || "").replace(/\D/g, "");
+
+    if (!cleaned) return "";
     if (!cleaned.startsWith("38")) {
       cleaned = "38" + cleaned;
     }
@@ -79,12 +116,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function isValidPhone(value) {
-    const digits = value.replace(/\D/g, "");
+    const digits = String(value || "").replace(/\D/g, "");
     return digits.startsWith("38") && digits.length === 12;
   }
 
   function initPhoneInput(input) {
-    if (!input) return;
+    if (!input || input.dataset.phoneInitialized === "true") return;
+
+    input.dataset.phoneInitialized = "true";
 
     input.addEventListener("focus", function () {
       if (!this.value.startsWith("+38")) {
@@ -107,7 +146,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function showResponse(message, type = "success") {
+  function initPhoneInputs(scope = document) {
+    const phoneInputs = scope.querySelectorAll(
+      'input[type="tel"], input[name="phone"], #phoneInput, #modalPhone'
+    );
+    phoneInputs.forEach(initPhoneInput);
+  }
+
+  function getResponseMessageElement(form) {
+    return (
+      form?.parentElement?.querySelector(".response-message") ||
+      document.getElementById("responseMessage")
+    );
+  }
+
+  function showResponse(form, message, type = "success") {
+    const responseMessage = getResponseMessageElement(form);
     if (!responseMessage) return;
 
     responseMessage.textContent = message;
@@ -142,35 +196,145 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-function buildMessage({ form, source, name, phone, car, vin, part, message }) {
-  const isRazborka = isRazborkaForm(form);
-  const lines = [];
+  function collectFormData(form, source) {
+    const leadType = getLeadType(form);
 
-  lines.push(
-    isRazborka
-      ? "🚗 РОЗБІРКА — нова заявка на зворотний дзвінок"
-      : "📩 Нова заявка на зворотний дзвінок"
-  );
+    const name = getFormValue(form, [
+      '[name="name"]',
+      "#nameInput",
+      "#modalName"
+    ]);
 
-  lines.push(`Джерело: ${source}`);
-  lines.push(`Сторінка: ${window.location.href}`);
-  lines.push("");
+    const phone = getFormValue(form, [
+      '[name="phone"]',
+      "#phoneInput",
+      "#modalPhone"
+    ]);
 
-  if (name) lines.push(`▪ Ім’я: ${name}`);
-  if (phone) lines.push(`▪ Телефон: ${phone}`);
+    const vin = getFormValue(form, [
+      '[name="vin"]',
+      "#vinInput",
+      "#modalVin"
+    ]);
 
-  if (car) lines.push(`▪ Авто: ${car}`);
-  if (part) lines.push(`▪ Потрібна запчастина: ${part}`);
-  if (vin) lines.push(`▪ VIN: ${vin}`);
+    let car = getFormValue(form, [
+      '[name="car"]',
+      '[name="carModel"]',
+      "#carInput",
+      "#modalCar"
+    ]);
 
-  if (!isRazborka && message) {
-    lines.push(`▪ Повідомлення: ${message}`);
+    const part = getFormValue(form, [
+      '[name="part"]',
+      "#partInput",
+      "#modalPart"
+    ]);
+
+    const rawMessage = getFormValue(form, [
+      '[name="message"]',
+      '[name="comment"]',
+      "#messageInput",
+      "#modalMessage",
+      "textarea"
+    ]);
+
+    // Фолбэк для старых страниц разборки,
+    // где вместо отдельного поля авто использовалось одно текстовое поле
+    if (!car && leadType === "razborka" && rawMessage) {
+      car = rawMessage;
+    }
+
+    const message = rawMessage && rawMessage !== car ? rawMessage : "";
+
+    return {
+      form,
+      source,
+      name,
+      phone,
+      vin,
+      car,
+      part,
+      message
+    };
   }
 
-  return lines.join("\n");
-}
+  function buildMessage({ form, source, name, phone, car, vin, part, message }) {
+    const isRazborka = isRazborkaForm(form);
+    const lines = [];
 
-  // ===== МОДАЛКА =====
+    lines.push(getLeadHeading(form));
+    lines.push(`Джерело: ${source}`);
+    lines.push(`Сторінка: ${window.location.href}`);
+    lines.push("");
+
+    if (name) lines.push(`▪ Ім’я: ${name}`);
+    if (phone) lines.push(`▪ Телефон: ${phone}`);
+    if (car) lines.push(`▪ Авто: ${car}`);
+    if (part) lines.push(`▪ Потрібна запчастина: ${part}`);
+    if (vin) lines.push(`▪ VIN: ${vin}`);
+
+    if (!isRazborka && message) {
+      lines.push(`▪ Повідомлення: ${message}`);
+    }
+
+    return lines.join("\n");
+  }
+
+  async function handleFormSubmit(form, source, options = {}) {
+    const { useAlert = false, onSuccess = null } = options;
+
+    const formData = collectFormData(form, source);
+
+    if (!isValidPhone(formData.phone)) {
+      const errorText =
+        "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX";
+
+      if (useAlert) {
+        alert(errorText);
+      } else {
+        showResponse(form, errorText, "error");
+      }
+      return;
+    }
+
+    const telegramMessage = buildMessage(formData);
+
+    try {
+      await sendToTelegram(telegramMessage);
+
+      if (useAlert) {
+        alert("✅ Дякуємо! Ми вам зателефонуємо найближчим часом.");
+      } else {
+        showResponse(
+          form,
+          "Дякуємо! Ми вам зателефонуємо найближчим часом.",
+          "success"
+        );
+      }
+
+      form.reset();
+
+      if (typeof onSuccess === "function") {
+        onSuccess();
+      }
+    } catch (error) {
+      console.error("Помилка відправки форми:", error);
+
+      if (useAlert) {
+        alert("⚠ Сталася помилка. Спробуйте ще раз або зателефонуйте нам.");
+      } else {
+        showResponse(
+          form,
+          "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.",
+          "error"
+        );
+      }
+    }
+  }
+
+  // =========================
+  // МОДАЛКА
+  // =========================
   function openModal() {
     if (!modal) return;
     modal.style.display = "block";
@@ -183,7 +347,9 @@ function buildMessage({ form, source, name, phone, car, vin, part, message }) {
     document.body.classList.remove("modal-open");
   }
 
-  // ===== ФИКСИРОВАННАЯ КНОПКА =====
+  // =========================
+  // ФИКСИРОВАННАЯ КНОПКА
+  // =========================
   function expandFixedButton() {
     if (!fixedCallbackBtn || autoExpandDisabled) return;
     fixedCallbackBtn.classList.add("is-expanded");
@@ -206,7 +372,9 @@ function buildMessage({ form, source, name, phone, car, vin, part, message }) {
     });
   }
 
-  // ===== ВСЕ HERO-КНОПКИ =====
+  // =========================
+  // HERO-КНОПКИ
+  // =========================
   heroButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -222,98 +390,40 @@ function buildMessage({ form, source, name, phone, car, vin, part, message }) {
     }
   });
 
-  // ===== ИНИЦИАЛИЗАЦИЯ ТЕЛЕФОНОВ =====
-  initPhoneInput(document.getElementById("phoneInput"));
-  initPhoneInput(document.getElementById("modalPhone"));
+  // =========================
+  // ИНИЦИАЛИЗАЦИЯ ТЕЛЕФОНОВ
+  // =========================
+  initPhoneInputs(document);
 
-  // ===== ОБЫЧНАЯ ФОРМА =====
+  // =========================
+  // ОБЫЧНАЯ ФОРМА
+  // =========================
   if (callbackForm) {
     callbackForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const name = getValue("nameInput");
-      const phone = getValue("phoneInput");
-      const car = getValue("carInput");
-      const part = getValue("partInput");
-      const legacyMessage = getValue("messageInput");
-
-      if (!isValidPhone(phone)) {
-        showResponse(
-          "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX",
-          "error"
-        );
-        return;
-      }
-
-      const telegramMessage = buildMessage({
-        form: callbackForm,
-        source: "Форма на сторінці",
-        name,
-        phone,
-        car,
-        part,
-        vin: "",
-        message: legacyMessage
+      await handleFormSubmit(callbackForm, "Форма на сторінці", {
+        useAlert: false
       });
-
-      try {
-        await sendToTelegram(telegramMessage);
-        showResponse(
-          "Дякуємо! Ми вам зателефонуємо найближчим часом.",
-          "success"
-        );
-        callbackForm.reset();
-      } catch (error) {
-        console.error("Помилка відправки форми:", error);
-        showResponse(
-          "Помилка відправки. Спробуйте ще раз або зателефонуйте нам.",
-          "error"
-        );
-      }
     });
   }
 
-  // ===== МОДАЛЬНАЯ ФОРМА =====
+  // =========================
+  // МОДАЛЬНАЯ ФОРМА
+  // =========================
   if (modalForm) {
     modalForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const name = getValue("modalName");
-      const phone = getValue("modalPhone");
-      const vin = getValue("modalVin");
-      const car = getValue("modalCar");
-      const part = getValue("modalPart");
-
-      if (!isValidPhone(phone)) {
-        alert("Введіть коректний номер телефону у форматі +38 XXX XXX XXXX");
-        return;
-      }
-
-      const telegramMessage = buildMessage({
-        form: modalForm,
-        source: "Модальне вікно",
-        name,
-        phone,
-        car,
-        part,
-        vin,
-        message: ""
+      await handleFormSubmit(modalForm, "Модальне вікно", {
+        useAlert: true,
+        onSuccess: () => {
+          autoExpandDisabled = true;
+          clearTimeout(autoExpandTimer);
+          collapseFixedButton();
+          closeModal();
+        }
       });
-
-      try {
-        await sendToTelegram(telegramMessage);
-
-        autoExpandDisabled = true;
-        clearTimeout(autoExpandTimer);
-        collapseFixedButton();
-
-        alert("✅ Дякуємо! Ми вам зателефонуємо найближчим часом.");
-        modalForm.reset();
-        closeModal();
-      } catch (error) {
-        console.error("Помилка відправки модальної форми:", error);
-        alert("⚠ Сталася помилка. Спробуйте ще раз або зателефонуйте нам.");
-      }
     });
   }
 });
