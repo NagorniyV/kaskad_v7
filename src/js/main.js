@@ -142,33 +142,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function buildMessage({ form, source, name, phone, car, vin, part, message }) {
-    const isRazborka = isRazborkaForm(form);
-    const lines = [];
+function buildMessage({ form, source, name, phone, car, vin, part, message }) {
+  const isRazborka = isRazborkaForm(form);
+  const lines = [];
 
-    lines.push(
-      isRazborka
-        ? "🚗 РОЗБІРКА — нова заявка на зворотний дзвінок"
-        : "📩 Нова заявка на зворотний дзвінок"
-    );
+  lines.push(
+    isRazborka
+      ? "🚗 РОЗБІРКА — нова заявка на зворотний дзвінок"
+      : "📩 Нова заявка на зворотний дзвінок"
+  );
 
-    lines.push(`Джерело: ${source}`);
-    lines.push(`Сторінка: ${window.location.href}`);
-    lines.push("");
+  lines.push(`Джерело: ${source}`);
+  lines.push(`Сторінка: ${window.location.href}`);
+  lines.push("");
 
-    if (name) lines.push(`▪ Ім’я: ${name}`);
-    lines.push(`▪ Телефон: ${phone}`);
+  if (name) lines.push(`▪ Ім’я: ${name}`);
+  if (phone) lines.push(`▪ Телефон: ${phone}`);
 
-    if (isRazborka) {
-      lines.push(`▪ Авто: ${car || "не вказано"}`);
-      lines.push(`▪ Потрібна запчастина: ${part || "не вказано"}`);
-      lines.push(`▪ VIN: ${vin || "не вказано"}`);
-    } else {
-      lines.push(`▪ Повідомлення: ${message || car || "не вказано"}`);
-    }
+  if (car) lines.push(`▪ Авто: ${car}`);
+  if (part) lines.push(`▪ Потрібна запчастина: ${part}`);
+  if (vin) lines.push(`▪ VIN: ${vin}`);
 
-    return lines.join("\n");
+  if (!isRazborka && message) {
+    lines.push(`▪ Повідомлення: ${message}`);
   }
+
+  return lines.join("\n");
+}
 
   // ===== МОДАЛКА =====
   function openModal() {
