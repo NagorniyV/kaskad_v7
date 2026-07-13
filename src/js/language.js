@@ -1,5 +1,5 @@
 function loadTranslations(lang) {
-  const basePath = window.__BASE_PATH__ || "./";
+  const basePath = window.__BASE_PATH__ || "/";
   document.documentElement.lang = lang === "uk" ? "uk" : "ru";
   fetch(`${basePath}locales/${lang}.json`)
     .then((response) => response.json())

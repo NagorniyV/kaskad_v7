@@ -7,11 +7,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/4226-256x256x8.webp"
+                    srcset="./src/img/avto-logo/4226-256x256x8.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/4226-256x256x8.png"
+                    src="./src/img/avto-logo/4226-256x256x8.png"
                    
                     loading="lazy"
                     data-brand="daewoo"
@@ -23,11 +23,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/4227-256x256x32.webp"
+                    srcset="./src/img/avto-logo/4227-256x256x32.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/4227-256x256x32.png"
+                    src="./src/img/avto-logo/4227-256x256x32.png"
                    
                     loading="lazy"
                     data-brand="daihatsu"
@@ -39,11 +39,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/acura_logo.webp"
+                    srcset="./src/img/avto-logo/acura_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/acura_logo.png"
+                    src="./src/img/avto-logo/acura_logo.png"
                    
                     loading="lazy"
                     data-brand="acura"
@@ -55,11 +55,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/alfa-romeo-logo.webp"
+                    srcset="./src/img/avto-logo/alfa-romeo-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/alfa-romeo-logo.png"
+                    src="./src/img/avto-logo/alfa-romeo-logo.png"
                    
                     loading="lazy"
                     data-brand="alfa-romeo"
@@ -71,11 +71,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/audi.webp"
+                    srcset="./src/img/avto-logo/audi.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/audi.png"
+                    src="./src/img/avto-logo/audi.png"
                    
                     loading="lazy"
                     data-brand="audi"
@@ -87,11 +87,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/chevrolet-logo.webp"
+                    srcset="./src/img/avto-logo/chevrolet-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/chevrolet-logo.png"
+                    src="./src/img/avto-logo/chevrolet-logo.png"
                    
                     loading="lazy"
                     data-brand="chevrolet"
@@ -103,11 +103,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/daewoo-logo.webp"
+                    srcset="./src/img/avto-logo/daewoo-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/daewoo-logo.png"
+                    src="./src/img/avto-logo/daewoo-logo.png"
                    
                     loading="lazy"
                     data-brand="daewoo"
@@ -119,11 +119,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/citroen-logo.webp"
+                    srcset="./src/img/avto-logo/citroen-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/citroen-logo.jpg"
+                    src="./src/img/avto-logo/citroen-logo.jpg"
                    
                     loading="lazy"
                     data-brand="citroen"
@@ -135,11 +135,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/dodge-logo.webp"
+                    srcset="./src/img/avto-logo/dodge-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/dodge-logo.png"
+                    src="./src/img/avto-logo/dodge-logo.png"
                    
                     loading="lazy"
                     data-brand="dodge"
@@ -151,11 +151,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/fiat_logo.webp"
+                    srcset="./src/img/avto-logo/fiat_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/fiat_logo.png"
+                    src="./src/img/avto-logo/fiat_logo.png"
                    
                     loading="lazy"
                     data-brand="fiat"
@@ -167,11 +167,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/ford.webp"
+                    srcset="./src/img/avto-logo/ford.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/ford.png"
+                    src="./src/img/avto-logo/ford.png"
                    
                     loading="lazy"
                     data-brand="ford"
@@ -183,11 +183,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/honda-color-128.webp"
+                    srcset="./src/img/avto-logo/honda-color-128.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/honda-color-128.png"
+                    src="./src/img/avto-logo/honda-color-128.png"
                    
                     loading="lazy"
                     data-brand="honda"
@@ -199,11 +199,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/hyundai-lg.webp"
+                    srcset="./src/img/avto-logo/hyundai-lg.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/hyundai-lg.png"
+                    src="./src/img/avto-logo/hyundai-lg.png"
                    
                     loading="lazy"
                     data-brand="hyundai"
@@ -215,11 +215,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/infiniti.webp"
+                    srcset="./src/img/avto-logo/infiniti.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/infiniti.png"
+                    src="./src/img/avto-logo/infiniti.png"
                    
                     loading="lazy"
                     data-brand="infiniti"
@@ -231,11 +231,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/jaguar-logo.webp"
+                    srcset="./src/img/avto-logo/jaguar-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/jaguar-logo.png"
+                    src="./src/img/avto-logo/jaguar-logo.png"
                    
                     loading="lazy"
                     data-brand="jaguar"
@@ -247,11 +247,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/jeep-logo.webp"
+                    srcset="./src/img/avto-logo/jeep-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/jeep-logo.png"
+                    src="./src/img/avto-logo/jeep-logo.png"
                    
                     loading="lazy"
                     data-brand="jeep"
@@ -263,11 +263,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/kia_logo_256_003.webp"
+                    srcset="./src/img/avto-logo/kia_logo_256_003.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/kia_logo_256_003.png"
+                    src="./src/img/avto-logo/kia_logo_256_003.png"
                    
                     loading="lazy"
                     data-brand="kia"
@@ -279,11 +279,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/land-rover1.webp"
+                    srcset="./src/img/avto-logo/land-rover1.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/land-rover1.png"
+                    src="./src/img/avto-logo/land-rover1.png"
                    
                     loading="lazy"
                     data-brand="land-rover"
@@ -295,11 +295,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/lexus-logo.webp"
+                    srcset="./src/img/avto-logo/lexus-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/lexus-logo.png"
+                    src="./src/img/avto-logo/lexus-logo.png"
                    
                     loading="lazy"
                     data-brand="lexus"
@@ -311,11 +311,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/lincoln-logo.webp"
+                    srcset="./src/img/avto-logo/lincoln-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/lincoln-logo.png"
+                    src="./src/img/avto-logo/lincoln-logo.png"
                    
                     loading="lazy"
                     data-brand="lincoln"
@@ -327,11 +327,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/logo_suzuki.webp"
+                    srcset="./src/img/avto-logo/logo_suzuki.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/logo_suzuki.png"
+                    src="./src/img/avto-logo/logo_suzuki.png"
                    
                     loading="lazy"
                     data-brand="suzuki"
@@ -349,7 +349,7 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
+                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
                    
                     loading="lazy"
                     data-brand="mazda"
@@ -361,11 +361,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/mercedes_logo.webp"
+                    srcset="./src/img/avto-logo/mercedes_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/mercedes_logo.png"
+                    src="./src/img/avto-logo/mercedes_logo.png"
                    
                     loading="lazy"
                     data-brand="mercedes"
@@ -377,11 +377,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
+                    srcset="./src/img/avto-logo/mitsubishi_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/mitsubishi_logo.png"
+                    src="./src/img/avto-logo/mitsubishi_logo.png"
                    
                     loading="lazy"
                     data-brand="mitsubishi"
@@ -393,11 +393,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/nissan-logo-4.webp"
+                    srcset="./src/img/avto-logo/nissan-logo-4.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/nissan-logo-4.png"
+                    src="./src/img/avto-logo/nissan-logo-4.png"
                    
                     loading="lazy"
                     data-brand="nissan"
@@ -409,11 +409,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/novosti-skoda-logo.webp"
+                    srcset="./src/img/avto-logo/novosti-skoda-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/novosti-skoda-logo.gif"
+                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
                    
                     loading="lazy"
                     data-brand="skoda"
@@ -431,7 +431,7 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
+                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
                    
                     loading="lazy"
                     data-brand="opel"
@@ -443,11 +443,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/peugeot_logo_128.webp"
+                    srcset="./src/img/avto-logo/peugeot_logo_128.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/peugeot_logo_128.png"
+                    src="./src/img/avto-logo/peugeot_logo_128.png"
                    
                     loading="lazy"
                     data-brand="peugeot"
@@ -459,11 +459,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/renault_logo.webp"
+                    srcset="./src/img/avto-logo/renault_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/renault_logo.png"
+                    src="./src/img/avto-logo/renault_logo.png"
                    
                     loading="lazy"
                     data-brand="renault"
@@ -475,11 +475,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/saab-logo.webp"
+                    srcset="./src/img/avto-logo/saab-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/saab-logo.png"
+                    src="./src/img/avto-logo/saab-logo.png"
                    
                     loading="lazy"
                     data-brand="saab"
@@ -491,11 +491,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/seat.webp"
+                    srcset="./src/img/avto-logo/seat.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/seat.png"
+                    src="./src/img/avto-logo/seat.png"
                    
                     loading="lazy"
                     data-brand="seat"
@@ -507,11 +507,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/smart-logo.webp"
+                    srcset="./src/img/avto-logo/smart-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/smart-logo.png"
+                    src="./src/img/avto-logo/smart-logo.png"
                    
                     loading="lazy"
                     data-brand="smart"
@@ -523,11 +523,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/ssangyong-logo.webp"
+                    srcset="./src/img/avto-logo/ssangyong-logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/ssangyong-logo.png"
+                    src="./src/img/avto-logo/ssangyong-logo.png"
                    
                     loading="lazy"
                     data-brand="ssangyong"
@@ -539,11 +539,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/subaru-logo-transparent.webp"
+                    srcset="./src/img/avto-logo/subaru-logo-transparent.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/subaru-logo-transparent.png"
+                    src="./src/img/avto-logo/subaru-logo-transparent.png"
                    
                     loading="lazy"
                     data-brand="subaru"
@@ -555,11 +555,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/toyota.webp"
+                    srcset="./src/img/avto-logo/toyota.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/toyota.png"
+                    src="./src/img/avto-logo/toyota.png"
                    
                     loading="lazy"
                     data-brand="toyota"
@@ -571,11 +571,11 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/volkswagen_logo.webp"
+                    srcset="./src/img/avto-logo/volkswagen_logo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/volkswagen_logo.png"
+                    src="./src/img/avto-logo/volkswagen_logo.png"
                    
                     loading="lazy"
                     data-brand="volkswagen"

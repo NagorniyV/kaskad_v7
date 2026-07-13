@@ -55,18 +55,15 @@
         const pathParts = window.location.pathname.split("/").filter(Boolean);
         let basePath = "/";
 
-        // Production on custom domain
         if (host === "kaskad.in.ua" || host === "www.kaskad.in.ua") {
           basePath = "/";
         } else {
-          // Live Server / GitHub Pages: site may live under /kaskad_v7/
           const repoIdx = pathParts.indexOf("kaskad_v7");
           if (repoIdx !== -1) {
             basePath = "/" + pathParts.slice(0, repoIdx + 1).join("/") + "/";
           } else if (host.endsWith("github.io") && pathParts.length > 0) {
             basePath = "/" + pathParts[0] + "/";
           } else {
-            // Vite or Live Server with kaskad_v7 as root
             basePath = "/";
           }
         }
@@ -218,7 +215,7 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/4226-256x256x8.png"
+                    srcset="./src/img/avto-logo/4226-256x256x8.png"
                     type="image/png"
                     style="width: 100%"
                   />
@@ -276,35 +273,35 @@
 
                 <div class="kaskad-rzbk-vehicle-parts-grid">
                   <a
-                    href="razborka/bmw/zapchastiny-bez-probigu/bloky-kermovoyi-kolonky-szl.html"
+                    href="./razborka/bmw/zapchastiny-bez-probigu/bloky-kermovoyi-kolonky-szl.html"
                     class="kaskad-rzbk-vehicle-parts-link"
                   >
                     Блоки рулевои колонки SZL
                   </a>
 
                   <a
-                    href="razborka/bmw/zapchastiny-bez-probigu/reshitka-radiatora.html"
+                    href="./razborka/bmw/zapchastiny-bez-probigu/reshitka-radiatora.html"
                     class="kaskad-rzbk-vehicle-parts-link"
                   >
                     Решётки радиатора
                   </a>
 
                   <a
-                    href="razborka/bmw/zapchastiny-bez-probigu/provodka-parktronikiv.html"
+                    href="./razborka/bmw/zapchastiny-bez-probigu/provodka-parktronikiv.html"
                     class="kaskad-rzbk-vehicle-parts-link"
                   >
                     Проводка парктроников
                   </a>
 
                   <a
-                    href="razborka/bmw/zapchastiny-bez-probigu/rozdatky-atc13.html"
+                    href="./razborka/bmw/zapchastiny-bez-probigu/rozdatky-atc13.html"
                     class="kaskad-rzbk-vehicle-parts-link"
                   >
                     Раздатки ATC13
                   </a>
 
                   <a
-                    href="razborka/bmw/zapchastiny-bez-probigu/kerma.html"
+                    href="./razborka/bmw/zapchastiny-bez-probigu/kerma.html"
                     class="kaskad-rzbk-vehicle-parts-link"
                   >
                     Рули BMW

@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+
+# Разборка заморожена: индексируем только хаб, глубина — noindex + disallow
+Allow: /razborka/$
+Allow: /razborka/index.html
+Disallow: /razborka/*.html
+Disallow: /razborka/*/
+
 Sitemap: https://kaskad.in.ua/sitemap.xml

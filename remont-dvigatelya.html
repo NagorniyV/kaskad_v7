@@ -44,18 +44,15 @@
         const pathParts = window.location.pathname.split("/").filter(Boolean);
         let basePath = "/";
 
-        // Production on custom domain
         if (host === "kaskad.in.ua" || host === "www.kaskad.in.ua") {
           basePath = "/";
         } else {
-          // Live Server / GitHub Pages: site may live under /kaskad_v7/
           const repoIdx = pathParts.indexOf("kaskad_v7");
           if (repoIdx !== -1) {
             basePath = "/" + pathParts.slice(0, repoIdx + 1).join("/") + "/";
           } else if (host.endsWith("github.io") && pathParts.length > 0) {
             basePath = "/" + pathParts[0] + "/";
           } else {
-            // Vite or Live Server with kaskad_v7 as root
             basePath = "/";
           }
         }
@@ -363,7 +360,7 @@
             <div>
               <picture>
                 <source
-                  srcset="src/img/remont-dvigatelya.webp"
+                  srcset="./src/img/remont-dvigatelya.webp"
                   type="image/webp"
                 />
                 <img

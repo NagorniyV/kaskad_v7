@@ -56,18 +56,15 @@
         const pathParts = window.location.pathname.split("/").filter(Boolean);
         let basePath = "/";
 
-        // Production on custom domain
         if (host === "kaskad.in.ua" || host === "www.kaskad.in.ua") {
           basePath = "/";
         } else {
-          // Live Server / GitHub Pages: site may live under /kaskad_v7/
           const repoIdx = pathParts.indexOf("kaskad_v7");
           if (repoIdx !== -1) {
             basePath = "/" + pathParts.slice(0, repoIdx + 1).join("/") + "/";
           } else if (host.endsWith("github.io") && pathParts.length > 0) {
             basePath = "/" + pathParts[0] + "/";
           } else {
-            // Vite or Live Server with kaskad_v7 as root
             basePath = "/";
           }
         }
@@ -220,7 +217,7 @@
               <div>
                 <picture>
                   <source
-                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
+                    srcset="./src/img/avto-logo/mitsubishi_logo.webp"
                     type="image/webp"
                     style="width: 100%"
                   />
@@ -257,7 +254,7 @@
             <div class="kaskad-rzbk-brand-cars-grid">
               <a
                 class="kaskad-rzbk-brand-car-card"
-                href="razborka/mitsubishi/pajero-wagon.html"
+                href="./razborka/mitsubishi/pajero-wagon.html"
               >
                 <div class="kaskad-rzbk-brand-car-card-image">
                   <img
@@ -305,7 +302,7 @@
 
               <a
                 class="kaskad-rzbk-brand-car-card"
-                href="razborka/mitsubishi/outlander.html"
+                href="./razborka/mitsubishi/outlander.html"
               >
                 <div class="kaskad-rzbk-brand-car-card-image">
                   <img
@@ -378,7 +375,7 @@
       >
         <div class="kaskad-rzbk-brand-car-card-image">
           <img
-            src="/images/razborka/mitsubishi/slug-modeli/main.jpg"
+            src="./images/razborka/mitsubishi/slug-modeli/main.jpg"
             alt="Разборка Mitsubishi ..."
             loading="lazy"
           />

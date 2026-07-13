@@ -7,7 +7,7 @@
               <div class="team-card">
                 <picture>
                   <source
-                    srcset="src/img/colleagues/dir.webp"
+                    srcset="./src/img/colleagues/dir.webp"
                     type="image/webp"
                   />
                   <img
@@ -33,7 +33,7 @@
               <div class="team-card">
                 <picture>
                   <source
-                    srcset="src/img/colleagues/colleagues-1.webp"
+                    srcset="./src/img/colleagues/colleagues-1.webp"
                     type="image/webp"
                   />
                   <img
@@ -94,6 +94,7 @@
                   type="text"
                   id="vinInput"
                   name="vin"
+                  data-translate-placeholder="vin-placeholder"
                   placeholder="VIN-код (17 символов)"
                   maxlength="17"
                   spellcheck="false"

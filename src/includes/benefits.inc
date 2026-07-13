@@ -10,10 +10,10 @@
         <p class="benefits-top-text" data-translate="benefits-top-text1">ПОРЯДОЧНОСТЬ</p>
       </div>
       <picture>
-        <source srcset="src/img/bene-1.webp" type="image/webp" />
+        <source srcset="./src/img/bene-1.webp" type="image/webp" />
         <img
           class="benefits-img"
-          src="src/img/bene-1.jpg"
+          src="./src/img/bene-1.jpg"
           alt="porjadnist"
           loading="lazy"
         />
@@ -28,10 +28,10 @@
         <p class="benefits-top-text" data-translate="benefits-top-text2">ОТВЕТСТВЕННОСТЬ</p>
       </div>
       <picture>
-        <source srcset="src/img/bene-2.webp" type="image/webp" />
+        <source srcset="./src/img/bene-2.webp" type="image/webp" />
         <img
           class="benefits-img"
-          src="src/img/bene-2.jpg"
+          src="./src/img/bene-2.jpg"
           alt="vidpovidalnist"
           loading="lazy"
         />
@@ -46,10 +46,10 @@
         <p class="benefits-top-text" data-translate="benefits-top-text3">ОПЕРАТИВНОСТЬ</p>
       </div>
       <picture>
-        <source srcset="src/img/bene-3.webp" type="image/webp" />
+        <source srcset="./src/img/bene-3.webp" type="image/webp" />
         <img
           class="benefits-img"
-          src="src/img/bene-3.jpg"
+          src="./src/img/bene-3.jpg"
           alt="operatyvnist"
           loading="lazy"
         />

@@ -36,6 +36,7 @@
                 type="text"
                 id="modalVin"
                 name="vin"
+                data-translate-placeholder="vin-placeholder"
                 placeholder="VIN-код (17 символов)"
                 maxlength="17"
                 spellcheck="false"

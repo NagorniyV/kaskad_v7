@@ -107,8 +107,32 @@ function initCallbackUI() {
   }
 
   const PHONE_ERROR = "Введите номер в формате +38 (050) 111 22 33";
-  const VIN_ERROR = "VIN-код должен содержать ровно 17 символов (без I, O, Q)";
   const VIN_LENGTH = 17;
+  const VIN_I18N = {
+    ru: {
+      error: "VIN-код должен содержать ровно 17 символов (без I, O, Q)",
+      title: "VIN: ровно 17 символов (буквы и цифры, без I, O, Q)",
+    },
+    uk: {
+      error: "VIN-код повинен містити рівно 17 символів (без I, O, Q)",
+      title: "VIN: рівно 17 символів (літери та цифри, без I, O, Q)",
+    },
+  };
+
+  function getUiLang() {
+    return localStorage.getItem("language") === "uk" ||
+      document.documentElement.lang === "uk"
+      ? "uk"
+      : "ru";
+  }
+
+  function getVinError() {
+    return VIN_I18N[getUiLang()].error;
+  }
+
+  function getVinTitle() {
+    return VIN_I18N[getUiLang()].title;
+  }
 
   function formatPhone(value) {
     let cleaned = String(value || "").replace(/\D/g, "");
@@ -205,10 +229,7 @@ function initCallbackUI() {
     input.removeAttribute("minlength");
     input.setAttribute("spellcheck", "false");
     input.setAttribute("autocomplete", "off");
-    input.setAttribute(
-      "title",
-      "VIN: ровно 17 символов (буквы и цифры, без I, O, Q)"
-    );
+    input.setAttribute("title", getVinTitle());
 
     input.addEventListener("input", function () {
       const start = this.selectionStart;
@@ -226,7 +247,7 @@ function initCallbackUI() {
 
     input.addEventListener("blur", function () {
       if (this.value && !isValidVin(this.value)) {
-        this.setCustomValidity(VIN_ERROR);
+        this.setCustomValidity(getVinError());
         this.reportValidity();
       } else {
         this.setCustomValidity("");
@@ -410,13 +431,13 @@ function initCallbackUI() {
 
     if (!isValidVin(formData.vin)) {
       if (vinInput) {
-        vinInput.setCustomValidity(VIN_ERROR);
+        vinInput.setCustomValidity(getVinError());
         vinInput.reportValidity();
       }
       if (useAlert) {
-        alert(VIN_ERROR);
+        alert(getVinError());
       } else {
-        showResponse(form, VIN_ERROR, "error");
+        showResponse(form, getVinError(), "error");
       }
       return;
     }
@@ -556,6 +577,33 @@ function initCallbackUI() {
 
 document.addEventListener("DOMContentLoaded", initCallbackUI);
 document.addEventListener("partials:loaded", initCallbackUI);
+
+document.addEventListener("language:changed", () => {
+  document
+    .querySelectorAll('input[name="vin"], #vinInput, #modalVin')
+    .forEach((input) => {
+      const lang =
+        localStorage.getItem("language") === "uk" ||
+        document.documentElement.lang === "uk"
+          ? "uk"
+          : "ru";
+      const i18n = {
+        ru: {
+          error: "VIN-код должен содержать ровно 17 символов (без I, O, Q)",
+          title: "VIN: ровно 17 символов (буквы и цифры, без I, O, Q)",
+        },
+        uk: {
+          error: "VIN-код повинен містити рівно 17 символів (без I, O, Q)",
+          title: "VIN: рівно 17 символів (літери та цифри, без I, O, Q)",
+        },
+      };
+      input.setAttribute("title", i18n[lang].title);
+      const vin = String(input.value || "").trim();
+      if (vin && !/^[A-HJ-NPR-Z0-9]{17}$/i.test(vin)) {
+        input.setCustomValidity(i18n[lang].error);
+      }
+    });
+});
 
 //Запчасти страница с машиной, ее фото
 
