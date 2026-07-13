@@ -1,12 +1,30 @@
 .price-section{
     background-color: #f1f1f1;
     padding: 20px 20px;
+    color: #101010;
+}
+
+.gbo-section {
+    color: #101010;
 }
 
 .price {
     font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1.6;
-    margin: 20px;
+}
+
+.price-section td.price,
+.gbo-section td.price {
+    margin: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+    width: 28%;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+    color: #101010;
 }
 
 .price-title{
@@ -19,40 +37,73 @@
 
 .price-content{
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0px auto;
-    max-width: 1000px;    
+    max-width: 1000px;
     font-size: 18px;
-    text-indent: 20px;
+    line-height: 1.75;
+    text-indent: 30px;
+    color: #101010;
 }
 
-table {
+.price-section table,
+.gbo-section table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px auto;
     table-layout: fixed;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1000px;
+    color: #101010;
+    background: #fff;
 }
 
-th,
-td {
+.gbo-section > table {
+    display: table;
+    margin: 20px auto;
+}
+
+.price-section table th:first-child,
+.price-section table td:first-child,
+.gbo-section table th:first-child,
+.gbo-section table td:first-child {
+    width: 72%;
+}
+
+.price-section table th:last-child,
+.price-section table td:last-child,
+.gbo-section table th:last-child,
+.gbo-section table td:last-child {
+    width: 28%;
+}
+
+.price-section th,
+.price-section td,
+.gbo-section th,
+.gbo-section td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #101010;
+    vertical-align: top;
 }
 
-th {
+.price-section th,
+.gbo-section th {
     background-color: #f2f2f2;
-    font-weight: bold;
+    font-weight: 700;
 }
 
-tr:nth-child(even) {
+.price-section tr:nth-child(even),
+.gbo-section tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-tr:hover {
+.price-section tr:hover,
+.gbo-section tr:hover {
     background-color: #f1f1f1;
 }
 
@@ -60,9 +111,9 @@ tr:hover {
     font-size: 24px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 8px;
+    color: #101010;
 }
 
 .price-content-container{
@@ -71,4 +122,3 @@ tr:hover {
     max-width: 1000px;
     margin: 0px auto 30px auto;
 }
-

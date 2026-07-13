@@ -28,7 +28,8 @@
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 42px;
+    line-height: 1.15;
     margin: 0px auto;
     margin-bottom: 40px;
 }
@@ -51,8 +52,9 @@
     min-width: 0;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    text-indent: 20px;
+    font-size: 18px;
+    line-height: 1.75;
+    text-indent: 30px;
 }
 
 .TS-content-text>p{
@@ -91,7 +93,8 @@
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #f8f8f8;
     max-width: 900px;
     margin: 0px auto;
@@ -181,7 +184,8 @@
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #222;
     max-width: 1000px;
     margin: 0px auto;
@@ -199,8 +203,9 @@
 .TS-seo-content p{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    text-indent: 20px;
+    font-size: 18px;
+    line-height: 1.75;
+    text-indent: 30px;
     margin: 8px 0px;
 }
 
@@ -231,14 +236,8 @@
     .TS-section p, .service-TS p, .TS-seo-content p,.TS-section li,
     .service-TS li,
     .TS-seo-content li{
-        font-size: 18px;
-    }
-
-    .TS-section h3,
-    .service-TS h3,
-    .TS-seo-content h3{
-        font-size: 22px
-    }
+        font-size: 17px;
+        line-height: 1.7;
 }
 
 .TS-seo-content{

@@ -42,24 +42,25 @@
       (function () {
         const host = window.location.hostname;
         const pathParts = window.location.pathname.split("/").filter(Boolean);
-
         let basePath = "/";
 
-        if (host.endsWith("github.io") && pathParts.length > 0) {
-          basePath = "/" + pathParts[0] + "/";
-        }
-
-        if (
-          host === "kaskad.in.ua" ||
-          host === "www.kaskad.in.ua" ||
-          host === "localhost" ||
-          host === "127.0.0.1"
-        ) {
+        // Production on custom domain
+        if (host === "kaskad.in.ua" || host === "www.kaskad.in.ua") {
           basePath = "/";
+        } else {
+          // Live Server / GitHub Pages: site may live under /kaskad_v7/
+          const repoIdx = pathParts.indexOf("kaskad_v7");
+          if (repoIdx !== -1) {
+            basePath = "/" + pathParts.slice(0, repoIdx + 1).join("/") + "/";
+          } else if (host.endsWith("github.io") && pathParts.length > 0) {
+            basePath = "/" + pathParts[0] + "/";
+          } else {
+            // Vite or Live Server with kaskad_v7 as root
+            basePath = "/";
+          }
         }
 
         window.__BASE_PATH__ = basePath;
-
         const base = document.createElement("base");
         base.href = basePath;
         document.head.prepend(base);
@@ -157,9 +158,9 @@
 }
     </script>
   </head>
+<body>
   <div id="site-header"></div>
-  <body>
-    <main>
+<main>
       <div class="container">
         <section class="hero-price-section">
           <div>
@@ -376,122 +377,102 @@
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  Диагностика двигательа (візуально-акустичнии осмотр, течи та
-                  сторонние звуки)
-                </td>
-                <td class="price">от 350 грн</td>
+                <td data-translate="price-item-003">Диагностика двигателя (визуально-акустический осмотр, течи и сторонние звуки)</td>
+                <td class="price" data-translate="price-item-004">от 350 грн</td>
               </tr>
               <tr>
-                <td>Видеобороскопия двигательа (осмотр цилиндра камерой)</td>
-                <td class="price">от 450 грн/цилиндр</td>
+                <td data-translate="price-item-005">Видеоэндоскопия двигателя (осмотр цилиндра камерой)</td>
+                <td class="price" data-translate="price-item-006">от 450 грн/цилиндр</td>
               </tr>
               <tr>
-                <td>
-                  Тест CO₂ (наличие выхлопных газов у системе охлаждения)
-                </td>
-                <td class="price">750 грн</td>
+                <td data-translate="price-item-007">Тест CO₂ (наличие выхлопных газов в системе охлаждения)</td>
+                <td class="price" data-translate="price-item-008">750 грн</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика системы охлаждения под давлением (опрессовка)
-                </td>
-                <td class="price">от 650 грн</td>
+                <td data-translate="price-item-009">Диагностика системы охлаждения под давлением (опрессовка)</td>
+                <td class="price" data-translate="price-item-010">от 650 грн</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика кондиционера (проверка давления и продуктивности)
-                </td>
-                <td class="price">750 грн</td>
+                <td data-translate="price-item-011">Диагностика кондиционера (проверка давления и производительности)</td>
+                <td class="price" data-translate="price-item-008">750 грн</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика системы электропитания (нагрузочная вилка
-                  АКБ, уровень зарядки)
-                </td>
-                <td class="price">150 грн</td>
+                <td data-translate="price-item-012">Диагностика системы электропитания (нагрузочная вилка АКБ, уровень зарядки)</td>
+                <td class="price" data-translate="price-item-013">150 грн</td>
               </tr>
               <tr>
-                <td>Диагностика ходовои части</td>
-                <td class="price">400 грн</td>
+                <td data-translate="price-item-014">Диагностика ходовой части</td>
+                <td class="price" data-translate="price-item-015">400 грн</td>
               </tr>
               <tr class="included-service">
-                <td>Рулевое управление</td>
-                <td class="price">включено в диагностику ходовой</td>
+                <td data-translate="price-item-016">Рулевое управление</td>
+                <td class="price" data-translate="price-item-017">включено в диагностику ходовой</td>
               </tr>
               <tr class="included-service">
-                <td>Тормозная система</td>
-                <td class="price">включено в диагностику ходовой</td>
+                <td data-translate="price-item-018">Тормозная система</td>
+                <td class="price" data-translate="price-item-017">включено в диагностику ходовой</td>
               </tr>
               <tr>
-                <td>Двигатель / Навесное оборудования</td>
-                <td class="price">350 грн</td>
+                <td data-translate="price-item-019">Двигатель / Навесное оборудование</td>
+                <td class="price" data-translate="price-item-020">350 грн</td>
               </tr>
               <tr>
-                <td>Уровни и качество подкапотных жидкостей</td>
-                <td class="price">+150 грн до диагностики ходовой</td>
+                <td data-translate="price-item-021">Уровни и качество подкапотных жидкостей</td>
+                <td class="price" data-translate="price-item-022">+150 грн до диагностики ходовой</td>
               </tr>
               <tr class="included-service">
-                <td>Подтекание</td>
-                <td class="price">включено в диагностику ходовой/двигательа</td>
+                <td data-translate="price-item-023">Подтекание</td>
+                <td class="price" data-translate="price-item-024">включено в диагностику ходовой/двигателя</td>
               </tr>
               <tr>
-                <td>Компьютерная диагностика</td>
-                <td class="price">
-                  400 грн (чтение ошибок)<br />от 700 грн (полноценная)
-                </td>
+                <td data-translate="price-item-025">Компьютерная диагностика</td>
+                <td class="price" data-translate-html="price-item-026">400 грн (чтение ошибок)<br />от 700 грн (полноценная)</td>
               </tr>
               <tr>
-                <td>Диагностика системы зажигания</td>
-                <td class="price">
-                  650 грн (4 цилиндра)<br />800 грн (6 цилиндров)
-                </td>
+                <td data-translate="price-item-027">Диагностика системы зажигания</td>
+                <td class="price" data-translate-html="price-item-028">650 грн (4 цилиндра)<br />800 грн (6 цилиндров)</td>
               </tr>
               <tr>
-                <td>Проверка наповнення цилиндров мотор-тестером</td>
-                <td class="price">
-                  800 грн (4 цилиндра)<br />1000 грн (6-8 цилиндров)
-                </td>
+                <td data-translate="price-item-029">Проверка наполнения цилиндров мотор-тестером</td>
+                <td class="price" data-translate-html="price-item-030">800 грн (4 цилиндра)<br />1000 грн (6-8 цилиндров)</td>
               </tr>
               <tr>
-                <td>Предпродажная диагностика авто</td>
-                <td class="price">2500 грн</td>
+                <td data-translate="price-item-031">Предпродажная диагностика авто</td>
+                <td class="price" data-translate="price-item-032">2500 грн</td>
               </tr>
               <tr>
-                <td>Проверка акумулятора</td>
-                <td class="price">100 грн</td>
+                <td data-translate="price-item-033">Проверка аккумулятора</td>
+                <td class="price" data-translate="price-item-034">100 грн</td>
               </tr>
               <tr>
-                <td>Проверка розвал-сходження</td>
-                <td class="price">400 грн</td>
+                <td data-translate="price-item-035">Проверка развал-схождения</td>
+                <td class="price" data-translate="price-item-015">400 грн</td>
               </tr>
               <tr>
-                <td>Регулировка розвал-сходження</td>
-                <td class="price">
-                  700 грн (1 ось)<br />850 грн (2 оси)<br />1000-1500 грн
-                  (позашляховики)<br />от 1800 грн (Tesla)
-                </td>
+                <td data-translate="price-item-036">Регулировка развал-схождения</td>
+                <td class="price" data-translate-html="price-item-037">700 грн (1 ось)<br />850 грн (2 оси)<br />1000-1500 грн
+                  (внедорожники)<br />от 1800 грн (Tesla)</td>
               </tr>
               <tr>
-                <td>
-                  Проверка герметичности впускного тракту (димогенератор)
-                </td>
-                <td class="price">от 650 грн</td>
+                <td data-translate="price-item-038">Проверка герметичности впускного тракта (дымогенератор)</td>
+                <td class="price" data-translate="price-item-010">от 650 грн</td>
               </tr>
               <tr>
-                <td>Проверка ЛКП толщиномером</td>
-                <td class="price">1000 грн</td>
+                <td data-translate="price-item-039">Проверка ЛКП толщиномером</td>
+                <td class="price" data-translate="price-item-040">1000 грн</td>
               </tr>
             </tbody>
           </table>
         </section>
-        <!-- seo-article:start -->
+                <div id="site-callback"></div>
+        <div id="site-benefits"></div>
+        <div id="site-brend" data-brend-topic="diagnostika"></div>
         <section class="main-content-section seo-article">
           <div class="main-content-div">
             <div class="main-content">
@@ -522,614 +503,9 @@
             </div>
           </div>
         </section>
-        <!-- seo-article:end -->
-        <section class="benefits-section">
-          <h2 class="benefits-title">
-            <span data-translate="benefits-title">Почему</span>
-            <span
-              class="span-benefits-title"
-              data-translate="span-benefits-title"
-              >выбирают нас</span
-            >
-          </h2>
-          <div class="benefits-containers">
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">1</p>
-                <p
-                  class="benefits-top-text"
-                  data-translate="benefits-top-text1"
-                >
-                  ПОРЯДОЧНОСТЬ
-                </p>
-              </div>
-              <picture>
-                <!-- ВебП версии -->
-                <source srcset="src/img/bene-1.webp" type="image/webp" />
-                <!-- Фолбэк на JPEG -->
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-1.jpg"
-                  alt="porjadnist"
-                  loading="lazy"
-                />
-              </picture>
-              <p class="benefits-bot-text" data-translate="benefits-bot-text1">
-                «Честныи ремонт: только нужные работы, только нужные запчасти.»
-              </p>
-            </div>
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">2</p>
-                <p
-                  class="benefits-top-text"
-                  data-translate="benefits-top-text2"
-                >
-                  ОТВЕТСТВЕННОСТЬ
-                </p>
-              </div>
-              <picture>
-                <!-- ВебП версии -->
-                <source srcset="src/img/bene-2.webp" type="image/webp" />
-                <!-- Фолбэк на JPEG -->
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-2.jpg"
-                  alt="vidpovidalnist"
-                  loading="lazy"
-                />
-              </picture>
-              <p class="benefits-bot-text" data-translate="benefits-bot-text2">
-                «Гарантируем качество – отвечаем за результат!»
-              </p>
-            </div>
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">3</p>
-                <p
-                  class="benefits-top-text"
-                  data-translate="benefits-top-text3"
-                >
-                  ОПЕРАТИВНОСТЬ
-                </p>
-              </div>
-              <picture>
-                <!-- ВебП версии -->
-                <source srcset="src/img/bene-3.webp" type="image/webp" />
-                <!-- Фолбэк на JPEG -->
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-3.jpg"
-                  alt="vidpovidalnist"
-                  loading="lazy"
-                />
-              </picture>
-              <p class="benefits-bot-text" data-translate="benefits-bot-text3">
-                «Ваше авто не задержится у нас дольше необходимого.»
-              </p>
-            </div>
-          </div>
-        </section>
-        <section id="brend" class="brend-section">
-          <h2 class="brend-title" data-translate="brend-title">
-            СТО в Павлограде
-          </h2>
-          <div class="infinite-carousel">
-            <div class="carousel-track">
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/4226-256x256x8.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/4226-256x256x8.png"
-                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daewoo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/4227-256x256x32.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/4227-256x256x32.png"
-                    alt="Логотип Daihatsu для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daihatsu</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/acura_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/acura_logo.png"
-                    alt="Логотип Acura для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">acura</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/alfa-romeo-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/alfa-romeo-logo.png"
-                    alt="Логотип Alfa Romeo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">alfa-romeo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/audi.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/audi.png"
-                    alt="Логотип Audi для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">audi</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/chevrolet-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/chevrolet-logo.png"
-                    alt="Логотип Chevrolet для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">chevrolet</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/daewoo-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/daewoo-logo.png"
-                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daewoo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/citroen-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/citroen-logo.jpg"
-                    alt="Логотип Citroen для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">citroen</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/dodge-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/dodge-logo.png"
-                    alt="Логотип Dodge для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">dodge</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/fiat_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/fiat_logo.png"
-                    alt="Логотип Fiat для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">fiat</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/ford.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/ford.png"
-                    alt="Логотип Ford для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">ford</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/honda-color-128.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/honda-color-128.png"
-                    alt="Логотип Honda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">honda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/hyundai-lg.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/hyundai-lg.png"
-                    alt="Логотип Hyundai для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">hyundai</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/infiniti.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/infiniti.png"
-                    alt="Логотип Infiniti для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">infiniti</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/jaguar-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/jaguar-logo.png"
-                    alt="Логотип Jaguar для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">jaguar</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/jeep-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/jeep-logo.png"
-                    alt="Логотип Jeep для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">jeep</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/kia_logo_256_003.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/kia_logo_256_003.png"
-                    alt="Логотип Kia для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">kia</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/land-rover1.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/land-rover1.png"
-                    alt="Логотип Land Rover для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">land-rover</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/lexus-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/lexus-logo.png"
-                    alt="Логотип Lexus для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">lexus</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/lincoln-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/lincoln-logo.png"
-                    alt="Логотип Lincoln для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">lincoln</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/logo_suzuki.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/logo_suzuki.png"
-                    alt="Логотип Suzuki для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">suzuki</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="
-                      src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
-                    "
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
-                    alt="Логотип Mazda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mazda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/mercedes_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mercedes_logo.png"
-                    alt="Логотип Mercedes-Benz для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mercedes</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mitsubishi_logo.png"
-                    alt="Логотип Mitsubishi для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mitsubishi</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/nissan-logo-4.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/nissan-logo-4.png"
-                    alt="Логотип Nissan для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">nissan</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/novosti-skoda-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
-                    alt="Логотип Skoda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">skoda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="
-                      src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
-                    "
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
-                    alt="Логотип Opel для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">opel</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/peugeot_logo_128.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/peugeot_logo_128.png"
-                    alt="Логотип Peugeot для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">peugeot</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/renault_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/renault_logo.png"
-                    alt="Логотип Renault для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">renault</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/saab-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/saab-logo.png"
-                    alt="Логотип Saab для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">saab</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/seat.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/seat.png"
-                    alt="Логотип SEAT для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">seat</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/smart-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/smart-logo.png"
-                    alt="Логотип Smart для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">smart</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/ssangyong-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/ssangyong-logo.png"
-                    alt="Логотип SsangYong для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">ssangyong</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/subaru-logo-transparent.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/subaru-logo-transparent.png"
-                    alt="Логотип Subaru для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">subaru</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/toyota.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/toyota.png"
-                    alt="Логотип Toyota для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">toyota</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/volkswagen_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/volkswagen_logo.png"
-                    alt="Логотип Volkswagen для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">volkswagen</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
           <div id="site-callback-widgets"></div>
     </main>
-  </body>
   <div id="site-footer"></div>
+</body>
 </html>

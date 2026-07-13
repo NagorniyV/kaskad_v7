@@ -13,21 +13,24 @@ document.addEventListener("click", function (e) {
 function initSocialScroll() {
   const social = document.querySelector(".social-fixed");
   const toHome = document.querySelector(".to-home");
-  if (!social || !toHome || social.dataset.scrollInit === "true") return;
+  if ((!social && !toHome) || (social && social.dataset.scrollInit === "true")) {
+    return;
+  }
+  if (social) social.dataset.scrollInit = "true";
 
-  social.dataset.scrollInit = "true";
-
-  window.addEventListener("scroll", function () {
+  const updateVisibility = () => {
     if (window.innerWidth <= 1024) {
-      if (window.scrollY > 100) {
-        social.classList.add("show");
-        toHome.classList.add("show");
-      } else {
-        social.classList.remove("show");
-        toHome.classList.remove("show");
-      }
+      social?.classList.toggle("show", window.scrollY > 100);
+      toHome?.classList.toggle("show", window.scrollY > 100);
+    } else {
+      social?.classList.remove("show");
+      toHome?.classList.remove("show");
     }
-  });
+  };
+
+  window.addEventListener("scroll", updateVisibility, { passive: true });
+  window.addEventListener("resize", updateVisibility);
+  updateVisibility();
 }
 
 document.addEventListener("DOMContentLoaded", initSocialScroll);
@@ -103,49 +106,128 @@ function initCallbackUI() {
     return "";
   }
 
+  const PHONE_ERROR = "Введите номер в формате +38 (050) 111 22 33";
+  const VIN_ERROR = "VIN-код должен содержать ровно 17 символов (без I, O, Q)";
+  const VIN_LENGTH = 17;
+
   function formatPhone(value) {
     let cleaned = String(value || "").replace(/\D/g, "");
 
     if (!cleaned) return "";
-    if (!cleaned.startsWith("38")) {
+
+    if (cleaned.startsWith("380")) {
+      // ok
+    } else if (cleaned.startsWith("38")) {
+      // ok
+    } else if (cleaned.startsWith("0")) {
+      cleaned = "38" + cleaned;
+    } else {
       cleaned = "38" + cleaned;
     }
 
     cleaned = cleaned.substring(0, 12);
+    const local = cleaned.substring(2);
 
     let formatted = "+38";
-    if (cleaned.length > 2) formatted += " " + cleaned.substring(2, 5);
-    if (cleaned.length > 5) formatted += " " + cleaned.substring(5, 8);
-    if (cleaned.length > 8) formatted += " " + cleaned.substring(8, 12);
+    if (local.length > 0) {
+      formatted += " (" + local.substring(0, Math.min(3, local.length));
+      if (local.length >= 3) formatted += ")";
+      if (local.length > 3) formatted += " " + local.substring(3, 6);
+      if (local.length > 6) formatted += " " + local.substring(6, 8);
+      if (local.length > 8) formatted += " " + local.substring(8, 10);
+    }
 
     return formatted;
   }
 
   function isValidPhone(value) {
     const digits = String(value || "").replace(/\D/g, "");
-    return digits.startsWith("38") && digits.length === 12;
+    // +38 (0XX) XXX XX XX → 12 digits, operator code starts with 0
+    return /^380\d{9}$/.test(digits);
+  }
+
+  function formatVin(value) {
+    return String(value || "")
+      .toUpperCase()
+      .replace(/[^A-HJ-NPR-Z0-9]/g, "")
+      .slice(0, VIN_LENGTH);
+  }
+
+  function isValidVin(value) {
+    const vin = String(value || "").trim();
+    if (!vin) return true; // optional
+    return /^[A-HJ-NPR-Z0-9]{17}$/i.test(vin);
   }
 
   function initPhoneInput(input) {
     if (!input || input.dataset.phoneInitialized === "true") return;
 
     input.dataset.phoneInitialized = "true";
+    input.setAttribute("inputmode", "tel");
+    input.setAttribute("autocomplete", "tel");
+    input.setAttribute("maxlength", "19");
+    input.setAttribute("placeholder", "+38 (050) 111 22 33");
 
     input.addEventListener("focus", function () {
-      if (!this.value.startsWith("+38")) {
-        this.value = "+38";
+      if (!this.value.trim()) {
+        this.value = "+38 (";
       }
     });
 
     input.addEventListener("input", function () {
       this.value = formatPhone(this.value);
+      if (isValidPhone(this.value) || !this.value || this.value === "+38") {
+        this.setCustomValidity("");
+      }
     });
 
     input.addEventListener("blur", function () {
+      if (this.value === "+38" || this.value === "+38 (" || this.value === "+38 ()") {
+        this.value = "";
+        this.setCustomValidity("");
+        return;
+      }
+
       if (this.value && !isValidPhone(this.value)) {
-        this.setCustomValidity(
-          "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX"
-        );
+        this.setCustomValidity(PHONE_ERROR);
+        this.reportValidity();
+      } else {
+        this.setCustomValidity("");
+      }
+    });
+  }
+
+  function initVinInput(input) {
+    if (!input || input.dataset.vinInitialized === "true") return;
+
+    input.dataset.vinInitialized = "true";
+    input.setAttribute("maxlength", String(VIN_LENGTH));
+    input.removeAttribute("minlength");
+    input.setAttribute("spellcheck", "false");
+    input.setAttribute("autocomplete", "off");
+    input.setAttribute(
+      "title",
+      "VIN: ровно 17 символов (буквы и цифры, без I, O, Q)"
+    );
+
+    input.addEventListener("input", function () {
+      const start = this.selectionStart;
+      const before = this.value.length;
+      this.value = formatVin(this.value);
+      const delta = before - this.value.length;
+      if (typeof start === "number") {
+        const pos = Math.max(0, start - delta);
+        this.setSelectionRange(pos, pos);
+      }
+      if (isValidVin(this.value)) {
+        this.setCustomValidity("");
+      }
+    });
+
+    input.addEventListener("blur", function () {
+      if (this.value && !isValidVin(this.value)) {
+        this.setCustomValidity(VIN_ERROR);
+        this.reportValidity();
       } else {
         this.setCustomValidity("");
       }
@@ -157,6 +239,13 @@ function initCallbackUI() {
       'input[type="tel"], input[name="phone"], #phoneInput, #modalPhone'
     );
     phoneInputs.forEach(initPhoneInput);
+  }
+
+  function initVinInputs(scope = document) {
+    const vinInputs = scope.querySelectorAll(
+      'input[name="vin"], #vinInput, #modalVin'
+    );
+    vinInputs.forEach(initVinInput);
   }
 
   function getResponseMessageElement(form) {
@@ -291,17 +380,47 @@ function initCallbackUI() {
 
     const formData = collectFormData(form, source);
 
-    if (!isValidPhone(formData.phone)) {
-      const errorText =
-        "Введіть коректний номер телефону у форматі +38 XXX XXX XXXX";
+    const phoneInput =
+      form.querySelector('[name="phone"], #phoneInput, #modalPhone') || null;
+    const vinInput =
+      form.querySelector('[name="vin"], #vinInput, #modalVin') || null;
 
+    if (phoneInput) {
+      phoneInput.value = formatPhone(phoneInput.value);
+      formData.phone = phoneInput.value.trim();
+    }
+    if (vinInput) {
+      vinInput.value = formatVin(vinInput.value);
+      formData.vin = vinInput.value.trim();
+    }
+
+    if (!isValidPhone(formData.phone)) {
+      if (phoneInput) {
+        phoneInput.setCustomValidity(PHONE_ERROR);
+        phoneInput.reportValidity();
+      }
       if (useAlert) {
-        alert(errorText);
+        alert(PHONE_ERROR);
       } else {
-        showResponse(form, errorText, "error");
+        showResponse(form, PHONE_ERROR, "error");
       }
       return;
     }
+    if (phoneInput) phoneInput.setCustomValidity("");
+
+    if (!isValidVin(formData.vin)) {
+      if (vinInput) {
+        vinInput.setCustomValidity(VIN_ERROR);
+        vinInput.reportValidity();
+      }
+      if (useAlert) {
+        alert(VIN_ERROR);
+      } else {
+        showResponse(form, VIN_ERROR, "error");
+      }
+      return;
+    }
+    if (vinInput) vinInput.setCustomValidity("");
 
     const telegramMessage = buildMessage(formData);
 
@@ -397,9 +516,10 @@ function initCallbackUI() {
   });
 
   // =========================
-  // ИНИЦИАЛИЗАЦИЯ ТЕЛЕФОНОВ
+  // ИНИЦИАЛИЗАЦИЯ ТЕЛЕФОНОВ / VIN
   // =========================
   initPhoneInputs(document);
+  initVinInputs(document);
 
   // =========================
   // ОБЫЧНАЯ ФОРМА

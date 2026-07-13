@@ -68,14 +68,16 @@
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 38px;
+    font-size: 42px;
+    line-height: 1.15;
 }
 
 .main-gbo-content>p, .main-gbo-content>ul{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 18px;
-    text-indent: 20px;
+    line-height: 1.75;
+    text-indent: 30px;
 }
 
 .gbo-span{
@@ -86,14 +88,35 @@
     margin-top: 12px;
     display: flex;
     align-items: center;
+    gap: 10px;
     margin-left: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-indent: 0;
+}
+
+.gbo-list>li svg {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    flex-shrink: 0;
+}
+
+.gbo-list>li span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .service-gbo-title{
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #f8f8f8;
     max-width: 900px;
     margin: 0px auto;

@@ -34,18 +34,13 @@
               class="logo-footer"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <!-- Фон (опционально) -->
               <rect width="200" height="120" rx="10" fill="none" />
-
-              <!-- Символ "каскада" (волны + шестерёнка) -->
               <path
                 d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
                 stroke="#24a7c1"
                 stroke-width="4"
                 stroke-linecap="round"
               />
-
-              <!-- Текст -->
               <text
                 x="100"
                 y="100"
@@ -82,17 +77,12 @@
             <div class="number-footer-div">
               <p data-translate="number-footer-title">Связь с нами:</p>
               <div>
-                <a href="tel:+380668375666" class="number-link"
-                  >+38 (066) 837−56−66</a
-                ><span data-translate="number-footer-txt"> Офис</span>
-              </div>
-              <div>
-                <a href="tel:+380962110210" class="number-link"
-                  >+38 (096) 211−02−10</a
+                <a href="tel:+380681234551" class="number-link"
+                  >+38 (068) 123 45 51</a
                 >
-                <span data-translate="number-footer-txt">Офис</span>
+                <span data-translate="number-footer-razborka-name">Вячеслав</span>
               </div>
-              <p>Директор</p>
+              <p data-translate="number-footer-dir-label">Директор</p>
               <div>
                 <a href="tel:+380502233959" class="number-link"
                   >+38 (050) 223−39−59</a

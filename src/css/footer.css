@@ -72,6 +72,16 @@
     margin-top: 12px;
 }
 
+.number-link {
+    color: #24a7c1;
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.number-link:hover {
+    color: #0e6374;
+}
+
 @media (max-width: 480px){
     .footer-container{
         padding: 20px 20px;

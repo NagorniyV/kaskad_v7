@@ -1,3 +1,10 @@
+function sanitizePartialHtml(html) {
+  return html
+    .replace(/<!--\s*Code injected by live-server\s*-->\s*<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<\/(?:body|html)>\s*$/i, "")
+    .trim();
+}
+
 async function loadPartial(containerId, fileName) {
   const container = document.getElementById(containerId);
   if (!container) return null;
@@ -10,8 +17,9 @@ async function loadPartial(containerId, fileName) {
       throw new Error(`${fileName} not loaded: ${response.status}`);
     }
 
+    const html = sanitizePartialHtml(await response.text());
     const template = document.createElement("template");
-    template.innerHTML = (await response.text()).trim();
+    template.innerHTML = html;
     container.replaceWith(template.content.cloneNode(true));
     return true;
   } catch (error) {
@@ -20,30 +28,19 @@ async function loadPartial(containerId, fileName) {
   }
 }
 
-function applyRazborkaFields() {
+function isPartsPage() {
   const leadType =
     document.body?.dataset?.leadType?.trim().toLowerCase() || "";
-  const isRazborka = leadType === "razborka";
+  if (leadType === "razborka" || leadType === "parts") return true;
 
-  document.querySelectorAll("[data-razborka-only]").forEach((el) => {
-    if (isRazborka) {
-      el.hidden = false;
-      el.removeAttribute("hidden");
-    } else {
-      el.hidden = true;
-      if (el.matches("input, textarea, select")) {
-        el.removeAttribute("required");
-      }
-    }
-  });
-
-  if (!isRazborka) return;
-
-  document
-    .querySelectorAll("#callbackForm, #modalForm")
-    .forEach((form) => {
-      form.dataset.leadType = "razborka";
-    });
+  const path = (window.location.pathname || "").toLowerCase().replace(/\\/g, "/");
+  return (
+    path.includes("/razborka/") ||
+    path.endsWith("/razborka") ||
+    path.includes("/razborka.html") ||
+    path.includes("zapchasti.html") ||
+    path.endsWith("/zapchasti")
+  );
 }
 
 function initHeaderMenu() {
@@ -126,15 +123,112 @@ function initHeaderMenu() {
   });
 }
 
+function isRazborkaSectionPage() {
+  const path = (window.location.pathname || "").toLowerCase();
+  return path.includes("/razborka/") || path.endsWith("/razborka");
+}
+
+const BREND_TOPICS = {
+  uslugi: "услуги автосервиса",
+  dvigatel: "ремонт двигателя",
+  hodovoy: "ремонт ходовой части",
+  elektrika: "ремонт автоэлектрики",
+  tormoz: "ремонт тормозной системы",
+  transmissiya: "ремонт трансмиссии",
+  to: "техническое обслуживание авто",
+  diagnostika: "диагностика автомобиля",
+  kondi: "обслуживание автокондиционеров",
+  gbo: "установка и сервис ГБО",
+  ohlazhdenie: "ремонт системы охлаждения",
+  evakuator: "эвакуатор и доставка на СТО",
+  zapchasti: "подбор автозапчастей",
+  ceny: "цены на услуги СТО",
+  razborka: "контрактные запчасти с разборки",
+};
+
+const BREND_TOPIC_UK = {
+  uslugi: "послуги автосервісу",
+  dvigatel: "ремонт двигуна",
+  hodovoy: "ремонт ходової частини",
+  elektrika: "ремонт автоелектрики",
+  tormoz: "ремонт гальмівної системи",
+  transmissiya: "ремонт трансмісії",
+  to: "технічне обслуговування авто",
+  diagnostika: "діагностика автомобіля",
+  kondi: "обслуговування автокондиціонерів",
+  gbo: "встановлення та сервіс ГБО",
+  ohlazhdenie: "ремонт системи охолодження",
+  evakuator: "евакуатор і доставка на СТО",
+  zapchasti: "підбір автозапчастин",
+  ceny: "ціни на послуги СТО",
+  razborka: "контрактні запчастини з розбірки",
+};
+
+function brandLabel(slug) {
+  const map = {
+    "alfa-romeo": "Alfa Romeo",
+    "land-rover": "Land Rover",
+    mercedes: "Mercedes-Benz",
+    ssangyong: "SsangYong",
+    volkswagen: "Volkswagen",
+  };
+  if (map[slug]) return map[slug];
+  return String(slug || "")
+    .split("-")
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+function applyBrendAlts(topicKey) {
+  const topicRu = BREND_TOPICS[topicKey] || BREND_TOPICS.uslugi;
+  const topicUk = BREND_TOPIC_UK[topicKey] || BREND_TOPIC_UK.uslugi;
+  const lang =
+    localStorage.getItem("language") === "uk" ||
+    document.documentElement.lang === "uk"
+      ? "uk"
+      : "ru";
+  const topic = lang === "uk" ? topicUk : topicRu;
+  const suffix = lang === "uk" ? "у Павлограді | СТО Каскад" : "в Павлограде | СТО Каскад";
+
+  document.querySelectorAll(".brend-section img[data-brand]").forEach((img) => {
+    const brand = brandLabel(img.dataset.brand);
+    img.alt = `${brand} — ${topic} ${suffix}`;
+  });
+}
+
+async function loadBrendPartial() {
+  const container = document.getElementById("site-brend");
+  if (!container) return null;
+  const topic = container.dataset.brendTopic || "uslugi";
+  const loaded = await loadPartial("site-brend", "brend.inc");
+  if (loaded) {
+    const section = document.querySelector(".brend-section");
+    if (section) section.dataset.brendTopic = topic;
+    applyBrendAlts(topic);
+  }
+  return loaded;
+}
+
 async function loadPartials() {
+  const footerFile = isRazborkaSectionPage()
+    ? "footer-razborka.inc"
+    : "footer.inc";
+  const partsPage = isPartsPage();
+  const callbackFile = partsPage ? "callback-parts.inc" : "callback.inc";
+  const widgetsFile = partsPage
+    ? "callback-widgets-parts.inc"
+    : "callback-widgets.inc";
+
   await Promise.all([
-    loadPartial("site-header", "header.html"),
-    loadPartial("site-callback", "callback.html"),
-    loadPartial("site-callback-widgets", "callback-widgets.html"),
-    loadPartial("site-footer", "footer.html"),
+    loadPartial("site-header", "header.inc"),
+    loadPartial("site-callback", callbackFile),
+    loadPartial("site-callback-widgets", widgetsFile),
+    loadPartial("site-benefits", "benefits.inc"),
+    loadBrendPartial(),
+    loadPartial("site-footer", footerFile),
   ]);
 
-  applyRazborkaFields();
   initHeaderMenu();
 
   if (typeof window.initLanguageSwitcher === "function") {
@@ -145,3 +239,9 @@ async function loadPartials() {
 }
 
 document.addEventListener("DOMContentLoaded", loadPartials);
+
+document.addEventListener("language:changed", () => {
+  const topic =
+    document.querySelector(".brend-section")?.dataset?.brendTopic || "uslugi";
+  applyBrendAlts(topic);
+});

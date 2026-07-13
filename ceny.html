@@ -45,26 +45,25 @@
       (function () {
         const host = window.location.hostname;
         const pathParts = window.location.pathname.split("/").filter(Boolean);
-
         let basePath = "/";
 
-        // GitHub Pages repo site: /kaskad_v7/
-        if (host.endsWith("github.io") && pathParts.length > 0) {
-          basePath = "/" + pathParts[0] + "/";
-        }
-
-        // Custom domain и Live Server
-        if (
-          host === "kaskad.in.ua" ||
-          host === "www.kaskad.in.ua" ||
-          host === "localhost" ||
-          host === "127.0.0.1"
-        ) {
+        // Production on custom domain
+        if (host === "kaskad.in.ua" || host === "www.kaskad.in.ua") {
           basePath = "/";
+        } else {
+          // Live Server / GitHub Pages: site may live under /kaskad_v7/
+          const repoIdx = pathParts.indexOf("kaskad_v7");
+          if (repoIdx !== -1) {
+            basePath = "/" + pathParts.slice(0, repoIdx + 1).join("/") + "/";
+          } else if (host.endsWith("github.io") && pathParts.length > 0) {
+            basePath = "/" + pathParts[0] + "/";
+          } else {
+            // Vite or Live Server with kaskad_v7 as root
+            basePath = "/";
+          }
         }
 
         window.__BASE_PATH__ = basePath;
-
         const base = document.createElement("base");
         base.href = basePath;
         document.head.prepend(base);
@@ -161,9 +160,9 @@
 }
     </script>
   </head>
+<body>
   <div id="site-header"></div>
-  <body>
-    <main>
+<main>
       <div class="container">
         <section class="hero-price-section">
           <div>
@@ -208,1029 +207,896 @@
             <p class="price-content" data-translate="price-content-22">Здесь вы найдете основные услуги по диагностике авто, техническому обслуживанию, ремонту двигателя, подвески, тормозной системы и установке газобаллонного оборудования. Если нужной услуги нет в списке – просто позвоните нам по телефонам +38 (066) 837 56 66 или +38 (096) 211 02 10. Менеджеры автосервиса «АС КАСКАД» всегда готовы предоставить профессиональную консультацию, ответить на все ваши вопросы и предложить оптимальное решение для любого автомобиля.</p>
           </div>
 
-          <h2>Диагностика автомобиля</h2>
+          <h2 data-translate="price-item-278">Диагностика автомобиля</h2>
 
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  Диагностика двигательа (візуально-акустичнии осмотр, течи та
-                  сторонние звуки)
-                </td>
-                <td class="price">от 350 грн</td>
+                <td data-translate="price-item-003">Диагностика двигателя (визуально-акустический осмотр, течи и сторонние звуки)</td>
+                <td class="price" data-translate="price-item-004">от 350 грн</td>
               </tr>
               <tr>
-                <td>Видеобороскопия двигательа (осмотр цилиндра камерой)</td>
-                <td class="price">от 450 грн/цилиндр</td>
+                <td data-translate="price-item-005">Видеоэндоскопия двигателя (осмотр цилиндра камерой)</td>
+                <td class="price" data-translate="price-item-006">от 450 грн/цилиндр</td>
               </tr>
               <tr>
-                <td>
-                  Тест CO₂ (наличие выхлопных газов у системе охлаждения)
-                </td>
-                <td class="price">750 грн</td>
+                <td data-translate="price-item-007">Тест CO₂ (наличие выхлопных газов в системе охлаждения)</td>
+                <td class="price" data-translate="price-item-008">750 грн</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика системы охлаждения под давлением (опрессовка)
-                </td>
-                <td class="price">от 650 грн</td>
+                <td data-translate="price-item-009">Диагностика системы охлаждения под давлением (опрессовка)</td>
+                <td class="price" data-translate="price-item-010">от 650 грн</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика кондиционера (проверка давления и продуктивности)
-                </td>
-                <td class="price">750 грн</td>
+                <td data-translate="price-item-011">Диагностика кондиционера (проверка давления и производительности)</td>
+                <td class="price" data-translate="price-item-008">750 грн</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика системы электропитания (нагрузочная вилка
-                  АКБ, уровень зарядки)
-                </td>
-                <td class="price">150 грн</td>
+                <td data-translate="price-item-012">Диагностика системы электропитания (нагрузочная вилка АКБ, уровень зарядки)</td>
+                <td class="price" data-translate="price-item-013">150 грн</td>
               </tr>
               <tr>
-                <td>Диагностика ходовои части</td>
-                <td class="price">400 грн</td>
+                <td data-translate="price-item-014">Диагностика ходовой части</td>
+                <td class="price" data-translate="price-item-015">400 грн</td>
               </tr>
               <tr class="included-service">
-                <td>Рулевое управление</td>
-                <td class="price">включено в диагностику ходовой</td>
+                <td data-translate="price-item-016">Рулевое управление</td>
+                <td class="price" data-translate="price-item-017">включено в диагностику ходовой</td>
               </tr>
               <tr class="included-service">
-                <td>Тормозная система</td>
-                <td class="price">включено в диагностику ходовой</td>
+                <td data-translate="price-item-018">Тормозная система</td>
+                <td class="price" data-translate="price-item-017">включено в диагностику ходовой</td>
               </tr>
               <tr>
-                <td>Двигатель / Навесное оборудования</td>
-                <td class="price">350 грн</td>
+                <td data-translate="price-item-019">Двигатель / Навесное оборудование</td>
+                <td class="price" data-translate="price-item-020">350 грн</td>
               </tr>
               <tr>
-                <td>Уровни и качество подкапотных жидкостей</td>
-                <td class="price">+150 грн до диагностики ходовой</td>
+                <td data-translate="price-item-021">Уровни и качество подкапотных жидкостей</td>
+                <td class="price" data-translate="price-item-022">+150 грн до диагностики ходовой</td>
               </tr>
               <tr class="included-service">
-                <td>Подтекание</td>
-                <td class="price">включено в диагностику ходовой/двигательа</td>
+                <td data-translate="price-item-023">Подтекание</td>
+                <td class="price" data-translate="price-item-024">включено в диагностику ходовой/двигателя</td>
               </tr>
               <tr>
-                <td>Компьютерная диагностика</td>
-                <td class="price">
-                  400 грн (чтение ошибок)<br />от 700 грн (полноценная)
-                </td>
+                <td data-translate="price-item-025">Компьютерная диагностика</td>
+                <td class="price" data-translate-html="price-item-026">400 грн (чтение ошибок)<br />от 700 грн (полноценная)</td>
               </tr>
               <tr>
-                <td>Диагностика системы зажигания</td>
-                <td class="price">
-                  650 грн (4 цилиндра)<br />800 грн (6 цилиндров)
-                </td>
+                <td data-translate="price-item-027">Диагностика системы зажигания</td>
+                <td class="price" data-translate-html="price-item-028">650 грн (4 цилиндра)<br />800 грн (6 цилиндров)</td>
               </tr>
               <tr>
-                <td>Проверка наповнення цилиндров мотор-тестером</td>
-                <td class="price">
-                  800 грн (4 цилиндра)<br />1000 грн (6-8 цилиндров)
-                </td>
+                <td data-translate="price-item-029">Проверка наполнения цилиндров мотор-тестером</td>
+                <td class="price" data-translate-html="price-item-030">800 грн (4 цилиндра)<br />1000 грн (6-8 цилиндров)</td>
               </tr>
               <tr>
-                <td>Предпродажная диагностика авто</td>
-                <td class="price">2500 грн</td>
+                <td data-translate="price-item-031">Предпродажная диагностика авто</td>
+                <td class="price" data-translate="price-item-032">2500 грн</td>
               </tr>
               <tr>
-                <td>Проверка акумулятора</td>
-                <td class="price">100 грн</td>
+                <td data-translate="price-item-033">Проверка аккумулятора</td>
+                <td class="price" data-translate="price-item-034">100 грн</td>
               </tr>
               <tr>
-                <td>Проверка розвал-сходження</td>
-                <td class="price">400 грн</td>
+                <td data-translate="price-item-035">Проверка развал-схождения</td>
+                <td class="price" data-translate="price-item-015">400 грн</td>
               </tr>
               <tr>
-                <td>Регулировка розвал-сходження</td>
-                <td class="price">
-                  700 грн (1 ось)<br />850 грн (2 оси)<br />1000-1500 грн
-                  (позашляховики)<br />от 1800 грн (Tesla)
-                </td>
+                <td data-translate="price-item-036">Регулировка развал-схождения</td>
+                <td class="price" data-translate-html="price-item-037">700 грн (1 ось)<br />850 грн (2 оси)<br />1000-1500 грн
+                  (внедорожники)<br />от 1800 грн (Tesla)</td>
               </tr>
               <tr>
-                <td>
-                  Проверка герметичности впускного тракту (димогенератор)
-                </td>
-                <td class="price">от 650 грн</td>
+                <td data-translate="price-item-038">Проверка герметичности впускного тракта (дымогенератор)</td>
+                <td class="price" data-translate="price-item-010">от 650 грн</td>
               </tr>
               <tr>
-                <td>Проверка ЛКП толщиномером</td>
-                <td class="price">1000 грн</td>
+                <td data-translate="price-item-039">Проверка ЛКП толщиномером</td>
+                <td class="price" data-translate="price-item-040">1000 грн</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Замена технических жидкостей и фильтров</h2>
+          <h2 data-translate="price-item-279">Замена технических жидкостей и фильтров</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена масла в двигателе и фильтра масляного</td>
-                <td class="price">
-                  400 грн. (при покупке масла в нас), 500 грн. (если свое)
-                </td>
+                <td data-translate="price-item-041">Замена масла в двигателе и фильтра масляного</td>
+                <td class="price" data-translate="price-item-042">400 грн. (при покупке масла в нас), 500 грн. (если свое)</td>
               </tr>
               <tr>
-                <td>Снятие-установка захисту двигательа</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-043">Снятие-установка захисту двигателя</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
               <tr>
-                <td>Замена масла в механічніи КПП</td>
-                <td class="price">450 грн, со снятием поддона от 1400 грн.</td>
+                <td data-translate="price-item-045">Замена масла в механической КПП</td>
+                <td class="price" data-translate="price-item-046">450 грн, со снятием поддона от 1400 грн.</td>
               </tr>
               <tr>
-                <td>Замена фильтра воздуха (2 элементы)</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-047">Замена фильтра воздуха (2 элементы)</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
               <tr>
-                <td>Замена фильтра воздуха</td>
-                <td class="price">от 150 грн.</td>
+                <td data-translate="price-item-048">Замена фильтра воздуха</td>
+                <td class="price" data-translate="price-item-049">от 150 грн.</td>
               </tr>
               <tr>
-                <td>Замена фильтра салону (кондиционера) у бардачка</td>
-                <td class="price">от 350 грн.</td>
+                <td data-translate="price-item-050">Замена фильтра салона (кондиционера) в бардачке</td>
+                <td class="price" data-translate="price-item-051">от 350 грн.</td>
               </tr>
               <tr>
-                <td>Замена фильтра салону (кондиционера) педальнии узел</td>
-                <td class="price">650 грн.</td>
+                <td data-translate="price-item-052">Замена фильтра салона (кондиционера) педальный узел</td>
+                <td class="price" data-translate="price-item-053">650 грн.</td>
               </tr>
               <tr>
-                <td>Замена фильтра топливного подвесного</td>
-                <td class="price">от 450 грн.</td>
+                <td data-translate="price-item-054">Замена фильтра топливного подвесного</td>
+                <td class="price" data-translate="price-item-055">от 450 грн.</td>
               </tr>
               <tr>
-                <td>Замена фильтра топливного у бака</td>
-                <td class="price">от 2000 грн.</td>
+                <td data-translate="price-item-056">Замена фильтра топливного в баке</td>
+                <td class="price" data-translate="price-item-057">от 2000 грн.</td>
               </tr>
               <tr>
-                <td>Замена фильтра топлива дизельного</td>
-                <td class="price">
-                  от 600 грн., если прокачка топлива з комп'ютера то + 450 грн.
-                </td>
+                <td data-translate="price-item-058">Замена фильтра топлива дизельного</td>
+                <td class="price" data-translate="price-item-059">от 600 грн., если прокачка топлива с компьютера, то + 450 грн.</td>
               </tr>
               <tr>
-                <td>Частичная замена жидкости в АКПП без замены фильтра АКПП</td>
-                <td class="price">700 грн.</td>
+                <td data-translate="price-item-060">Частичная замена жидкости в АКПП без замены фильтра АКПП</td>
+                <td class="price" data-translate="price-item-061">700 грн.</td>
               </tr>
               <tr>
-                <td>Частичная замена жидкости в АКПП с заменой фильтра АКПП</td>
-                <td class="price">от 2000 грн.</td>
+                <td data-translate="price-item-062">Частичная замена жидкости в АКПП с заменой фильтра АКПП</td>
+                <td class="price" data-translate="price-item-057">от 2000 грн.</td>
               </tr>
               <tr>
-                <td>Замена масла в роздавальніи коробке</td>
-                <td class="price">от 450 грн.</td>
+                <td data-translate="price-item-063">Замена масла в раздаточной коробке</td>
+                <td class="price" data-translate="price-item-055">от 450 грн.</td>
               </tr>
               <tr>
-                <td>Замена масла в мосту</td>
-                <td class="price">от 450 грн.</td>
+                <td data-translate="price-item-064">Замена масла в мосту</td>
+                <td class="price" data-translate="price-item-055">от 450 грн.</td>
               </tr>
               <tr>
-                <td>Замена жидкости ГУР</td>
-                <td class="price">750 грн.</td>
+                <td data-translate="price-item-065">Замена жидкости ГУР</td>
+                <td class="price" data-translate="price-item-066">750 грн.</td>
               </tr>
               <tr>
-                <td>Замена жидкости ГУР с промывкой</td>
-                <td class="price">1200 грн.</td>
+                <td data-translate="price-item-067">Замена жидкости ГУР с промывкой</td>
+                <td class="price" data-translate="price-item-068">1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена жидкости системы охлаждения</td>
-                <td class="price">от 900 грн.</td>
+                <td data-translate="price-item-069">Замена жидкости системы охлаждения</td>
+                <td class="price" data-translate="price-item-070">от 900 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Апаратна промывка системы охлаждения (миестьмо только всю
-                  систему целиком!)
-                </td>
-                <td class="price">от 3500 грн.</td>
+                <td data-translate="price-item-071">Аппаратная промывка системы охлаждения (моем только всю систему целиком!)</td>
+                <td class="price" data-translate="price-item-072">от 3500 грн.</td>
               </tr>
               <tr>
-                <td>Замена жидкости коробки з двойным сцеплением (DSG)</td>
-                <td class="price">от 800 грн.</td>
+                <td data-translate="price-item-073">Замена жидкости коробки с двойным сцеплением (DSG)</td>
+                <td class="price" data-translate="price-item-074">от 800 грн.</td>
               </tr>
               <tr>
-                <td>Змащення 1 хрестовини карданного вала</td>
-                <td class="price">150 грн.</td>
+                <td data-translate="price-item-075">Смазка 1 крестовины карданного вала</td>
+                <td class="price" data-translate="price-item-076">150 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Тормозна система</h2>
+          <h2 data-translate="price-item-018">Тормозная система</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена шланга тормозного</td>
-                <td class="price">от 450 грн.</td>
+                <td data-translate="price-item-077">Замена шланга тормозного</td>
+                <td class="price" data-translate="price-item-055">от 450 грн.</td>
               </tr>
               <tr>
-                <td>Замена тормозных колодок дисковых (комплект)</td>
-                <td class="price">от 500 грн (+ 100 грн. масла на ось)</td>
+                <td data-translate="price-item-078">Замена тормозных колодок дисковых (комплект)</td>
+                <td class="price" data-translate="price-item-079">от 500 грн (+ 100 грн. масла на ось)</td>
               </tr>
               <tr>
-                <td>Замена тормозных колодок барабанных (комплект)</td>
-                <td class="price">от 1200 грн (+ масла 100-200 грн.)</td>
+                <td data-translate="price-item-080">Замена тормозных колодок барабанных (комплект)</td>
+                <td class="price" data-translate="price-item-081">от 1200 грн (+ масла 100-200 грн.)</td>
               </tr>
               <tr>
-                <td>Замена тормозного барабана</td>
-                <td class="price">от 600 грн.</td>
+                <td data-translate="price-item-082">Замена тормозного барабана</td>
+                <td class="price" data-translate="price-item-083">от 600 грн.</td>
               </tr>
               <tr>
-                <td>Регулировка ручного тормозова</td>
-                <td class="price">
-                  от 450 грн. (без снятия барабанов), от 1200 грн. (со снятием
-                  барабанов)
-                </td>
+                <td data-translate="price-item-084">Регулировка ручного тормозова</td>
+                <td class="price" data-translate="price-item-085">от 450 грн. (без снятия барабанов), от 1200 грн. (со снятием барабанов)</td>
               </tr>
               <tr>
-                <td>Замена колодок ручного тормозова (стоянкового)</td>
-                <td class="price">от 1000 грн.</td>
+                <td data-translate="price-item-086">Замена колодок ручного тормозова (стоянкового)</td>
+                <td class="price" data-translate="price-item-087">от 1000 грн.</td>
               </tr>
               <tr>
-                <td>Замена троса ручного тормозова (одна сторона)</td>
-                <td class="price">от 500 грн.</td>
+                <td data-translate="price-item-088">Замена троса ручного тормозова (одна сторона)</td>
+                <td class="price" data-translate="price-item-089">от 500 грн.</td>
               </tr>
               <tr>
-                <td>Замена тормозного суппорта</td>
-                <td class="price">от 500 грн.</td>
+                <td data-translate="price-item-090">Замена тормозного суппорта</td>
+                <td class="price" data-translate="price-item-089">от 500 грн.</td>
               </tr>
               <tr>
-                <td>Замена ремкомплекта тормозного суппорта 1 поршень</td>
-                <td class="price">от 750 грн.</td>
+                <td data-translate="price-item-091">Замена ремкомплекта тормозного суппорта 1 поршень</td>
+                <td class="price" data-translate="price-item-092">от 750 грн.</td>
               </tr>
               <tr>
-                <td>Замена ремкомплекта тормозного суппорта 2 поршня</td>
-                <td class="price">от 950 грн.</td>
+                <td data-translate="price-item-093">Замена ремкомплекта тормозного суппорта 2 поршня</td>
+                <td class="price" data-translate="price-item-094">от 950 грн.</td>
               </tr>
               <tr>
-                <td>Замена ремкомплекта тормозного суппорта 4 поршня</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-095">Замена ремкомплекта тормозного суппорта 4 поршня</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена головного тормозного цилиндра</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-097">Замена головного тормозного цилиндра</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена тормозного цилиндра робочого</td>
-                <td class="price">от 750 грн.</td>
+                <td data-translate="price-item-098">Замена тормозного цилиндра робочого</td>
+                <td class="price" data-translate="price-item-092">от 750 грн.</td>
               </tr>
               <tr>
-                <td>Замена вакуумного усилителя тормозов</td>
-                <td class="price">от 1600 грн.</td>
+                <td data-translate="price-item-099">Замена вакуумного усилителя тормозов</td>
+                <td class="price" data-translate="price-item-100">от 1600 грн.</td>
               </tr>
               <tr>
-                <td>Замена тормозных дисков з колодками (ось)</td>
-                <td class="price">
-                  от 1100 грн. (+100-150 грн. масла на ось)
-                </td>
+                <td data-translate="price-item-101">Замена тормозных дисков з колодками (ось)</td>
+                <td class="price" data-translate="price-item-102">от 1100 грн. (+100-150 грн. масла на ось)</td>
               </tr>
               <tr>
-                <td>Замена тормозной жидкости</td>
-                <td class="price">от 650 грн.</td>
+                <td data-translate="price-item-103">Замена тормозной жидкости</td>
+                <td class="price" data-translate="price-item-104">от 650 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена тормозных колодок задних дискових з эл. приводом
-                  ручного тормозова (комплект)
-                </td>
-                <td class="price">от 900 грн. (+ 100 грн. масла на ось)</td>
+                <td data-translate="price-item-105">Замена тормозных колодок задних дискових з эл. приводом ручного тормозова (комплект)</td>
+                <td class="price" data-translate="price-item-106">от 900 грн. (+ 100 грн. масла на ось)</td>
               </tr>
               <tr>
-                <td>Розробка тормозного суппорта</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-107">Розробка тормозного суппорта</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
               <tr>
-                <td>Проверка биения перед. тормозных дисков</td>
-                <td class="price">от 600 грн. за пару</td>
+                <td data-translate="price-item-108">Проверка биения перед. тормозных дисков</td>
+                <td class="price" data-translate="price-item-109">от 600 грн. за пару</td>
               </tr>
               <tr>
-                <td>Проверка биения задних тормозных дисков</td>
-                <td class="price">от 600 грн. за пару</td>
+                <td data-translate="price-item-110">Проверка биения задних тормозных дисков</td>
+                <td class="price" data-translate="price-item-109">от 600 грн. за пару</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Рулевое управление</h2>
+          <h2 data-translate="price-item-016">Рулевое управление</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена рульового наконечника</td>
-                <td class="price">от 350 грн.</td>
+                <td data-translate="price-item-111">Замена рульового наконечника</td>
+                <td class="price" data-translate="price-item-051">от 350 грн.</td>
               </tr>
               <tr>
-                <td>Замена рулевой тяги</td>
-                <td class="price">от 550 грн.</td>
+                <td data-translate="price-item-112">Замена рулевой тяги</td>
+                <td class="price" data-translate="price-item-113">от 550 грн.</td>
               </tr>
               <tr>
-                <td>Замена насоса гидроусилителя</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-114">Замена насоса гидроусилителя</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена пыльника рулевой рейки</td>
-                <td class="price">от 450 грн.</td>
+                <td data-translate="price-item-115">Замена пыльника рулевой рейки</td>
+                <td class="price" data-translate="price-item-055">от 450 грн.</td>
               </tr>
               <tr>
-                <td>Снятие-установка (замена) рулевой рейки</td>
-                <td class="price">от 2500 грн.</td>
+                <td data-translate="price-item-116">Снятие-установка (замена) рулевой рейки</td>
+                <td class="price" data-translate="price-item-117">от 2500 грн.</td>
               </tr>
               <tr>
-                <td>Ремонт рулевой рейки механической</td>
-                <td class="price">от 3500 грн.</td>
+                <td data-translate="price-item-118">Ремонт рулевой рейки механической</td>
+                <td class="price" data-translate="price-item-072">от 3500 грн.</td>
               </tr>
               <tr>
-                <td>Ремонт рулевой рейки гидравлической</td>
-                <td class="price">от 5000 грн.</td>
+                <td data-translate="price-item-119">Ремонт рулевой рейки гидравлической</td>
+                <td class="price" data-translate="price-item-120">от 5000 грн.</td>
               </tr>
               <tr>
-                <td>Ремонт электрической рулевой рейки</td>
-                <td class="price">от 6000 грн.</td>
+                <td data-translate="price-item-121">Ремонт электрической рулевой рейки</td>
+                <td class="price" data-translate="price-item-122">от 6000 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Ходовая частина</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+          <h2 data-translate="price-item-280">Ходовая часть</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена стойки стабилизатора</td>
-                <td class="price">от 300 грн.</td>
+                <td data-translate="price-item-123">Замена стойки стабилизатора</td>
+                <td class="price" data-translate="price-item-124">от 300 грн.</td>
               </tr>
               <tr>
-                <td>Замена втулки стабилизатора</td>
-                <td class="price">от 500 грн. (за 2 шт)</td>
+                <td data-translate="price-item-125">Замена втулки стабилизатора</td>
+                <td class="price" data-translate="price-item-126">от 500 грн. (за 2 шт)</td>
               </tr>
               <tr>
-                <td>Замена переднего нижнего рычага (Макферсон)</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-127">Замена переднего нижнего рычага (Макферсон)</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена сайлентблоков рычага переднего нижнего</td>
-                <td class="price">от 1500 грн. (за 2 сайлентблока)</td>
+                <td data-translate="price-item-128">Замена сайлентблоков рычага переднего нижнего</td>
+                <td class="price" data-translate="price-item-129">от 1500 грн. (за 2 сайлентблока)</td>
               </tr>
               <tr>
-                <td>Замена сайлентблоков рычага переднего верхнего</td>
-                <td class="price">от 2000 грн. (за 2 сайлентблока)</td>
+                <td data-translate="price-item-130">Замена сайлентблоков рычага переднего верхнего</td>
+                <td class="price" data-translate="price-item-131">от 2000 грн. (за 2 сайлентблока)</td>
               </tr>
               <tr>
-                <td>Замена рычага заднего поперечного</td>
-                <td class="price">от 550 грн.</td>
+                <td data-translate="price-item-132">Замена рычага заднего поперечного</td>
+                <td class="price" data-translate="price-item-113">от 550 грн.</td>
               </tr>
               <tr>
-                <td>Замена сайлентблоков рычага заднего поперечного</td>
-                <td class="price">от 750 грн. (за 2 сайлентблока)</td>
+                <td data-translate="price-item-133">Замена сайлентблоков рычага заднего поперечного</td>
+                <td class="price" data-translate="price-item-134">от 750 грн. (за 2 сайлентблока)</td>
               </tr>
               <tr>
-                <td>
-                  Замена сайлентблоков рычага заднего поперечного
-                  подпружиненного
-                </td>
-                <td class="price">от 900 грн. (за 2 сайлентблока)</td>
+                <td data-translate="price-item-135">Замена сайлентблоков рычага заднего поперечного подпружиненного</td>
+                <td class="price" data-translate="price-item-136">от 900 грн. (за 2 сайлентблока)</td>
               </tr>
               <tr>
-                <td>Замена рычага продольного</td>
-                <td class="price">от 1000 грн.</td>
+                <td data-translate="price-item-137">Замена рычага продольного</td>
+                <td class="price" data-translate="price-item-087">от 1000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена сайлентблоков рычага продольного задней подвески
-                </td>
-                <td class="price">от 1100 грн.</td>
+                <td data-translate="price-item-138">Замена сайлентблоков рычага продольного задней подвески</td>
+                <td class="price" data-translate="price-item-139">от 1100 грн.</td>
               </tr>
               <tr>
-                <td>Замена шаровой опори (запресована)</td>
-                <td class="price">от 1250 грн.</td>
+                <td data-translate="price-item-140">Замена шаровой опоры (запрессованная)</td>
+                <td class="price" data-translate="price-item-141">от 1250 грн.</td>
               </tr>
               <tr>
-                <td>Замена шаровой опори (болти или заклепки)</td>
-                <td class="price">от 850 грн.</td>
+                <td data-translate="price-item-142">Замена шаровой опоры (болты или заклепки)</td>
+                <td class="price" data-translate="price-item-143">от 850 грн.</td>
               </tr>
               <tr>
-                <td>Замена подшипника ступицы</td>
-                <td class="price">от 950 грн.</td>
+                <td data-translate="price-item-144">Замена подшипника ступицы</td>
+                <td class="price" data-translate="price-item-094">от 950 грн.</td>
               </tr>
               <tr>
-                <td>Замена амортизатора в пружине (Макферсон)</td>
-                <td class="price">от 1500 грн.</td>
+                <td data-translate="price-item-145">Замена амортизатора в пружине (Макферсон)</td>
+                <td class="price" data-translate="price-item-146">от 1500 грн.</td>
               </tr>
               <tr>
-                <td>Замена амортизатора без пружини (вставка)</td>
-                <td class="price">от 650 грн.</td>
+                <td data-translate="price-item-147">Замена амортизатора без пружины (вставка)</td>
+                <td class="price" data-translate="price-item-104">от 650 грн.</td>
               </tr>
               <tr>
-                <td>Замена сайлентблока плавающего (шарнирного)</td>
-                <td class="price">от 800 грн.</td>
+                <td data-translate="price-item-148">Замена сайлентблока плавающего (шарнирного)</td>
+                <td class="price" data-translate="price-item-074">от 800 грн.</td>
               </tr>
               <tr>
-                <td>Замена сайлентблоков задней балки</td>
-                <td class="price">от 2200 грн.</td>
+                <td data-translate="price-item-149">Замена сайлентблоков задней балки</td>
+                <td class="price" data-translate="price-item-150">от 2200 грн.</td>
               </tr>
               <tr>
-                <td>Замена карданного вала</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-151">Замена карданного вала</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена хрестовини карданного вала</td>
-                <td class="price">
-                  +800 грн. до замены кардана за кожну крестовину
-                </td>
+                <td data-translate="price-item-152">Замена хрестовини карданного вала</td>
+                <td class="price" data-translate="price-item-153">+800 грн. до замены кардана за каждую крестовину</td>
               </tr>
               <tr>
-                <td>Замена подвесного подшипника карданного вала</td>
-                <td class="price">от 1400 грн.</td>
+                <td data-translate="price-item-154">Замена подвесного подшипника карданного вала</td>
+                <td class="price" data-translate="price-item-155">от 1400 грн.</td>
               </tr>
               <tr>
-                <td>Замена ШРУСа (гранати)</td>
-                <td class="price">от 950 грн.</td>
+                <td data-translate="price-item-156">Замена ШРУСа (гранати)</td>
+                <td class="price" data-translate="price-item-094">от 950 грн.</td>
               </tr>
               <tr>
-                <td>Замена пыльника ШРУСа</td>
-                <td class="price">от 950 грн.</td>
+                <td data-translate="price-item-157">Замена пыльника ШРУСа</td>
+                <td class="price" data-translate="price-item-094">от 950 грн.</td>
               </tr>
               <tr>
-                <td>Замена подушки двигательа верхней</td>
-                <td class="price">от 650 грн.</td>
+                <td data-translate="price-item-158">Замена подушки двигателя верхней</td>
+                <td class="price" data-translate="price-item-104">от 650 грн.</td>
               </tr>
               <tr>
-                <td>Замена подушки двигательа нижней</td>
-                <td class="price">от 550 грн.</td>
+                <td data-translate="price-item-159">Замена подушки двигателя нижней</td>
+                <td class="price" data-translate="price-item-113">от 550 грн.</td>
               </tr>
               <tr>
-                <td>Замена втулок стабилизатора со снятием подрамника (2шт)</td>
-                <td class="price">от 1400 грн.</td>
+                <td data-translate="price-item-160">Замена втулок стабилизатора со снятием подрамника (2шт)</td>
+                <td class="price" data-translate="price-item-155">от 1400 грн.</td>
               </tr>
               <tr>
-                <td>Замена сайлентблоков подрамника</td>
-                <td class="price">от 4000 грн.</td>
+                <td data-translate="price-item-161">Замена сайлентблоков подрамника</td>
+                <td class="price" data-translate="price-item-162">от 4000 грн.</td>
               </tr>
               <tr>
-                <td>Замена сальника полуоси передней подвески</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-163">Замена сальника полуоси передней подвески</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена сальника полуоси задней подвески</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-164">Замена сальника полуоси задней подвески</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена пневмоамортизатора или пневмоподушки амортизатора
-                </td>
-                <td class="price">от 2000 грн.</td>
+                <td data-translate="price-item-165">Замена пневмоамортизатора или пневмоподушки амортизатора</td>
+                <td class="price" data-translate="price-item-057">от 2000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена пневмоподушки (которая стоит окремо от амортизатора)
-                </td>
-                <td class="price">от 1000 грн.</td>
+                <td data-translate="price-item-166">Замена пневмоподушки (которая стоит окремо от амортизатора)</td>
+                <td class="price" data-translate="price-item-087">от 1000 грн.</td>
               </tr>
               <tr>
-                <td>Калибровка пневматической подвески</td>
-                <td class="price">от 2000 грн.</td>
+                <td data-translate="price-item-167">Калибровка пневматической подвески</td>
+                <td class="price" data-translate="price-item-057">от 2000 грн.</td>
               </tr>
               <tr>
-                <td>Заправка пневматической подвески азотом</td>
-                <td class="price">от 1400 грн.</td>
+                <td data-translate="price-item-168">Заправка пневматической подвески азотом</td>
+                <td class="price" data-translate="price-item-155">от 1400 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Топливная система</h2>
+          <h2 data-translate="price-item-281">Топливная система</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена бензонасоса подвесного</td>
-                <td class="price">от 800 грн.</td>
+                <td data-translate="price-item-169">Замена бензонасоса подвесного</td>
+                <td class="price" data-translate="price-item-074">от 800 грн.</td>
               </tr>
               <tr>
-                <td>Замена бензонасоса погружного (у баке)</td>
-                <td class="price">от 2000 грн.</td>
+                <td data-translate="price-item-170">Замена бензонасоса погружного (у баке)</td>
+                <td class="price" data-translate="price-item-057">от 2000 грн.</td>
               </tr>
               <tr>
-                <td>Измерение давления топливного насоса</td>
-                <td class="price">от 650 грн.</td>
+                <td data-translate="price-item-171">Измерение давления топливного насоса</td>
+                <td class="price" data-translate="price-item-104">от 650 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Система сцепления</h2>
+          <h2 data-translate="price-item-282">Система сцепления</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена комплекту сцепления без снятия подрамника</td>
-                <td class="price">от 5000 грн.</td>
+                <td data-translate="price-item-172">Замена комплекта сцепления без снятия подрамника</td>
+                <td class="price" data-translate="price-item-120">от 5000 грн.</td>
               </tr>
               <tr>
-                <td>Замена комплекту сцепления со снятием подрамника</td>
-                <td class="price">от 7000 грн.</td>
+                <td data-translate="price-item-173">Замена комплекта сцепления со снятием подрамника</td>
+                <td class="price" data-translate="price-item-174">от 7000 грн.</td>
               </tr>
               <tr>
-                <td>Замена комплекту сцепления (повнии привід)</td>
-                <td class="price">от 8000 грн.</td>
+                <td data-translate="price-item-175">Замена комплекта сцепления (полный привод)</td>
+                <td class="price" data-translate="price-item-176">от 8000 грн.</td>
               </tr>
               <tr>
-                <td>Замена маховика</td>
-                <td class="price">+700 грн. до замены сцепления</td>
+                <td data-translate="price-item-177">Замена маховика</td>
+                <td class="price" data-translate="price-item-178">+700 грн. до замены сцепления</td>
               </tr>
               <tr>
-                <td>Замена заднего сальника коленчатого вала</td>
-                <td class="price">+1000 грн. до замены сцепления</td>
+                <td data-translate="price-item-179">Замена заднего сальника коленчатого вала</td>
+                <td class="price" data-translate="price-item-180">+1000 грн. до замены сцепления</td>
               </tr>
               <tr>
-                <td>Замена троса сцепления</td>
-                <td class="price">от 600 грн.</td>
+                <td data-translate="price-item-181">Замена троса сцепления</td>
+                <td class="price" data-translate="price-item-083">от 600 грн.</td>
               </tr>
               <tr>
-                <td>Замена шланга сцепления</td>
-                <td class="price">от 800 грн.</td>
+                <td data-translate="price-item-182">Замена шланга сцепления</td>
+                <td class="price" data-translate="price-item-074">от 800 грн.</td>
               </tr>
               <tr>
-                <td>Замена цилиндра сцепления</td>
-                <td class="price">от 800 грн.</td>
+                <td data-translate="price-item-183">Замена цилиндра сцепления</td>
+                <td class="price" data-translate="price-item-074">от 800 грн.</td>
               </tr>
               <tr>
-                <td>Замена рабочей жидкости сцепления</td>
-                <td class="price">от 550 грн.</td>
+                <td data-translate="price-item-184">Замена рабочей жидкости сцепления</td>
+                <td class="price" data-translate="price-item-113">от 550 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>ГРМ (газорозподільнии механізм)</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+          <h2 data-translate="price-item-283">ГРМ (газораспределительный механизм)</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена комплекту ГРМ бензинового двигательа</td>
-                <td class="price">от 2500 грн.</td>
+                <td data-translate="price-item-185">Замена комплекту ГРМ бензинового двигателя</td>
+                <td class="price" data-translate="price-item-117">от 2500 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ГРМ бензинового двигательа со снятием клапанной
-                  кришки
-                </td>
-                <td class="price">от 3800 грн.</td>
+                <td data-translate="price-item-186">Замена комплекту ГРМ бензинового двигателя со снятием клапанной крышки</td>
+                <td class="price" data-translate="price-item-187">от 3800 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ГРМ бензинового двигательа (16-20 клапанов) зі
-                  снятиям передней части
-                </td>
-                <td class="price">от 6400 грн.</td>
+                <td data-translate="price-item-188">Замена комплекту ГРМ бензинового двигателя (16-20 клапанов) зі снятиям передней части</td>
+                <td class="price" data-translate="price-item-189">от 6400 грн.</td>
               </tr>
               <tr>
-                <td>Замена комплекту ГРМ (опозитнии двигатель)</td>
-                <td class="price">от 3250 грн.</td>
+                <td data-translate="price-item-190">Замена комплекту ГРМ (опозитнии двигатель)</td>
+                <td class="price" data-translate="price-item-191">от 3250 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ГРМ бензинового двигательа (6-8 цилиндров)
-                </td>
-                <td class="price">от 4000 грн.</td>
+                <td data-translate="price-item-192">Замена комплекту ГРМ бензинового двигателя (6-8 цилиндров)</td>
+                <td class="price" data-translate="price-item-162">от 4000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ГРМ бензинового двигательа (6-8 цилиндров) зі
-                  снятиям передней части
-                </td>
-                <td class="price">от 7600 грн.</td>
+                <td data-translate="price-item-193">Замена комплекту ГРМ бензинового двигателя (6-8 цилиндров) зі снятиям передней части</td>
+                <td class="price" data-translate="price-item-194">от 7600 грн.</td>
               </tr>
               <tr>
-                <td>Замена комплекту ГРМ дизельного двигательа</td>
-                <td class="price">от 2800 грн.</td>
+                <td data-translate="price-item-195">Замена комплекту ГРМ дизельного двигателя</td>
+                <td class="price" data-translate="price-item-196">от 2800 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ГРМ дизельного двигательа со снятием клапанной
-                  кришки
-                </td>
-                <td class="price">от 4600 грн.</td>
+                <td data-translate="price-item-197">Замена комплекту ГРМ дизельного двигателя со снятием клапанной крышки</td>
+                <td class="price" data-translate="price-item-198">от 4600 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ГРМ дизельного двигательа (16 клапанов) зі
-                  снятиям передней части
-                </td>
-                <td class="price">от 6400 грн.</td>
+                <td data-translate="price-item-199">Замена комплекту ГРМ дизельного двигателя (16 клапанов) зі снятиям передней части</td>
+                <td class="price" data-translate="price-item-189">от 6400 грн.</td>
               </tr>
               <tr>
-                <td>Замена комплекту ГРМ дизельного двигательа (6-8 цилиндров)</td>
-                <td class="price">от 4900 грн.</td>
+                <td data-translate="price-item-200">Замена комплекту ГРМ дизельного двигателя (6-8 цилиндров)</td>
+                <td class="price" data-translate="price-item-201">от 4900 грн.</td>
               </tr>
               <tr>
-                <td>Замена комплекту ланцюга ГРМ (3-4 цилиндра)</td>
-                <td class="price">от 6000 грн.</td>
+                <td data-translate="price-item-202">Замена комплекту ланцюга ГРМ (3-4 цилиндра)</td>
+                <td class="price" data-translate="price-item-122">от 6000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ланцюга ГРМ и ланцюга масляного насоса (3-4
-                  цилиндра)
-                </td>
-                <td class="price">от 7300 грн.</td>
+                <td data-translate="price-item-203">Замена комплекту ланцюга ГРМ и ланцюга масляного насоса (3-4 цилиндра)</td>
+                <td class="price" data-translate="price-item-204">от 7300 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ланцюга ГРМ (3-4 цилиндра) со снятием
-                  передней части
-                </td>
-                <td class="price">от 11000 грн.</td>
+                <td data-translate="price-item-205">Замена комплекту ланцюга ГРМ (3-4 цилиндра) со снятием передней части</td>
+                <td class="price" data-translate="price-item-206">от 11000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена ланцюга ГРМ (3-4 цилиндра) бензинового или дизельного
-                  двигательа со снятием двигательа
-                </td>
-                <td class="price">от 20000 грн.</td>
+                <td data-translate="price-item-207">Замена ланцюга ГРМ (3-4 цилиндра) бензинового или дизельного двигателя со снятием двигателя</td>
+                <td class="price" data-translate="price-item-208">от 20000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ланцюга ГРМ без снятия двигательа (6-8
-                  цилиндров)
-                </td>
-                <td class="price">от 14500 грн.</td>
+                <td data-translate="price-item-209">Замена комплекту ланцюга ГРМ без снятия двигателя (6-8 цилиндров)</td>
+                <td class="price" data-translate="price-item-210">от 14500 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена комплекту ланцюга ГРМ со снятием двигательа (6-8
-                  цилиндров)
-                </td>
-                <td class="price">от 25000 грн.</td>
+                <td data-translate="price-item-211">Замена комплекту ланцюга ГРМ со снятием двигателя (6-8 цилиндров)</td>
+                <td class="price" data-translate="price-item-212">от 25000 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Двигатель</h2>
+          <h2 data-translate="price-item-284">Двигатель</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  Измерение компрессии бензинового двигательа (1 цилиндр) без снятия
-                  колектора
-                </td>
-                <td class="price">300 грн.</td>
+                <td data-translate="price-item-213">Измерение компрессии бензинового двигателя (1 цилиндр) без снятия коллектора</td>
+                <td class="price" data-translate="price-item-214">300 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Измерение компрессии дизельного двигательа (1 цилиндр) без снятия
-                  колектора
-                </td>
-                <td class="price">250 грн.</td>
+                <td data-translate="price-item-215">Измерение компрессии дизельного двигателя (1 цилиндр) без снятия коллектора</td>
+                <td class="price" data-translate="price-item-216">250 грн.</td>
               </tr>
               <tr>
-                <td>Регулировка клапанов (8 клапанов), гвинти</td>
-                <td class="price">от 1000 грн.</td>
+                <td data-translate="price-item-217">Регулировка клапанов (8 клапанов), винты</td>
+                <td class="price" data-translate="price-item-087">от 1000 грн.</td>
               </tr>
               <tr>
-                <td>Регулировка клапанов (8 клапанов), шайби или толкатели</td>
-                <td class="price">от 2000 грн.</td>
+                <td data-translate="price-item-218">Регулировка клапанов (8 клапанов), шайбы или толкатели</td>
+                <td class="price" data-translate="price-item-057">от 2000 грн.</td>
               </tr>
               <tr>
-                <td>Регулировка клапанов (16 клапанов), гвинти</td>
-                <td class="price">от 2400 грн.</td>
+                <td data-translate="price-item-219">Регулировка клапанов (16 клапанов), винты</td>
+                <td class="price" data-translate="price-item-220">от 2400 грн.</td>
               </tr>
               <tr>
-                <td>Регулировка клапанов (16 клапанов), шайби или толкатели</td>
-                <td class="price">от 5500 грн.</td>
+                <td data-translate="price-item-221">Регулировка клапанов (16 клапанов), шайбы или толкатели</td>
+                <td class="price" data-translate="price-item-222">от 5500 грн.</td>
               </tr>
               <tr>
-                <td>Замена прокладки випускного колектора</td>
-                <td class="price">от 1400 грн.</td>
+                <td data-translate="price-item-223">Замена прокладки выпускного коллектора</td>
+                <td class="price" data-translate="price-item-155">от 1400 грн.</td>
               </tr>
               <tr>
-                <td>Замена прокладки впускного колектора</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-224">Замена прокладки впускного коллектора</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена прокладки клапанной кришки (без снятия колектора)
-                </td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-225">Замена прокладки клапанной крышки (без снятия коллектора)</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена турбины</td>
-                <td class="price">от 3000 грн.</td>
+                <td data-translate="price-item-226">Замена турбины</td>
+                <td class="price" data-translate="price-item-227">от 3000 грн.</td>
               </tr>
               <tr>
-                <td>Замена шківа колінвала</td>
-                <td class="price">от 950 грн.</td>
+                <td data-translate="price-item-228">Замена шківа колінвала</td>
+                <td class="price" data-translate="price-item-094">от 950 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена заднего сальника колінвала (МКПП, без снятия
-                  подрамника)
-                </td>
-                <td class="price">от 6000 грн.</td>
+                <td data-translate="price-item-229">Замена заднего сальника колінвала (МКПП, без снятия подрамника)</td>
+                <td class="price" data-translate="price-item-122">от 6000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена заднего сальника колінвала (МКПП, со снятием
-                  подрамника)
-                </td>
-                <td class="price">от 8000 грн.</td>
+                <td data-translate="price-item-230">Замена заднего сальника колінвала (МКПП, со снятием подрамника)</td>
+                <td class="price" data-translate="price-item-176">от 8000 грн.</td>
               </tr>
               <tr>
-                <td>Замена заднего сальника колінвала (АКПП)</td>
-                <td class="price">от 6000 грн.</td>
+                <td data-translate="price-item-231">Замена заднего сальника колінвала (АКПП)</td>
+                <td class="price" data-translate="price-item-122">от 6000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена заднего сальника колінвала (АКПП, повнии привід)
-                </td>
-                <td class="price">от 9000 грн.</td>
+                <td data-translate="price-item-232">Замена заднего сальника колінвала (АКПП, полный привод)</td>
+                <td class="price" data-translate="price-item-233">от 9000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена прокладки клапанной кришки (со снятием колектора)
-                </td>
-                <td class="price">от 2400 грн.</td>
+                <td data-translate="price-item-234">Замена прокладки клапанной крышки (со снятием колектора)</td>
+                <td class="price" data-translate="price-item-220">от 2400 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Система зажигания</h2>
+          <h2 data-translate="price-item-285">Система зажигания</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена свічок зажигания 4 шт. (без снятия колектора)</td>
-                <td class="price">600 грн.</td>
+                <td data-translate="price-item-235">Замена свічок зажигания 4 шт. (без снятия коллектора)</td>
+                <td class="price" data-translate="price-item-236">600 грн.</td>
               </tr>
               <tr>
-                <td>Замена свічок зажигания 6 шт. (со снятием колектора)</td>
-                <td class="price">от 2900 грн.</td>
+                <td data-translate="price-item-237">Замена свічок зажигания 6 шт. (со снятием колектора)</td>
+                <td class="price" data-translate="price-item-238">от 2900 грн.</td>
               </tr>
               <tr>
-                <td>Замена свічок зажигания 8 шт. (со снятием колектора)</td>
-                <td class="price">от 3200 грн.</td>
+                <td data-translate="price-item-239">Замена свічок зажигания 8 шт. (со снятием колектора)</td>
+                <td class="price" data-translate="price-item-240">от 3200 грн.</td>
               </tr>
               <tr>
-                <td>Зняття ГБО (если автомобиль обладнании ГБО)</td>
-                <td class="price">от 600 грн.</td>
+                <td data-translate="price-item-241">Снятие ГБО (если автомобиль оборудован ГБО)</td>
+                <td class="price" data-translate="price-item-083">от 600 грн.</td>
               </tr>
               <tr>
-                <td>Замена свічок зажигания 1 шт. (опозитнии двигатель)</td>
-                <td class="price">от 250 грн.</td>
+                <td data-translate="price-item-242">Замена свічок зажигания 1 шт. (опозитнии двигатель)</td>
+                <td class="price" data-translate="price-item-243">от 250 грн.</td>
               </tr>
               <tr>
-                <td>Замена свічок зажигания 4 шт. (со снятием колектора)</td>
-                <td class="price">от 2000 грн.</td>
+                <td data-translate="price-item-244">Замена свічок зажигания 4 шт. (со снятием колектора)</td>
+                <td class="price" data-translate="price-item-057">от 2000 грн.</td>
               </tr>
               <tr>
-                <td>Монтаж/демонтаж колектора</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-245">Монтаж/демонтаж коллектора</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена свічок накалу</td>
-                <td class="price">от 400 грн. за штуку</td>
+                <td data-translate="price-item-246">Замена свічок накалу</td>
+                <td class="price" data-translate="price-item-247">от 400 грн. за штуку</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Чистка форсунок (інжектора)</h2>
+          <h2 data-translate="price-item-286">Чистка форсунок (інжектора)</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Чистка и тестування топливнои форсунки</td>
-                <td class="price">400 грн.</td>
+                <td data-translate="price-item-248">Чистка и тестування топливнои форсунки</td>
+                <td class="price" data-translate="price-item-249">400 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Чистка и тестування топливнои форсунки, безпосередніи вприск
-                  (FSI, TSI, TFSI, GDI)
-                </td>
-                <td class="price">600 грн.</td>
+                <td data-translate="price-item-250">Чистка и тестування топливнои форсунки, безпосередніи вприск (FSI, TSI, TFSI, GDI)</td>
+                <td class="price" data-translate="price-item-236">600 грн.</td>
               </tr>
               <tr>
-                <td>Зняття/установка форсунок (за 4 шт)</td>
-                <td class="price">от 1000 грн.</td>
+                <td data-translate="price-item-251">Снятие/установка форсунок (за 4 шт)</td>
+                <td class="price" data-translate="price-item-087">от 1000 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Зняття/установка форсунок, безпосередніи вприск - під
-                  колектором (за 4 шт)
-                </td>
-                <td class="price">от 2500 грн.</td>
+                <td data-translate="price-item-252">Снятие/установка форсунок, непосредственный впрыск — под коллектором (за 4 шт)</td>
+                <td class="price" data-translate="price-item-117">от 2500 грн.</td>
               </tr>
               <tr>
-                <td>Чистка дросельної заслінки</td>
-                <td class="price">от 650 грн.</td>
+                <td data-translate="price-item-253">Чистка дросельної заслінки</td>
+                <td class="price" data-translate="price-item-104">от 650 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Замена сервісних ременів</h2>
+          <h2 data-translate="price-item-287">Замена сервісних ременів</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена ременя ГУР</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-254">Замена ременя ГУР</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
               <tr>
-                <td>Замена ременя генератора</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-255">Замена ременя генератора</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
               <tr>
-                <td>Замена ременя кондиционера</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-256">Замена ременя кондиционера</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
               <tr>
-                <td>Замена ролика натяжного ременя поліклінового</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-257">Замена ролика натяжного ременя поліклінового</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
               <tr>
-                <td>Замена ролика обвідного ременя поліклінового</td>
-                <td class="price">от 400 грн.</td>
+                <td data-translate="price-item-258">Замена ролика обвідного ременя поліклінового</td>
+                <td class="price" data-translate="price-item-044">от 400 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Система охлаждения</h2>
+          <h2 data-translate="price-item-288">Система охлаждения</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена радиатора двигательа</td>
-                <td class="price">от 2500 грн.</td>
+                <td data-translate="price-item-259">Замена радиатора двигателя</td>
+                <td class="price" data-translate="price-item-117">от 2500 грн.</td>
               </tr>
               <tr>
-                <td>Замена термостата</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-260">Замена термостата</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>Замена термостата з корпусом у зборі</td>
-                <td class="price">от 1200 грн.</td>
+                <td data-translate="price-item-261">Замена термостата з корпусом у зборі</td>
+                <td class="price" data-translate="price-item-096">от 1200 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Замена насоса системы охлаждения (без снятия ременя ГРМ)
-                </td>
-                <td class="price">от 1400 грн.</td>
+                <td data-translate="price-item-262">Замена насоса системы охлаждения (без снятия ременя ГРМ)</td>
+                <td class="price" data-translate="price-item-155">от 1400 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Развал-схождение</h2>
+          <h2 data-translate="price-item-289">Развал-схождение</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Регулировка розвал-сходження</td>
-                <td class="price">
-                  700 грн. - 1 ось, 850 грн. - 2 оси, позашляховик 1000-1500
-                  грн., Тесла от 1800 грн.
-                </td>
+                <td data-translate="price-item-036">Регулировка развал-схождения</td>
+                <td class="price" data-translate="price-item-263">700 грн. - 1 ось, 850 грн. - 2 оси, позашляховик 1000-1500 грн., Тесла от 1800 грн.</td>
               </tr>
               <tr>
-                <td>Проверка розвал-сходження</td>
-                <td class="price">400 грн.</td>
+                <td data-translate="price-item-035">Проверка развал-схождения</td>
+                <td class="price" data-translate="price-item-249">400 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Обслуживание кондиционера</h2>
+          <h2 data-translate="price-item-290">Обслуживание кондиционера</h2>
           <table>
             <thead>
               <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+                <th data-translate="price-item-001">Наименование услуг:</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Диагностика кондиционера (візуальнии осмотр з УФ лампою)</td>
-                <td class="price">от 350 грн.</td>
+                <td data-translate="price-item-264">Диагностика кондиционера (візуальнии осмотр з УФ лампою)</td>
+                <td class="price" data-translate="price-item-051">от 350 грн.</td>
               </tr>
               <tr>
-                <td>Заправка системы кондиционирования (фреон и масло)</td>
-                <td class="price">
-                  500 грн + расходные материалы (масло и фреон), на порожній
-                  системе в середньому 1800 грн.
-                </td>
+                <td data-translate="price-item-265">Заправка системы кондиционирования (фреон и масло)</td>
+                <td class="price" data-translate="price-item-266">500 грн + расходные материалы (масло и фреон), на пустой системе в среднем 1800 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Антибактеріальна чистка кондиционера (теплообмінника
-                  спеціальною піною)
-                </td>
-                <td class="price">от 1200 грн. (робота и піна)</td>
+                <td data-translate="price-item-267">Антибактериальная чистка кондиционера (теплообменника специальной пеной)</td>
+                <td class="price" data-translate="price-item-268">от 1200 грн. (робота и піна)</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика системы кондиционирования (герметичність под давлением,
-                  азотом)
-                </td>
-                <td class="price">от 600 грн.</td>
+                <td data-translate="price-item-269">Диагностика системы кондиционирования (герметичність под давлением, азотом)</td>
+                <td class="price" data-translate="price-item-083">от 600 грн.</td>
               </tr>
               <tr>
-                <td>
-                  Диагностика системы кондиционирования заправною станціестью (давление
-                  и продуктивність)
-                </td>
-                <td class="price">450 грн.</td>
+                <td data-translate="price-item-270">Диагностика системы кондиционирования заправною станціестью (давление и продуктивність)</td>
+                <td class="price" data-translate="price-item-271">450 грн.</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>Акумулятори</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Наименование услуг:</th>
-                <th>Цена от, грн.</th>
+          <h2 data-translate="price-item-291">Аккумуляторы</th>
+                <th data-translate="price-item-002">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Замена акумулятора (під капотом)</td>
-                <td class="price">от 150 грн.</td>
+                <td data-translate="price-item-272">Замена аккумулятора (під капотом)</td>
+                <td class="price" data-translate="price-item-049">от 150 грн.</td>
               </tr>
               <tr>
-                <td>Замена акумулятора (у багажнику)</td>
-                <td class="price">от 300 грн.</td>
+                <td data-translate="price-item-273">Замена аккумулятора (у багажнику)</td>
+                <td class="price" data-translate="price-item-124">от 300 грн.</td>
               </tr>
               <tr>
-                <td>Замена акумулятора (під сидінням)</td>
-                <td class="price">от 600 грн.</td>
+                <td data-translate="price-item-274">Замена аккумулятора (під сидінням)</td>
+                <td class="price" data-translate="price-item-083">от 600 грн.</td>
               </tr>
               <tr>
-                <td>Зарядка акумулятора</td>
-                <td class="price">150 грн.</td>
+                <td data-translate="price-item-275">Зарядка аккумулятора</td>
+                <td class="price" data-translate="price-item-076">150 грн.</td>
               </tr>
             </tbody>
           </table>
@@ -1246,15 +1112,15 @@
             <tbody>
               <tr>
                 <td data-translate="evacuator-price-section-th1">Легковое авто</td>
-                <td class="price">1000 грн.</td>
+                <td class="price" data-translate="price-item-276">1000 грн.</td>
               </tr>
               <tr>
                 <td data-translate="evacuator-price-section-th2">Джип, Бус</td>
-                <td class="price">1100 грн.</td>
+                <td class="price" data-translate="price-item-277">1100 грн.</td>
               </tr>
               <tr>
                 <td data-translate="evacuator-price-section-th3">Мини спец техника</td>
-                <td class="price">1200 грн.</td>
+                <td class="price" data-translate="price-item-068">1200 грн.</td>
               </tr>
               <tr>
                 <td data-translate="evacuator-price-section-th4">Негабарит</td>
@@ -1348,524 +1214,11 @@
             </div>
           </div>
         </section>
-        <section id="brend" class="brend-section">
-          <h2 class="brend-title" data-translate="brend-title">СТО в Павлограде</h2>
-          <div class="infinite-carousel">
-            <div class="carousel-track">
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/4226-256x256x8.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/4226-256x256x8.png"
-                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daewoo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/4227-256x256x32.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/4227-256x256x32.png"
-                    alt="Логотип Daihatsu для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daihatsu</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/acura_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/acura_logo.png"
-                    alt="Логотип Acura для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">acura</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/alfa-romeo-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/alfa-romeo-logo.png"
-                    alt="Логотип Alfa Romeo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">alfa-romeo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/audi.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/audi.png"
-                    alt="Логотип Audi для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">audi</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/chevrolet-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/chevrolet-logo.png"
-                    alt="Логотип Chevrolet для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">chevrolet</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/daewoo-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/daewoo-logo.png"
-                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daewoo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/citroen-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/citroen-logo.jpg"
-                    alt="Логотип Citroen для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">citroen</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/dodge-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/dodge-logo.png"
-                    alt="Логотип Dodge для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">dodge</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/fiat_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/fiat_logo.png"
-                    alt="Логотип Fiat для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">fiat</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/ford.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/ford.png"
-                    alt="Логотип Ford для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">ford</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/honda-color-128.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/honda-color-128.png"
-                    alt="Логотип Honda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">honda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/hyundai-lg.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/hyundai-lg.png"
-                    alt="Логотип Hyundai для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">hyundai</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/infiniti.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/infiniti.png"
-                    alt="Логотип Infiniti для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">infiniti</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/jaguar-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/jaguar-logo.png"
-                    alt="Логотип Jaguar для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">jaguar</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/jeep-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/jeep-logo.png"
-                    alt="Логотип Jeep для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">jeep</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/kia_logo_256_003.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/kia_logo_256_003.png"
-                    alt="Логотип Kia для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">kia</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/land-rover1.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/land-rover1.png"
-                    alt="Логотип Land Rover для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">land-rover</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/lexus-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/lexus-logo.png"
-                    alt="Логотип Lexus для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">lexus</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/lincoln-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/lincoln-logo.png"
-                    alt="Логотип Lincoln для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">lincoln</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/logo_suzuki.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/logo_suzuki.png"
-                    alt="Логотип Suzuki для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">suzuki</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="
-                      src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
-                    "
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
-                    alt="Логотип Mazda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mazda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/mercedes_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mercedes_logo.png"
-                    alt="Логотип Mercedes-Benz для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mercedes</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mitsubishi_logo.png"
-                    alt="Логотип Mitsubishi для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mitsubishi</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/nissan-logo-4.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/nissan-logo-4.png"
-                    alt="Логотип Nissan для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">nissan</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/novosti-skoda-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
-                    alt="Логотип Skoda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">skoda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="
-                      src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
-                    "
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
-                    alt="Логотип Opel для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">opel</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/peugeot_logo_128.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/peugeot_logo_128.png"
-                    alt="Логотип Peugeot для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">peugeot</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/renault_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/renault_logo.png"
-                    alt="Логотип Renault для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">renault</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/saab-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/saab-logo.png"
-                    alt="Логотип Saab для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">saab</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/seat.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/seat.png"
-                    alt="Логотип SEAT для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">seat</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/smart-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/smart-logo.png"
-                    alt="Логотип Smart для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">smart</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/ssangyong-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/ssangyong-logo.png"
-                    alt="Логотип SsangYong для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">ssangyong</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/subaru-logo-transparent.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/subaru-logo-transparent.png"
-                    alt="Логотип Subaru для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">subaru</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/toyota.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/toyota.png"
-                    alt="Логотип Toyota для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">toyota</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/volkswagen_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/volkswagen_logo.png"
-                    alt="Логотип Volkswagen для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">volkswagen</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
+          
+        <div id="site-brend" data-brend-topic="ceny"></div>
           <div id="site-callback-widgets"></div>
     </main>
-  </body>
   <div id="site-footer"></div>
+</body>
 </html>

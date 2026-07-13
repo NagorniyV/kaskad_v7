@@ -8,18 +8,24 @@ body {
 .header {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 50;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .header-container {
-    max-width: 1440px;
+    width: fit-content;
+    max-width: min(1400px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 12px 24px;
+    padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 28px;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -33,11 +39,21 @@ body {
     align-items: center;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-width: 0;
+    flex-shrink: 0;
+}
+
 .nav-list-header {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 12px;
+    margin: 0;
+    padding: 0;
     color: #fff;
 }
 
@@ -156,18 +172,26 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #f3f3f3;
-    transition: color 0.3s;
+    font-weight: 500;
+    color: #24a7c1;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.lang-btn:hover {
+    color: #5fd3ea;
 }
 
 .lang-btn.active {
-    color: #0e6374;
-    font-weight: bold;
-    text-decoration: underline;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.85), 0 0 16px rgba(255, 255, 255, 0.45);
+    cursor: default;
+    pointer-events: none;
 }
 
 .lang-divider {
-    color: #f3f3f3;
+    color: rgba(255, 255, 255, 0.45);
 }
 
 .burger-menu {
@@ -192,18 +216,24 @@ body {
 
 @media (max-width: 992px) {
     .header-container {
+        width: 100%;
+        max-width: 100%;
         justify-content: space-between;
         gap: 16px;
-    }
-
-    .burger-menu {
-        display: flex;
-        order: 2;
-        z-index: 101;
+        padding: 12px 20px;
     }
 
     .logo {
         order: 1;
+    }
+
+    .header-actions {
+        order: 2;
+    }
+
+    .burger-menu {
+        display: flex;
+        z-index: 101;
     }
 
     .nav {

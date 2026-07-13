@@ -447,14 +447,14 @@ body.modal-open::after {
     outline: none;
     background: linear-gradient(315deg, #101010 0%, #182c35 25%, #24a7c1 75%, #e8f4f7 100%);
     color: #f5fbfd;
-    height: 50px;
-    max-width: 50px;
+    height: 56px;
+    max-width: 56px;
     border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    padding: 0 16px 0 13px;
+    padding: 0 18px 0 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: max-width 0.35s ease, transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -484,27 +484,34 @@ body.modal-open::after {
 }
 
 .callback-fixed-btn__icon {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.callback-fixed-btn__icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
 }
 
 .callback-fixed-btn__text {
     opacity: 0;
     transform: translateX(8px);
     transition: opacity 0.25s ease, transform 0.25s ease;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
-    margin: 0px 10px;
+    margin: 0 10px 0 4px;
 }
 
 .callback-fixed-btn.is-expanded {
-    max-width: 290px;
+    max-width: 320px;
 }
 
 .callback-fixed-btn.is-expanded .callback-fixed-btn__text {
@@ -533,32 +540,39 @@ body.modal-open::after {
     position: fixed;
     left: 20px;
     bottom: 20px;
-    z-index: 100;
+    z-index: 1001;
     display: flex;
     align-items: center;
     background: #24a7c1;
     color: #f8f8f8;
-    height: 28px;
-    width: 28px;
-    /* Начальная ширина - квадрат */
+    height: 44px;
+    width: 44px;
     border-radius: 40px;
     text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     white-space: nowrap;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .to-home .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 44px;
+    height: 44px;
     flex-shrink: 0;
+}
+
+.to-home .icon svg {
+    width: 20px;
+    height: 20px;
 }
 
 .to-home .text {
@@ -572,7 +586,6 @@ body.modal-open::after {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: auto;
-    /* Автоматическая ширина при наведении */
     padding-right: 16px;
 }
 
@@ -592,4 +605,5 @@ body.modal-open::after {
     .social-fixed.show,
     .to-home.show {
         display: flex;
-    } }
+    }
+}

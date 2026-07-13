@@ -12,55 +12,68 @@ const END = "<!-- seo-article:end -->";
 const PAGE_MAP = {
   dvigatel: {
     file: "remont-dvigatelya.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   hodovoy: {
     file: "remont-hodovoy.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   elektriki: {
     file: "remont-elektriki.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   tormoz: {
     file: "remont-tormoznoi-sistemy.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   transmissii: {
     file: "remont-transmissii.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   to: {
     file: "tehnicheskoe-obsluzhivanie.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   diagnostika: {
     file: "diagnostika-avto.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   kondicionery: {
     file: "avtokondicionery.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   gbo: {
     file: "ustanovka-gbo.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   uslugi: {
     file: "uslugi.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   zapchasti: {
     file: "zapchasti.html",
-    marker: '<div id="site-callback"></div>',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   evakuator: {
     file: "evakuator.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   ohlazhdenie: {
     file: "sistema-ohlazhdeniya.html",
-    marker: '<div id="site-callback"></div>',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
   },
   index: {
     file: "index.html",
@@ -68,7 +81,8 @@ const PAGE_MAP = {
   },
   razborka: {
     file: "razborka/index.html",
-    marker: '<section class="benefits-section">',
+    marker: '          <div id="site-callback-widgets"></div>',
+    insertInsideContainer: true,
     replaceExistingMain: true,
   },
 };

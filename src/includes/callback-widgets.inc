@@ -17,7 +17,8 @@
                 type="tel"
                 id="modalPhone"
                 name="phone"
-                placeholder="+38 (___) ___ ____"
+                placeholder="+38 (050) 111 22 33"
+                maxlength="19"
                 required
               />
             </div>
@@ -27,15 +28,19 @@
               <input type="text" id="modalCar" name="carModel" />
             </div>
 
-                        <div class="form-group" data-razborka-only hidden>
-              <label for="modalPart">Нужна запчасть</label>
-              <input type="text" id="modalPart" name="part" />
-            </div>
             <div class="form-group">
               <label for="modalVin" data-translate="vin"
                 >VIN-код автомобиля</label
               >
-              <input type="text" id="modalVin" name="vin" />
+              <input
+                type="text"
+                id="modalVin"
+                name="vin"
+                placeholder="VIN-код (17 символов)"
+                maxlength="17"
+                spellcheck="false"
+                autocomplete="off"
+              />
             </div>
 
             <button
@@ -53,17 +58,23 @@
           type="button"
           class="callback-fixed-btn"
           id="fixedCallbackBtn"
-          aria-label="Заказать зворотніи звонок"
+          aria-label="Получить консультацию"
+          data-translate-aria="callback-fixed-btn-text"
         >
           <span class="callback-fixed-btn__icon">
             <img src="./src/img/callback-btn-img.png" alt="" />
           </span>
-          <span class="callback-fixed-btn__text">Отримати консультацию</span>
+          <span
+            class="callback-fixed-btn__text"
+            data-translate="callback-fixed-btn-text"
+            >Получить консультацию</span
+          >
         </button>
         <a
           href="https://t.me/kkua1210"
           target="_blank"
           class="social-btn telegram"
+          rel="noopener noreferrer"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -149,22 +160,22 @@
 
           <i class="fas fa-phone social-icon"></i>
         </a>
-        <a href="#header" class="to-home" id="back-to-top">
-          <span class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M18 15l-6-6-6 6" />
-            </svg>
-          </span>
-          <span class="text" data-translate="up-btn">Подняться в начало</span>
-        </a>
       </div>
+      <a href="#header" class="to-home" id="back-to-top" aria-label="Наверх">
+        <span class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 15l-6-6-6 6" />
+          </svg>
+        </span>
+        <span class="text" data-translate="up-btn">Подняться в начало</span>
+      </a>

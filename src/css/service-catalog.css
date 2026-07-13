@@ -94,9 +94,11 @@
 .catalog-title{
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #101010;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .catalog-description{
@@ -166,15 +168,21 @@
     .price-content-container {
       flex-direction: column;
     }
+
+    .catalog-title,
+    .dvigatel-span {
+      font-size: 32px;
+    }
   }
 
   .dvigatel-span{
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 42px;
+    line-height: 1.15;
     color: #101010;
     text-align: center;
-    max-width: 850px;
+    max-width: 900px;
     margin: 30px auto;
   }
 

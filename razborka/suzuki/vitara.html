@@ -59,24 +59,25 @@
       (function () {
         const host = window.location.hostname;
         const pathParts = window.location.pathname.split("/").filter(Boolean);
-
         let basePath = "/";
 
-        if (host.endsWith("github.io") && pathParts.length > 0) {
-          basePath = "/" + pathParts[0] + "/";
-        }
-
-        if (
-          host === "kaskad.in.ua" ||
-          host === "www.kaskad.in.ua" ||
-          host === "localhost" ||
-          host === "127.0.0.1"
-        ) {
+        // Production on custom domain
+        if (host === "kaskad.in.ua" || host === "www.kaskad.in.ua") {
           basePath = "/";
+        } else {
+          // Live Server / GitHub Pages: site may live under /kaskad_v7/
+          const repoIdx = pathParts.indexOf("kaskad_v7");
+          if (repoIdx !== -1) {
+            basePath = "/" + pathParts.slice(0, repoIdx + 1).join("/") + "/";
+          } else if (host.endsWith("github.io") && pathParts.length > 0) {
+            basePath = "/" + pathParts[0] + "/";
+          } else {
+            // Vite or Live Server with kaskad_v7 as root
+            basePath = "/";
+          }
         }
 
         window.__BASE_PATH__ = basePath;
-
         const base = document.createElement("base");
         base.href = basePath;
         document.head.prepend(base);
@@ -147,9 +148,9 @@
       }
     </script>
   </head>
+<body data-lead-type="razborka">
   <div id="site-header"></div>
-  <body data-lead-type="razborka">
-    <main>
+<main>
       <div class="container">
         <section class="hero">
           <div>
@@ -462,6 +463,9 @@
             </div>
           </div>
         </section>
+        <div id="site-callback"></div>
+        <div id="site-benefits"></div>
+        <div id="site-brend" data-brend-topic="razborka"></div>
         <section class="main-content-section">
           <div class="main-content-div">
             <div class="main-content">
@@ -511,93 +515,9 @@
             </div>
           </div>
         </section>
-        <section class="benefits-section">
-          <h2 class="benefits-title">
-            <span data-translate="">Як заказать запчасть</span>
-            <span class="span-benefits-title" data-translate="">
-              з авторазборки
-            </span>
-          </h2>
-
-          <div class="benefits-containers">
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">1</p>
-                <p class="benefits-top-text" data-translate="">ВЫБЕРИТЕ АВТО</p>
-              </div>
-
-              <picture>
-                <source srcset="src/img/bene-1.webp" type="image/webp" />
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-1.jpg"
-                  alt="Выбор автомобиля на авторазборке для подбору б/в запчастей"
-                  loading="lazy"
-                />
-              </picture>
-
-              <p class="benefits-bot-text" data-translate="">
-                Перейдите у раздел авторазборки, выберите марку и модель
-                автомобиля, просмотрите фото авто, опис и доступные б/в
-                запчасти з автомобиля-донора.
-              </p>
-            </div>
-
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">2</p>
-                <p class="benefits-top-text" data-translate="">
-                  УТОЧНИТЬ ЗАПЧАСТИНУ
-                </p>
-              </div>
-
-              <picture>
-                <source srcset="src/img/bene-2.webp" type="image/webp" />
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-2.jpg"
-                  alt="Подбор запчасти з авторазборки по VIN-коду, фото или модели автомобиля"
-                  loading="lazy"
-                />
-              </picture>
-
-              <p class="benefits-bot-text" data-translate="">
-                Зв’яжіться з нами телефоном или в мессенджере. Мы поможем
-                подобрать нужную запчасть з авторазборки за моделью авто,
-                двигательом, фото детали или VIN-кодом и уточним совместимость.
-              </p>
-            </div>
-
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">3</p>
-                <p class="benefits-top-text" data-translate="">
-                  ОТРИМАЙТЕ ЗАПЧАСТИНУ
-                </p>
-              </div>
-
-              <picture>
-                <source srcset="src/img/bene-3.webp" type="image/webp" />
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-3.jpg"
-                  alt="Покупка, доставка и установка запчастеи з авторазборки"
-                  loading="lazy"
-                />
-              </picture>
-
-              <p class="benefits-bot-text" data-translate="">
-                После подтверждения наличии, состояния и совместимости детали ми
-                согласуем оплату, организуем доставку по Украине або
-                предложим установка на СТО Каскад в Павлограде.
-              </p>
-            </div>
-          </div>
-        </section>
-        <div id="site-callback"></div>
       </div>
           <div id="site-callback-widgets"></div>
     </main>
-  </body>
   <div id="site-footer"></div>
+</body>
 </html>

@@ -1,5 +1,6 @@
 function loadTranslations(lang) {
   const basePath = window.__BASE_PATH__ || "./";
+  document.documentElement.lang = lang === "uk" ? "uk" : "ru";
   fetch(`${basePath}locales/${lang}.json`)
     .then((response) => response.json())
     .then((translations) => {
@@ -8,10 +9,24 @@ function loadTranslations(lang) {
         if (translations[key]) el.textContent = translations[key];
       });
 
+      document.querySelectorAll("[data-translate-html]").forEach((el) => {
+        const key = el.getAttribute("data-translate-html");
+        if (translations[key]) el.innerHTML = translations[key];
+      });
+
       document.querySelectorAll("[data-translate-placeholder]").forEach((el) => {
         const key = el.getAttribute("data-translate-placeholder");
         if (translations[key]) el.placeholder = translations[key];
       });
+
+      document.querySelectorAll("[data-translate-aria]").forEach((el) => {
+        const key = el.getAttribute("data-translate-aria");
+        if (translations[key]) el.setAttribute("aria-label", translations[key]);
+      });
+
+      document.dispatchEvent(
+        new CustomEvent("language:changed", { detail: { lang } })
+      );
     })
     .catch((error) => console.error("Ошибка загрузки переводов:", error));
 }

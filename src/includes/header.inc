@@ -30,12 +30,6 @@
       </svg>
     </a>
 
-    <button class="burger-menu" type="button" aria-label="Открыть меню">
-      <span class="burger-line"></span>
-      <span class="burger-line"></span>
-      <span class="burger-line"></span>
-    </button>
-
     <nav class="nav">
       <ul class="nav-list-header">
         <li class="nav-item">
@@ -110,15 +104,21 @@
         <li class="nav-item">
           <a href="./ceny.html">Цены</a>
         </li>
-
-        <li class="nav-item">
-          <div class="language-switcher">
-            <button class="lang-btn" data-lang="uk">Укр</button>
-            <span class="lang-divider">/</span>
-            <button class="lang-btn active" data-lang="ru">Рос</button>
-          </div>
-        </li>
       </ul>
     </nav>
+
+    <div class="header-actions">
+      <div class="language-switcher">
+        <button class="lang-btn" data-lang="uk" type="button">Укр</button>
+        <span class="lang-divider">/</span>
+        <button class="lang-btn active" data-lang="ru" type="button" data-translate="lang-btn-ru">Рус</button>
+      </div>
+
+      <button class="burger-menu" type="button" aria-label="Открыть меню">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
   </div>
 </header>

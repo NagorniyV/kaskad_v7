@@ -45,26 +45,25 @@
       (function () {
         const host = window.location.hostname;
         const pathParts = window.location.pathname.split("/").filter(Boolean);
-
         let basePath = "/";
 
-        // GitHub Pages repo site: /kaskad_v7/
-        if (host.endsWith("github.io") && pathParts.length > 0) {
-          basePath = "/" + pathParts[0] + "/";
-        }
-
-        // Custom domain и Live Server
-        if (
-          host === "kaskad.in.ua" ||
-          host === "www.kaskad.in.ua" ||
-          host === "localhost" ||
-          host === "127.0.0.1"
-        ) {
+        // Production on custom domain
+        if (host === "kaskad.in.ua" || host === "www.kaskad.in.ua") {
           basePath = "/";
+        } else {
+          // Live Server / GitHub Pages: site may live under /kaskad_v7/
+          const repoIdx = pathParts.indexOf("kaskad_v7");
+          if (repoIdx !== -1) {
+            basePath = "/" + pathParts.slice(0, repoIdx + 1).join("/") + "/";
+          } else if (host.endsWith("github.io") && pathParts.length > 0) {
+            basePath = "/" + pathParts[0] + "/";
+          } else {
+            // Vite or Live Server with kaskad_v7 as root
+            basePath = "/";
+          }
         }
 
         window.__BASE_PATH__ = basePath;
-
         const base = document.createElement("base");
         base.href = basePath;
         document.head.prepend(base);
@@ -197,9 +196,9 @@
 }
     </script>
   </head>
+<body>
   <div id="site-header"></div>
-  <body>
-    <main>
+<main>
       <div class="container">
         <section class="hero">
           <div>
@@ -613,245 +612,121 @@
           <div class="services-carousel">
             <div class="services-container" id="servicesContainer">
               <div class="service-card">
-                <h3 data-translate="services-h3-1">ПРОДАЖА АВТОЗАПЧАСТЕЙ</h3>
-                <p data-translate="services-p-1">В наличии подвески, тормозные системы, системы зажигания, фильтры, системы управления, светотехника, трансмиссии, автоэлектроника, шины и диски</p>
+                <h3 data-translate="services-h3-1">НОВЫЕ ЗАПЧАСТИ</h3>
+                <p data-translate="services-p-1">Подбор и продажа новых запчастей: подвеска, тормоза, фильтры, электрика, трансмиссия и расходники.</p>
                 <div class="btn-container">
-                  <a
-                    href="zapchasti.html"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./zapchasti.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
-                <h3 data-translate="services-h3-2">УСТАНОВКА ГБО</h3>
-                <p data-translate="services-p-2">
-                  Подбор, установка, настройка и обслуживания газобаллонного
-                  оборудования любых производителей.
-                </p>
+                <h3 data-translate="services-h3-2">ЗАПЧАСТИ С РАЗБОРКИ</h3>
+                <p data-translate="services-p-2">Контрактные б/у запчасти с разборки в Павлограде — подбор по марке, модели и VIN.</p>
                 <div class="btn-container">
-                  <a
-                    href="ustanovka-gbo.html"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./razborka/index.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
-                <h3 data-translate="services-h3-3">ДИАГНОСТИКА ДВИГАТЕЛЯ</h3>
-                <p data-translate="services-p-3">
-                  Компьютерная диагностика двигателя, проверка состояния
-                  цилиндропоршневои группы, системы зажигания и впрыска.
-                </p>
+                <h3 data-translate="services-h3-3">РЕМОНТ ДВИГАТЕЛЯ</h3>
+                <p data-translate="services-p-3">Диагностика и ремонт двигателя любой сложности: ГРМ, ГБЦ, турбина, капитальный ремонт.</p>
                 <div class="btn-container">
-                  <a
-                    href="uslugi.html#dvigatel"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./remont-dvigatelya.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
                 <h3 data-translate="services-h3-4">РЕМОНТ ХОДОВОЙ</h3>
-                <p data-translate="services-p-4">
-                  Диагностика и ремонт подвески, замена амортизаторов, шаровых
-                  опор, рычагов, сайлентблоков.
-                </p>
+                <p data-translate="services-p-4">Диагностика и ремонт подвески, замена амортизаторов, шаровых опор, рычагов, сайлентблоков.</p>
                 <div class="btn-container">
-                  <a
-                    href="uslugi.html#hodovka"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./remont-hodovoy.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
                 <h3 data-translate="services-h3-5">АВТОЭЛЕКТРИКА</h3>
-                <p data-translate="services-p-5">
-                  Диагностика и ремонт электрооборудования автомобиля, проводки,
-                  блоков управления, датчиков.
-                </p>
+                <p data-translate="services-p-5">Диагностика и ремонт электрооборудования, проводки, блоков управления, датчиков, стартера и генератора.</p>
                 <div class="btn-container">
-                  <a
-                    href="uslugi.html#electrika"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./remont-elektriki.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
-                <h3 data-translate="services-h3-6">
-                  РЕМОНТ И ТЕХ ОБСЛУЖИВАНИЕ
-                </h3>
-                <p data-translate="services-p-6">
-                  Комплекс работ по диагностике автомобиля в целом или отдельных
-                  его агрегатов, регулировке систем/узлов, выполнению работ по
-                  регламентнои замене деталеи и/или технических жидкостей.
-                </p>
+                <h3 data-translate="services-h3-6">ТОРМОЗНАЯ СИСТЕМА</h3>
+                <p data-translate="services-p-6">Замена колодок и дисков, прокачка тормозов, ремонт суппортов, диагностика ABS.</p>
                 <div class="btn-container">
-                  <a
-                    href="uslugi.html#servisnoe"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./remont-tormoznoi-sistemy.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
                 <h3 data-translate="services-h3-7">РЕМОНТ ТРАНСМИССИИ</h3>
-                <p data-translate="services-p-7">
-                  Диагностика и ремонт механических и автоматических коробок
-                  передач, редукторов, раздаточных коробок.
-                </p>
+                <p data-translate="services-p-7">Ремонт МКПП и АКПП, замена сцепления, редукторов и раздаточных коробок.</p>
                 <div class="btn-container">
-                  <a
-                    href="uslugi.html#transmisija"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./remont-transmissii.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
-                <h3 data-translate="services-h3-8">
-                  ОБСЛУЖИВАНИЕ ТОРМОЗНОЙ СИСТЕМЫ
-                </h3>
-                <p data-translate="services-p-8">
-                  Замена тормозной жидкости, прокачування тормозной системы,
-                  диагностика тормозных колодок и дисков, проверка роботи ABS,
-                  замена тормозных суппортов.
-                </p>
+                <h3 data-translate="services-h3-8">ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ</h3>
+                <p data-translate="services-p-8">Плановое ТО: замена масел и фильтров, регламентные работы и проверка систем автомобиля.</p>
                 <div class="btn-container">
-                  <a
-                    href="uslugi.html#servisnoe"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./tehnicheskoe-obsluzhivanie.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
 
               <div class="service-card">
-                <h3 data-translate="services-h3-9">
-                  ОБСЛУЖИВАНИЕ КОНДИЦИОНЕРА
-                </h3>
-                <p data-translate="services-p-9">
-                  Заправка и замена хладагента, промывка системы, замена
-                  фильтра-осушителя, диагностика давления, проверка герметичности,
-                  очистка испарителя и дезинфекция системы кондиционирования.
-                </p>
+                <h3 data-translate="services-h3-9">ДИАГНОСТИКА АВТО</h3>
+                <p data-translate="services-p-9">Компьютерная и комплексная диагностика двигателя, ходовой, электрики и электронных систем.</p>
                 <div class="btn-container">
-                  <a
-                    href="uslugi.html#kondi"
-                    class="details-btn"
-                    data-translate="details-btn"
-                    >ПОДРОБНЕЕ</a
-                  >
+                  <a href="./diagnostika-avto.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3 data-translate="services-h3-10">АВТОКОНДИЦИОНЕРЫ</h3>
+                <p data-translate="services-p-10">Заправка, диагностика, ремонт и обслуживание автомобильных кондиционеров.</p>
+                <div class="btn-container">
+                  <a href="./avtokondicionery.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3 data-translate="services-h3-11">УСТАНОВКА ГБО</h3>
+                <p data-translate="services-p-11">Подбор, установка, настройка и сервисное обслуживание газобаллонного оборудования.</p>
+                <div class="btn-container">
+                  <a href="./ustanovka-gbo.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3 data-translate="services-h3-12">СИСТЕМА ОХЛАЖДЕНИЯ</h3>
+                <p data-translate="services-p-12">Ремонт радиаторов, помпы, термостата, устранение течей и перегрева двигателя.</p>
+                <div class="btn-container">
+                  <a href="./sistema-ohlazhdeniya.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3 data-translate="services-h3-13">ЭВАКУАТОР</h3>
+                <p data-translate="services-p-13">Вызов эвакуатора в Павлограде и доставка автомобиля на СТО «Каскад».</p>
+                <div class="btn-container">
+                  <a href="./evakuator.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <h3 data-translate="services-h3-14">ЦЕНЫ НА УСЛУГИ</h3>
+                <p data-translate="services-p-14">Актуальный прайс автосервиса: диагностика, ТО, ремонт и обслуживание без скрытых доплат.</p>
+                <div class="btn-container">
+                  <a href="./ceny.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="benefits-section">
-          <h2 class="benefits-title">
-            <span data-translate="benefits-title">Почему</span>
-            <span
-              class="span-benefits-title"
-              data-translate="span-benefits-title"
-              >выбирают нас</span
-            >
-          </h2>
-          <div class="benefits-containers">
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">1</p>
-                <p
-                  class="benefits-top-text"
-                  data-translate="benefits-top-text1"
-                >
-                  ПОРЯДОЧНОСТЬ
-                </p>
-              </div>
-              <picture>
-                <!-- ВебП версии -->
-                <source srcset="src/img/bene-1.webp" type="image/webp" />
-                <!-- Фолбэк на JPEG -->
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-1.jpg"
-                  alt="porjadnist"
-                  loading="lazy"
-                />
-              </picture>
-              <p class="benefits-bot-text" data-translate="benefits-bot-text1">
-                «Честныи ремонт: только нужные работы, только нужные запчасти.»
-              </p>
-            </div>
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">2</p>
-                <p
-                  class="benefits-top-text"
-                  data-translate="benefits-top-text2"
-                >
-                  ОТВЕТСТВЕННОСТЬ
-                </p>
-              </div>
-              <picture>
-                <!-- ВебП версии -->
-                <source srcset="src/img/bene-2.webp" type="image/webp" />
-                <!-- Фолбэк на JPEG -->
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-2.jpg"
-                  alt="vidpovidalnist"
-                  loading="lazy"
-                />
-              </picture>
-              <p class="benefits-bot-text" data-translate="benefits-bot-text2">
-                «Гарантируем качество – отвечаем за результат!»
-              </p>
-            </div>
-            <div class="benefits-container">
-              <div class="benefits-top">
-                <p class="benefits-number">3</p>
-                <p
-                  class="benefits-top-text"
-                  data-translate="benefits-top-text3"
-                >
-                  ОПЕРАТИВНОСТЬ
-                </p>
-              </div>
-              <picture>
-                <!-- ВебП версии -->
-                <source srcset="src/img/bene-3.webp" type="image/webp" />
-                <!-- Фолбэк на JPEG -->
-                <img
-                  class="benefits-img"
-                  src="./src/img/bene-3.jpg"
-                  alt="vidpovidalnist"
-                  loading="lazy"
-                />
-              </picture>
-              <p class="benefits-bot-text" data-translate="benefits-bot-text3">
-                «Ваше авто не задержится у нас дольше необходимого.»
-              </p>
-            </div>
-          </div>
-        </section>
-                        <!-- seo-article:start -->
+        <div id="site-benefits"></div>
+                                <div id="site-callback"></div>
         <section class="main-content-section seo-article">
           <div class="main-content-div">
             <div class="main-content">
@@ -872,529 +747,10 @@
             </div>
           </div>
         </section>
-        <!-- seo-article:end -->
-        
-        <div id="site-callback"></div>
-        <section id="brend" class="brend-section">
-          <h2 class="brend-title" data-translate="brend-title">
-            СТО в Павлограде
-          </h2>
-          <div class="infinite-carousel">
-            <div class="carousel-track">
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/4226-256x256x8.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/4226-256x256x8.png"
-                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daewoo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/4227-256x256x32.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/4227-256x256x32.png"
-                    alt="Логотип Daihatsu для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daihatsu</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/acura_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/acura_logo.png"
-                    alt="Логотип Acura для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">acura</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/alfa-romeo-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/alfa-romeo-logo.png"
-                    alt="Логотип Alfa Romeo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">alfa-romeo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/audi.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/audi.png"
-                    alt="Логотип Audi для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">audi</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/chevrolet-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/chevrolet-logo.png"
-                    alt="Логотип Chevrolet для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">chevrolet</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/daewoo-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/daewoo-logo.png"
-                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">daewoo</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/citroen-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/citroen-logo.jpg"
-                    alt="Логотип Citroen для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">citroen</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/dodge-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/dodge-logo.png"
-                    alt="Логотип Dodge для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">dodge</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/fiat_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/fiat_logo.png"
-                    alt="Логотип Fiat для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">fiat</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/ford.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/ford.png"
-                    alt="Логотип Ford для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">ford</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/honda-color-128.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/honda-color-128.png"
-                    alt="Логотип Honda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">honda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/hyundai-lg.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/hyundai-lg.png"
-                    alt="Логотип Hyundai для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">hyundai</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/infiniti.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/infiniti.png"
-                    alt="Логотип Infiniti для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">infiniti</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/jaguar-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/jaguar-logo.png"
-                    alt="Логотип Jaguar для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">jaguar</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/jeep-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/jeep-logo.png"
-                    alt="Логотип Jeep для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">jeep</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/kia_logo_256_003.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/kia_logo_256_003.png"
-                    alt="Логотип Kia для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">kia</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/land-rover1.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/land-rover1.png"
-                    alt="Логотип Land Rover для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">land-rover</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/lexus-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/lexus-logo.png"
-                    alt="Логотип Lexus для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">lexus</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/lincoln-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/lincoln-logo.png"
-                    alt="Логотип Lincoln для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">lincoln</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/logo_suzuki.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/logo_suzuki.png"
-                    alt="Логотип Suzuki для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">suzuki</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="
-                      src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
-                    "
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
-                    alt="Логотип Mazda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mazda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/mercedes_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mercedes_logo.png"
-                    alt="Логотип Mercedes-Benz для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mercedes</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/mitsubishi_logo.png"
-                    alt="Логотип Mitsubishi для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">mitsubishi</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/nissan-logo-4.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/nissan-logo-4.png"
-                    alt="Логотип Nissan для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">nissan</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/novosti-skoda-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
-                    alt="Логотип Skoda для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">skoda</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="
-                      src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
-                    "
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
-                    alt="Логотип Opel для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">opel</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/peugeot_logo_128.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/peugeot_logo_128.png"
-                    alt="Логотип Peugeot для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">peugeot</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/renault_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/renault_logo.png"
-                    alt="Логотип Renault для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">renault</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/saab-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/saab-logo.png"
-                    alt="Логотип Saab для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">saab</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/seat.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/seat.png"
-                    alt="Логотип SEAT для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">seat</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/smart-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/smart-logo.png"
-                    alt="Логотип Smart для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">smart</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/ssangyong-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/ssangyong-logo.png"
-                    alt="Логотип SsangYong для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">ssangyong</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/subaru-logo-transparent.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/subaru-logo-transparent.png"
-                    alt="Логотип Subaru для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">subaru</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/toyota.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/toyota.png"
-                    alt="Логотип Toyota для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">toyota</p>
-              </div>
-              <div>
-                <picture>
-                  <source
-                    srcset="src/img/avto-logo/volkswagen_logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./src/img/avto-logo/volkswagen_logo.png"
-                    alt="Логотип Volkswagen для ремонта и обслуживания авто в автосервисе Каскад"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="text-brend">volkswagen</p>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </div>
           <div id="site-callback-widgets"></div>
     </main>
-  </body>
   <div id="site-footer"></div>
+</body>
 </html>

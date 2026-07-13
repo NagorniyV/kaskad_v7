@@ -68,20 +68,20 @@
                   >БЕСПЛАТНО!</span
                 >
               </p>
-              <form id="callbackForm">
+              <form id="callbackForm" data-lead-type="razborka">
                 <input
                   type="text"
                   id="nameInput"
                   name="name"
                   data-translate-placeholder="name-placeholder"
                   placeholder="Ваше имя"
-                  required
                 />
                 <input
                   type="tel"
                   id="phoneInput"
                   name="phone"
-                  placeholder="+38 (___) ___ ____"
+                  placeholder="+38 (050) 111 22 33"
+                  maxlength="19"
                   required
                 />
                 <input
@@ -94,15 +94,17 @@
                   type="text"
                   id="partInput"
                   name="part"
-                  data-razborka-only
-                  placeholder="Нужна запчасть"
-                  hidden
+                  data-translate-placeholder="part-placeholder"
+                  placeholder="Номер / название запчасти"
                 />
                 <input
                   type="text"
                   id="vinInput"
                   name="vin"
-                  placeholder="VIN-код автомобиля"
+                  placeholder="VIN-код (17 символов)"
+                  maxlength="17"
+                  spellcheck="false"
+                  autocomplete="off"
                 />
                 <button
                   type="submit"
