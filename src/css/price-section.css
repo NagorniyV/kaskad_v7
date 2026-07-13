@@ -12,20 +12,14 @@
 .price-title{
     margin-bottom: 20px;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 28px;
     text-align: center;
 }
 
 .price-content{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     margin: 0px auto;
     max-width: 1000px;    
     font-size: 18px;
@@ -66,9 +60,7 @@ tr:hover {
     font-size: 24px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
-    font-style: normal;
     font-weight: bold;
     margin-top: 8px;
 }

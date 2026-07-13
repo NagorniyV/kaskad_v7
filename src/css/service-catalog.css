@@ -72,11 +72,7 @@
     border: none;
     color: #f8f8f8;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 14px;
     cursor: pointer;
 }
@@ -97,9 +93,7 @@
 
 .catalog-title{
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 32px;
     color: #101010;
     margin-bottom: 12px;
@@ -107,11 +101,7 @@
 
 .catalog-description{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 16px;
     color: #101010;
     margin-bottom: 20px;
@@ -145,11 +135,7 @@
 
 .catalog-text{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 16px;
     color: #101010;
     margin: 12px auto;
@@ -184,9 +170,7 @@
 
   .dvigatel-span{
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 32px;
     color: #101010;
     text-align: center;
@@ -196,11 +180,7 @@
 
   .uslugi-final-content{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 18px;
     color: #101010;
     /* text-align: center; */

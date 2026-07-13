@@ -22,20 +22,14 @@
 
 .map-title {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 56px;
     color: #f8f8f8;
 }
 
 .map-content {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 18px;
     color: rgb(180, 180, 189);
 }
@@ -47,32 +41,24 @@
     /* margin-bottom: 30px; */
 }
 
-.work-footer-div>h3{
+.work-footer-div>h3, .work-footer-div>p{
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 22px;
     color: #f8f8f8;
 }
 
 .work-footer-div>p{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 18px;
     color: #f8f8f8;
     margin-top: 4px;
 }
 
-.number-footer-div>h3{
+.number-footer-div>h3, .number-footer-div>p{
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 22px;
     color: #f8f8f8;
     margin-top: 20px;
@@ -81,11 +67,7 @@
 .number-footer-div>div{
     color: #f8f8f8;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 18px;
     margin-top: 12px;
 }

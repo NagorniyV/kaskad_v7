@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LFYC21VZB6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LFYC21VZB6");
+    </script>
+
+    <!-- Кодировка и масштабирование -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="theme-color" content="#24a7c1" />
+    <meta name="ICBM" content="48.52613, 35.87073" />
+    <meta name="geo.position" content="48.52613;35.87073" />
+    <meta name="geo.placename" content="Павлоград" />
+    <meta name="geo.region" content="UA-12" />
+    <meta name="author" content="Автосервис Каскад" />
+    <meta name="keywords" content="автозапчасти Павлоград, купить запчасти Павлоград, подбор запчастей Павлоград, оригинальные запчасти Павлоград, СТО Каскад запчасти" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.png" type="image/png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Прогрузка хедера -->
+    <script>
+      (function () {
+        const host = window.location.hostname;
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+        let basePath = "/";
+
+        // GitHub Pages repo site: /kaskad_v7/
+        if (host.endsWith("github.io") && pathParts.length > 0) {
+          basePath = "/" + pathParts[0] + "/";
+        }
+
+        // Custom domain и Live Server
+        if (
+          host === "kaskad.in.ua" ||
+          host === "www.kaskad.in.ua" ||
+          host === "localhost" ||
+          host === "127.0.0.1"
+        ) {
+          basePath = "/";
+        }
+
+        window.__BASE_PATH__ = basePath;
+
+        const base = document.createElement("base");
+        base.href = basePath;
+        document.head.prepend(base);
+      })();
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/pages/zapchasti.css" />
+
+    <!-- Title & Meta Description -->
+    <title>Автозапчасти Павлоград — подбор и заказ оригинала и аналогов | Каскад</title>
+    <meta name="description" content="Подбор автозапчастей в Павлограде на СТО «Каскад»: оригинал и проверенные аналоги под ваш VIN. Быстрый заказ, гарантия совместимости, установка на месте." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://kaskad.in.ua/zapchasti.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale:alternate" content="uk_UA" />
+    <meta property="og:locale" content="ru_UA" />
+    <meta property="og:site_name" content="Автосервис Каскад" />
+    <meta property="og:title" content="Автозапчасти Павлоград — подбор и заказ оригинала и аналогов | Каскад" />
+    <meta property="og:description" content="Подбор автозапчастей в Павлограде на СТО «Каскад»: оригинал и проверенные аналоги под ваш VIN. Быстрый заказ, гарантия совместимости, установка на месте." />
+    <meta property="og:image" content="https://kaskad.in.ua/images/logo.png" />
+    <meta property="og:url" content="https://kaskad.in.ua/zapchasti.html" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Автозапчасти Павлоград — подбор и заказ оригинала и аналогов | Каскад" />
+    <meta name="twitter:description" content="Подбор автозапчастей в Павлограде на СТО «Каскад»: оригинал и проверенные аналоги под ваш VIN. Быстрый заказ, гарантия совместимости, установка на месте." />
+    <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
+
+    <!-- Scripts -->
+    <script src="./src/js/main.js" defer></script>
+    <script src="./src/js/include-partials.js" defer></script>
+    <script src="./src/js/language.js" defer></script>
+    <script src="./src/js/carousel-parts.js" defer></script>
+      <!-- SEO:AutoPartsStore -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoPartsStore",
+  "name": "Автосервис Каскад — Автозапчасти",
+  "description": "Подбор автозапчастей в Павлограде на СТО «Каскад»: оригинал и проверенные аналоги под ваш VIN. Быстрый заказ, гарантия совместимости, установка на месте.",
+  "url": "https://kaskad.in.ua/zapchasti.html",
+  "image": "https://kaskad.in.ua/images/logo.png",
+  "telephone": "+380668375666",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Ушинского, 2а",
+    "addressLocality": "Павлоград",
+    "addressRegion": "Днепропетровская область",
+    "postalCode": "51400",
+    "addressCountry": "UA"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":48.52613,"longitude":35.87073},
+  "openingHours": "Mo-Su 09:00-18:00",
+  "areaServed": "UA",
+  "priceRange": "$$"
+}
+    </script>
+      <!-- SEO:BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Главная","item":"https://kaskad.in.ua/"},
+    {"@type":"ListItem","position":2,"name":"Автозапчасти","item":"https://kaskad.in.ua/zapchasti.html"}
+  ]
+}
+    </script>
+  </head>
+  <div id="site-header"></div>
+  <body data-lead-type="razborka">
+    <main>
+      <div class="container">
+        <section class="hero-parts">
+          <div>
+            <div class="hero-content">
+              <h1 class="hero-title" data-translate="hero-title-parts">Подбор автозапчастей в Павлограде</h1>
+              <button
+                type="button"
+                class="details-hero-btn"
+                id="openModalBtn"
+                data-translate="details-hero-btn-parts"
+              >ЗАКАЗАТЬ ЗАПЧАСТЬ</button>
+              <p class="discount" data-translate="discount">Скидка 50% на первую диагностику по промокоду: «АС КАСКАД»</p>
+            </div>
+            <div class="hero-contact-div">
+              <p data-translate="hero-contact-div-map">Едь к нам прямо сейчас:</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
+                width="250"
+                height="200"
+                style="border-radius: 20px"
+                class="iframe"
+                title="Карта расположения автосервиса Каскад на Google Maps"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="hero-contact-number">
+                <p data-translate="hero-contact-div-number">Ждем твоего звонка:</p>
+                <a href="tel:+380668375666" class="number-link"
+                  >+38 (066) 837−56−66</a
+                >
+                <a href="tel:+380962110210" class="number-link"
+                  >+38 (096) 211−02−10</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="parts-section">
+          <div class="benefits-content">
+            <p data-translate="benefits-content1">Для многих автовладельцев поиск нужных запчастей превращается в настоящий квест. Особенно когда машина уже стоит в сервисе разобранная, а времени на беготню по магазинам совсем нет. Хуже всего, когда после долгих поисков купленная деталь оказывается неподходящей. В «АС КАСКАД» мы прекрасно понимаем эти сложности и сделали все, чтобы ремонт для вас был максимально комфортным.</p>
+            <p data-translate="benefits-content2">«АС КАСКАД» работает в Павлограде с 2005 года и помогает автовладельцам решать любые проблемы с их автомобилями. Мы предлагаем полный комплекс услуг – от компьютерной диагностики до капитального ремонта двигателя и ходовой части. Наш сервис работает без выходных, потому что мы понимаем: поломка может случиться в любой момент.</p>
+            <p data-translate="benefits-content3">Одно из наших ключевых преимуществ – подбор качественных запчастей именно на Ваш автомобиль. Это значит, что вам не придется тратить время на их поиски – все необходимое для ремонта мы берем на себя. Мы тщательно проверяем всех поставщиков и гарантируем, что используем только надежные детали. Наши мастера – настоящие профессионалы, которые знают свое дело и всегда готовы дать честную рекомендацию по ремонту. В «АС КАСКАД» вы получаете не просто услуги автосервиса, а комплексное решение всех проблем с вашим автомобилем в одном месте.</p>
+          </div>
+          <div class="carousel-container">
+            <div class="carousel">
+              <picture>
+                <source srcset="src/img/parts/p1.webp" type="image/webp" />
+                <img
+                  src="./src/img/parts/p1.jpg"
+                  alt="Запчасти"
+                  class="active"
+                  loading="lazy"
+                />
+              </picture>
+              <picture>
+                <source srcset="src/img/parts/p2.webp" type="image/webp" />
+                <img src="./src/img/parts/p2.jpg" alt="Запчасти" loading="lazy" />
+              </picture>
+              <picture>
+                <source srcset="src/img/parts/p6.webp" type="image/webp" />
+                <img src="./src/img/parts/p6.jpg" alt="Запчасти" loading="lazy" />
+              </picture>
+            </div>
+          </div>
+          <div class="Our-Benefits">
+            <h2 data-translate="our-benefits-title">Наши преимущества</h2>
+            <p data-translate="our-benefits-txt1">Приобретая автозапчасти в нашем автосервисе, вы получаете ряд важных преимуществ:</p>
+            <ul class="benefits-list">
+              <li class="benefits-item">
+                <span class="bene-span" data-translate="our-benefits-item11"
+                  >Официальная гарантия</span
+                >
+                <span data-translate="our-benefits-item12"
+                  >на все детали от производителей*.</span
+                >
+              </li>
+              <li class="benefits-item">
+                <span class="bene-span" data-translate="our-benefits-item21"
+                  >Экономия времени</span
+                >
+                <span data-translate="our-benefits-item22">
+                  – вам не нужно искать запчасти самостоятельно.</span
+                >
+              </li>
+              <li class="benefits-item">
+                <span class="bene-span" data-translate="our-benefits-item31"
+                  >Гарантия совместимости</span
+                >
+                <span data-translate="our-benefits-item32">
+                  – мы подбираем детали и расходники строго по спецификациям
+                  автопроизводителей.</span
+                >
+              </li>
+              <li class="benefits-item">
+                <span class="bene-span" data-translate="our-benefits-item41"
+                  >Профессиональные консультации</span
+                >
+                <span data-translate="our-benefits-item42">
+                  – наши специалисты помогут выбрать оптимальное решение,
+                  основываясь на многолетнем опыте ремонта.</span
+                >
+              </li>
+              <li class="benefits-item">
+                <span class="bene-span" data-translate="our-benefits-item51"
+                  >Комплексныи подход</span
+                >
+                <span data-translate="our-benefits-item52">
+                  – диагностика, подбор запчастеи и ремонт выполняются в одном
+                  месте, что гарантирует качество и нашу ответственность за
+                  результат.</span
+                >
+              </li>
+            </ul>
+            <p data-translate="our-benefits-txt2">
+              *Сроки и условия гарантии могут отличаться для разных категорий
+              товаров. Подробности уточняйте у наших менеджеров.
+            </p>
+          </div>
+        </section>
+        <!-- seo-article:start -->
+        <section class="main-content-section seo-article">
+          <div class="main-content-div">
+            <div class="main-content">
+              <h2 data-translate="seo-zapchasti-h2">Подбор и продажа автозапчастей в Павлограде — оригинал и аналоги от «АС Каскад»</h2>
+              <h3 data-translate="seo-zapchasti-h3-1">Как мы подбираем запчасти для вашего авто</h3>
+              <p data-translate="seo-zapchasti-p-1-1">Правильный подбор запчастей — половина успеха любого ремонта. В «АС Каскад» мы подбираем детали для вашего автомобиля точно по его параметрам, а не приблизительно. Основной и самый надёжный способ — подбор по VIN-коду, который однозначно определяет комплектацию, год выпуска и особенности конкретной машины. Это исключает распространённые ошибки, когда внешне похожая деталь не подходит по креплениям или разъёмам.</p>
+              <p data-translate="seo-zapchasti-p-1-2">Если VIN недоступен, мы подбираем запчасти по марке, модели, году выпуска, типу двигателя и другим характеристикам. Наши мастера ежедневно работают с самыми разными автомобилями, поэтому знают тонкости совместимости и подводные камни, которые не всегда очевидны при заказе через интернет самостоятельно. Мы уточняем детали, чтобы вы получили именно то, что нужно.</p>
+              <p data-translate="seo-zapchasti-p-1-3">Нередко один и тот же автомобиль в разные годы выпускался с разными узлами, и деталь, которая идеально подходит к одной модификации, не встанет на другую. Разобраться в этом без опыта сложно, а ошибка стоит времени и денег. Мы берём эту задачу на себя: сверяем каталожные номера, учитываем рестайлинги и особенности комплектаций, чтобы подобранная деталь гарантированно подошла именно вашей машине.</p>
+              <p data-translate="seo-zapchasti-p-1-4">Если вы не уверены, какая именно деталь вышла из строя, не обязательно приезжать с готовым списком. Достаточно описать симптомы или пригнать автомобиль на диагностику — и мы сами определим, что требуется заменить. Такой подход избавляет от ситуации, когда куплена не та запчасть, а истинная причина неисправности осталась не устранённой. Мы отвечаем за весь путь: от постановки диагноза до подбора и установки нужной детали.</p>
+              <p data-translate="seo-zapchasti-p-1-5">Работая с 2005 года, мы наладили связи с поставщиками и научились быстро находить нужные позиции. Даже если деталь редкая или не самая ходовая, мы постараемся её найти. А главное — мы не просто продаём запчасть, но и берём на себя ответственность за то, что она подойдёт вашему автомобилю.</p>
+              <h3 data-translate="seo-zapchasti-h3-2">Оригинальные запчасти или качественные аналоги</h3>
+              <p data-translate="seo-zapchasti-p-2-1">Один из главных вопросов при покупке запчастей — брать оригинал или аналог. У каждого варианта есть свои преимущества, и правильный выбор зависит от конкретной детали и ваших задач. Оригинальные запчасти гарантируют полное соответствие заводским параметрам и, как правило, максимальный ресурс. Это оптимальный выбор для ответственных узлов и для тех, кто хочет сохранить характеристики автомобиля.</p>
+              <p data-translate="seo-zapchasti-p-2-2">Качественные аналоги от проверенных производителей — это разумный компромисс между ценой и надёжностью. Многие бренды выпускают детали, которые по качеству не уступают оригиналу, а стоят заметно дешевле. Часто оригинальные и «аналоговые» детали производятся на одних и тех же заводах. Важно лишь выбирать проверенные марки, а не самые дешёвые безымянные варианты.</p>
+              <p data-translate="seo-zapchasti-p-2-3">Отдельно предостерегаем от соблазна купить самую дешёвую деталь неизвестного происхождения. Экономия на ответственных узлах часто оборачивается повторным ремонтом: дешёвая деталь быстро выходит из строя, и в итоге вы платите дважды. Поэтому мы ориентируемся не на минимальную цену, а на разумное соотношение цены и ресурса, честно предупреждая, где экономия оправдана, а где рискованна.</p>
+              <p data-translate="seo-zapchasti-p-2-4">Мы честно консультируем, где имеет смысл поставить оригинал, а где вполне достаточно качественного аналога. Например, на ответственные узлы и детали двигателя мы обычно рекомендуем более надёжные варианты, а на некоторые расходники можно спокойно ставить хорошие аналоги. Окончательное решение всегда за вами — мы лишь даём объективную рекомендацию.</p>
+              <h3 data-translate="seo-zapchasti-h3-3">Доставка запчастей и установка на месте</h3>
+              <p data-translate="seo-zapchasti-p-3-1">После подбора запчасти важно быстро её получить. Многие ходовые позиции доступны в короткие сроки, а более редкие детали мы заказываем у поставщиков с доставкой. Мы заранее сообщаем ориентировочные сроки, чтобы вы могли спланировать ремонт и не оставаться без автомобиля дольше необходимого.</p>
+              <p data-translate="seo-zapchasti-p-3-2">Ключевое преимущество заказа запчастей именно в «АС Каскад» — это возможность сразу установить их у нас. Вам не нужно искать отдельно, где купить деталь, и отдельно — где её поставить. Мы делаем всё в одном месте: подбираем, привозим и монтируем. Это удобно, экономит время и снимает с вас лишние хлопоты.</p>
+              <p data-translate="seo-zapchasti-p-3-3">Установка запчастей у нас выполняется опытными мастерами с соблюдением технологии. Мы следим за тем, чтобы деталь встала корректно, а сопутствующие элементы (при необходимости) были заменены вовремя. Такой подход обеспечивает надёжный результат и долгую службу установленной запчасти.</p>
+              <p data-translate="seo-zapchasti-p-3-4">Комплексный подход выгоден ещё и тем, что при установке мы можем сразу оценить состояние смежных узлов. Например, при замене одной детали подвески логично проверить соседние элементы, чтобы не разбирать узел повторно через короткое время. Мы подскажем, что стоит заменить заодно, а что ещё послужит, — это помогает экономить и на запчастях, и на работе.</p>
+              <h3 data-translate="seo-zapchasti-h3-4">Запчасти под ремонт на станции «АС Каскад»</h3>
+              <p data-translate="seo-zapchasti-p-4-1">Когда вы ремонтируете автомобиль у нас, вопрос запчастей решается автоматически. Мы сами определяем, какие детали нужны по итогам диагностики, подбираем их и согласовываем с вами варианты по цене и качеству. Вам не приходится разбираться в артикулах и каталогах самостоятельно — это забота наших специалистов.</p>
+              <p data-translate="seo-zapchasti-p-4-2">Такой подход снимает классическую проблему, когда клиент покупает деталь сам, а она оказывается неподходящей или некомплектной, из-за чего ремонт затягивается. Поскольку мы отвечаем и за подбор, и за установку, ответственность за конечный результат лежит на нас целиком. Это удобно и надёжно.</p>
+              <p data-translate="seo-zapchasti-p-4-3">Кроме того, при ремонте мы видим состояние смежных узлов и можем заранее предупредить, что вскоре потребует внимания. Это помогает планировать бюджет и совмещать работы, экономя на повторных визитах. Комплексный подход к запчастям и ремонту — одно из главных преимуществ станции полного цикла.</p>
+              <p data-translate="seo-zapchasti-p-4-4">Мы всегда предлагаем варианты под разный бюджет: если задача — восстановить машину как можно дешевле, подберём качественные аналоги или контрактные детали с разборки; если важен максимальный ресурс — предложим оригинал. Вы получаете полную картину и сами принимаете решение, а мы обеспечиваем корректную установку выбранной запчасти.</p>
+              <h3 data-translate="seo-zapchasti-h3-5">Почему выгодно заказывать запчасти в «АС Каскад»</h3>
+              <p data-translate="seo-zapchasti-p-5-1">Заказывая запчасти в «АС Каскад», вы получаете не просто деталь, а гарантию того, что она подойдёт именно вашему автомобилю. Мы берём на себя подбор, проверку совместимости и установку, избавляя вас от риска ошибиться при самостоятельной покупке. Это особенно ценно для тех, кто не разбирается в тонкостях каталогов и артикулов.</p>
+              <p data-translate="seo-zapchasti-p-5-2">Мы предлагаем выбор между оригиналом и качественными аналогами, честно объясняя разницу и помогая найти оптимальный баланс цены и ресурса. При необходимости используем и контрактные детали с авторазборки, что позволяет ещё больше сэкономить без потери надёжности на подходящих для этого узлах.</p>
+              <p data-translate="seo-zapchasti-p-5-3">За годы работы мы убедились, что довольный клиент возвращается снова, поэтому нам невыгодно продавать неподходящие или некачественные детали. Наша репутация строится на том, что подобранная и установленная у нас запчасть работает так, как должна. Именно поэтому многие водители Павлограда доверяют подбор запчастей именно нам, а не разбираются в каталогах самостоятельно.</p>
+              <p data-translate="seo-zapchasti-p-5-4">Опыт с 2005 года, налаженные связи с поставщиками и репутация честного сервиса делают «АС Каскад» удобным местом для покупки автозапчастей в Павлограде. Обращайтесь к нам — подберём, привезём и установим то, что действительно нужно вашей машине. Работаем ежедневно с 09:00 до 18:00.</p>
+            </div>
+          </div>
+        </section>
+        <!-- seo-article:end -->
+        <div id="site-callback"></div>
+        <section id="brend" class="brend-section">
+          <h2 class="brend-title" data-translate="brend-title">
+            СТО в Павлограде
+          </h2>
+          <div class="infinite-carousel">
+            <div class="carousel-track">
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/4226-256x256x8.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/4226-256x256x8.png"
+                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">daewoo</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/4227-256x256x32.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/4227-256x256x32.png"
+                    alt="Логотип Daihatsu для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">daihatsu</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/acura_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/acura_logo.png"
+                    alt="Логотип Acura для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">acura</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/alfa-romeo-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/alfa-romeo-logo.png"
+                    alt="Логотип Alfa Romeo для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">alfa-romeo</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/audi.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/audi.png"
+                    alt="Логотип Audi для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">audi</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/chevrolet-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/chevrolet-logo.png"
+                    alt="Логотип Chevrolet для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">chevrolet</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/daewoo-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/daewoo-logo.png"
+                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">daewoo</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/citroen-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/citroen-logo.jpg"
+                    alt="Логотип Citroen для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">citroen</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/dodge-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/dodge-logo.png"
+                    alt="Логотип Dodge для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">dodge</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/fiat_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/fiat_logo.png"
+                    alt="Логотип Fiat для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">fiat</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/ford.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/ford.png"
+                    alt="Логотип Ford для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">ford</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/honda-color-128.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/honda-color-128.png"
+                    alt="Логотип Honda для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">honda</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/hyundai-lg.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/hyundai-lg.png"
+                    alt="Логотип Hyundai для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">hyundai</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/infiniti.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/infiniti.png"
+                    alt="Логотип Infiniti для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">infiniti</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/jaguar-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/jaguar-logo.png"
+                    alt="Логотип Jaguar для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">jaguar</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/jeep-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/jeep-logo.png"
+                    alt="Логотип Jeep для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">jeep</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/kia_logo_256_003.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/kia_logo_256_003.png"
+                    alt="Логотип Kia для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">kia</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/land-rover1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/land-rover1.png"
+                    alt="Логотип Land Rover для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">land-rover</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/lexus-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/lexus-logo.png"
+                    alt="Логотип Lexus для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">lexus</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/lincoln-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/lincoln-logo.png"
+                    alt="Логотип Lincoln для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">lincoln</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/logo_suzuki.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/logo_suzuki.png"
+                    alt="Логотип Suzuki для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">suzuki</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="
+                      src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
+                    alt="Логотип Mazda для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">mazda</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/mercedes_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/mercedes_logo.png"
+                    alt="Логотип Mercedes-Benz для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">mercedes</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/mitsubishi_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/mitsubishi_logo.png"
+                    alt="Логотип Mitsubishi для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">mitsubishi</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/nissan-logo-4.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/nissan-logo-4.png"
+                    alt="Логотип Nissan для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">nissan</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/novosti-skoda-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
+                    alt="Логотип Skoda для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">skoda</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="
+                      src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
+                    alt="Логотип Opel для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">opel</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/peugeot_logo_128.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/peugeot_logo_128.png"
+                    alt="Логотип Peugeot для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">peugeot</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/renault_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/renault_logo.png"
+                    alt="Логотип Renault для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">renault</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/saab-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/saab-logo.png"
+                    alt="Логотип Saab для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">saab</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/seat.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/seat.png"
+                    alt="Логотип SEAT для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">seat</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/smart-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/smart-logo.png"
+                    alt="Логотип Smart для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">smart</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/ssangyong-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/ssangyong-logo.png"
+                    alt="Логотип SsangYong для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">ssangyong</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/subaru-logo-transparent.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/subaru-logo-transparent.png"
+                    alt="Логотип Subaru для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">subaru</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/toyota.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/toyota.png"
+                    alt="Логотип Toyota для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">toyota</p>
+              </div>
+              <div>
+                <picture>
+                  <source
+                    srcset="src/img/avto-logo/volkswagen_logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./src/img/avto-logo/volkswagen_logo.png"
+                    alt="Логотип Volkswagen для ремонта и обслуживания авто в автосервисе Каскад"
+                    loading="lazy"
+                  />
+                </picture>
+                <p class="text-brend">volkswagen</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+          <div id="site-callback-widgets"></div>
+    </main>
+  </body>
+  <div id="site-footer"></div>
+</html>

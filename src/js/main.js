@@ -1,28 +1,25 @@
-//кнопка Піднятись в гору
+//кнопка Піднятись в гору (delegation — кнопка приходит из include)
+document.addEventListener("click", function (e) {
+  const backToTop = e.target.closest("#back-to-top");
+  if (!backToTop) return;
 
-document.getElementById('back-to-top').addEventListener('click', function(e) {
-  e.preventDefault(); // Отменяем стандартное поведение ссылки
-  
-  // Находим элемент header
-  const headerElement = document.getElementById('header');
-  
-  // Плавный скролл до header
-  if (headerElement) {
-    headerElement.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
+  e.preventDefault();
+  document.getElementById("header")?.scrollIntoView({
+    behavior: "smooth",
+  });
 });
 
 // КНОПКИ ПОЯВЛЯЮТСЯ ПОСЛЕ ПРОКРУТКИ
-
-document.addEventListener("DOMContentLoaded", function() {
+function initSocialScroll() {
   const social = document.querySelector(".social-fixed");
   const toHome = document.querySelector(".to-home");
+  if (!social || !toHome || social.dataset.scrollInit === "true") return;
 
-  window.addEventListener("scroll", function() {
+  social.dataset.scrollInit = "true";
+
+  window.addEventListener("scroll", function () {
     if (window.innerWidth <= 1024) {
-      if (window.scrollY > 100) { // при прокрутке более 100px
+      if (window.scrollY > 100) {
         social.classList.add("show");
         toHome.classList.add("show");
       } else {
@@ -31,15 +28,24 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
-});
+}
+
+document.addEventListener("DOMContentLoaded", initSocialScroll);
+document.addEventListener("partials:loaded", initSocialScroll);
 
 // КОЛБЕК — универсальный JS для всех страниц
-document.addEventListener("DOMContentLoaded", () => {
+function initCallbackUI() {
+  if (window.__callbackUIInitialized) return;
+  if (!document.getElementById("callbackModal") && !document.getElementById("callbackForm")) {
+    return;
+  }
+  window.__callbackUIInitialized = true;
+
   // =========================
   // НАСТРОЙКИ
   // =========================
   const botToken = "7401776138:AAEIszjxs4_-9alGK01THnbG9VHvAGUrEwA";
-const adminChatIds = ["398501551", "5370980969", "5235424421"];
+  const adminChatIds = ["398501551", "5370980969", "5235424421"];
 
   // =========================
   // ЭЛЕМЕНТЫ
@@ -426,7 +432,10 @@ const adminChatIds = ["398501551", "5370980969", "5235424421"];
       });
     });
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", initCallbackUI);
+document.addEventListener("partials:loaded", initCallbackUI);
 
 //Запчасти страница с машиной, ее фото
 

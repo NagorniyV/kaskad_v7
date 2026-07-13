@@ -1,43 +1,34 @@
 .hero-price-section {
-    position: relative;
-    color: white;
-    background-color: #101010;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-top: 1px solid #f8f8f8;
-}
-
-.hero-price-section {
-    background-image: url(../img/price-auto-img.webp);
-    background-image: url(../img/price-auto-img.jpg);
+  position: relative;
+  color: #fff;
+  background-color: #101010;
+  background-image: url(../img/price-auto-img.webp);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top: 1px solid #f8f8f8;
 }
 
 .hero-price-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Чёрный с прозрачностью 50% */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-/* Чтобы контент был поверх затемнения */
-.hero-price-section>* {
-    position: relative;
-    z-index: 2;
+.hero-price-section > * {
+  position: relative;
+  z-index: 2;
 }
 
-.hero-price-section .discount{
-    color: #f8f8f8;
-    font-size: 28px;
-    max-width: 450px;
+.hero-price-section .discount {
+  color: #f8f8f8;
+  font-size: 28px;
+  max-width: 450px;
 }

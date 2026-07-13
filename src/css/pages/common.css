@@ -1,0 +1,7 @@
+/* Shared styles for all pages */
+@import url('../reset.css');
+@import url('../container.css');
+@import url('../header.css');
+@import url('../footer.css');
+@import url('../hero-section.css');
+@import url('../callback-section.css');

@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LFYC21VZB6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LFYC21VZB6");
+    </script>
+
+    <!-- Кодировка и масштабирование -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="theme-color" content="#24a7c1" />
+    <meta name="ICBM" content="48.52613, 35.87073" />
+    <meta name="geo.position" content="48.52613;35.87073" />
+    <meta name="geo.placename" content="Павлоград" />
+    <meta name="geo.region" content="UA-12" />
+    <meta name="author" content="Автосервис Каскад" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="услуги автосервиса Павлоград, услуги СТО Павлоград, ремонт авто услуги Павлоград, каталог услуг Каскад" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.png" type="image/png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Прогрузка хедера -->
+    <script>
+      (function () {
+        const host = window.location.hostname;
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+        let basePath = "/";
+
+        // GitHub Pages repo site: /kaskad_v7/
+        if (host.endsWith("github.io") && pathParts.length > 0) {
+          basePath = "/" + pathParts[0] + "/";
+        }
+
+        // Custom domain и Live Server
+        if (
+          host === "kaskad.in.ua" ||
+          host === "www.kaskad.in.ua" ||
+          host === "localhost" ||
+          host === "127.0.0.1"
+        ) {
+          basePath = "/";
+        }
+
+        window.__BASE_PATH__ = basePath;
+
+        const base = document.createElement("base");
+        base.href = basePath;
+        document.head.prepend(base);
+      })();
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/pages/uslugi.css" />
+
+    <!-- Title & Meta Description -->
+    <title>Услуги автосервиса в Павлограде — каталог работ СТО Каскад</title>
+    <meta name="description" content="Полный каталог услуг СТО «Каскад» в Павлограде: двигатель, ходовая, электрика, тормоза, трансмиссия, ТО, диагностика, ГБО и автокондиционеры. Запись по телефону." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://kaskad.in.ua/uslugi.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale:alternate" content="uk_UA" />
+    <meta property="og:locale" content="ru_UA" />
+    <meta property="og:site_name" content="Автосервис Каскад" />
+    <meta property="og:title" content="Услуги автосервиса в Павлограде — каталог работ СТО Каскад" />
+    <meta property="og:description" content="Полный каталог услуг СТО «Каскад» в Павлограде: двигатель, ходовая, электрика, тормоза, трансмиссия, ТО, диагностика, ГБО и автокондиционеры. Запись по телефону." />
+    <meta property="og:image" content="https://kaskad.in.ua/images/logo.png" />
+    <meta property="og:url" content="https://kaskad.in.ua/uslugi.html" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Услуги автосервиса в Павлограде — каталог работ СТО Каскад" />
+    <meta name="twitter:description" content="Полный каталог услуг СТО «Каскад» в Павлограде: двигатель, ходовая, электрика, тормоза, трансмиссия, ТО, диагностика, ГБО и автокондиционеры. Запись по телефону." />
+    <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
+
+    <!-- Scripts -->
+    <script src="./src/js/main.js" defer></script>
+    <script src="./src/js/include-partials.js" defer></script>
+    <script src="./src/js/language.js" defer></script>
+      <!-- SEO:Service -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Каталог услуг автосервиса",
+  "description": "Полный каталог услуг СТО «Каскад» в Павлограде: двигатель, ходовая, электрика, тормоза, трансмиссия, ТО, диагностика, ГБО и автокондиционеры. Запись по телефону.",
+  "url": "https://kaskad.in.ua/uslugi.html",
+  "image": "https://kaskad.in.ua/images/logo.png",
+  "provider": {
+    "@type": "AutoRepair",
+    "name": "Автосервис Каскад",
+    "telephone": "+380668375666",
+    "url": "https://kaskad.in.ua/",
+    "image": "https://kaskad.in.ua/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Ушинского, 2а",
+      "addressLocality": "Павлоград",
+      "addressRegion": "Днепропетровская область",
+      "postalCode": "51400",
+      "addressCountry": "UA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.52613,
+      "longitude": 35.87073
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Павлоград"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Павлоград"
+  },
+  "serviceType": "Каталог услуг автосервиса"
+}
+    </script>
+      <!-- SEO:BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Главная","item":"https://kaskad.in.ua/"},
+    {"@type":"ListItem","position":2,"name":"Услуги","item":"https://kaskad.in.ua/uslugi.html"}
+  ]
+}
+    </script>
+  </head>
+  <div id="site-header"></div>
+  <body>
+    <main>
+      <div class="container">
+        <section class="hero-service-catalog">
+          <div>
+            <div class="hero-content">
+              <h1 class="hero-title" data-translate="hero-service-title">Услуги автосервиса Каскад в Павлограде</h1>
+              <button
+                type="button"
+                onclick="window.location.href = '#callbackForm'"
+                class="details-hero-btn"
+                data-translate="details-hero-btn"
+              >ЗАПИСАТЬСЯ</button>
+              <p class="discount" data-translate="discount">Скидка 50% на первую диагностику по промокоду: «АС КАСКАД»</p>
+            </div>
+            <div class="hero-contact-div">
+              <p data-translate="hero-contact-div-map">Едь к нам прямо сейчас:</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
+                width="250"
+                height="200"
+                style="border-radius: 20px"
+                class="iframe"
+                title="Карта расположения автосервиса Каскад на Google Maps"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="hero-contact-number">
+                <p data-translate="hero-contact-div-number">Ждем твоего звонка:</p>
+                <a href="tel:+380668375666" class="number-link"
+                  >+38 (066) 837−56−66</a
+                >
+                <a href="tel:+380962110210" class="number-link"
+                  >+38 (096) 211−02−10</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="service-catalog-section">
+          <div class="price-content-container">
+            <p class="price-content" data-translate="price-content1">Высококачественная станция технического обслуживания в Павлограде – это симбиоз современного подхода к управлению процессами, применения инновационных технологий и высокой квалификации сотрудников. Коллектив автосервиса АС КАСКАД, работая в Павлограде с 2005 года, накопил богатый опыт выполнения работ по диагностике авто, ремонту автомобилей любой сложности, установке ГБО, обслуживанию кондиционеров и комплексному техническому обслуживанию автомобилей. Мы постоянно развиваемся, оттачиваем свое мастерство и улучшаем качество услуг, чтобы оставаться надежным СТО в Павлограде для каждого клиента. Наша станция технического обслуживания оснащена современным диагностическим оборудованием, инструментами для профессионального ремонта авто, а также имеет доступ к обширной базе технической информации и заводских руководств по ремонту и обслуживанию автомобилей различных марок.</p>
+            <p class="price-content" data-translate="price-content2">Для максимального удобства клиентов и сокращения сроков выполнения работ в наличии всегда большой ассортимент технических жидкостей, масел, фильтров и смазочных материалов. Мы обеспечиваем прямые поставки запчастей от официальных дилеров и проверенных импортеров, что подтверждает наш профессиональный подход к управлению автосервисом и качеству ремонта авто. При отсутствии нужной детали в наличии, мы оперативно заказываем её у партнеров и поставщиков. Менеджеры автосервиса КАСКАД в Павлограде обеспечивают надежную связь с клиентом, готовы подробно ответить на все вопросы касательно ремонта автомобиля, установки ГБО, подбора запчастей и диагностики авто. Мы работаем прозрачно, предоставляем доступ в ремзону в любое время и всегда открыты к общению. СТО КАСКАД – это автосервис Павлограда, где каждый клиент уверен в профессионализме мастеров и качестве выполненных работ.</p>
+          </div>
+          <nav class="nav-service-catalog">
+            <ul class="list-service-catalog">
+              <li class="item-service-catalog">
+                <a
+                  href="remont-dvigatelya.html"
+                  data-translate="item-service-catalog-dvig"
+                  >Двигатель</a
+                >
+              </li>
+              <li class="item-service-catalog">
+                <a
+                  href="remont-hodovoy.html"
+                  data-translate="item-service-catalog-hodov"
+                  >Ходовая частина</a
+                >
+              </li>
+              <li class="item-service-catalog">
+                <a
+                  href="remont-elektriki.html"
+                  data-translate="item-service-catalog-electro"
+                  >Электрика</a
+                >
+              </li>
+              <li class="item-service-catalog">
+                <a
+                  href="remont-tormoznoi-sistemy.html"
+                  data-translate="item-service-catalog-tormoznaja"
+                  >Тормозная система</a
+                >
+              </li>
+              <li class="item-service-catalog">
+                <a
+                  href="remont-transmissii.html"
+                  data-translate="item-service-catalog-transm"
+                  >Трансмиссия</a
+                >
+              </li>
+              <li class="item-service-catalog">
+                <a
+                  href="tehnicheskoe-obsluzhivanie.html"
+                  data-translate="item-service-catalog-servisnoe"
+                  >Техническое обслуживания</a
+                >
+              </li>
+              <li class="item-service-catalog">
+                <a
+                  href="avtokondicionery.html"
+                  data-translate="item-service-catalog-kondi"
+                  >Обслуживание кондиционеров</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div id="dvigatel" class="catalog-container">
+            <h2
+              class="catalog-title"
+              data-translate="item-service-catalog-dvig"
+            >
+              Двигатель
+            </h2>
+            <p
+              class="catalog-description"
+              data-translate="catalog-description-dvig"
+            >
+              Диагностика и ремонт двигательа внутрішнього згорання.
+            </p>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/dvigatel/8tcizgctuko-1-qpchmrvh7aztnf3sxxf8uhdyo8x8en6kivx116w2bo.jpg"
+                  alt="Ремонт двигателя Ауди А5"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-dvig1">
+                  Ремонт двигателя Ауди А5
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/dvigatel/eaaykygwgyy-qpchmwko5h699gwz6hgdoy79n6a2h4p87j6gfkp3gk.jpg"
+                  alt="Ремонт двигателя Ауди А4"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-dvig2">
+                  Ремонт двигателя Ауди А4
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/dvigatel/eeoeyod3zfy-qpchn35jhbf9iqnf42aroejhsvdmz0fckfqusifc90.jpg"
+                  alt="Замена цепи ГРМ на Ниссан Мурано Z51"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-dvig3">
+                  Замена цепи ГРМ на Ниссан Мурано Z51
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/dvigatel/od7mqwtn4qi-qpchmstbe513z12fsftvez5f9mslmcaav0kiiguo5g.jpg"
+                  alt="Ремонт двигателя Mitsubishi Outlander"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-dvig4">
+                  Ремонт двигателя Mitsubishi Outlander
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/dvigatel/vshf9b1rcui-qpchn27pahdz74os9jw53ws17hi9rbbm8b3db8gqf8.jpg"
+                  alt="Замена маховика Skoda Yeti"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-dvig5">
+                  Замена маховика Skoda Yeti
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/dvigatel/w2dp2ejmdcy-qpchn8skmbmzgef874qj3d49d6lu971ql7nro66z7o.jpg"
+                  alt="Ремонт двигателя Volkswagen Passat B7"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-dvig6">
+                  Ремонт двигателя Volkswagen Passat B7
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="hodovka" class="catalog-container">
+            <h2
+              class="catalog-title"
+              data-translate="item-service-catalog-hodov"
+            >
+              Ходовая частина
+            </h2>
+            <p
+              class="catalog-description"
+              data-translate="catalog-description-hodov"
+            >
+              Диагностика и ремонт автомобильної подвески.
+            </p>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/hodovka/ford-4-min.jpg"
+                  alt="Замена нижних с/б Ford"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-hodov1">
+                  Замена нижних с/б Ford
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/hodovka/nis-1-min.jpg"
+                  alt="Ремонт сайлентблока Nissan Qashqai"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-hodov2">
+                  Ремонт сайлентблока Nissan Qashqai
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/hodovka/nissan2-min.jpg"
+                  alt="Замена сальника привода КПП Nissan"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-hodov3">
+                  Замена сальника привода КПП Nissan
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/hodovka/nissan_note5-1_1.jpg"
+                  alt="Замена пружин Nissan Note"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-hodov4">
+                  Замена пружин Nissan Note
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/hodovka/pego3-min.jpg"
+                  alt="Замена сальника привода и стоек стабилизатора Pego"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-hodov5">
+                  Замена сальника привода и стоек стабилизатора Pego
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/hodovka/tig4-min.jpg"
+                  alt="Замена амортизаторов Volkswagen Tiguan"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-hodov6">
+                  Замена амортизаторов Volkswagen Tiguan
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="electrika" class="catalog-container">
+            <h2
+              class="catalog-title"
+              data-translate="item-service-catalog-electro"
+            >
+              Электрика
+            </h2>
+            <p
+              class="catalog-description"
+              data-translate="catalog-description-electro"
+            >
+              Компьютерна диагностика, ремонт електропроводки и електричних
+              блоків управления.
+            </p>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/elektro/proverka-akb.jpg"
+                  alt="Подбор и замена АКП на Dodge"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-electro1">
+                  Подбор и замена АКП на Dodge
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/elektro/snjatie-gener-duster.jpg"
+                  alt="Процесс снятия генератора на Reno Duster"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-electro2">
+                  Процесс снятия генератора на Reno Duster
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/elektro/ustanovka-signaliz.jpg"
+                  alt="Процесс монтирования сигнализации на Ауди"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-electro3">
+                  Процесс монтирования сигнализации на Ауди
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/elektro/zamena-generatora-lancer.jpg"
+                  alt="Замена генератора на лансер 9"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-electro4">
+                  Замена генератора на лансер 9
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/elektro/zamena-pribornoy-p-volksv.jpg"
+                  alt="Ремонт приборнои панели на Фольцваген"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-electro5">
+                  Ремонт приборнои панели на Фольцваген
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="tormoznaja" class="catalog-container">
+            <h2
+              class="catalog-title"
+              data-translate="item-service-catalog-tormoznaja"
+            >
+              Тормозная система
+            </h2>
+            <p
+              class="catalog-description"
+              data-translate="catalog-description-tormoznaja"
+            >
+              Диагностика, реммонт и обслуживания тормозной системы.
+            </p>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/tormoz/logan-zamena-peredn-ts.jpg"
+                  alt="Замена переднеи тормознои системы на Reno Logan"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-tormoznaja1"
+                >
+                  Замена переднеи тормознои системы на Reno Logan
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/tormoz/regul-torm-sist.jpg"
+                  alt="Ремонт тормознои системы"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-tormoznaja2"
+                >
+                  Ремонт тормознои системы
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/tormoz/torm-kolodki-lanser10.jpg"
+                  alt="Замена колодок на Mitsubisi Lancer 10"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-tormoznaja3"
+                >
+                  Замена колодок на Mitsubisi Lancer 10
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/tormoz/zamena-torm-kolodok.jpg"
+                  alt="Замена колодок"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-tormoznaja4"
+                >
+                  Замена колодок
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/tormoz/zamena-torm-kolodok1.jpg"
+                  alt="Замена колодок"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-tormoznaja5"
+                >
+                  Замена колодок
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/tormoz/zamena-torm-shlangov.jpg"
+                  alt="Замена тормозных шлангов"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-tormoznaja6"
+                >
+                  Замена тормозных шлангов
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="transmisija" class="catalog-container">
+            <h2
+              class="catalog-title"
+              data-translate="item-service-catalog-transm"
+            >
+              Трансмиссия
+            </h2>
+            <p
+              class="catalog-description"
+              data-translate="catalog-description-transm"
+            >
+              Диагностика и ремонт элементов трансмиссии, замена сцепления.
+            </p>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/transm/akpp-shkoda-oct.jpg"
+                  alt="Ремонт АКПП Шкода Октавия"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-transm1">
+                  Ремонт АКПП Шкода Октавия
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/transm/kardan-reno-duster.jpg"
+                  alt="Замена кардана на Рено Дастер"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-transm2">
+                  Замена кардана на Рено Дастер
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/transm/scepl-logan.jpg"
+                  alt="Замена сцепления на Логан"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-transm3">
+                  Замена сцепления на Логан
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/transm/scepl-smart.jpg"
+                  alt="Замена сцепления на Смарт"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-transm4">
+                  Замена сцепления на Смарт
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/transm/scepl_yaris.jpg"
+                  alt="Замена сцепления на Toyota Yaris"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-transm5">
+                  Замена сцепления на Toyota Yaris
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="servisnoe" class="catalog-container">
+            <h2
+              class="catalog-title"
+              data-translate="item-service-catalog-servisnoe"
+            >
+              Техническое обслуживания
+            </h2>
+            <p
+              class="catalog-description"
+              data-translate="catalog-description-servisnoe"
+            >
+              Інтервальне обслуживания автомобилеи Замена масел, фильтров,
+              свічок зажигания, технических жидкостей.
+            </p>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/to/filter-salona.jpg"
+                  alt="Замена фильтра салона"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-servisnoe1"
+                >
+                  Замена фильтра салона
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/to/maslo-kp.jpg"
+                  alt="Замена масла в коробке передач"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-servisnoe2"
+                >
+                  Замена масла в коробке передач
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/to/remen-grm.jpg"
+                  alt="Замена и регулировка ремня ГРБ"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-servisnoe3"
+                >
+                  Замена и регулировка ремня ГРБ
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/to/vozd-filter.jpg"
+                  alt="Замена воздушного фильтра"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-servisnoe4"
+                >
+                  Замена воздушного фильтра
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/to/zamena-masla-dvig.jpg"
+                  alt="Замена масла в двигателе"
+                  loading="lazy"
+                />
+                <p
+                  class="catalog-text"
+                  data-translate="catalog-text-servisnoe5"
+                >
+                  Замена масла в двигателе
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="kondi" class="catalog-container">
+            <h2
+              class="catalog-title"
+              data-translate="item-service-catalog-kondi"
+            >
+              Обслуживание кондиционеров
+            </h2>
+            <p
+              class="catalog-description"
+              data-translate="catalog-description-kondi"
+            >
+              Заправка и замена хладагента, промывка системы, замена
+              фильтра-осушителя, диагностика давления, проверка герметичности,
+              очистка испарителя и дезинфекция системы кондиционирования.
+            </p>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/kondik/kondik1.jpg"
+                  alt="Диагностика автомобильных компрессоров"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-kondi1">
+                  Диагностика автомобильных компрессоров
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/kondik/kondik2.jpg"
+                  alt="Замена автомобильных компрессоров"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-kondi2">
+                  Замена автомобильных компрессоров
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/kondik/kondik3.jpg"
+                  alt="Проверка давление и устранение вытока фриона"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-kondi3">
+                  Проверка давление и устранение вытока фриона
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/kondik/kondik4.jpg"
+                  alt="Заправка фрионом"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-kondi4">
+                  Заправка фрионом
+                </p>
+              </li>
+              <li class="catalog-item">
+                <img
+                  class="catalog-img"
+                  src="./src/img/service/kondik/kondik5.jpg"
+                  alt="Антибактериальная обработка дифлекторов"
+                  loading="lazy"
+                />
+                <p class="catalog-text" data-translate="catalog-text-kondi5">
+                  Антибактериальная обработка дифлекторов
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- seo-article:start -->
+        <section class="main-content-section seo-article">
+          <div class="main-content-div">
+            <div class="main-content">
+              <h2 data-translate="seo-uslugi-h2">Услуги автосервиса «АС Каскад» в Павлограде — полный каталог работ по ремонту и обслуживанию авто</h2>
+              <h3 data-translate="seo-uslugi-h3-1">Обзор услуг станции «АС Каскад»</h3>
+              <p data-translate="seo-uslugi-p-1-1">Автосервис «АС Каскад» в Павлограде предлагает водителям широкий каталог услуг по ремонту и обслуживанию автомобилей. Работая с 2005 года, мы сформировали направления, которые закрывают практически любую потребность автовладельца — от планового технического обслуживания до сложного ремонта двигателя и ходовой части. Всё это доступно на одной станции, что избавляет вас от необходимости искать разные мастерские под каждую задачу.</p>
+              <p data-translate="seo-uslugi-p-1-2">Наша станция ориентирована на комплексный сервис. Приезжая к нам, вы можете совместить несколько работ за один визит: например, пройти ТО, заодно проверить тормоза и заправить кондиционер. Мастера согласуют объём работ заранее, а вы получаете понятную смету без скрытых пунктов. Такой формат экономит время и делает обслуживание автомобиля предсказуемым по стоимости.</p>
+              <p data-translate="seo-uslugi-p-1-3">Каждое направление ведут мастера, которые специализируются на своих задачах и хорошо знают особенности разных марок. Это важно, потому что современный автомобиль — сложный механизм, где двигатель, электроника, трансмиссия и ходовая тесно связаны между собой. Комплексный взгляд на автомобиль помогает находить настоящую причину проблемы, а не устранять отдельные симптомы, которые вскоре возвращаются.</p>
+              <p data-translate="seo-uslugi-p-1-4">Мы одинаково внимательно относимся и к возрастным автомобилям с большим пробегом, и к сравнительно свежим машинам. Для старших авто важно грамотно поддерживать ресурс и вовремя менять изнашиваемые узлы, а для новых — соблюдать регламент обслуживания, чтобы сохранить их состояние на годы вперёд. В любом случае мы подбираем объём работ под реальные потребности конкретной машины и её владельца, а не по шаблону.</p>
+              <p data-translate="seo-uslugi-p-1-5">Ниже мы кратко описываем основные категории услуг «АС Каскад». Если вы не нашли нужную работу в списке или не уверены, что именно требуется вашему автомобилю, позвоните нам — мы подскажем и при необходимости проведём диагностику. Работаем ежедневно с 09:00 до 18:00.</p>
+              <h3 data-translate="seo-uslugi-h3-2">Ремонт двигателя, ходовой части и электрики</h3>
+              <p data-translate="seo-uslugi-p-2-1">Ремонт двигателя — одно из ключевых направлений станции. Мы выполняем как текущий ремонт (замена ремня или цепи ГРМ, устранение течей, замена сальников и прокладок), так и капитальный ремонт с разборкой, дефектовкой и заменой изношенных деталей. Диагностируем причины повышенного расхода масла, потери мощности, посторонних шумов и нестабильной работы мотора.</p>
+              <p data-translate="seo-uslugi-p-2-2">Ходовая часть напрямую влияет на управляемость и комфорт. Наши мастера проверяют и меняют амортизаторы, пружины, сайлентблоки, шаровые опоры, рычаги, ступичные подшипники, рулевые тяги и наконечники. Диагностика подвески на подъёмнике помогает выявить стуки, люфты и износ до того, как они превратятся в серьёзную проблему.</p>
+              <p data-translate="seo-uslugi-p-2-3">Автомобильная электрика требует внимательного подхода и оборудования. Мы ремонтируем и меняем стартеры и генераторы, устраняем неисправности проводки, находим причины разряда аккумулятора, ремонтируем цепи освещения, проверяем датчики и исполнительные механизмы. Компьютерная диагностика помогает точно локализовать электрические неисправности.</p>
+              <p data-translate="seo-uslugi-p-2-4">Эти три направления часто связаны между собой: например, неровная работа двигателя может быть вызвана как механической причиной, так и неисправностью электрики или датчиков. Поэтому мы рассматриваем автомобиль целиком, а не по отдельным узлам. Такой подход помогает точно определить корень проблемы и избежать ситуации, когда заменённая деталь не решает исходную неисправность.</p>
+              <h3 data-translate="seo-uslugi-h3-3">Тормозная система, трансмиссия и техническое обслуживание</h3>
+              <p data-translate="seo-uslugi-p-3-1">Тормозная система — вопрос безопасности, поэтому ей мы уделяем особое внимание. В «АС Каскад» выполняется замена тормозных колодок и дисков, ремонт и замена суппортов, замена тормозных шлангов и трубок, прокачка и замена тормозной жидкости. При жалобах на биение педали, посторонние звуки или увеличенный тормозной путь проводим полную проверку системы.</p>
+              <p data-translate="seo-uslugi-p-3-2">Трансмиссия и сцепление обеспечивают передачу мощности на колёса. Мы обслуживаем и ремонтируем механические коробки передач, выполняем замену сцепления, обслуживаем автоматические трансмиссии с заменой масла и фильтров, диагностируем и ремонтируем приводы и ШРУСы. Своевременное обслуживание трансмиссии заметно продлевает её ресурс.</p>
+              <p data-translate="seo-uslugi-p-3-3">Плановое техническое обслуживание — основа долгой и беспроблемной эксплуатации. Мы проводим замену моторного масла и фильтров, свечей зажигания, воздушного и салонного фильтров, проверяем уровни технических жидкостей и общее состояние автомобиля. Регулярное ТО помогает выявлять мелкие неисправности заранее и избегать дорогостоящих поломок.</p>
+              <p data-translate="seo-uslugi-p-3-4">Мы рекомендуем относиться к техническому обслуживанию как к инвестиции, а не к лишней трате. Вовремя заменённое масло, исправные тормоза и обслуженная трансмиссия обходятся в разы дешевле, чем ремонт двигателя или коробки после того, как проблема запущена. При каждом визите мы обращаем внимание на общее состояние машины и подсказываем, что стоит сделать в ближайшее время, а что ещё может подождать.</p>
+              <p data-translate="seo-uslugi-p-3-5">Отдельно напомним про сезонную подготовку автомобиля. Перед зимой важно проверить аккумулятор, тормоза, состояние резины и работу отопителя, а перед летом — систему охлаждения и кондиционер. Такой сезонный осмотр помогает встретить сложные погодные условия во всеоружии и избежать поломок в самый неподходящий момент. Мы поможем подготовить машину к любому сезону быстро и без лишних затрат.</p>
+              <h3 data-translate="seo-uslugi-h3-4">Диагностика, кондиционеры и газобаллонное оборудование</h3>
+              <p data-translate="seo-uslugi-p-4-1">Компьютерная диагностика — это первый шаг при большинстве неисправностей современных автомобилей. С помощью сканера мы считываем коды ошибок электронных систем, анализируем параметры работы двигателя и других узлов, что позволяет точно определить причину проблемы. Диагностика экономит деньги, потому что исключает замену исправных деталей «на всякий случай».</p>
+              <p data-translate="seo-uslugi-p-4-2">Обслуживание автомобильных кондиционеров включает заправку системы хладагентом, поиск и устранение утечек, замену фильтров и антибактериальную обработку. Исправный кондиционер важен не только для комфорта летом, но и для эффективного обдува и осушения стёкол в холодное время года. Мы рекомендуем обслуживать систему регулярно.</p>
+              <p data-translate="seo-uslugi-p-4-3">Газобаллонное оборудование (ГБО) — это направление для тех, кто хочет заметно снизить расходы на топливо. Мы устанавливаем и настраиваем ГБО, проводим его техническое обслуживание и диагностику. Грамотно установленное и настроенное оборудование позволяет экономить на каждой заправке, сохраняя при этом стабильную работу двигателя.</p>
+              <p data-translate="seo-uslugi-p-4-4">Эти услуги делают «АС Каскад» по-настоящему многопрофильной станцией. Вам не нужно ехать в одно место за диагностикой, в другое — за кондиционером, а в третье — за установкой газа. Всё выполняется у нас, одной командой, которая отвечает за результат. Это удобно и экономит время, особенно когда автомобиль нужно подготовить к сезону или комплексно привести в порядок.</p>
+              <h3 data-translate="seo-uslugi-h3-5">Как выбрать нужную услугу и почему стоит доверить работу «АС Каскад»</h3>
+              <p data-translate="seo-uslugi-p-5-1">Если вы не уверены, какая именно услуга нужна вашему автомобилю, начните с диагностики. Часто симптомы — стук, вибрация, посторонний звук, индикатор на панели — могут указывать на разные причины. Наши мастера сначала выяснят источник проблемы, а затем предложат конкретное решение с понятной стоимостью, не навязывая лишних работ.</p>
+              <p data-translate="seo-uslugi-p-5-2">Преимущество обращения на станцию полного цикла в том, что все работы выполняются в одном месте и одной командой, которая отвечает за результат целиком. Вам не нужно возить машину между разными мастерскими и собирать разрозненные мнения. Мы подберём и запчасти, и выполним ремонт, и проверим результат перед выдачей автомобиля.</p>
+              <p data-translate="seo-uslugi-p-5-3">Отдельно стоит сказать о планировании. Если бюджет ограничен, мы поможем расставить приоритеты: что критично для безопасности и требует немедленного вмешательства, а что можно сделать позже. Такой честный подход помогает поддерживать автомобиль в порядке без резких и неожиданных трат, распределяя работы во времени разумно.</p>
+              <p data-translate="seo-uslugi-p-5-4">«АС Каскад» работает в Павлограде с 2005 года и дорожит доверием клиентов. Мы предлагаем честные рекомендации, прозрачные цены и качественный результат. Запишитесь на удобное время с 09:00 до 18:00 — и мы поможем вашему автомобилю оставаться исправным и безопасным.</p>
+            </div>
+          </div>
+        </section>
+        <!-- seo-article:end -->
+        <section class="benefits-section">
+          <h2 class="benefits-title">
+            <span data-translate="benefits-title">Почему</span>
+            <span
+              class="span-benefits-title"
+              data-translate="span-benefits-title"
+              >выбирают нас</span
+            >
+          </h2>
+          <div class="benefits-containers">
+            <div class="benefits-container">
+              <div class="benefits-top">
+                <p class="benefits-number">1</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text1"
+                >
+                  ПОРЯДОЧНОСТЬ
+                </p>
+              </div>
+              <picture>
+                <!-- ВебП версии -->
+                <source srcset="src/img/bene-1.webp" type="image/webp" />
+                <!-- Фолбэк на JPEG -->
+                <img
+                  class="benefits-img"
+                  src="./src/img/bene-1.jpg"
+                  alt="porjadnist"
+                  loading="lazy"
+                />
+              </picture>
+              <p class="benefits-bot-text" data-translate="benefits-bot-text1">
+                «Честныи ремонт: только нужные работы, только нужные запчасти.»
+              </p>
+            </div>
+            <div class="benefits-container">
+              <div class="benefits-top">
+                <p class="benefits-number">2</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text2"
+                >
+                  ОТВЕТСТВЕННОСТЬ
+                </p>
+              </div>
+              <picture>
+                <!-- ВебП версии -->
+                <source srcset="src/img/bene-2.webp" type="image/webp" />
+                <!-- Фолбэк на JPEG -->
+                <img
+                  class="benefits-img"
+                  src="./src/img/bene-2.jpg"
+                  alt="vidpovidalnist"
+                  loading="lazy"
+                />
+              </picture>
+              <p class="benefits-bot-text" data-translate="benefits-bot-text2">
+                «Гарантируем качество – отвечаем за результат!»
+              </p>
+            </div>
+            <div class="benefits-container">
+              <div class="benefits-top">
+                <p class="benefits-number">3</p>
+                <p
+                  class="benefits-top-text"
+                  data-translate="benefits-top-text3"
+                >
+                  ОПЕРАТИВНОСТЬ
+                </p>
+              </div>
+              <picture>
+                <!-- ВебП версии -->
+                <source srcset="src/img/bene-3.webp" type="image/webp" />
+                <!-- Фолбэк на JPEG -->
+                <img
+                  class="benefits-img"
+                  src="./src/img/bene-3.jpg"
+                  alt="vidpovidalnist"
+                  loading="lazy"
+                />
+              </picture>
+              <p class="benefits-bot-text" data-translate="benefits-bot-text3">
+                «Ваше авто не задержится у нас дольше необходимого.»
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+          <div id="site-callback-widgets"></div>
+    </main>
+  </body>
+  <div id="site-footer"></div>
+</html>

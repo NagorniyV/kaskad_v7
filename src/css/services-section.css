@@ -24,9 +24,7 @@
 
 .services-title {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 42px;
     line-height: 1.15;
     color: #f8f8f8;
@@ -35,10 +33,7 @@
 
 .services-subtitle {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
     font-size: 18px;
     line-height: 1.6;
     color: #f8f8f8;
@@ -115,9 +110,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     text-align: center;
 }
 
@@ -127,10 +120,7 @@
     line-height: 1.6;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
 }
 
 .btn-container {
@@ -166,7 +156,7 @@
     box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
 }
 
-@keyframes subtlePulse {
+@keyframes detailsPulse {
 
     0%,
     100% {

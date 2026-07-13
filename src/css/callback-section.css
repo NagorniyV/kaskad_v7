@@ -5,9 +5,7 @@
 
 .callback-main-title {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 42px;
     line-height: 1.15;
     color: #f8f8f8;
@@ -62,9 +60,7 @@
 
 .team-card-title {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 22px;
     line-height: 1.2;
     margin: 0;
@@ -72,10 +68,7 @@
 
 .team-card-position {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
     font-size: 14px;
     line-height: 1.45;
     margin-top: 4px;
@@ -83,10 +76,7 @@
 
 .team-card-content {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
     font-size: 18px;
     line-height: 1.6;
     margin-top: 18px;
@@ -95,19 +85,21 @@
 .callback-container {
     background-color: #f8f8f8;
     text-align: center;
-    padding: 34px 34px;
+    padding: 34px;
+    width: 100%;
     max-width: 380px;
     border-radius: 8px;
     height: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    flex: 0 1 380px;
+    min-width: 0;
 }
 
 .callbaack-main-title {
     color: #2c2b2b;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
-    font-style: normal;
     font-size: 22px;
     line-height: 1.35;
     margin-bottom: 36px;
@@ -118,33 +110,16 @@
     font-weight: 800;
 }
 
-.text-header {
-    padding: 12px 35px;
-    border-radius: 25px;
-    background: #24a7c1;
-    color: #f8f8f8;
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    transition: all 0.4s ease;
-    box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
-    animation: subtlePulse 2.5s infinite ease-in-out;
-    z-index: 2;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-header:hover {
-    background: #0e6374;
-    box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
-}
-
 #callbackForm {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: 18px;
-    max-width: 400px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #callbackForm input {
@@ -154,7 +129,51 @@
     font-size: 16px;
     background-color: #d4d4d4;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    float: none;
+    display: block;
+    margin: 0;
+}
+
+#callbackForm .callback-submit-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    float: none;
+    clear: both;
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    inset: auto;
+    transform: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 12px 16px;
+    border-radius: 25px;
+    background: #24a7c1;
+    color: #f8f8f8;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    white-space: normal;
+    box-sizing: border-box;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
+    animation: callbackBtnPulse 2.5s infinite ease-in-out;
+    z-index: 1;
+}
+
+#callbackForm .callback-submit-btn:hover,
+#callbackForm .callback-submit-btn:focus {
+    background: #0e6374;
+    box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
+    transform: none;
 }
 
 .cb-last-text {
@@ -181,29 +200,15 @@
     color: #721c24;
 }
 
-/* обычная анимация для callback-кнопок */
-@keyframes subtlePulse {
-
+/* пульсация без transform — иначе кнопка «уезжает» влево */
+@keyframes callbackBtnPulse {
     0%,
     100% {
-        transform: scale(1);
+        box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
     }
 
     50% {
-        transform: scale(1.02);
-    }
-}
-
-/* отдельная анимация только для кнопки в секции услуг */
-@keyframes detailsPulse {
-
-    0%,
-    100% {
-        transform: translateX(-50%) scale(1);
-    }
-
-    50% {
-        transform: translateX(-50%) scale(1.02);
+        box-shadow: 0 0 18px rgba(36, 167, 193, 0.85);
     }
 }
 
@@ -278,9 +283,14 @@
         margin-bottom: 28px;
     }
 
-    .text-header {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 16px;
+    .callback-container {
+        max-width: 100%;
+        flex: 1 1 auto;
+        padding: 24px 20px;
+    }
+
+    #callbackForm .callback-submit-btn {
+        font-size: 15px;
+        padding: 12px 14px;
     }
 }

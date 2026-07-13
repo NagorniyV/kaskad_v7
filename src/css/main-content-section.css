@@ -18,9 +18,7 @@
 
 .main-content>h2 {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 42px;
     line-height: 1.15;
     text-align: center;
@@ -31,12 +29,24 @@
     margin-top: 40px;
 }
 
+.main-content>h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.3;
+    color: #101010;
+    margin: 36px 0 14px;
+    padding-left: 14px;
+    border-left: 4px solid #24a7c1;
+}
+
+.main-content>h3:first-of-type {
+    margin-top: 8px;
+}
+
 .main-content>p {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
     font-size: 18px;
     line-height: 1.75;
     margin-top: 18px;
@@ -47,6 +57,10 @@
     overflow-wrap: normal;
     word-break: normal;
     hyphens: auto;
+}
+
+.seo-article .main-content>p:first-of-type {
+    margin-top: 0;
 }
 
 .img-content {
@@ -77,6 +91,12 @@
 
     .two-title-content {
         margin-top: 32px;
+    }
+
+    .main-content>h3 {
+        font-size: 22px;
+        margin: 28px 0 12px;
+        padding-left: 12px;
     }
 
     .img-content {
@@ -112,6 +132,13 @@
 
     .two-title-content {
         margin-top: 24px;
+    }
+
+    .main-content>h3 {
+        font-size: 20px;
+        margin: 24px 0 10px;
+        padding-left: 10px;
+        border-left-width: 3px;
     }
 
     .img-content {

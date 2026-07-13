@@ -6,9 +6,7 @@
 
 .work-title {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 56px;
     color: #101010;
     margin-bottom: 12px;
@@ -16,11 +14,7 @@
 
 .work-subtitle {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
     font-size: 18px;
     color: #101010;
     width: 340px;

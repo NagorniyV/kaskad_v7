@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="uk">
+<html lang="ru">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -19,15 +19,24 @@
     <!-- Кодировка и масштабирование -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="theme-color" content="#24a7c1" />
+    <meta name="ICBM" content="48.52613, 35.87073" />
+    <meta name="geo.position" content="48.52613;35.87073" />
+    <meta name="geo.placename" content="Павлоград" />
+    <meta name="geo.region" content="UA-12" />
+    <meta name="author" content="Автосервис Каскад" />
+    <meta name="keywords" content="эвакуатор Павлоград, вызвать эвакуатор Павлоград, эвакуация авто Павлоград, эвакуатор круглосуточно Павлоград" />
+    <meta name="robots" content="noindex, nofollow" />
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="./favicon.png" type="image/png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -63,46 +72,36 @@
     </script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="./src/css/pages/evakuator.css" />
 
     <!-- Title & Meta Description -->
-    <title>
-      Эвакуатор Павлоград – Срочная служба эвакуации автомобилей | СТО Каскад
-    </title>
-    <meta
-      name="description"
-      content="Срочный эвакуатор в Павлограде и области. Срочный вызов, быстрая подача до 30 минут. Эвакуация легковых, грузовых авто и спецтехники. Доступные цены от 15 грн/км."
-    />
+    <title>Эвакуатор Павлоград — вызов 24/7, подача до 30 минут | Каскад</title>
+    <meta name="description" content="Эвакуатор в Павлограде и области: быстрая подача, легковые и коммерческие авто. Вызов круглосуточно. Цены от 15 грн/км — служба Каскад." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://kaskad.in.ua/evakuator.html" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Эвакуатор Павлоград - Срочная служба эвакуации | СТО Каскад"
-    />
-    <meta
-      property="og:description"
-      content="Срочный вызов эвакуатора в Павлограде. Работаем 24/7, быстрая подача, все виды транспорта. Гарантия безопасности перевозки."
-    />
+    <meta property="og:image" content="https://kaskad.in.ua/images/logo.png" />
+    <meta property="og:locale:alternate" content="uk_UA" />
+    <meta property="og:locale" content="ru_UA" />
+    <meta property="og:site_name" content="Автосервис Каскад" />
+    <meta property="og:title" content="Эвакуатор Павлоград — вызов 24/7, подача до 30 минут | Каскад" />
+    <meta property="og:description" content="Эвакуатор в Павлограде и области: быстрая подача, легковые и коммерческие авто. Вызов круглосуточно. Цены от 15 грн/км — служба Каскад." />
     <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
     <meta property="og:url" content="https://kaskad.in.ua/evakuator.html" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Эвакуатор Павлоград | СТО Каскад" />
-    <meta
-      name="twitter:description"
-      content="Срочный эвакуатор - быстро, надежно, недорого. Вызов за 30 минут!"
-    />
+    <meta name="twitter:title" content="Эвакуатор Павлоград — вызов 24/7, подача до 30 минут | Каскад" />
+    <meta name="twitter:description" content="Эвакуатор в Павлограде и области: быстрая подача, легковые и коммерческие авто. Вызов круглосуточно. Цены от 15 грн/км — служба Каскад." />
     <meta name="twitter:image" content="https://kaskad.in.ua/images/logo.png" />
 
     <!-- Scripts -->
-    <script src="src/js/main.js" defer></script>
-    <script src="src/js/include-header.js" defer></script>
-    <script src="src/js/language.js" defer></script>
+    <script src="./src/js/main.js" defer></script>
+    <script src="./src/js/include-partials.js" defer></script>
+    <script src="./src/js/language.js" defer></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -110,7 +109,7 @@
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Эвакуатор Павлоград - СТО Каскад",
-        "description": "Срочная служба эвакуации автомобилей в Павлограде и Днепропетровской области",
+        "description": "Срочная служба эвакуации автомобилеи в Павлограде и Днепропетровскои области",
         "url": "https://kaskad.in.ua/evakuator.html",
         "telephone": "+380-66-837-56-66",
         "areaServed": {
@@ -134,6 +133,64 @@
         }
       }
     </script>
+      <!-- SEO:Service -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Эвакуация автомобилей",
+  "description": "Эвакуатор в Павлограде и области: быстрая подача, легковые и коммерческие авто. Вызов круглосуточно. Цены от 15 грн/км — служба Каскад.",
+  "url": "https://kaskad.in.ua/evakuator.html",
+  "image": "https://kaskad.in.ua/images/logo.png",
+  "provider": {
+    "@type": "AutoRepair",
+    "name": "Автосервис Каскад",
+    "telephone": "+380668375666",
+    "url": "https://kaskad.in.ua/",
+    "image": "https://kaskad.in.ua/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Ушинского, 2а",
+      "addressLocality": "Павлоград",
+      "addressRegion": "Днепропетровская область",
+      "postalCode": "51400",
+      "addressCountry": "UA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.52613,
+      "longitude": 35.87073
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Павлоград"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Павлоград"
+  },
+  "serviceType": "Эвакуация автомобилей"
+}
+    </script>
+      <!-- SEO:BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Главная","item":"https://kaskad.in.ua/"},
+    {"@type":"ListItem","position":2,"name":"Эвакуатор","item":"https://kaskad.in.ua/evakuator.html"}
+  ]
+}
+    </script>
   </head>
   <div id="site-header"></div>
   <body>
@@ -142,9 +199,7 @@
         <section class="hero-gbo hero-EVA">
           <div>
             <div class="hero-content">
-              <h1 class="hero-title" data-translate="hero-title-eva">
-                ЭВАКУАТОР ПАВЛОГРАД
-              </h1>
+              <h1 class="hero-title" data-translate="hero-title-eva">Эвакуатор в Павлограде</h1>
               <div class="hero-content-container">
                 <div>
                   <svg
@@ -161,9 +216,7 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p data-translate="hero-content-eva1">
-                    Быстрая подача эвакуатора.
-                  </p>
+                  <p data-translate="hero-content-eva1">Быстрая подача эвакуатора.</p>
                 </div>
                 <div>
                   <svg
@@ -180,9 +233,7 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p data-translate="hero-content-eva2">
-                    Надежная транспортировка авто.
-                  </p>
+                  <p data-translate="hero-content-eva2">Надежная транспортировка авто.</p>
                 </div>
                 <div>
                   <svg
@@ -199,9 +250,7 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p data-translate="hero-content-eva3">
-                    Гарантия качества услуг!
-                  </p>
+                  <p data-translate="hero-content-eva3">Гарантия качества услуг!</p>
                 </div>
               </div>
               <button
@@ -209,32 +258,24 @@
                 class="details-hero-btn"
                 id="openModalBtn"
                 data-translate="details-hero-btn-eva"
-              >
-                ЗАКАЗАТЬ ЭВАКУАТОР
-              </button>
-              <p class="discount" data-translate="discount">
-                Скидка 50% на первую диагностику по промокоду «АС КАСКАД»
-              </p>
+              >ЗАКАЗАТЬ ЭВАКУАТОР</button>
+              <p class="discount" data-translate="discount">Скидка 50% на первую диагностику по промокоду: «АС КАСКАД»</p>
             </div>
             <div class="hero-contact-div">
-              <h3 data-translate="hero-contact-div-map">
-                Едь к нам прямо сейчас:
-              </h3>
+              <p data-translate="hero-contact-div-map">Едь к нам прямо сейчас:</p>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
                 width="250"
                 height="200"
                 style="border-radius: 20px"
                 class="iframe"
-                title="Мапа розташування автосервісу Каскад на Google Maps"
+                title="Карта расположения автосервиса Каскад на Google Maps"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
               <div class="hero-contact-number">
-                <h3 data-translate="hero-contact-div-number">
-                  Ждем твоего звонка:
-                </h3>
+                <p data-translate="hero-contact-div-number">Ждем твоего звонка:</p>
                 <a href="tel:+380668375666" class="number-link"
                   >+38 (066) 837−56−66</a
                 >
@@ -246,33 +287,14 @@
           </div>
         </section>
         <section class="evacuator-section">
-          <img src="src/img/kaskad-evakuator-img1.webp" alt="" />
-          <p data-translate="evacuator-section-p-eva1">
-            Автомобиль, как и любое транспортное средство, может попасть в
-            дорожную аварию, заглохнуть в самый неподходящий момент или на
-            оживленном участке дороги. А еще у него может элементарно
-            закончиться топливо. Итог - складывается ситуация, когда дальнейшее
-            самостоятельное передвижение становится невозможным и требуется
-            срочная эвакуация.
-          </p>
+          <img src="./src/img/kaskad-evakuator-img1.webp" alt="" />
+          <p data-translate="evacuator-section-p-eva1">Автомобиль, как и любое транспортное средство, может попасть в дорожную аварию, заглохнуть в самый неподходящий момент или на оживленном участке дороги. А еще у него может элементарно закончиться топливо. Итог - складывается ситуация, когда дальнейшее самостоятельное передвижение становится невозможным и требуется срочная эвакуация.</p>
 
-          <h3 data-translate="evacuator-section-h3-eva1">
-            Служба эвакуации в Павлограде
-          </h3>
-          <p data-translate="evacuator-section-p-eva2">
-            Если неприятность случилась с вами в Павлограде или Днепропетровской
-            области - быстро придем на помощь! В любой момент вы можете вызвать
-            эвакуатор службы «Каскад». Вызов будет мгновенно принят нашими
-            диспетчерами, и уже через 20-30 минут эвакуатор прибудет к вам.
-          </p>
+          <h2 data-translate="evacuator-section-h3-eva1">Служба эвакуации в Павлограде</h2>
+          <p data-translate="evacuator-section-p-eva2">Если неприятность случилась с вами в Павлограде или Днепропетровской области - быстро придем на помощь! В любой момент вы можете вызвать эвакуатор службы «Каскад». Вызов будет мгновенно принят нашими диспетчерами, и уже через 20-30 минут эвакуатор прибудет к вам.</p>
 
-          <h3 data-translate="evacuator-section-h3-eva2">
-            Как заказать эвакуатор в Павлограде?
-          </h3>
-          <p data-translate="evacuator-section-p-eva3">
-            Заказ эвакуационной техники можно по телефону. Рекомендуется
-            сообщить нам:
-          </p>
+          <h2 data-translate="evacuator-section-h3-eva2">Как заказать эвакуатор в Павлограде?</h2>
+          <p data-translate="evacuator-section-p-eva3">Заказ эвакуационной техники можно по телефону. Рекомендуется сообщить нам:</p>
           <ul class="benefits-list">
             <li>
               <svg
@@ -289,9 +311,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva1">
-                Марку и модель вашего авто
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva1">Марку и модель вашего авто</p>
             </li>
             <li>
               <svg
@@ -308,9 +328,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva2">
-                Массу и габаритные размеры
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva2">Массу и габаритные размеры</p>
             </li>
             <li>
               <svg
@@ -327,9 +345,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva3">
-                Место нахождения автомобиля
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva3">Место нахождения автомобиля</p>
             </li>
             <li>
               <svg
@@ -346,9 +362,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva4">
-                Тип возникшей проблемы
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva4">Тип возникшей проблемы</p>
             </li>
             <li>
               <svg
@@ -365,33 +379,16 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva5">
-                Адрес доставки автомобиля
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva5">Адрес доставки автомобиля</p>
             </li>
           </ul>
-          <p data-translate="evacuator-section-p-eva4">
-            Это поможет нам выбрать оптимальную технику для вашего случая.
-          </p>
+          <p data-translate="evacuator-section-p-eva4">Это поможет нам выбрать оптимальную технику для вашего случая.</p>
 
-          <h3 data-translate="evacuator-section-h3-eva3">
-            Надежность и безопасность перевозки
-          </h3>
-          <p data-translate="evacuator-section-p-eva5">
-            Мы гарантируем безопасность перевозки поврежденного автомобиля.
-            После подъема на платформу транспортное средство жестко фиксируется
-            с помощью крепежных элементов и специальных ремней. Время погрузки
-            зависит от сложности ситуации - при блокировке колес или других
-            проблемах может потребоваться дополнительное оборудование.
-          </p>
-          <img src="src/img/kaskad-evakuator-img2.webp" alt="" />
-          <h3 data-translate="evacuator-section-h3-eva4">
-            Какие транспортные средства мы эвакуируем?
-          </h3>
-          <p data-translate="evacuator-section-p-eva6">
-            Наша служба эвакуации в Павлограде обслуживает все типы транспортных
-            средств:
-          </p>
+          <h2 data-translate="evacuator-section-h3-eva3">Надежность и безопасность перевозки</h2>
+          <p data-translate="evacuator-section-p-eva5">Мы гарантируем безопасность перевозки поврежденного автомобиля. После подъема на платформу транспортное средство жестко фиксируется с помощью крепежных элементов и специальных ремней. Время погрузки зависит от сложности ситуации - при блокировке колес или других проблемах может потребоваться дополнительное оборудование.</p>
+          <img src="./src/img/kaskad-evakuator-img2.webp" alt="" />
+          <h2 data-translate="evacuator-section-h3-eva4">Какие транспортные средства мы эвакуируем?</h2>
+          <p data-translate="evacuator-section-p-eva6">Наша служба эвакуации в Павлограде обслуживает все типы транспортных средств:</p>
           <ul class="benefits-list">
             <li>
               <svg
@@ -408,9 +405,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva6">
-                Легковые автомобили всех марок
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva6">Легковые автомобили всех марок</p>
             </li>
             <li>
               <svg
@@ -427,9 +422,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva7">
-                Внедорожники и джипы
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva7">Внедорожники и джипы</p>
             </li>
             <li>
               <svg
@@ -446,9 +439,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva8">
-                Микроавтобусы и автобусы
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva8">Микроавтобусы и автобусы</p>
             </li>
             <li>
               <svg
@@ -465,9 +456,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva9">
-                Грузовые автомобили до 5 тонн
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva9">Грузовые автомобили до 5 тонн</p>
             </li>
             <li>
               <svg
@@ -484,9 +473,7 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva10">
-                Мотоциклы и квадроциклы
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva10">Мотоциклы и квадроциклы</p>
             </li>
             <li>
               <svg
@@ -503,87 +490,52 @@
                   stroke-linecap="round"
                 />
               </svg>
-              <p data-translate="evacuator-benefits-list-p-eva11">
-                Сельскохозяйственную технику
-              </p>
+              <p data-translate="evacuator-benefits-list-p-eva11">Сельскохозяйственную технику</p>
             </li>
           </ul>
 
-          <h3 data-translate="evacuator-section-h3-eva5">
-            Преимущества службы эвакуации «Каскад»
-          </h3>
+          <h2 data-translate="evacuator-section-h3-eva5">Преимущества службы эвакуации «Каскад»</h2>
           <div class="advantages-grid">
             <div class="advantage-item">
-              <h4 data-translate="evacuator-section-h4-eva1">
-                Работаем каждый день
-              </h4>
-              <p data-translate="evacuator-section-p-eva7">
-                Работаем всю неделю, включая выходные и праздничные дни
-              </p>
+              <h3 data-translate="evacuator-section-h4-eva1">Работаем каждый день</h3>
+              <p data-translate="evacuator-section-p-eva7">Работаем всю неделю, включая выходные и праздничные дни</p>
             </div>
             <div class="advantage-item">
-              <h4 data-translate="evacuator-section-h4-eva2">Быстрая подача</h4>
-              <p data-translate="evacuator-section-p-eva8">
-                Время подачи эвакуатора по Павлограду - до 30 минут
-              </p>
+              <h3 data-translate="evacuator-section-h4-eva2">Быстрая подача</h3>
+              <p data-translate="evacuator-section-p-eva8">Время подачи эвакуатора по Павлограду - до 30 минут</p>
             </div>
             <div class="advantage-item">
-              <h4 data-translate="evacuator-section-h4-eva3">
-                Опытные водители
-              </h4>
-              <p data-translate="evacuator-section-p-eva9">
-                Все водители имеют многолетний стаж работы
-              </p>
+              <h3 data-translate="evacuator-section-h4-eva3">Опытные водители</h3>
+              <p data-translate="evacuator-section-p-eva9">Все водители имеют многолетний стаж работы</p>
             </div>
           </div>
 
-          <h3 data-translate="evacuator-section-h3-eva6">
-            Эвакуатор в Павлограде - надежная помощь на дороге
-          </h3>
-          <p data-translate="evacuator-section-p-eva10">
-            Служба эвакуации «Каскад» в Павлограде предлагает профессиональные
-            услуги по транспортировке автомобилей. Мы специализируемся на
-            эвакуации легковых и грузовых автомобилей, внедорожников,
-            микроавтобусов и специальной техники.
-          </p>
+          <h2 data-translate="evacuator-section-h3-eva6">Эвакуатор в Павлограде - надежная помощь на дороге</h2>
+          <p data-translate="evacuator-section-p-eva10">Служба эвакуации «Каскад» в Павлограде предлагает профессиональные услуги по транспортировке автомобилей. Мы специализируемся на эвакуации легковых и грузовых автомобилей, внедорожников, микроавтобусов и специальной техники.</p>
 
           <p data-translate="evacuator-section-p-eva11">
             Если вам нужен
-            <strong>эвакуатор в Павлограде</strong>, вы обратились по адресу. Мы
-            работаем по всей Днепропетровской области, включая соседние
+            <strong>эвакуатор в Павлограде</strong>, вы выбратьлись по адресу. Мы
+            работаем по всеи Днепропетровскои области, включая соседние
             населенные пункты. Наши услуги особенно востребованы при ДТП,
             технических неисправностях, заблокированных колесах, а также для
-            транспортировки новых автомобилей из салонов.
+            транспортировки новых автомобилеи из салонов.
           </p>
 
-          <p data-translate="evacuator-section-p-eva12">
-            Что делать при поломке автомобиля? Сохраняйте спокойствие и
-            вызывайте эвакуатор службы «Каскад». Установите аварийный знак,
-            включите аварийную сигнализацию и отойдите на безопасное расстояние.
-            Наши диспетчеры проконсультируют вас по всем вопросам и направят
-            ближайший свободный эвакуатор.
-          </p>
+          <p data-translate="evacuator-section-p-eva12">Что делать при поломке автомобиля? Сохраняйте спокойствие и вызывайте эвакуатор службы «Каскад». Установите аварийный знак, включите аварийную сигнализацию и отойдите на безопасное расстояние. Наши диспетчеры проконсультируют вас по всем вопросам и направят ближайший свободный эвакуатор.</p>
         </section>
         <section class="evacuator-price-section">
-          <h2 data-translate="evacuator-price-section-h2-eva1">
-            Цены на услуги эвакуатора в Павлограде
-          </h2>
+          <h2 data-translate="evacuator-price-section-h2-eva1">Цены на услуги эвакуатора в Павлограде</h2>
           <table>
             <thead>
               <tr>
-                <th data-translate="evacuator-price-section-th">
-                  Наименование услуг:
-                </th>
-                <th data-translate="evacuator-price-section-thh">
-                  Цена от, грн.
-                </th>
+                <th data-translate="evacuator-price-section-th">Наименование услуг:</th>
+                <th data-translate="evacuator-price-section-thh">Цена от, грн.</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td data-translate="evacuator-price-section-th1">
-                  Легковое авто
-                </td>
+                <td data-translate="evacuator-price-section-th1">Легковое авто</td>
                 <td class="price">1000 грн.</td>
               </tr>
               <tr>
@@ -591,20 +543,55 @@
                 <td class="price">1100 грн.</td>
               </tr>
               <tr>
-                <td data-translate="evacuator-price-section-th3">
-                  Мини спец техника
-                </td>
+                <td data-translate="evacuator-price-section-th3">Мини спец техника</td>
                 <td class="price">1200 грн.</td>
               </tr>
               <tr>
                 <td data-translate="evacuator-price-section-th4">Негабарит</td>
-                <td class="price" data-translate="evacuator-price-section-th41">
-                  Договорная
-                </td>
+                <td class="price" data-translate="evacuator-price-section-th41">Договорная</td>
               </tr>
             </tbody>
           </table>
         </section>
+        <!-- seo-article:start -->
+        <section class="main-content-section seo-article">
+          <div class="main-content-div">
+            <div class="main-content">
+              <h2 data-translate="seo-evakuator-h2">Эвакуатор в Павлограде — быстрая помощь на дороге от «АС Каскад»</h2>
+              <h3 data-translate="seo-evakuator-h3-1">Когда нужен эвакуатор</h3>
+              <p data-translate="seo-evakuator-p-1-1">Эвакуатор нужен в тех ситуациях, когда автомобиль не может двигаться своим ходом или его движение небезопасно. Самый очевидный случай — дорожно-транспортное происшествие, после которого машина получила повреждения. Но список ситуаций гораздо шире, и с большинством из них рано или поздно сталкивается любой водитель.</p>
+              <p data-translate="seo-evakuator-p-1-2">Услуга эвакуатора необходима при серьёзных поломках: заклинил двигатель, вышла из строя коробка передач, порвался ремень ГРМ, отказали тормоза или рулевое управление. Во всех этих случаях продолжать движение опасно или невозможно. Также эвакуатор требуется, если автомобиль не заводится вдали от дома, разрядился и не помогает «прикуривание», или спустило колесо без запаски.</p>
+              <p data-translate="seo-evakuator-p-1-3">Важно понимать, что попытка доехать «своим ходом» при серьёзной неисправности часто приводит к куда большим повреждениям и затратам. Например, движение с перегретым или неисправным двигателем может окончательно вывести его из строя, а езда на пробитом колесе портит диск. В таких случаях вызов эвакуатора — это не лишняя трата, а способ сэкономить на будущем ремонте.</p>
+              <p data-translate="seo-evakuator-p-1-4">Эвакуатор пригодится и в менее драматичных, но не менее частых ситуациях: сломался автомобиль в дороге между городами, застряла машина после бездорожья, нужно перевезти технику с автостоянки или доставить только что купленный автомобиль от продавца к дому или на диагностику. Иногда водители заказывают эвакуатор просто для безопасной перевозки автомобиля, который давно стоял без движения и его состояние вызывает сомнения. Во всех этих случаях профессиональная эвакуация избавляет от рисков и лишних хлопот, а вам не приходится волноваться о том, доедет ли машина.</p>
+              <p data-translate="seo-evakuator-p-1-5">Отдельная категория — эвакуация автомобилей после длительной стоянки, техники без документов на передвижение, а также транспортировка машин, которые вы приобрели и хотите доставить на ремонт или диагностику. В любой из этих ситуаций «АС Каскад» поможет доставить ваш автомобиль в нужное место аккуратно и безопасно.</p>
+              <h3 data-translate="seo-evakuator-h3-2">Как заказать эвакуатор в «АС Каскад»</h3>
+              <p data-translate="seo-evakuator-p-2-1">Заказать эвакуатор просто — достаточно позвонить нам и описать ситуацию. Чтобы мы могли быстро и правильно организовать выезд, сообщите несколько ключевых деталей: где находится автомобиль, что с ним случилось (не заводится, повреждён, не крутятся колёса), марку и примерные габариты машины, а также куда её нужно доставить.</p>
+              <p data-translate="seo-evakuator-p-2-2">Эта информация помогает нам подобрать правильный способ погрузки и подготовить всё необходимое заранее. Например, автомобиль с заблокированными колёсами или повреждённой подвеской требует особого подхода при погрузке. Чем точнее вы опишете ситуацию, тем быстрее и безопаснее пройдёт эвакуация.</p>
+              <p data-translate="seo-evakuator-p-2-3">Пока вы ожидаете эвакуатор, по возможности позаботьтесь о безопасности: включите аварийную сигнализацию, выставьте знак аварийной остановки и, если находитесь на проезжей части, отойдите в безопасное место. Мы, со своей стороны, стараемся сориентировать вас по времени прибытия, чтобы ожидание было предсказуемым и вы не оставались в неведении.</p>
+              <p data-translate="seo-evakuator-p-2-4">Мы стараемся реагировать оперативно, ведь чаще всего эвакуатор нужен срочно. После вашего звонка согласовываем время подачи и стоимость, чтобы для вас не было неожиданностей. Работаем ежедневно с 09:00 до 18:00 — обращайтесь, и мы поможем решить проблему с вашим автомобилем.</p>
+              <h3 data-translate="seo-evakuator-h3-3">Какие автомобили мы перевозим</h3>
+              <p data-translate="seo-evakuator-p-3-1">Мы помогаем с эвакуацией самых распространённых типов транспорта — легковых автомобилей, кроссоверов и внедорожников, а также лёгкого коммерческого транспорта. Большинство машин, которые ездят по дорогам Павлограда и региона, можно безопасно транспортировать при правильной организации процесса.</p>
+              <p data-translate="seo-evakuator-p-3-2">При заказе важно уточнить тип и состояние автомобиля, потому что от этого зависит способ погрузки. Легковую машину на ходу погрузить проще, чем автомобиль с заблокированными колёсами, повреждённой подвеской или после серьёзной аварии. В некоторых случаях требуется дополнительное оборудование или особая осторожность.</p>
+              <p data-translate="seo-evakuator-p-3-3">Габариты, масса и клиренс автомобиля также влияют на процесс. Низкие спортивные машины, тяжёлые внедорожники или транспорт с нестандартными характеристиками требуют индивидуального подхода. Поэтому мы всегда просим заранее описать автомобиль как можно точнее — это позволяет подготовиться и выполнить эвакуацию без импровизаций и лишнего риска для машины.</p>
+              <p data-translate="seo-evakuator-p-3-4">Если вы не уверены, можно ли эвакуировать ваш автомобиль в конкретной ситуации, просто позвоните и опишите проблему. Мы подскажем оптимальное решение и честно скажем, что возможно сделать. Наша цель — доставить машину без дополнительных повреждений и лишних сложностей для вас.</p>
+              <p data-translate="seo-evakuator-p-3-5">Помимо перевозки легковых машин, к нам обращаются и владельцы небольшого коммерческого транспорта — микроавтобусов и лёгких грузовичков, которые используются для работы и простой не может себе позволить. Мы понимаем, насколько важно быстро вернуть такой транспорт в строй, поэтому стараемся оперативно доставить его на станцию и приступить к ремонту. Точные возможности по конкретному автомобилю всегда уточняйте по телефону.</p>
+              <h3 data-translate="seo-evakuator-h3-4">Безопасность при погрузке и транспортировке</h3>
+              <p data-translate="seo-evakuator-p-4-1">Безопасность автомобиля во время эвакуации — наш приоритет. Неправильная погрузка может привести к повреждениям кузова, подвески или трансмиссии, поэтому мы подходим к процессу внимательно. Автомобиль надёжно фиксируется, чтобы исключить смещение и повреждения при движении, а способ погрузки подбирается с учётом состояния машины.</p>
+              <p data-translate="seo-evakuator-p-4-2">Особое внимание уделяется автомобилям с механическими повреждениями, заблокированными колёсами, неисправной трансмиссией или поломанной подвеской. Для таких случаев важно использовать правильную технику погрузки, чтобы не усугубить существующие проблемы. Опыт помогает нам избегать типичных ошибок, из-за которых машина может пострадать при перевозке.</p>
+              <p data-translate="seo-evakuator-p-4-3">Отдельно важно учитывать особенности автомобилей с полным приводом и автоматической коробкой передач — у них есть свои требования к транспортировке, чтобы не повредить трансмиссию. Мы знаем эти нюансы и выбираем способ погрузки так, чтобы автомобиль доехал до места в том же состоянии, в каком его забрали, без новых неисправностей.</p>
+              <p data-translate="seo-evakuator-p-4-4">Мы понимаем, что автомобиль — это ценность и важное имущество, поэтому относимся к каждой перевозке ответственно. Аккуратная погрузка, надёжная фиксация и безопасная транспортировка — это то, что вы получаете, обращаясь за эвакуатором в «АС Каскад».</p>
+              <h3 data-translate="seo-evakuator-h3-5">Подход к стоимости услуг эвакуатора</h3>
+              <p data-translate="seo-evakuator-p-5-1">Стоимость эвакуации зависит от нескольких факторов: расстояния транспортировки, состояния автомобиля и сложности погрузки, а также от конкретной ситуации. Мы придерживаемся честного подхода к ценообразованию: озвучиваем стоимость заранее, до начала работы, чтобы у вас не возникло неприятных сюрпризов по факту.</p>
+              <p data-translate="seo-evakuator-p-5-2">Нам важно, чтобы цена была понятной и обоснованной. Поэтому при обращении мы уточняем детали и сразу говорим, из чего складывается стоимость в вашем случае. Такой подход исключает ситуации, когда итоговая сумма неожиданно оказывается выше озвученной, и позволяет вам заранее принять взвешенное решение.</p>
+              <p data-translate="seo-evakuator-p-5-3">Мы понимаем, что эвакуатор часто нужен в стрессовой и незапланированной ситуации, когда лишние траты особенно нежелательны. Поэтому мы стараемся предлагать разумные условия и не пользуемся затруднительным положением клиента. Честность в вопросах цены — часть нашей репутации, которой мы дорожим уже почти два десятилетия.</p>
+              <h3 data-translate="seo-evakuator-h3-6">Почему выбирают эвакуатор «АС Каскад»</h3>
+              <p data-translate="seo-evakuator-p-6-1">Ключевое преимущество заказа эвакуатора именно в «АС Каскад» — это то, что мы можем сразу доставить ваш автомобиль на нашу станцию для диагностики и ремонта. Вам не придётся отдельно искать, кто заберёт машину, и отдельно — где её починить. Всё решается в рамках одного обращения, что экономит время и нервы.</p>
+              <p data-translate="seo-evakuator-p-6-2">Такой единый цикл — от эвакуации до готового автомобиля — удобен ещё и тем, что мы сразу видим, в каком состоянии поступила машина, и можем оперативно приступить к диагностике. Вам не нужно пересказывать историю поломки разным людям в разных местах: команда, которая привезла автомобиль, и команда, которая его ремонтирует, работают вместе.</p>
+              <p data-translate="seo-evakuator-p-6-3">Работая в Павлограде с 2005 года, мы дорожим репутацией и относимся к клиентам с пониманием, ведь эвакуатор чаще всего нужен в неприятной ситуации. Мы стремимся помочь быстро, аккуратно и по честной цене. Звоните нам ежедневно с 09:00 до 18:00 — и мы поможем вашему автомобилю добраться до места назначения.</p>
+            </div>
+          </div>
+        </section>
+        <!-- seo-article:end -->
         <section class="benefits-section">
           <h2 class="benefits-title">
             <span data-translate="benefits-title">Почему</span>
@@ -631,13 +618,13 @@
                 <!-- Фолбэк на JPEG -->
                 <img
                   class="benefits-img"
-                  src="src/img/bene-1.jpg"
+                  src="./src/img/bene-1.jpg"
                   alt="porjadnist"
                   loading="lazy"
                 />
               </picture>
               <p class="benefits-bot-text" data-translate="benefits-bot-text1">
-                «Честный ремонт: только нужные работы, только нужные запчасти.»
+                «Честныи ремонт: только нужные работы, только нужные запчасти.»
               </p>
             </div>
             <div class="benefits-container">
@@ -656,7 +643,7 @@
                 <!-- Фолбэк на JPEG -->
                 <img
                   class="benefits-img"
-                  src="src/img/bene-2.jpg"
+                  src="./src/img/bene-2.jpg"
                   alt="vidpovidalnist"
                   loading="lazy"
                 />
@@ -681,7 +668,7 @@
                 <!-- Фолбэк на JPEG -->
                 <img
                   class="benefits-img"
-                  src="src/img/bene-3.jpg"
+                  src="./src/img/bene-3.jpg"
                   alt="vidpovidalnist"
                   loading="lazy"
                 />
@@ -705,8 +692,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/4226-256x256x8.png"
-                    alt="Логотип Daewoo для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/4226-256x256x8.png"
+                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -719,8 +706,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/4227-256x256x32.png"
-                    alt="Логотип Daihatsu для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/4227-256x256x32.png"
+                    alt="Логотип Daihatsu для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -733,8 +720,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/acura_logo.png"
-                    alt="Логотип Acura для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/acura_logo.png"
+                    alt="Логотип Acura для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -747,8 +734,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/alfa-romeo-logo.png"
-                    alt="Логотип Alfa Romeo для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/alfa-romeo-logo.png"
+                    alt="Логотип Alfa Romeo для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -761,8 +748,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/audi.png"
-                    alt="Логотип Audi для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/audi.png"
+                    alt="Логотип Audi для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -775,8 +762,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/chevrolet-logo.png"
-                    alt="Логотип Chevrolet для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/chevrolet-logo.png"
+                    alt="Логотип Chevrolet для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -789,8 +776,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/daewoo-logo.png"
-                    alt="Логотип Daewoo для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/daewoo-logo.png"
+                    alt="Логотип Daewoo для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -803,8 +790,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/citroen-logo.jpg"
-                    alt="Логотип Citroen для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/citroen-logo.jpg"
+                    alt="Логотип Citroen для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -817,8 +804,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/dodge-logo.png"
-                    alt="Логотип Dodge для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/dodge-logo.png"
+                    alt="Логотип Dodge для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -831,8 +818,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/fiat_logo.png"
-                    alt="Логотип Fiat для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/fiat_logo.png"
+                    alt="Логотип Fiat для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -845,8 +832,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/ford.png"
-                    alt="Логотип Ford для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/ford.png"
+                    alt="Логотип Ford для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -859,8 +846,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/honda-color-128.png"
-                    alt="Логотип Honda для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/honda-color-128.png"
+                    alt="Логотип Honda для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -873,8 +860,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/hyundai-lg.png"
-                    alt="Логотип Hyundai для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/hyundai-lg.png"
+                    alt="Логотип Hyundai для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -887,8 +874,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/infiniti.png"
-                    alt="Логотип Infiniti для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/infiniti.png"
+                    alt="Логотип Infiniti для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -901,8 +888,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/jaguar-logo.png"
-                    alt="Логотип Jaguar для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/jaguar-logo.png"
+                    alt="Логотип Jaguar для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -915,8 +902,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/jeep-logo.png"
-                    alt="Логотип Jeep для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/jeep-logo.png"
+                    alt="Логотип Jeep для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -929,8 +916,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/kia_logo_256_003.png"
-                    alt="Логотип Kia для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/kia_logo_256_003.png"
+                    alt="Логотип Kia для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -943,8 +930,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/land-rover1.png"
-                    alt="Логотип Land Rover для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/land-rover1.png"
+                    alt="Логотип Land Rover для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -957,8 +944,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/lexus-logo.png"
-                    alt="Логотип Lexus для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/lexus-logo.png"
+                    alt="Логотип Lexus для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -971,8 +958,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/lincoln-logo.png"
-                    alt="Логотип Lincoln для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/lincoln-logo.png"
+                    alt="Логотип Lincoln для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -985,8 +972,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/logo_suzuki.png"
-                    alt="Логотип Suzuki для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/logo_suzuki.png"
+                    alt="Логотип Suzuki для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1001,8 +988,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
-                    alt="Логотип Mazda для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/mazda_logo_icon_by_mahesh69a-d473lkv.png"
+                    alt="Логотип Mazda для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1015,8 +1002,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/mercedes_logo.png"
-                    alt="Логотип Mercedes-Benz для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/mercedes_logo.png"
+                    alt="Логотип Mercedes-Benz для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1029,8 +1016,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/mitsubishi_logo.png"
-                    alt="Логотип Mitsubishi для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/mitsubishi_logo.png"
+                    alt="Логотип Mitsubishi для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1043,8 +1030,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/nissan-logo-4.png"
-                    alt="Логотип Nissan для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/nissan-logo-4.png"
+                    alt="Логотип Nissan для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1057,8 +1044,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/novosti-skoda-logo.gif"
-                    alt="Логотип Skoda для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/novosti-skoda-logo.gif"
+                    alt="Логотип Skoda для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1073,8 +1060,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
-                    alt="Логотип Opel для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/opel-vectorlogo-dot-biz-128x128-1.png"
+                    alt="Логотип Opel для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1087,8 +1074,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/peugeot_logo_128.png"
-                    alt="Логотип Peugeot для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/peugeot_logo_128.png"
+                    alt="Логотип Peugeot для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1101,8 +1088,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/renault_logo.png"
-                    alt="Логотип Renault для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/renault_logo.png"
+                    alt="Логотип Renault для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1115,8 +1102,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/saab-logo.png"
-                    alt="Логотип Saab для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/saab-logo.png"
+                    alt="Логотип Saab для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1129,8 +1116,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/seat.png"
-                    alt="Логотип SEAT для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/seat.png"
+                    alt="Логотип SEAT для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1143,8 +1130,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/smart-logo.png"
-                    alt="Логотип Smart для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/smart-logo.png"
+                    alt="Логотип Smart для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1157,8 +1144,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/ssangyong-logo.png"
-                    alt="Логотип SsangYong для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/ssangyong-logo.png"
+                    alt="Логотип SsangYong для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1171,8 +1158,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/subaru-logo-transparent.png"
-                    alt="Логотип Subaru для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/subaru-logo-transparent.png"
+                    alt="Логотип Subaru для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1185,8 +1172,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/toyota.png"
-                    alt="Логотип Toyota для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/toyota.png"
+                    alt="Логотип Toyota для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1199,8 +1186,8 @@
                     type="image/webp"
                   />
                   <img
-                    src="src/img/avto-logo/volkswagen_logo.png"
-                    alt="Логотип Volkswagen для ремонту та обслуговування авто в Автосервісі Каскад"
+                    src="./src/img/avto-logo/volkswagen_logo.png"
+                    alt="Логотип Volkswagen для ремонта и обслуживания авто в автосервисе Каскад"
                     loading="lazy"
                   />
                 </picture>
@@ -1210,279 +1197,8 @@
           </div>
         </section>
       </div>
-      <!-- Модальное окно -->
-      <div id="callbackModal" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times;</span>
-          <h3 data-translate="modal-title">
-            Залиште ваші дані, і ми передзвонимо з готовим рішенням.
-          </h3>
-          <form class="modal-callbackForm" id="modalForm">
-            <div class="form-group">
-              <label for="modalName" data-translate="name">Ім’я</label>
-              <input type="text" id="modalName" name="name" />
-            </div>
-
-            <div class="form-group">
-              <label for="modalPhone" data-translate="phone">Телефон*</label>
-              <input
-                type="tel"
-                id="modalPhone"
-                name="phone"
-                placeholder="+38 (___) ___ ____"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="modalCar">Марка / модель автомобіля</label>
-              <input type="text" id="modalCar" name="carModel" />
-            </div>
-
-            <div class="form-group">
-              <label for="modalVin" data-translate="vin"
-                >VIN-код автомобіля</label
-              >
-              <input type="text" id="modalVin" name="vin" />
-            </div>
-
-            <button
-              type="submit"
-              class="submit-btn"
-              data-translate="submit-btn"
-            >
-              Надіслати
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="social-fixed">
-        <button
-          type="button"
-          class="callback-fixed-btn"
-          id="fixedCallbackBtn"
-          aria-label="Замовити зворотній дзвінок"
-        >
-          <span class="callback-fixed-btn__icon">
-            <img src="src/img/callback-btn-img.png" alt="" />
-          </span>
-          <span class="callback-fixed-btn__text">Отримати консультацію</span>
-        </button>
-        <a
-          href="https://t.me/kkua1210"
-          target="_blank"
-          class="social-btn telegram"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="100"
-            height="100"
-            viewBox="0,0,256,256"
-            style="fill: #ffffff"
-          >
-            <g
-              fill="#ffffff"
-              fill-rule="nonzero"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
-              style="mix-blend-mode: normal"
-            >
-              <g transform="scale(5.12,5.12)">
-                <path
-                  d="M46.137,6.552c-0.75,-0.636 -1.928,-0.727 -3.146,-0.238h-0.002c-1.281,0.514 -36.261,15.518 -37.685,16.131c-0.259,0.09 -2.521,0.934 -2.288,2.814c0.208,1.695 2.026,2.397 2.248,2.478l8.893,3.045c0.59,1.964 2.765,9.21 3.246,10.758c0.3,0.965 0.789,2.233 1.646,2.494c0.752,0.29 1.5,0.025 1.984,-0.355l5.437,-5.043l8.777,6.845l0.209,0.125c0.596,0.264 1.167,0.396 1.712,0.396c0.421,0 0.825,-0.079 1.211,-0.237c1.315,-0.54 1.841,-1.793 1.896,-1.935l6.556,-34.077c0.4,-1.82 -0.156,-2.746 -0.694,-3.201zM22,32l-3,8l-3,-10l23,-17z"
-                ></path>
-              </g>
-            </g>
-          </svg>
-          <i class="fab fa-telegram social-icon"></i>
-        </a>
-        <a href="viber://chat?number=+380668375666" class="social-btn viber"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="100"
-            height="100"
-            viewBox="0,0,256,256"
-            style="fill: #ffffff"
-          >
-            <g
-              fill="#ffffff"
-              fill-rule="nonzero"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
-              style="mix-blend-mode: normal"
-            >
-              <g transform="scale(8,8)">
-                <path
-                  d="M15.69922,4c-1.9,0 -6.59961,0.19961 -9.09961,2.59961c-1.8,1.7 -2.49961,4.30039 -2.59961,7.40039c-0.2,4.9 0.89922,7.99961 2.69922,9.59961c0.4,0.3 1.40078,1.10117 3.30078,1.70117v2.5c0,0 -0.00039,0.99922 0.59961,1.19922c0.1,0 0.20078,0.09961 0.30078,0.09961c0.6,0 1.09883,-0.70039 1.79883,-1.40039c0.6,-0.7 1.10039,-1.19922 1.40039,-1.69922h1.40039h0.80078c1.9,0 6.59961,-0.19961 9.09961,-2.59961c1.8,-1.8 2.5,-4.40117 2.5,-7.70117c0.1,-0.5 0.09961,-1.09922 0.09961,-1.69922c-0.1,-3.7 -1.19922,-6.19961 -2.69922,-7.59961c-0.6,-0.5 -3.20078,-2.40039 -8.80078,-2.40039zM15.5,5.90039h0.69922h0.10156h0.09961c5.3,0 7.3,1.70039 7.5,1.90039c1.2,1 1.9,3.19961 2,6.09961v0.40039c0.1,0.6 0.09961,1.09844 0.09961,1.39844c-0.1,3 -0.70039,5.00078 -1.90039,6.30078c-2.1,1.9 -6.49922,2 -7.69922,2h-0.70117h-0.09961h-0.09961h-1l-1.59961,1.80078l-1,1.09961l-0.20117,0.29883c-0.2,0.2 -0.49922,0.60117 -0.69922,0.70117v-0.20117v-4.29883c-2,-0.5 -2.8,-1.20039 -3,-1.40039c-1.4,-1.2 -2.2,-4.1 -2,-8v-1c0.2,-2.4 0.80078,-3.99961 1.80078,-5.09961c2.1,-1.9 6.49922,-2 7.69922,-2zM15.40039,8.09961c-0.5,0 -0.5,0.70117 0,0.70117c3.7,0 6.90039,2.49922 6.90039,7.19922c0,0.5 0.69922,0.5 0.69922,0c0,-5.1 -3.39961,-8.00039 -7.59961,-7.90039zM11.4375,9.02539c-0.2125,-0.025 -0.43672,0.02383 -0.63672,0.17383c-1,0.5 -2.00117,1.50156 -1.70117,2.60156c0,0 0.20078,0.89883 1.30078,2.79883c0.6,0.9 1.09961,1.70078 1.59961,2.30078c0.5,0.7 1.29961,1.49961 2.09961,2.09961c1.6,1.3 4.10117,2.60039 5.20117,2.90039c1,0.3 2.09961,-0.70117 2.59961,-1.70117c0.2,-0.4 0.09922,-0.89922 -0.30078,-1.19922c-0.6,-0.6 -1.59883,-1.29922 -2.29883,-1.69922c-0.5,-0.3 -1.10078,-0.10078 -1.30078,0.19922l-0.5,0.59961c-0.2,0.3 -0.69922,0.30078 -0.69922,0.30078c-3.3,-0.9 -4.20117,-4.30078 -4.20117,-4.30078c0,0 0.00078,-0.39922 0.30078,-0.69922l0.59961,-0.5c0.3,-0.2 0.49922,-0.80078 0.19922,-1.30078c-0.2,-0.3 -0.49883,-0.89922 -0.79883,-1.19922c-0.3,-0.4 -0.90039,-1.09961 -0.90039,-1.09961c-0.15,-0.15 -0.35,-0.25039 -0.5625,-0.27539zM16.09961,10.09961c-0.5,-0.1 -0.59961,0.70117 -0.09961,0.70117c2.8,0.2 4.40078,2.1 4.30078,4.5c-0.1,0.5 0.69922,0.5 0.69922,0c0.1,-2.8 -1.70039,-5.10117 -4.90039,-5.20117zM16.40039,12c-0.5,-0.1 -0.5,0.69922 0,0.69922c1.2,0 1.79883,0.70039 1.79883,1.90039c0.1,0.5 0.80078,0.5 0.80078,0c-0.1,-1.6 -0.99961,-2.59961 -2.59961,-2.59961z"
-                ></path>
-              </g>
-            </g>
-          </svg>
-          <i class="fab fa-viber social-icon"></i>
-        </a>
-        <a href="tel:+380668375666" class="social-btn phone"
-          ><svg
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6.62 10.79a15.091 15.091 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.48 2.53.74 3.88.74a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.26 2.67.74 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"
-              fill="white"
-            />
-          </svg>
-
-          <i class="fas fa-phone social-icon"></i>
-        </a>
-        <a href="#header" class="to-home" id="back-to-top">
-          <span class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M18 15l-6-6-6 6" />
-            </svg>
-          </span>
-          <span class="text" data-translate="up-btn">Піднятися в гору</span>
-        </a>
-      </div>
+          <div id="site-callback-widgets"></div>
     </main>
   </body>
-  <footer id="map-section">
-    <div class="container">
-      <div class="footer-container">
-        <div class="top-footer">
-          <div class="title-map">
-            <h2 class="map-title" data-translate="map-title">Мы на картах</h2>
-            <p class="map-content">
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 22C12 22 19 14.5 19 9C19 5.134 15.866 2 12 2C8.134 2 5 5.134 5 9C5 14.5 12 22 12 22Z"
-                  fill="#24a7c1"
-                  stroke="#2C3E50"
-                  stroke-width="1.5"
-                />
-                <circle cx="12" cy="9" r="3" fill="white" />
-              </svg>
-              <span data-translate="map-content"
-                >улица Ушинского, 2 а, Павлоград, Днепропетровская область</span
-              >
-            </p>
-          </div>
-          <a href="./index.html"
-            ><svg
-              width="200"
-              height="110"
-              viewBox="0 0 200 120"
-              fill="none"
-              class="logo-footer"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <!-- Фон (опционально) -->
-              <rect width="200" height="120" rx="10" fill="none" />
-
-              <!-- Символ "каскада" (волны + шестерёнка) -->
-              <path
-                d="M40 70C60 50 80 80 100 60C120 40 140 70 160 50"
-                stroke="#24a7c1"
-                stroke-width="4"
-                stroke-linecap="round"
-              />
-
-              <!-- Текст -->
-              <text
-                x="100"
-                y="100"
-                font-family="Arial, sans-serif"
-                font-size="24"
-                font-weight="bold"
-                text-anchor="middle"
-                fill="#FFFFFF"
-                filter="drop-shadow(2px 2px 4px #000)"
-              >
-                АС КАСКАД
-              </text>
-            </svg></a
-          >
-        </div>
-        <div class="bot-footer">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.1671695603704!2d35.83380167638042!3d48.53002797128957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40deb744fd3bfc69%3A0x36392c7691b6bb0d!2z0KHQotCeINCa0LDRgdC60LDQtA!5e0!3m2!1sru!2sua!4v1749836072193!5m2!1sru!2sua"
-            width="400"
-            title="Мапа розташування автосервісу Каскад на Google Maps"
-            height="300"
-            style="border-radius: 10px"
-            class="iframe"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <div>
-            <div class="work-footer-div">
-              <h3 data-translate="work-footer-title">Работаем без выходных:</h3>
-              <p data-translate="work-footer-txt">Понедельник - Воскресенье</p>
-              <p data-translate="work-footer-time">C 09:00 до 18:00</p>
-            </div>
-            <div class="number-footer-div">
-              <h3 data-translate="number-footer-title">Связь с нами:</h3>
-              <div>
-                <a href="tel:+380668375666" class="number-link"
-                  >+38 (066) 837−56−66</a
-                ><span data-translate="number-footer-txt"> Офис</span>
-              </div>
-              <div>
-                <a href="tel:+380962110210" class="number-link"
-                  >+38 (096) 211−02−10</a
-                >
-                <span data-translate="number-footer-txt">Офис</span>
-              </div>
-              <h3>Директор</h3>
-              <div>
-                <a href="tel:+380502233959" class="number-link"
-                  >+38 (050) 223−39−59</a
-                >
-                <span data-translate="number-footer-dir-name">Павел</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 </html>
