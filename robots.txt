@@ -1,11 +1,19 @@
 User-agent: *
 Allow: /
 
-# Эвакуатор временно заморожен
+# Замороженный эвакуатор
 Disallow: /evakuator.html
 
-# Глубина разборки: хаб открыт, вложенные URL закрыты
-# (серверный 410 в .htaccess — основной сигнал; Disallow — страховка, пока AllowOverride/деплой нестабильны)
+# Старые EN/алиас-URL (клиентский redirect + noindex)
+Disallow: /parts.html
+Disallow: /price.html
+Disallow: /service-catalog.html
+Disallow: /technical-service.html
+Disallow: /car-diagnostics.html
+Disallow: /air-conditioning.html
+Disallow: /toplivnaya-sistema.html
+
+# Разборка: индексируем только хаб
 Allow: /razborka/$
 Allow: /razborka/index.html
 Disallow: /razborka/*/

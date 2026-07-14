@@ -33,7 +33,7 @@ function loadTranslations(lang) {
 
 function initLanguageSwitcher() {
   if (!localStorage.getItem("language")) {
-    localStorage.setItem("language", "ru");
+    localStorage.setItem("language", "uk");
   }
 
   const currentLang = localStorage.getItem("language");

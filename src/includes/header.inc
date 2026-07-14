@@ -111,9 +111,9 @@
 
     <div class="header-actions">
       <div class="language-switcher">
-        <button class="lang-btn" data-lang="uk" type="button">Укр</button>
+        <button class="lang-btn active" data-lang="uk" type="button">Укр</button>
         <span class="lang-divider">/</span>
-        <button class="lang-btn active" data-lang="ru" type="button" data-translate="lang-btn-ru">Рус</button>
+        <button class="lang-btn" data-lang="ru" type="button" data-translate="lang-btn-ru">Рус</button>
       </div>
 
       <button class="burger-menu" type="button" aria-label="Открыть меню" data-translate-aria="nav-open-menu">
