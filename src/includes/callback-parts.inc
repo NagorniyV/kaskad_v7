@@ -68,7 +68,7 @@
                   >БЕСПЛАТНО!</span
                 >
               </p>
-              <form id="callbackForm" data-lead-type="razborka">
+              <form id="callbackForm" data-lead-type="parts">
                 <input
                   type="text"
                   id="nameInput"
@@ -88,14 +88,15 @@
                   type="text"
                   id="carInput"
                   name="car"
+                  data-translate-placeholder="car-placeholder"
                   placeholder="Марка и модель авто"
                 />
                 <input
                   type="text"
                   id="partInput"
                   name="part"
-                  data-translate-placeholder="part-placeholder"
-                  placeholder="Номер / название запчасти"
+                  data-translate-placeholder="parts-field-part"
+                  placeholder="Название необходимой детали"
                 />
                 <input
                   type="text"

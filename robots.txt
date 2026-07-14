@@ -1,10 +1,8 @@
 User-agent: *
 Allow: /
 
-# Разборка заморожена: индексируем только хаб, глубина — noindex + disallow
-Allow: /razborka/$
-Allow: /razborka/index.html
-Disallow: /razborka/*.html
-Disallow: /razborka/*/
+# Эвакуатор временно заморожен
+Disallow: /evakuator.html
 
+# Глубину разборки не закрываем Disallow — отдаём 410, чтобы робот увидел статус
 Sitemap: https://kaskad.in.ua/sitemap.xml

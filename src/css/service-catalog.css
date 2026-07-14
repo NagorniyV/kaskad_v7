@@ -54,7 +54,16 @@
 
 .service-catalog-section{
     background-color: #f8f8f8;
+    color: #101010;
     padding: 20px 20px;
+}
+
+.service-catalog-section .catalog-title,
+.service-catalog-section .catalog-title a,
+.service-catalog-section .catalog-description,
+.service-catalog-section .catalog-text,
+.service-catalog-section .price-content {
+    color: #101010;
 }
 
 .list-service-catalog{
@@ -99,6 +108,12 @@
     color: #101010;
     margin-bottom: 12px;
     text-align: center;
+}
+
+.catalog-title a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
 }
 
 .catalog-description{

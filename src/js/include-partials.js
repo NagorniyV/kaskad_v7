@@ -210,6 +210,63 @@ async function loadBrendPartial() {
   return loaded;
 }
 
+const SERVICES_VARIANT_COPY = {
+  full: {
+    titleKey: "services-title",
+    subtitleKey: "services-subtitle",
+    title: "Услуги и цены",
+    subtitle: "Лучшее соотношение цена - качество в нашем городе!",
+    kinds: null,
+  },
+  services: {
+    titleKey: "parts-related-title",
+    subtitleKey: "parts-related-subtitle",
+    title: "Связанные услуги СТО",
+    subtitle: "Ремонт и обслуживание — страницы услуг автосервиса",
+    kinds: new Set(["service"]),
+  },
+  parts: {
+    titleKey: "parts-cards-title",
+    subtitleKey: "parts-cards-subtitle",
+    title: "Запчасти для ремонта",
+    subtitle: "Подбор новых и б/у деталей под диагностику и ремонт на СТО",
+    kinds: new Set(["parts"]),
+  },
+};
+
+function applyServicesVariant(section, variant) {
+  const config = SERVICES_VARIANT_COPY[variant] || SERVICES_VARIANT_COPY.full;
+  const title = section.querySelector(".services-title");
+  const subtitle = section.querySelector(".services-subtitle");
+
+  if (title) {
+    title.setAttribute("data-translate", config.titleKey);
+    title.textContent = config.title;
+  }
+  if (subtitle) {
+    subtitle.setAttribute("data-translate", config.subtitleKey);
+    subtitle.textContent = config.subtitle;
+  }
+
+  if (config.kinds) {
+    section.querySelectorAll(".service-card[data-card-kind]").forEach((card) => {
+      const kind = card.getAttribute("data-card-kind");
+      if (!config.kinds.has(kind)) card.remove();
+    });
+  }
+}
+
+async function loadServicesPartial() {
+  const container = document.getElementById("site-services");
+  if (!container) return null;
+  const variant = (container.dataset.services || "full").toLowerCase();
+  const loaded = await loadPartial("site-services", "services-section.inc");
+  if (!loaded) return false;
+  const section = document.querySelector(".services-section");
+  if (section) applyServicesVariant(section, variant);
+  return true;
+}
+
 async function loadPartials() {
   const footerFile = isRazborkaSectionPage()
     ? "footer-razborka.inc"
@@ -226,10 +283,18 @@ async function loadPartials() {
     loadPartial("site-callback-widgets", widgetsFile),
     loadPartial("site-benefits", "benefits.inc"),
     loadBrendPartial(),
+    loadServicesPartial(),
     loadPartial("site-footer", footerFile),
   ]);
 
   initHeaderMenu();
+
+  // Parts forms: sync lead type from body
+  const bodyLead =
+    document.body?.dataset?.leadType?.trim().toLowerCase() || "";
+  document.querySelectorAll("#callbackForm, #modalForm").forEach((form) => {
+    if (bodyLead) form.dataset.leadType = bodyLead;
+  });
 
   if (typeof window.initLanguageSwitcher === "function") {
     window.initLanguageSwitcher();

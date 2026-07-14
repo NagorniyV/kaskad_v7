@@ -25,7 +25,7 @@
               >
             </p>
           </div>
-          <a href="./index.html"
+          <a href="./"
             ><svg
               width="200"
               height="110"

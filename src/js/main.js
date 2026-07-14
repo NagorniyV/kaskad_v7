@@ -77,7 +77,8 @@ function initCallbackUI() {
   }
 
   function isRazborkaForm(form) {
-    return getLeadType(form) === "razborka";
+    const t = getLeadType(form);
+    return t === "razborka" || t === "parts";
   }
 
   function getLeadHeading(form) {
@@ -85,6 +86,7 @@ function initCallbackUI() {
 
     const headings = {
       razborka: "🚗 РОЗБІРКА — нова заявка на зворотний дзвінок",
+      parts: "🔧 ЗАПЧАСТИНИ — нова заявка на підбір",
       service: "🛠 СЕРВІС — нова заявка на зворотний дзвінок",
       hodovka: "🛞 ХОДОВА — нова заявка на зворотний дзвінок",
       diagnostics: "🔍 ДІАГНОСТИКА — нова заявка на зворотний дзвінок",
@@ -312,6 +314,21 @@ function initCallbackUI() {
     }
   }
 
+  async function sendPhotoToTelegram(file, caption) {
+    if (!file) return;
+    const url = `https://api.telegram.org/bot${botToken}/sendDocument`;
+    for (const chatId of adminChatIds) {
+      const body = new FormData();
+      body.append("chat_id", chatId);
+      body.append("document", file, file.name || "part-photo.jpg");
+      if (caption) body.append("caption", caption.slice(0, 900));
+      const response = await fetch(url, { method: "POST", body });
+      if (!response.ok) {
+        throw new Error(`Telegram photo HTTP error: ${response.status}`);
+      }
+    }
+  }
+
   function collectFormData(form, source) {
     const leadType = getLeadType(form);
 
@@ -333,12 +350,49 @@ function initCallbackUI() {
       "#modalVin"
     ]);
 
+    const carBrand = getFormValue(form, [
+      '[name="carBrand"]',
+      "#carBrandInput",
+      "#modalCarBrand"
+    ]);
+    const carModel = getFormValue(form, [
+      '[name="carModel"]',
+      "#carModelInput",
+      "#modalCarModel",
+      "#modalCar",
+      "#carInput"
+    ]);
+    const carYear = getFormValue(form, [
+      '[name="carYear"]',
+      "#carYearInput",
+      "#modalCarYear"
+    ]);
+    const carEngine = getFormValue(form, [
+      '[name="carEngine"]',
+      "#carEngineInput",
+      "#modalCarEngine"
+    ]);
+    const carTransmission = getFormValue(form, [
+      '[name="carTransmission"]',
+      "#carTransmissionInput",
+      "#modalCarTransmission"
+    ]);
+    const carDrive = getFormValue(form, [
+      '[name="carDrive"]',
+      "#carDriveInput",
+      "#modalCarDrive"
+    ]);
+
     let car = getFormValue(form, [
       '[name="car"]',
-      '[name="carModel"]',
-      "#carInput",
-      "#modalCar"
+      "#carInput"
     ]);
+
+    if (!car) {
+      car = [carBrand, carModel, carYear, carEngine]
+        .filter(Boolean)
+        .join(" / ");
+    }
 
     const part = getFormValue(form, [
       '[name="part"]',
@@ -354,13 +408,19 @@ function initCallbackUI() {
       "textarea"
     ]);
 
-    // Фолбэк для старых страниц разборки,
-    // где вместо отдельного поля авто использовалось одно текстовое поле
     if (!car && leadType === "razborka" && rawMessage) {
       car = rawMessage;
     }
 
     const message = rawMessage && rawMessage !== car ? rawMessage : "";
+
+    const photoInput = form.querySelector(
+      '[name="partPhoto"], #partPhotoInput, #modalPartPhoto'
+    );
+    const photoFile =
+      photoInput && photoInput.files && photoInput.files[0]
+        ? photoInput.files[0]
+        : null;
 
     return {
       form,
@@ -369,12 +429,36 @@ function initCallbackUI() {
       phone,
       vin,
       car,
+      carBrand,
+      carModel,
+      carYear,
+      carEngine,
+      carTransmission,
+      carDrive,
       part,
-      message
+      message,
+      photoFile
     };
   }
 
-  function buildMessage({ form, source, name, phone, car, vin, part, message }) {
+  function buildMessage(data) {
+    const {
+      form,
+      source,
+      name,
+      phone,
+      car,
+      carBrand,
+      carModel,
+      carYear,
+      carEngine,
+      carTransmission,
+      carDrive,
+      vin,
+      part,
+      message,
+      photoFile
+    } = data;
     const isRazborka = isRazborkaForm(form);
     const lines = [];
 
@@ -385,9 +469,16 @@ function initCallbackUI() {
 
     if (name) lines.push(`▪ Ім’я: ${name}`);
     if (phone) lines.push(`▪ Телефон: ${phone}`);
-    if (car) lines.push(`▪ Авто: ${car}`);
+    if (carBrand) lines.push(`▪ Марка: ${carBrand}`);
+    if (carModel) lines.push(`▪ Модель: ${carModel}`);
+    if (carYear) lines.push(`▪ Рік: ${carYear}`);
+    if (carEngine) lines.push(`▪ Двигун: ${carEngine}`);
+    if (carTransmission) lines.push(`▪ КПП: ${carTransmission}`);
+    if (carDrive) lines.push(`▪ Привід: ${carDrive}`);
+    if (!carBrand && !carModel && car) lines.push(`▪ Авто: ${car}`);
     if (part) lines.push(`▪ Потрібна запчастина: ${part}`);
     if (vin) lines.push(`▪ VIN: ${vin}`);
+    if (photoFile) lines.push(`▪ Фото: ${photoFile.name} (файл додано)`);
 
     if (!isRazborka && message) {
       lines.push(`▪ Повідомлення: ${message}`);
@@ -447,6 +538,9 @@ function initCallbackUI() {
 
     try {
       await sendToTelegram(telegramMessage);
+      if (formData.photoFile) {
+        await sendPhotoToTelegram(formData.photoFile, telegramMessage);
+      }
 
       if (useAlert) {
         alert("✅ Дякуємо! Ми вам зателефонуємо найближчим часом.");

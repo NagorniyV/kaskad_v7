@@ -1,6 +1,6 @@
 ﻿<header id="header" class="header">
   <div class="header-container">
-    <a href="./index.html" class="logo" aria-label="Автосервис Каскад">
+    <a href="./" class="logo" aria-label="Автосервис Каскад" data-translate-aria="logo-aria">
       <svg
         width="140"
         height="80"
@@ -33,76 +33,78 @@
     <nav class="nav">
       <ul class="nav-list-header">
         <li class="nav-item">
-          <a href="./index.html">Главная</a>
+          <a href="./" data-translate="nav-home">Главная</a>
         </li>
 
         <li class="nav-item has-submenu">
           <div class="nav-link-row">
-            <p>Подбор запчастей</p>
+            <p data-translate="nav-parts">Подбор запчастей</p>
             <button
               class="menu-toggle"
               type="button"
               aria-label="Открыть подменю"
+              data-translate-aria="nav-open-submenu"
             ></button>
           </div>
 
           <ul class="submenu">
             <li class="submenu-item">
-              <a href="./zapchasti.html">Новые запчасти</a>
+              <a href="./zapchasti.html" data-translate="nav-parts-new">Новые запчасти</a>
             </li>
             <li class="submenu-item">
-              <a href="./razborka/index.html">Запчасти с разборки</a>
+              <a href="./razborka/" data-translate="nav-parts-used">Запчасти с разборки</a>
             </li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a href="./avtokondicionery.html">Автокондиционеры</a>
+          <a href="./avtokondicionery.html" data-translate="nav-ac">Автокондиционеры</a>
         </li>
 
         <li class="nav-item has-submenu">
           <div class="nav-link-row">
-            <a href="./uslugi.html">Услуги</a>
+            <a href="./uslugi.html" data-translate="nav-services">Услуги</a>
             <button
               class="menu-toggle"
               type="button"
               aria-label="Открыть подменю"
+              data-translate-aria="nav-open-submenu"
             ></button>
           </div>
 
           <ul class="submenu">
             <li class="submenu-item">
-              <a href="./remont-dvigatelya.html">Двигатель</a>
+              <a href="./remont-dvigatelya.html" data-translate="nav-engine">Двигатель</a>
             </li>
             <li class="submenu-item">
-              <a href="./remont-hodovoy.html">Ходовая часть</a>
+              <a href="./remont-hodovoy.html" data-translate="nav-chassis">Ходовая часть</a>
             </li>
             <li class="submenu-item">
-              <a href="./remont-elektriki.html">Электрика</a>
+              <a href="./remont-elektriki.html" data-translate="nav-electric">Электрика</a>
             </li>
             <li class="submenu-item">
-              <a href="./remont-tormoznoi-sistemy.html">Тормозная система</a>
+              <a href="./remont-tormoznoi-sistemy.html" data-translate="nav-brakes">Тормозная система</a>
             </li>
             <li class="submenu-item">
-              <a href="./remont-transmissii.html">Трансмиссия</a>
+              <a href="./remont-transmissii.html" data-translate="nav-transmission">Трансмиссия</a>
             </li>
             <li class="submenu-item">
-              <a href="./tehnicheskoe-obsluzhivanie.html">Техническое обслуживание</a>
+              <a href="./tehnicheskoe-obsluzhivanie.html" data-translate="nav-to">Техническое обслуживание</a>
             </li>
             <li class="submenu-item">
-              <a href="./diagnostika-avto.html">Диагностика</a>
+              <a href="./diagnostika-avto.html" data-translate="nav-diagnostics">Диагностика</a>
             </li>
             <li class="submenu-item">
-              <a href="./ustanovka-gbo.html">Установка ГБО</a>
+              <a href="./ustanovka-gbo.html" data-translate="nav-gbo">Установка ГБО</a>
             </li>
             <li class="submenu-item">
-              <a href="./sistema-ohlazhdeniya.html">Система охлаждения</a>
+              <a href="./sistema-ohlazhdeniya.html" data-translate="nav-cooling">Система охлаждения</a>
             </li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a href="./ceny.html">Цены</a>
+          <a href="./ceny.html" data-translate="nav-prices">Цены</a>
         </li>
       </ul>
     </nav>
@@ -114,7 +116,7 @@
         <button class="lang-btn active" data-lang="ru" type="button" data-translate="lang-btn-ru">Рус</button>
       </div>
 
-      <button class="burger-menu" type="button" aria-label="Открыть меню">
+      <button class="burger-menu" type="button" aria-label="Открыть меню" data-translate-aria="nav-open-menu">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>

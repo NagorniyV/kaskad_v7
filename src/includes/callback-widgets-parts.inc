@@ -5,7 +5,7 @@
           <p data-translate="modal-title">
             Оставьте ваши дані, и ми перезвоним с готовым решением.
           </p>
-          <form class="modal-callbackForm" id="modalForm" data-lead-type="razborka">
+          <form class="modal-callbackForm" id="modalForm" data-lead-type="parts">
             <div class="form-group">
               <label for="modalName" data-translate="name">Ім’я</label>
               <input type="text" id="modalName" name="name" />
@@ -24,18 +24,18 @@
             </div>
 
             <div class="form-group">
-              <label for="modalCar">Марка / модель автомобиля</label>
-              <input type="text" id="modalCar" name="carModel" />
+              <label for="modalCar" data-translate="modal-car-label">Марка / модель автомобиля</label>
+              <input type="text" id="modalCar" name="car" />
             </div>
 
             <div class="form-group">
-              <label for="modalPart" data-translate="part-label">Номер / название запчасти</label>
+              <label for="modalPart" data-translate="parts-field-part">Название необходимой детали</label>
               <input
                 type="text"
                 id="modalPart"
                 name="part"
-                data-translate-placeholder="part-placeholder"
-                placeholder="Номер / название запчасти"
+                data-translate-placeholder="parts-field-part"
+                placeholder="Название необходимой детали"
               />
             </div>
 

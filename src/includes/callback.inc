@@ -88,6 +88,7 @@
                   type="text"
                   id="carInput"
                   name="car"
+                  data-translate-placeholder="car-placeholder"
                   placeholder="Марка и модель авто"
                 />
                 <input

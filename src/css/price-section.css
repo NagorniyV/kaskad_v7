@@ -116,9 +116,36 @@
     color: #101010;
 }
 
+.price-section > h2 a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+}
+
 .price-content-container{
     display: flex;
     gap: 8px;
     max-width: 1000px;
     margin: 0px auto 30px auto;
+}
+
+.price-anchor-nav {
+  margin: 0 0 1.5rem;
+  padding: 1rem 0;
+}
+.price-anchor-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+.price-anchor-nav a {
+  color: #24a7c1;
+}
+.price-note {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
 }

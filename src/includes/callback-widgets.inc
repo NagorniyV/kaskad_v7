@@ -24,7 +24,7 @@
             </div>
 
             <div class="form-group">
-              <label for="modalCar">Марка / модель автомобиля</label>
+              <label for="modalCar" data-translate="modal-car-label">Марка / модель автомобиля</label>
               <input type="text" id="modalCar" name="carModel" />
             </div>
 
