@@ -1,4 +1,7 @@
+Options -Indexes
+
 RewriteEngine On
+RewriteBase /
 
 # Prefer clean URLs: strip index.html
 RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]

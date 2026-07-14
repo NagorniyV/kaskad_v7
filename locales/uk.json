@@ -941,5 +941,6 @@
     "vin-placeholder": "VIN-код (17 символів)",
     "work-footer-time": "З 09:00 до 18:00",
     "work-footer-title": "Працюєм без вихідних:",
-    "work-footer-txt": "Понеділок - Неділя"
+    "work-footer-txt": "Понеділок - Неділя",
+    "footer-copyright": "© 2005–2026 Автосервіс «Каскад». Усі права захищені."
 }

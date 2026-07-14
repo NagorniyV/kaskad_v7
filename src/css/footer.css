@@ -132,7 +132,19 @@
     }
 }
 
-.develop{
+.footer-copyright{
     display: flex;
-    margin-top: 60px;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 28px auto 8px;
+    text-align: center;
+}
+
+.footer-copyright p{
+    margin: 0;
+    color: #f8f8f8;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
 }

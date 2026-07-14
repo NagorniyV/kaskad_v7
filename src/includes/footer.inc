@@ -100,12 +100,12 @@
                 <span data-translate="number-footer-dir-name">Павел</span>
               </div>
             </div>
-            <div class="develop">
-              <a href="https://t.me/RofLJeKee" class="number-link"
-                >Developer NahorniyV</a
-              >
-            </div>
           </div>
+        </div>
+        <div class="footer-copyright">
+          <p data-translate="footer-copyright">
+            © 2005–2026 Автосервис «Каскад». Все права защищены.
+          </p>
         </div>
       </div>
     </div>

@@ -12,4 +12,10 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    watch: {
+      // Edge/browser profile locks DB files → EBUSY crash for Vite watcher
+      ignored: ["**/_edge_profile/**", "**/_diag_out/**"],
+    },
+  },
 });
