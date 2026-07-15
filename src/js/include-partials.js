@@ -225,6 +225,13 @@ const SERVICES_VARIANT_COPY = {
     subtitle: "Ремонт и обслуживание — страницы услуг автосервиса",
     kinds: new Set(["service"]),
   },
+  razborka: {
+    titleKey: "razborka-related-title",
+    subtitleKey: "razborka-related-subtitle",
+    title: "Собственная автомобильная разборка нашего автосервиса в Павлограде",
+    subtitle: "Покупай выгодно запчасти, которые ещё поработают!",
+    kinds: new Set(["service"]),
+  },
   parts: {
     titleKey: "parts-cards-title",
     subtitleKey: "parts-cards-subtitle",
@@ -262,7 +269,7 @@ async function loadServicesPartial() {
   const variant = (container.dataset.services || "full").toLowerCase();
   const loaded = await loadPartial("site-services", "services-section.inc");
   if (!loaded) return false;
-  const section = document.querySelector(".services-section");
+  const section = container.querySelector(".services-section");
   if (section) applyServicesVariant(section, variant);
   return true;
 }

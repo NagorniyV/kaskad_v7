@@ -1,3 +1,234 @@
 @import url('./common.css');
 @import url('../services-section.css');
 @import url('../main-content-section.css');
+
+.razborka-brands-section {
+  padding-top: 40px;
+}
+
+.razborka-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.razborka-brand-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(248, 248, 248, 0.12);
+  border-radius: 16px;
+  padding: 20px 18px;
+  box-sizing: border-box;
+  min-height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.razborka-brand-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(36, 167, 193, 0.45);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.service-card-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  gap: 18px;
+}
+
+.service-brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.service-brand-logo-wrap--letter {
+  background: linear-gradient(160deg, #f4f7f8 0%, #e7eef1 100%);
+}
+
+.service-brand-letter {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1;
+  color: #1c2a30;
+}
+
+.service-brand-logo-wrap picture,
+.service-brand-logo-wrap img {
+  display: block;
+}
+
+.service-brand-logo {
+  max-width: 120px;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.razborka-brand-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #f8f8f8;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.razborka-card-desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(248, 248, 248, 0.82);
+  margin: 0 0 12px;
+  text-align: center;
+  min-height: 3.2em;
+}
+
+.service-brand-models {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.service-brand-models li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #24a7c1;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.service-brand-models li:last-child {
+  margin-bottom: 0;
+}
+
+.razborka-brands-cta-wrap {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.razborka-brands-seo .razborka-brands-cta-wrap {
+  grid-column: auto;
+  margin-top: 36px;
+  margin-bottom: 8px;
+}
+
+.razborka-brands-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: #24a7c1;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.razborka-brands-cta-btn:hover,
+.razborka-brands-cta-btn:focus-visible {
+  background: #1d8fa6;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.razborka-brands-seo .razborka-brand-seo {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(16, 16, 16, 0.12);
+  scroll-margin-top: 96px;
+}
+
+.razborka-brands-seo .razborka-brand-seo:first-of-type {
+  margin-top: 28px;
+}
+
+.razborka-brand-seo-models {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: flex-start;
+  margin: 0 0 16px;
+}
+
+.razborka-brand-seo-models li {
+  text-align: left;
+  margin: 0;
+}
+
+.razborka-brand-seo-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.razborka-brand-seo-photo {
+  flex: 0 0 280px;
+  max-width: 40%;
+}
+
+.razborka-brand-seo-photo picture,
+.razborka-brand-seo-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.razborka-brand-seo-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.razborka-brand-seo-text p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 960px) {
+  .razborka-brands-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .razborka-brand-seo-body {
+    flex-direction: column;
+  }
+
+  .razborka-brand-seo-photo {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .razborka-brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .razborka-card-desc {
+    min-height: 0;
+  }
+}

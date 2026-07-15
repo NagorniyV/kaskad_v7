@@ -1,19 +1,28 @@
 .hero-EVA {
-    background-image: url(img/kaskad-evakuator-hero480.webp);
-    background-image: url(img/kaskad-evakuator-hero480.jpg);
+    background-image: url(../img/kaskad-evakuator-hero480.jpg);
+    background-image: image-set(
+        url(../img/kaskad-evakuator-hero480.webp) type("image/webp"),
+        url(../img/kaskad-evakuator-hero480.jpg) type("image/jpeg")
+    );
 }
 
 @media (min-width: 768px) {
     .hero-EVA {
-        background-image: url(img/kaskad-evakuator-hero720.webp);
-        background-image: url(img/kaskad-evakuator-hero720.jpg);
+        background-image: url(../img/kaskad-evakuator-hero720.jpg);
+        background-image: image-set(
+            url(../img/kaskad-evakuator-hero720.webp) type("image/webp"),
+            url(../img/kaskad-evakuator-hero720.jpg) type("image/jpeg")
+        );
     }
 }
 
 @media (min-width: 1200px) {
     .hero-EVA {
-        background-image: url(img/kaskad-evakuator-hero1200.webp);
-        background-image: url(img/kaskad-evakuator-hero1200.jpg);
+        background-image: url(../img/kaskad-evakuator-hero1200.jpg);
+        background-image: image-set(
+            url(../img/kaskad-evakuator-hero1200.webp) type("image/webp"),
+            url(../img/kaskad-evakuator-hero1200.jpg) type("image/jpeg")
+        );
     }
 }
 
@@ -65,7 +74,7 @@
     max-width: 1200px;
 }
 
-.evacuator-section h3,
+.evacuator-section > h3,
 .evacuator-price-section h3 {
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -77,26 +86,100 @@
     max-width: 1200px;
 }
 
-.evacuator-section img {
-    display: block;
+.evacuator-section > h2 {
+    clear: both;
+}
+
+.evacuator-section > .benefits-list,
+.evacuator-section > .advantages-grid {
+    clear: both;
+}
+
+.evacuator-section .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 24px auto 0;
+    max-width: 1200px;
+}
+
+.evacuator-section .advantage-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 18px;
+    box-shadow: 0 4px 16px rgba(16, 16, 16, 0.08);
+}
+
+.evacuator-section .advantage-item h3,
+.evacuator-section .advantage-item h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #101010;
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.evacuator-section .advantage-item p {
+    margin: 0;
+    text-indent: 0;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.evacuator-price-section table {
     width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    table-layout: fixed;
+    max-width: 1000px;
+    color: #101010;
+    background: #fff;
+}
+
+.evacuator-price-section th,
+.evacuator-price-section td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #101010;
+    vertical-align: top;
+}
+
+.evacuator-price-section th {
+    background-color: #f2f2f2;
+    font-weight: 700;
+}
+
+.evacuator-price-section tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.evacuator-price-section td.price {
+    text-align: right;
+    font-weight: 700;
+}
+
+.evacuator-section > img {
+    display: block;
+    float: left;
+    width: 42%;
     max-width: 420px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(16, 16, 16, 0.12);
     object-fit: cover;
+    margin: 6px 28px 18px 0;
 }
 
-/* Первая картинка — аккуратно слева */
-.evacuator-section img:first-of-type {
-    float: left;
-    margin: 6px 30px 18px 0;
-}
-
-/* Вторая картинка — аккуратно справа */
-.evacuator-section img:nth-of-type(2) {
+.evacuator-section > img:nth-of-type(2) {
     float: right;
-    margin: 6px 0 18px 30px;
+    margin: 6px 0 18px 28px;
 }
 
 .benefits-list {
@@ -155,14 +238,20 @@
         text-indent: 26px;
     }
 
-    .evacuator-section img {
+    .evacuator-section > img {
+        float: none;
+        width: 100%;
         max-width: 360px;
+        margin: 20px auto;
     }
 
-    .evacuator-section img:first-of-type,
-    .evacuator-section img:nth-of-type(2) {
+    .evacuator-section > img:nth-of-type(2) {
         float: none;
         margin: 20px auto;
+    }
+
+    .evacuator-section .advantages-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -199,15 +288,16 @@
         text-indent: 24px;
     }
 
-    .evacuator-section img {
+    .evacuator-section > img {
+        float: none;
         max-width: 100%;
         width: 100%;
         border-radius: 10px;
         box-shadow: 0 6px 18px rgba(16, 16, 16, 0.1);
+        margin: 18px auto;
     }
 
-    .evacuator-section img:first-of-type,
-    .evacuator-section img:nth-of-type(2) {
+    .evacuator-section > img:nth-of-type(2) {
         float: none;
         margin: 18px auto;
     }

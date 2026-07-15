@@ -52,13 +52,17 @@
               <a href="./zapchasti.html" data-translate="nav-parts-new">Новые запчасти</a>
             </li>
             <li class="submenu-item">
-              <a href="./razborka/" data-translate="nav-parts-used">Запчасти с разборки</a>
+              <a href="./razborka/" data-translate="nav-parts-used">Запчасти с авторазборки</a>
             </li>
           </ul>
         </li>
 
         <li class="nav-item">
           <a href="./avtokondicionery.html" data-translate="nav-ac">Автокондиционеры</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./evakuator.html" data-translate="nav-evacuator">Эвакуатор</a>
         </li>
 
         <li class="nav-item has-submenu">
@@ -89,16 +93,19 @@
               <a href="./remont-transmissii.html" data-translate="nav-transmission">Трансмиссия</a>
             </li>
             <li class="submenu-item">
-              <a href="./tehnicheskoe-obsluzhivanie.html" data-translate="nav-to">Техническое обслуживание</a>
+              <a href="./tehnicheskoe-obsluzhivanie.html" data-translate="nav-to">Замена масла и ТО</a>
             </li>
             <li class="submenu-item">
-              <a href="./diagnostika-avto.html" data-translate="nav-diagnostics">Диагностика</a>
+              <a href="./diagnostika-avto.html" data-translate="nav-diagnostics">Компьютерная диагностика</a>
             </li>
             <li class="submenu-item">
-              <a href="./ustanovka-gbo.html" data-translate="nav-gbo">Установка ГБО</a>
+              <a href="./ustanovka-gbo.html" data-translate="nav-gbo">Установка и ТО ГБО</a>
             </li>
             <li class="submenu-item">
-              <a href="./sistema-ohlazhdeniya.html" data-translate="nav-cooling">Система охлаждения</a>
+              <a href="./sistema-ohlazhdeniya.html" data-translate="nav-cooling">Ремонт и промывка охлаждения</a>
+            </li>
+            <li class="submenu-item">
+              <a href="./evakuator.html" data-translate="nav-evacuator">Эвакуатор</a>
             </li>
           </ul>
         </li>

@@ -28,8 +28,8 @@
       </div>
 
       <div class="service-card" data-card-kind="parts">
-        <h3 data-translate="services-h3-2">ЗАПЧАСТИ С РАЗБОРКИ</h3>
-        <p data-translate="services-p-2">Контрактные б/у запчасти с разборки в Павлограде — подбор по марке, модели и VIN.</p>
+        <h3 data-translate="services-h3-2">ЗАПЧАСТИ С АВТОРАЗБОРКИ</h3>
+        <p data-translate="services-p-2">Контрактные б/у запчасти с авторазборки в Павлограде — подбор по марке, модели и VIN.</p>
         <div class="btn-container">
           <a href="./razborka/" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
         </div>
@@ -76,8 +76,8 @@
       </div>
 
       <div class="service-card" data-card-kind="service">
-        <h3 data-translate="services-h3-8">ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ</h3>
-        <p data-translate="services-p-8">Плановое ТО: замена масел и фильтров, регламентные работы и проверка систем автомобиля.</p>
+        <h3 data-translate="services-h3-8">ЗАМЕНА МАСЛА И ТО</h3>
+        <p data-translate="services-p-8">Замена моторного масла и фильтров, регламентное ТО и расходные материалы.</p>
         <div class="btn-container">
           <a href="./tehnicheskoe-obsluzhivanie.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
         </div>
@@ -100,25 +100,24 @@
       </div>
 
       <div class="service-card" data-card-kind="service">
-        <h3 data-translate="services-h3-11">УСТАНОВКА ГБО</h3>
-        <p data-translate="services-p-11">Подбор, установка, настройка и сервисное обслуживание газобаллонного оборудования.</p>
+        <h3 data-translate="services-h3-11">УСТАНОВКА И ТО ГБО</h3>
+        <p data-translate="services-p-11">Установка, диагностика, ремонт и ТО газобаллонного оборудования в Павлограде.</p>
         <div class="btn-container">
           <a href="./ustanovka-gbo.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
         </div>
       </div>
 
       <div class="service-card" data-card-kind="service">
-        <h3 data-translate="services-h3-12">СИСТЕМА ОХЛАЖДЕНИЯ</h3>
-        <p data-translate="services-p-12">Ремонт радиаторов, помпы, термостата, устранение течей и перегрева двигателя.</p>
+        <h3 data-translate="services-h3-12">РЕМОНТ И ПРОМЫВКА ОХЛАЖДЕНИЯ</h3>
+        <p data-translate="services-p-12">Ремонт и промывка системы охлаждения: радиаторы, помпа, термостат, устранение течей и перегрева.</p>
         <div class="btn-container">
           <a href="./sistema-ohlazhdeniya.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
         </div>
       </div>
 
-      <!-- frozen-service:evacuator — снять hidden, когда услуга снова активна -->
-      <div class="service-card is-service-frozen" data-card-kind="service" hidden>
+      <div class="service-card" data-card-kind="service">
         <h3 data-translate="services-h3-13">ЭВАКУАТОР</h3>
-        <p data-translate="services-p-13">Вызов эвакуатора в Павлограде и доставка автомобиля на СТО «Каскад».</p>
+        <p data-translate="services-p-13">Вызвать эвакуатор в Павлограде: перевозка после ДТП или поломки, доставка на СТО «Каскад».</p>
         <div class="btn-container">
           <a href="./evakuator.html" class="details-btn" data-translate="details-btn">ПОДРОБНЕЕ</a>
         </div>

@@ -1,3 +1,6 @@
 @import url('./common.css');
+@import url('../ustanovka-gbo.css');
 @import url('../evacuator.css');
+@import url('../price-section.css');
+@import url('../services-section.css');
 @import url('../main-content-section.css');

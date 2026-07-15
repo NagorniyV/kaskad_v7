@@ -1,9 +1,6 @@
 User-agent: *
 Allow: /
 
-# Замороженный эвакуатор
-Disallow: /evakuator.html
-
 # Старые EN/алиас-URL (клиентский redirect + noindex)
 Disallow: /parts.html
 Disallow: /price.html

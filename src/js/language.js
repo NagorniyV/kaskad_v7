@@ -24,6 +24,19 @@ function loadTranslations(lang) {
         if (translations[key]) el.setAttribute("aria-label", translations[key]);
       });
 
+      document.querySelectorAll("[data-translate-document]").forEach((el) => {
+        const key = el.getAttribute("data-translate-document");
+        if (translations[key]) {
+          document.title = translations[key];
+          el.textContent = translations[key];
+        }
+      });
+
+      document.querySelectorAll("[data-translate-content]").forEach((el) => {
+        const key = el.getAttribute("data-translate-content");
+        if (translations[key]) el.setAttribute("content", translations[key]);
+      });
+
       document.dispatchEvent(
         new CustomEvent("language:changed", { detail: { lang } })
       );
