@@ -10,9 +10,13 @@ Disallow: /car-diagnostics.html
 Disallow: /air-conditioning.html
 Disallow: /toplivnaya-sistema.html
 
-# Разборка: индексируем только хаб
+# Разборка: индексируем только хаб /razborka/
 Allow: /razborka/$
 Allow: /razborka/index.html
 Disallow: /razborka/*/
+
+# Служебные и временные
+Disallow: /scripts/
+Disallow: /.vite/
 
 Sitemap: https://kaskad.in.ua/sitemap.xml
